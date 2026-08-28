@@ -9,12 +9,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
 
 <style>
 
 /* =========================
-   BASIC
+   RESET
 ========================= */
 
 * {
@@ -29,20 +29,14 @@ html {
 
 body {
     background: #f5f3ef;
-    color: #242321;
+    color: #252422;
     font-family: "DM Sans", sans-serif;
     font-weight: 300;
-    line-height: 1.6;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-}
-
-img {
-    display: block;
-    width: 100%;
 }
 
 
@@ -51,7 +45,7 @@ img {
 ========================= */
 
 header {
-    height: 86px;
+    height: 55px;
     padding: 0 5vw;
 
     display: flex;
@@ -63,31 +57,32 @@ header {
 
 .logo {
     font-size: 12px;
-    letter-spacing: 2.8px;
-    font-weight: 400;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 9px;
 }
 
 .navigation a {
-    font-size: 10px;
-    letter-spacing: 1.8px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-}
 
-.contact-button {
-    padding: 11px 18px;
-    border: 1px solid #242321;
+    padding: 7px 13px;
+
+    border: 1px solid #aaa69e;
+
     transition: all .3s ease;
 }
 
-.contact-button:hover {
-    background: #242321;
+.navigation a:hover {
+    background: #252422;
     color: #f5f3ef;
+    border-color: #252422;
 }
 
 
@@ -98,177 +93,32 @@ header {
 .hero {
     width: 90%;
     max-width: 1400px;
-    margin: 25px auto 0;
+
+    margin: 15px auto 0;
 
     display: grid;
-    grid-template-columns: 46% 54%;
+    grid-template-columns: 43% 57%;
 
-    min-height: 620px;
+    min-height: 575px;
 }
 
 
-/* LEFT */
+/* =========================
+   HERO TEXT
+========================= */
 
 .hero-text {
-    padding: 8% 9% 8% 4%;
+    padding: 7% 9% 7% 4%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.small-title {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #77736d;
-
-    margin-bottom: 32px;
-}
-
-.hero-title {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(42px, 5vw, 72px);
-    font-weight: 400;
-    line-height: 1.08;
-
-    margin-bottom: 28px;
-}
-
-.hero-description {
-    max-width: 480px;
-
-    font-size: 15px;
-    line-height: 1.9;
-
-    color: #5d5953;
-
-    margin-bottom: 38px;
-}
-
-.about-button {
-    width: fit-content;
-
-    border-bottom: 1px solid #242321;
-
-    padding-bottom: 7px;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    transition: .3s ease;
-}
-
-.about-button:hover {
-    letter-spacing: 3px;
-}
-
-
-/* =========================
-   PHOTO PLACEHOLDER
-========================= */
-
-.hero-photo {
-    position: relative;
-
-    min-height: 620px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #252522,
-            #45433d
-        );
-
-    overflow: hidden;
-}
-
-.photo-placeholder {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: rgba(255,255,255,.65);
-
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.photo-placeholder span {
-    border: 1px solid rgba(255,255,255,.3);
-    padding: 14px 20px;
-}
-
-
-/* =========================
-   QUICK NAVIGATION
-========================= */
-
-.quick-nav {
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 25px auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    border-top: 1px solid #d7d3cb;
-    border-bottom: 1px solid #d7d3cb;
-}
-
-.quick-nav a {
-    padding: 22px;
-
-    text-align: center;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    transition: .3s ease;
-}
-
-.quick-nav a:hover {
-    background: #e9e6df;
-}
-
-
-/* =========================
-   LATEST WRITING
-========================= */
-
-.latest {
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 90px auto;
-
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
-
-.section-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: #77736d;
-}
-
-.latest-content {
-    padding-left: 8%;
-}
-
-.latest-content h2 {
+.hero-name {
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(38px, 4vw, 58px);
+    font-size: clamp(25px, 3vw, 40px);
 
     font-weight: 400;
 
@@ -277,62 +127,294 @@ header {
     margin-bottom: 25px;
 }
 
-.latest-content p {
-    max-width: 600px;
-
-    color: #625e58;
+.hero-description {
+    max-width: 430px;
 
     font-size: 14px;
 
     line-height: 1.9;
 
-    margin-bottom: 28px;
-}
+    color: #625e58;
 
-.read-more {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    border-bottom: 1px solid #242321;
-
-    padding-bottom: 6px;
+    margin-bottom: 32px;
 }
 
 
 /* =========================
-   ABOUT PREVIEW
+   RECTANGLE BUTTON
 ========================= */
 
-.about-preview {
-    background: #e8e5de;
+.outline-button {
+    width: fit-content;
 
-    padding: 100px 10%;
+    border: 1px solid #77736d;
+
+    padding: 10px 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    transition: all .3s ease;
+}
+
+.outline-button:hover {
+    background: #252422;
+    color: #f5f3ef;
+    border-color: #252422;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.hero-photo {
+
+    min-height: 575px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #272724,
+            #46443e
+        );
+
+    transition: transform 1s ease;
+}
+
+.hero-photo:hover {
+    transform: scale(1.008);
+}
+
+.photo-placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+.photo-placeholder span {
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    padding: 12px 18px;
+}
+
+
+/* =========================
+   QUICK MENU
+========================= */
+
+.quick-nav {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 15px auto 0;
 
     display: grid;
-    grid-template-columns: 30% 70%;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
 }
 
-.about-preview h2 {
+.quick-nav a {
+
+    border: 1px solid #aaa69e;
+
+    padding: 13px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.quick-nav a:hover {
+
+    background: #252422;
+
+    color: #f5f3ef;
+
+    border-color: #252422;
+}
+
+
+/* =========================
+   LATEST WRITING
+========================= */
+
+.latest {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 75px auto;
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+
+    border-top: 1px solid #d7d3cb;
+
+    padding-top: 35px;
+}
+
+.section-label {
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #77736d;
+}
+
+.latest-content {
+
+    padding-left: 7%;
+}
+
+.latest-content h2 {
+
     font-family: "Playfair Display", serif;
 
-    font-size: 46px;
+    font-size: clamp(32px, 4vw, 52px);
 
     font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
 }
 
-.about-preview-text {
-    max-width: 680px;
+.latest-content p {
+
+    max-width: 620px;
+
+    color: #625e58;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
 }
 
-.about-preview-text p {
-    font-size: 15px;
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 75px auto;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #d7d3cb;
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+}
+
+.about-content {
+
+    padding-left: 7%;
+
+    max-width: 700px;
+}
+
+.about-content p {
+
+    font-size: 14px;
 
     line-height: 1.9;
 
-    color: #5d5953;
+    color: #625e58;
 
     margin-bottom: 20px;
+}
+
+
+/* =========================
+   CV
+========================= */
+
+.cv {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 75px auto;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #d7d3cb;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 75px auto;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #d7d3cb;
+}
+
+.contact p {
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    color: #625e58;
 }
 
 
@@ -341,34 +423,22 @@ header {
 ========================= */
 
 footer {
-    padding: 35px 5vw;
 
-    display: flex;
-    justify-content: space-between;
+    padding: 30px 5vw;
 
     border-top: 1px solid #d7d3cb;
 
-    font-size: 9px;
+    display: flex;
 
-    letter-spacing: 2px;
+    justify-content: space-between;
+
+    font-size: 8px;
+
+    letter-spacing: 1.8px;
 
     text-transform: uppercase;
 
     color: #77736d;
-}
-
-
-/* =========================
-   SUBTLE EFFECT
-========================= */
-
-.hero-photo {
-    transform: translateY(0);
-    transition: transform 1s ease;
-}
-
-.hero-photo:hover {
-    transform: translateY(-5px);
 }
 
 
@@ -379,83 +449,113 @@ footer {
 @media (max-width: 800px) {
 
     header {
+
         height: auto;
-        padding: 22px 6vw;
+
+        padding: 15px 6vw;
 
         align-items: flex-start;
+
+    }
+
+    .logo {
+
+        font-size: 10px;
+
     }
 
     .navigation {
-        gap: 12px;
-        flex-wrap: wrap;
+
+        gap: 5px;
+
         justify-content: flex-end;
+
+        flex-wrap: wrap;
+
     }
 
     .navigation a {
-        font-size: 8px;
-    }
 
-    .contact-button {
-        padding: 8px 11px;
+        font-size: 7px;
+
+        padding: 6px 8px;
+
     }
 
     .hero {
+
         width: 88%;
 
         grid-template-columns: 1fr;
 
-        margin-top: 15px;
-    }
+        margin-top: 10px;
 
-    .hero-text {
-        padding: 60px 5%;
-        order: 2;
     }
 
     .hero-photo {
+
         order: 1;
 
-        min-height: 480px;
+        min-height: 430px;
+
+    }
+
+    .hero-text {
+
+        order: 2;
+
+        padding: 50px 3%;
+
     }
 
     .quick-nav {
+
         width: 88%;
 
         grid-template-columns: repeat(2, 1fr);
+
     }
 
-    .quick-nav a {
-        padding: 18px 8px;
-    }
+    .latest,
+    .about {
 
-    .latest {
         width: 88%;
 
         grid-template-columns: 1fr;
 
-        margin: 70px auto;
     }
 
-    .latest-content {
+    .latest-content,
+    .about-content {
+
         padding-left: 0;
-        margin-top: 30px;
+
+        margin-top: 25px;
+
     }
 
-    .about-preview {
-        grid-template-columns: 1fr;
+    .cv {
 
-        padding: 70px 8%;
+        width: 88%;
+
+        align-items: flex-start;
+
     }
 
-    .about-preview-text {
-        margin-top: 35px;
+    .contact {
+
+        width: 88%;
+
     }
 
     footer {
+
         flex-direction: column;
 
-        gap: 12px;
+        gap: 10px;
+
     }
+
 }
 
 </style>
@@ -493,7 +593,7 @@ footer {
             CV
         </a>
 
-        <a href="#contact" class="contact-button">
+        <a href="#contact">
             Contact
         </a>
 
@@ -512,32 +612,27 @@ footer {
 
     <div class="hero-text">
 
-        <div class="small-title">
-            Psychology · Research · Counseling
-        </div>
-
-
-        <h1 class="hero-title">
-            Bita<br>
-            Negahdar
+        <h1 class="hero-name">
+            Bita Negahdar
         </h1>
 
 
         <p class="hero-description">
 
-            Psychology graduate student developing a professional
-            path in psychology, counseling, and psychological research,
-            with an interest in human behavior and emotional experience.
+            Psychology graduate student developing
+            a professional path in psychology,
+            counseling, and psychological research,
+            with an interest in human behavior
+            and emotional experience.
 
         </p>
 
 
-        <a href="#about" class="about-button">
-            About Me →
+        <a href="#about" class="outline-button">
+            About Me
         </a>
 
     </div>
-
 
 
     <!-- PHOTO PLACEHOLDER -->
@@ -591,7 +686,6 @@ footer {
 
 <section class="latest" id="writing">
 
-
     <div>
 
         <div class="section-label">
@@ -604,22 +698,22 @@ footer {
     <div class="latest-content">
 
         <h2>
-            Notes on human
-            experience.
+            Latest articles
         </h2>
 
 
         <p>
 
-            A space for psychological reflections,
-            research-based writing, and observations
-            on human behavior and emotional experience.
+            New psychological writings,
+            research-based reflections,
+            and observations on human behavior
+            will appear here.
 
         </p>
 
 
-        <a href="#" class="read-more">
-            View Writing →
+        <a href="#" class="outline-button">
+            View Writing
         </a>
 
     </div>
@@ -632,8 +726,7 @@ footer {
      ABOUT
 ========================= -->
 
-<section class="about-preview" id="about">
-
+<section class="about" id="about">
 
     <div>
 
@@ -641,29 +734,26 @@ footer {
             About
         </div>
 
-        <h2>
-            Psychology
-            in progress.
-        </h2>
-
     </div>
 
 
-    <div class="about-preview-text">
+    <div class="about-content">
 
         <p>
 
             I am currently developing my professional
-            path in psychology, with a focus on psychological
-            research, counseling, and understanding human behavior.
+            path in psychology, with a focus on
+            psychological research, counseling,
+            and understanding human behavior.
 
         </p>
 
 
         <p>
 
-            My academic background also includes previous
-            studies in Photography and Graphic Design.
+            My academic background also includes
+            previous studies in Photography
+            and Graphic Design.
 
         </p>
 
@@ -677,38 +767,31 @@ footer {
      RESEARCH
 ========================= -->
 
-<section id="research" style="padding:100px 10%;">
+<section class="latest" id="research">
 
-    <div class="section-label">
-        Research
+    <div>
+
+        <div class="section-label">
+            Research
+        </div>
+
     </div>
 
-    <div style="margin-top:30px; max-width:700px;">
 
-        <h2 style="
-            font-family:'Playfair Display',serif;
-            font-size:48px;
-            font-weight:400;
-            line-height:1.2;
-        ">
+    <div class="latest-content">
 
-            Research interests
-            in human behavior.
-
-        </h2>
-
-        <p style="
-            margin-top:25px;
-            color:#625e58;
-            line-height:1.9;
-            font-size:14px;
-        ">
+        <p>
 
             Research interests, academic projects,
             publications, and ongoing psychological
             studies will be presented here.
 
         </p>
+
+
+        <a href="#" class="outline-button">
+            View Research
+        </a>
 
     </div>
 
@@ -720,41 +803,20 @@ footer {
      CV
 ========================= -->
 
-<section id="cv"
-style="
-background:#242321;
-color:#f5f3ef;
-padding:100px 10%;
-">
+<section class="cv" id="cv">
 
-    <div class="section-label" style="color:#aaa69f;">
-        Curriculum Vitae
+    <div>
+
+        <div class="section-label">
+            Curriculum Vitae
+        </div>
+
     </div>
 
-    <h2 style="
-        font-family:'Playfair Display',serif;
-        font-size:55px;
-        font-weight:400;
-        margin-top:25px;
-    ">
 
-        Professional
-        Profile
-
-    </h2>
-
-    <p style="
-        max-width:600px;
-        margin-top:25px;
-        color:#bbb8b1;
-        line-height:1.8;
-        font-size:14px;
-    ">
-
-        Academic background, research experience,
-        education, and professional development.
-
-    </p>
+    <a href="#" class="outline-button">
+        View CV
+    </a>
 
 </section>
 
@@ -764,35 +826,15 @@ padding:100px 10%;
      CONTACT
 ========================= -->
 
-<section id="contact"
-style="
-padding:100px 10%;
-">
+<section class="contact" id="contact">
 
     <div class="section-label">
         Contact
     </div>
 
-    <h2 style="
-        font-family:'Playfair Display',serif;
-        font-size:55px;
-        font-weight:400;
-        margin-top:25px;
-    ">
 
-        Professional
-        inquiries.
-
-    </h2>
-
-    <p style="
-        margin-top:25px;
-        color:#625e58;
-        font-size:14px;
-    ">
-
+    <p>
         Email: your-email@example.com
-
     </p>
 
 </section>
