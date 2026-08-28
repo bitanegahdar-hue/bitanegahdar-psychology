@@ -1,6 +1,5 @@
-```css
 /* =====================================================
-   GLOBAL
+   GLOBAL RESET
 ===================================================== */
 
 *{
@@ -16,29 +15,21 @@ html{
 :root{
     --white:#FFFFFF;
 
-    /* MAIN CYAN */
-    --cyan:#0891B2;
+    /* YOUR COLORS */
+    --cyan-light:#CFFAFE;   /* RGB 207 250 254 */
+    --cyan:#06B6D4;         /* RGB 6 182 212 */
+    --cyan-dark:#0891B2;    /* RGB 8 145 178 */
 
-    /* HOVER CYAN */
-    --cyan-hover:#06B6D4;
-
-    /* VERY LIGHT CYAN */
-    --cyan-light:#CFFAFE;
-
-    /* TEXT */
-    --text:#222222;
-
-    /* MUTED */
-    --muted:#626262;
-
-    /* BORDER */
     --border:#D8E7EA;
+
+    --text:#252525;
+    --muted:#666666;
 }
 
 body{
-    background:#FFFFFF !important;
-    color:var(--text) !important;
-    font-family:"DM Sans",Arial,sans-serif !important;
+    background:#FFFFFF;
+    color:var(--text);
+    font-family:"DM Sans",Arial,sans-serif;
     font-weight:400;
 }
 
@@ -54,7 +45,7 @@ a{
 
 header{
     width:100%;
-    min-height:76px;
+    min-height:72px;
 
     padding:0 4vw;
 
@@ -62,17 +53,20 @@ header{
     align-items:center;
     justify-content:space-between;
 
-    background:#FFFFFF !important;
+    background:#FFFFFF;
 
     border-bottom:1px solid var(--border);
 }
 
 .logo{
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:20px !important;
-    font-weight:700 !important;
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:20px;
+    font-weight:700;
+
     letter-spacing:2.4px;
-    color:var(--text) !important;
+
+    color:var(--text);
 }
 
 nav{
@@ -86,18 +80,20 @@ nav a{
     align-items:center;
     justify-content:center;
 
-    min-height:36px;
+    min-height:34px;
 
-    padding:7px 10px;
+    padding:7px 9px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:12px !important;
-    font-weight:600 !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
-    letter-spacing:1.4px;
+    font-size:11px;
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
     text-transform:uppercase;
 
-    color:var(--text) !important;
+    color:var(--text);
 
     transition:
         background-color .25s ease,
@@ -107,21 +103,21 @@ nav a{
 
 /* =====================================================
    MENU HOVER
-   BLUE/CYAN BACKGROUND + WHITE TEXT
 ===================================================== */
 
 nav a:hover{
-    background:#06B6D4 !important;
-    color:#FFFFFF !important;
+    background:#06B6D4;
+    color:#FFFFFF;
 }
 
 
-/* =====================================================
-   CONTACT BUTTON
-===================================================== */
+/* CONTACT BUTTON */
 
 .contact-btn{
-    background:#CFFAFE !important;
+    padding:9px 16px;
+
+    background:#CFFAFE;
+
     color:#0891B2 !important;
 
     border:1px solid #CFFAFE;
@@ -145,15 +141,14 @@ nav a:hover{
     margin:18px auto 0;
 
     display:grid;
+
     grid-template-columns:44% 56%;
 
     min-height:560px;
 }
 
 
-/* =====================================================
-   LEFT HERO PANEL
-===================================================== */
+/* LEFT COLORED PANEL */
 
 .hero-text{
     grid-column:1;
@@ -165,9 +160,9 @@ nav a:hover{
     justify-content:center;
     align-items:flex-start;
 
-    background:#CFFAFE !important;
+    background:#CFFAFE;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 .hero-description{
@@ -175,14 +170,14 @@ nav a:hover{
 
     margin-bottom:30px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:17px;
     font-weight:500;
 
     line-height:1.85;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 
@@ -195,13 +190,13 @@ nav a:hover{
 
     padding:11px 20px;
 
-    border:1px solid #0891B2 !important;
+    border:1px solid #0891B2;
 
-    background:transparent !important;
+    background:transparent;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
     font-weight:600;
@@ -217,14 +212,16 @@ nav a:hover{
 }
 
 .outline-btn:hover{
-    background:#06B6D4 !important;
-    border-color:#06B6D4 !important;
-    color:#FFFFFF !important;
+    background:#06B6D4;
+
+    border-color:#06B6D4;
+
+    color:#FFFFFF;
 }
 
 
 /* =====================================================
-   HERO PHOTO
+   RIGHT PHOTO
 ===================================================== */
 
 .hero-photo{
@@ -265,7 +262,7 @@ nav a:hover{
 .section-title{
     margin-bottom:24px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:12px;
     font-weight:700;
@@ -274,19 +271,21 @@ nav a:hover{
 
     text-transform:uppercase;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 .grid{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:18px;
 }
 
 .card{
     display:block;
 
-    background:#FFFFFF !important;
+    background:#FFFFFF;
 
     overflow:hidden;
 }
@@ -318,6 +317,7 @@ nav a:hover{
 
 .card:hover .cover img{
     transform:scale(1.025);
+
     filter:saturate(1.08);
 }
 
@@ -328,7 +328,7 @@ nav a:hover{
 .card-number{
     margin-bottom:7px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
     font-weight:700;
@@ -337,18 +337,18 @@ nav a:hover{
 
     text-transform:uppercase;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 .card-title{
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:18px;
     font-weight:600;
 
     line-height:1.4;
 
-    color:#222222 !important;
+    color:#252525;
 }
 
 
@@ -388,11 +388,12 @@ nav a:hover{
     display:flex;
 
     flex-direction:column;
+
     align-items:center;
 
     gap:9px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
     font-weight:600;
@@ -401,14 +402,13 @@ nav a:hover{
 
     text-transform:uppercase;
 
-    color:#444444 !important;
+    color:#4F514B;
 
-    transition:
-        color .25s ease;
+    transition:color .25s ease;
 }
 
 .social-link:hover{
-    color:#06B6D4 !important;
+    color:#06B6D4;
 }
 
 .social-icon{
@@ -458,9 +458,9 @@ footer{
 
     justify-content:space-between;
 
-    background:#FFFFFF !important;
+    background:#FFFFFF;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:9px;
     font-weight:600;
@@ -469,12 +469,12 @@ footer{
 
     text-transform:uppercase;
 
-    color:#626262;
+    color:var(--muted);
 }
 
 
 /* =====================================================
-   GENERAL PAGES
+   GENERAL PAGE
 ===================================================== */
 
 .page{
@@ -487,7 +487,7 @@ footer{
 .eyebrow{
     margin-bottom:18px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:11px;
     font-weight:700;
@@ -496,19 +496,19 @@ footer{
 
     text-transform:uppercase;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 h1{
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-weight:700;
 
     font-size:52px;
 
     line-height:1.15;
 
-    font-weight:700;
-
-    color:#222222 !important;
+    color:#252525;
 }
 
 .intro{
@@ -516,19 +516,19 @@ h1{
 
     margin:28px 0 60px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:16px;
     font-weight:400;
 
     line-height:2;
 
-    color:#626262;
+    color:#5F625F;
 }
 
 
 /* =====================================================
-   CONTENT BLOCKS
+   BLOCKS
 ===================================================== */
 
 .block{
@@ -541,28 +541,28 @@ h1{
 .section-label{
     margin-bottom:22px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
-    font-size:14px;
+    font-size:16px;
     font-weight:700;
 
     letter-spacing:1.8px;
 
     text-transform:uppercase;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 .block p{
     max-width:760px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:14px;
 
     line-height:2;
 
-    color:#626262;
+    color:#5F625F;
 }
 
 
@@ -572,7 +572,9 @@ h1{
 
 .education{
     display:grid;
+
     grid-template-columns:1fr;
+
     gap:0;
 }
 
@@ -586,85 +588,97 @@ h1{
     background:#FFFFFF;
 
     transition:
-        background-color .3s ease,
-        color .3s ease;
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
 }
 
 .education-item:hover{
-    background:#CFFAFE !important;
+    background:#CFFAFE;
+
+    border-color:#06B6D4;
 }
 
 .education-item h3{
     margin-bottom:8px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:20px;
     font-weight:700;
 }
 
 .education-item p{
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:12px;
 
     line-height:1.7;
 
-    color:#626262;
+    color:var(--muted);
 }
 
 
 /* =====================================================
    RELEVANT STUDIES & TRAINING
-   SQUARE CARDS
+   REAL SQUARE CARDS
 ===================================================== */
 
 .training{
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(0,1fr));
 
     gap:18px;
 
     width:100%;
 }
 
+
+/* EACH TRAINING CARD */
+
 .training span{
-    aspect-ratio:1 / 1;
+    width:100% !important;
 
-    padding:25px;
+    aspect-ratio:1 / 1 !important;
 
-    display:flex;
+    min-height:0 !important;
 
-    align-items:center;
-    justify-content:center;
+    height:auto !important;
 
-    text-align:center;
+    padding:24px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    text-align:center !important;
 
     background:#CFFAFE !important;
 
     color:#0891B2 !important;
 
-    border:1px solid #B8E8EE;
+    border:1px solid #B8E8EE !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:16px;
-    font-weight:700;
+    font-size:16px !important;
 
-    line-height:1.5;
+    font-weight:700 !important;
+
+    line-height:1.5 !important;
 
     transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease;
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease !important;
 }
 
 
-/* =====================================================
-   TRAINING HOVER
-===================================================== */
+/* TRAINING HOVER */
 
 .training span:hover{
     background:#06B6D4 !important;
@@ -673,12 +687,65 @@ h1{
 
     color:#FFFFFF !important;
 
-    transform:translateY(-4px);
+    transform:translateY(-4px) !important;
 }
 
 
 /* =====================================================
-   CV EDUCATION ROW
+   IF TRAINING ITEMS ARE LINKS
+===================================================== */
+
+.training a{
+    width:100% !important;
+
+    aspect-ratio:1 / 1 !important;
+
+    min-height:0 !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    text-align:center !important;
+
+    padding:24px !important;
+
+    background:#CFFAFE !important;
+
+    color:#0891B2 !important;
+
+    border:1px solid #B8E8EE !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:16px !important;
+
+    font-weight:700 !important;
+
+    line-height:1.5 !important;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease !important;
+}
+
+.training a:hover{
+    background:#06B6D4 !important;
+
+    border-color:#06B6D4 !important;
+
+    color:#FFFFFF !important;
+
+    transform:translateY(-4px) !important;
+}
+
+
+/* =====================================================
+   CV EDUCATION
 ===================================================== */
 
 .education-row{
@@ -702,14 +769,15 @@ h1{
     grid-column:1;
     grid-row:1;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:20px;
+
     font-weight:700;
 
     line-height:1.4;
 
-    color:#222222 !important;
+    color:#252525;
 }
 
 
@@ -721,12 +789,13 @@ h1{
 
     margin-top:-12px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:12px;
+
     font-weight:400;
 
-    color:#626262;
+    color:var(--muted);
 }
 
 
@@ -734,16 +803,18 @@ h1{
 
 .year{
     grid-column:2;
+
     grid-row:1 / span 2;
 
     text-align:right;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:12px;
+
     font-weight:600;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 
     white-space:nowrap;
 }
@@ -762,33 +833,35 @@ h1{
 .topic h2{
     margin-bottom:12px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:25px;
+
     font-weight:700;
 
-    color:#222222 !important;
+    color:#252525;
 }
 
 .topic p{
     max-width:700px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:14px;
 
     line-height:1.9;
 
-    color:#626262;
+    color:#5F625F;
 }
 
 
 /* =====================================================
-   ARTICLES
+   ARTICLES / WRITING
 ===================================================== */
 
 .article{
     width:82%;
+
     max-width:900px;
 
     margin:65px auto;
@@ -796,32 +869,38 @@ h1{
 
 .article h1{
     margin-bottom:45px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-weight:700;
 }
 
 .meta{
     margin-bottom:18px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:9px;
+
     font-weight:600;
 
     letter-spacing:2px;
 
     text-transform:uppercase;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 }
 
 .article-text{
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:15px;
+
     font-weight:400;
 
     line-height:2;
 
-    color:#555555;
+    color:#555955;
 }
 
 .article-text p{
@@ -830,7 +909,7 @@ h1{
 
 
 /* =====================================================
-   GALLERY
+   WRITING GALLERY
 ===================================================== */
 
 .gallery{
@@ -867,15 +946,16 @@ h1{
 
     padding:10px 16px;
 
-    border:1px solid #0891B2 !important;
+    border:1px solid #0891B2;
 
-    color:#0891B2 !important;
+    color:#0891B2;
 
     background:#FFFFFF;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
+
     font-weight:600;
 
     letter-spacing:1.5px;
@@ -889,11 +969,22 @@ h1{
 }
 
 .back:hover{
-    background:#06B6D4 !important;
+    background:#06B6D4;
 
-    border-color:#06B6D4 !important;
+    border-color:#06B6D4;
 
-    color:#FFFFFF !important;
+    color:#FFFFFF;
+}
+
+
+/* =====================================================
+   GENERAL LINK HOVER
+===================================================== */
+
+.page a:hover,
+.article a:hover,
+.block a:hover{
+    color:#06B6D4;
 }
 
 
@@ -905,31 +996,38 @@ h1{
 
     header{
         min-height:72px;
+
         padding:14px 5vw;
+
         gap:15px;
     }
 
     .logo{
-        font-size:14px !important;
+        font-size:14px;
+
         letter-spacing:1.8px;
     }
 
     nav{
         gap:6px;
+
         flex-wrap:wrap;
+
         justify-content:flex-end;
     }
 
     nav a{
         min-height:30px;
-        padding:5px 6px !important;
 
-        font-size:8px !important;
+        padding:5px 6px;
+
+        font-size:8px;
+
         letter-spacing:1px;
     }
 
     .contact-btn{
-        padding:7px 10px !important;
+        padding:7px 10px;
     }
 
 
@@ -945,6 +1043,7 @@ h1{
 
     .hero-photo{
         grid-column:1;
+
         grid-row:1;
 
         min-height:480px;
@@ -952,6 +1051,7 @@ h1{
 
     .hero-text{
         grid-column:1;
+
         grid-row:2;
 
         padding:45px 8%;
@@ -970,6 +1070,7 @@ h1{
 
     .grid{
         grid-template-columns:1fr;
+
         gap:18px;
     }
 
@@ -978,6 +1079,7 @@ h1{
 
     .page{
         width:90%;
+
         margin:45px auto;
     }
 
@@ -989,13 +1091,18 @@ h1{
     /* TRAINING */
 
     .training{
-        grid-template-columns:repeat(2,1fr);
-        gap:14px;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+
+        gap:14px !important;
     }
 
-    .training span{
-        padding:18px;
-        font-size:14px;
+    .training span,
+    .training a{
+        aspect-ratio:1 / 1 !important;
+
+        padding:18px !important;
+
+        font-size:14px !important;
     }
 
 
@@ -1003,6 +1110,7 @@ h1{
 
     .education-row{
         grid-template-columns:1fr 100px;
+
         gap:15px;
     }
 
@@ -1027,6 +1135,7 @@ h1{
 
     .article{
         width:90%;
+
         margin:45px auto;
     }
 
@@ -1046,9 +1155,12 @@ h1{
 
     footer{
         flex-direction:column;
+
         text-align:center;
+
         gap:10px;
     }
+
 }
 
 
@@ -1059,12 +1171,14 @@ h1{
 @media(max-width:480px){
 
     .training{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr !important;
     }
 
-    .training span{
-        aspect-ratio:1 / 1;
-        font-size:15px;
+    .training span,
+    .training a{
+        aspect-ratio:1 / 1 !important;
+
+        font-size:15px !important;
     }
 
     .education-row{
@@ -1073,6 +1187,7 @@ h1{
 
     .year{
         grid-column:1;
+
         grid-row:auto;
 
         text-align:left;
@@ -1082,14 +1197,16 @@ h1{
 
     .degree{
         grid-column:1;
+
         grid-row:auto;
     }
 
     .institution{
         grid-column:1;
+
         grid-row:auto;
 
         margin-top:0;
     }
+
 }
-```
