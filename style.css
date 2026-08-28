@@ -1,4 +1,3 @@
-```css
 /* =====================================================
    GLOBAL RESET
 ===================================================== */
@@ -14,8 +13,12 @@ html{
 }
 
 body{
+    margin:0;
+    padding:0;
+
     background:#FFFFFF;
     color:#252525;
+
     font-family:"DM Sans", Arial, sans-serif;
     font-weight:400;
 }
@@ -34,22 +37,16 @@ a{
 
     --white:#FFFFFF;
 
-    /* PALE CYAN / HERO PANEL */
     --cyan-pale:#CFFAFE;
 
-    /* NORMAL CYAN */
     --cyan:#0891B2;
 
-    /* HOVER CYAN */
     --cyan-hover:#06B6D4;
 
-    /* DARK TEXT */
     --text:#252525;
 
-    /* MUTED TEXT */
     --muted:#626A6D;
 
-    /* BORDER */
     --border:#D9E5E8;
 }
 
@@ -74,7 +71,9 @@ header{
 }
 
 .logo{
-    font-family:"DM Sans",Arial,sans-serif;
+    flex-shrink:0;
+
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:20px;
     font-weight:700;
@@ -82,17 +81,25 @@ header{
     letter-spacing:2.4px;
 
     color:var(--text);
+
+    white-space:nowrap;
 }
 
 nav{
     display:flex;
     align-items:center;
+    justify-content:flex-end;
 
     gap:24px;
+
+    flex-shrink:0;
+
+    white-space:nowrap;
 }
 
 nav a{
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
@@ -100,20 +107,27 @@ nav a{
 
     padding:7px 11px;
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:12px;
     font-weight:600;
 
     letter-spacing:1.4px;
 
+    line-height:1;
+
     text-transform:uppercase;
 
     color:var(--text);
 
+    background:transparent;
+
+    border:1px solid transparent;
+
     transition:
         background-color .25s ease,
-        color .25s ease;
+        color .25s ease,
+        border-color .25s ease;
 }
 
 
@@ -123,6 +137,9 @@ nav a{
 
 nav a:hover{
     background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
     color:#FFFFFF;
 }
 
@@ -136,9 +153,9 @@ nav a:hover{
 
     background:var(--cyan-pale);
 
-    color:var(--cyan) !important;
+    border-color:var(--cyan-pale);
 
-    border:1px solid var(--cyan-pale);
+    color:var(--cyan) !important;
 }
 
 .contact-btn:hover{
@@ -162,7 +179,6 @@ nav a:hover{
 
     display:grid;
 
-    /* TEXT LEFT / PHOTO RIGHT */
     grid-template-columns:44% 56%;
 
     min-height:560px;
@@ -170,7 +186,7 @@ nav a:hover{
 
 
 /* =====================================================
-   HERO TEXT — LEFT OF PHOTO
+   HERO TEXT
 ===================================================== */
 
 .hero-text{
@@ -179,8 +195,11 @@ nav a:hover{
     padding:8% 11% 8% 7%;
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:flex-start;
 
     background:var(--cyan-pale);
@@ -191,9 +210,9 @@ nav a:hover{
 .hero-description{
     max-width:500px;
 
-    margin-bottom:30px;
+    margin:0 0 30px 0;
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:17px;
 
@@ -220,7 +239,7 @@ nav a:hover{
 
     color:var(--cyan);
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:10px;
 
@@ -246,7 +265,7 @@ nav a:hover{
 
 
 /* =====================================================
-   HERO PHOTO — RIGHT
+   HERO PHOTO
 ===================================================== */
 
 .hero-photo{
@@ -287,7 +306,7 @@ nav a:hover{
 .section-title{
     margin-bottom:24px;
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:12px;
 
@@ -295,38 +314,53 @@ nav a:hover{
 
     letter-spacing:2.2px;
 
+    line-height:1.4;
+
     text-transform:uppercase;
 
     color:var(--cyan);
 }
 
+
+/* =====================================================
+   WRITING GRID
+===================================================== */
+
 .grid{
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(0,1fr));
 
     gap:18px;
+
+    width:100%;
 }
 
 
 /* =====================================================
-   WRITING CARDS
+   WRITING CARD
 ===================================================== */
 
 .card{
     display:block;
 
+    width:100%;
+
     background:#FFFFFF;
 
     overflow:hidden;
 
-    transition:
-        transform .25s ease;
+    transition:transform .25s ease;
 }
 
 .card:hover{
     transform:translateY(-3px);
 }
+
+
+/* =====================================================
+   WRITING COVER
+===================================================== */
 
 .cover{
     width:100%;
@@ -338,6 +372,8 @@ nav a:hover{
     position:relative;
 
     background:#EEEEEE;
+
+    border:1px solid var(--border);
 }
 
 .cover img{
@@ -361,19 +397,384 @@ nav a:hover{
 
 
 /* =====================================================
-   REMOVE WRITING TITLES UNDER COVERS
+   HIDE WRITING TEXT UNDER COVERS
 ===================================================== */
 
-.card-info{
-    display:none !important;
-}
-
-.card-number{
-    display:none !important;
-}
-
+.card-info,
+.card-number,
 .card-title{
     display:none !important;
+}
+
+
+/* =====================================================
+   GENERAL PAGE
+   USED BY ABOUT / WRITING
+===================================================== */
+
+.page{
+    width:92%;
+    max-width:1250px;
+
+    margin:55px auto;
+}
+
+.eyebrow{
+    margin-bottom:18px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+h1{
+    margin:0;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:var(--text);
+}
+
+.intro{
+    max-width:760px;
+
+    margin:28px 0 60px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#5F6668;
+}
+
+
+/* =====================================================
+   GENERAL BLOCKS
+   USED BY ABOUT
+===================================================== */
+
+.block{
+    padding:30px 0;
+
+    border-top:1px solid var(--border);
+}
+
+.block h2,
+.section-label{
+    margin-bottom:22px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:1.8px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+.block p{
+    max-width:760px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:14px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#5F6668;
+}
+
+
+/* =====================================================
+   EDUCATION
+   USED BY ABOUT
+===================================================== */
+
+.education{
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:0;
+}
+
+.education-item{
+    min-height:auto;
+
+    padding:22px 24px;
+
+    border:1px solid var(--border);
+
+    background:#FFFFFF;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.education-item:hover{
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
+}
+
+.education-item:hover h3,
+.education-item:hover p{
+    color:#FFFFFF;
+}
+
+.education-item h3{
+    margin-bottom:8px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    color:var(--text);
+}
+
+.education-item p{
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:12px;
+
+    font-weight:400;
+
+    line-height:1.7;
+
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   RELEVANT STUDIES & TRAINING
+   USED BY ABOUT
+===================================================== */
+
+.training{
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+    width:100%;
+}
+
+.training span{
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    min-height:0;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:var(--cyan-pale);
+
+    color:var(--cyan);
+
+    border:1px solid var(--border);
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    cursor:pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+.training span:hover{
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
+
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   ARTICLES / WRITING
+===================================================== */
+
+.article{
+    width:82%;
+    max-width:900px;
+
+    margin:65px auto;
+}
+
+.article h1{
+    margin-bottom:45px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:var(--text);
+}
+
+.meta{
+    margin-bottom:18px;
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:9px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+.article-text{
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:15px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#555D5F;
+}
+
+.article-text p{
+    margin:0 0 30px;
+}
+
+
+/* =====================================================
+   WRITING GALLERY
+===================================================== */
+
+.gallery{
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:18px;
+}
+
+.gallery img{
+    width:100%;
+
+    aspect-ratio:4 / 5;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#EEEEEE;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back{
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:10px 16px;
+
+    border:1px solid var(--cyan);
+
+    background:#FFFFFF;
+
+    color:var(--cyan);
+
+    font-family:"DM Sans", Arial, sans-serif;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.back:hover{
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
 }
 
 
@@ -421,13 +822,15 @@ nav a:hover{
 
     padding:8px 12px;
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:10px;
 
     font-weight:600;
 
     letter-spacing:1.3px;
+
+    line-height:1.3;
 
     text-transform:uppercase;
 
@@ -443,6 +846,11 @@ nav a:hover{
 
     color:#FFFFFF;
 }
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
 
 .social-icon{
     width:48px;
@@ -488,499 +896,43 @@ footer{
 
     padding:24px 4vw;
 
-    border-top:1px solid var(--border);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:9px;
-
-    font-weight:600;
-
-    letter-spacing:1.8px;
-
-    text-transform:uppercase;
-
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   GENERAL PAGE
-===================================================== */
-
-.page{
-    width:92%;
-
-    max-width:1250px;
-
-    margin:55px auto;
-}
-
-.eyebrow{
-    margin-bottom:18px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:11px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-h1{
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-weight:700;
-
-    font-size:52px;
-
-    line-height:1.15;
-
-    color:var(--text);
-}
-
-.intro{
-    max-width:760px;
-
-    margin:28px 0 60px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:16px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   GENERAL BLOCKS
-===================================================== */
-
-.block{
-    padding:30px 0;
-
-    border-top:1px solid var(--border);
-}
-
-.block h2,
-.section-label{
-    margin-bottom:22px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:1.8px;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-.block p{
-    max-width:760px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:14px;
-
-    line-height:2;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   EDUCATION
-===================================================== */
-
-.education{
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:0;
-}
-
-.education-item{
-    min-height:auto;
-
-    padding:22px 24px;
-
-    border:1px solid var(--border);
-
     background:#FFFFFF;
 
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.education-item:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-}
-
-.education-item:hover h3,
-.education-item:hover p{
-    color:#FFFFFF;
-}
-
-.education-item h3{
-    margin-bottom:8px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:20px;
-
-    font-weight:700;
-}
-
-.education-item p{
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:12px;
-
-    line-height:1.7;
-
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   RELEVANT STUDIES & TRAINING
-   TRUE SQUARE CARDS
-===================================================== */
-
-.training{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-
-    width:100%;
-}
-
-
-/* EACH CARD IS A SQUARE */
-
-.training span{
-    width:100%;
-
-    aspect-ratio:1 / 1;
-
-    min-height:0;
-
-    padding:25px;
+    border-top:1px solid var(--border);
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
+    justify-content:space-between;
 
-    text-align:center;
-
-    background:var(--cyan-pale);
-
-    color:var(--cyan);
-
-    border:1px solid var(--border);
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    line-height:1.5;
-
-    cursor:pointer;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease;
-}
-
-
-/* =====================================================
-   TRAINING HOVER — BLUE/CYAN + WHITE
-===================================================== */
-
-.training span:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-
-    transform:translateY(-4px);
-}
-
-
-/* =====================================================
-   CV EDUCATION ROW
-===================================================== */
-
-.education-row{
-    display:grid;
-
-    grid-template-columns:1fr 150px;
-
-    align-items:start;
-
-    gap:20px;
-
-    padding:18px 0;
-
-    border-bottom:1px solid var(--border);
-}
-
-
-/* DEGREE LEFT */
-
-.degree{
-    grid-column:1;
-
-    grid-row:1;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-    color:var(--text);
-}
-
-
-/* INSTITUTION */
-
-.institution{
-    grid-column:1;
-
-    grid-row:2;
-
-    margin-top:-10px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:12px;
-
-    font-weight:400;
-
-    color:var(--muted);
-}
-
-
-/* YEAR RIGHT */
-
-.year{
-    grid-column:2;
-
-    grid-row:1 / span 2;
-
-    text-align:right;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:12px;
-
-    font-weight:600;
-
-    color:var(--cyan);
-
-    white-space:nowrap;
-}
-
-
-/* =====================================================
-   RESEARCH / TOPICS
-===================================================== */
-
-.topic{
-    padding:30px 0;
-
-    border-top:1px solid var(--border);
-}
-
-.topic h2{
-    margin-bottom:12px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:25px;
-
-    font-weight:700;
-
-    color:var(--text);
-}
-
-.topic p{
-    max-width:700px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:14px;
-
-    line-height:1.9;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   ARTICLES / WRITING
-===================================================== */
-
-.article{
-    width:82%;
-
-    max-width:900px;
-
-    margin:65px auto;
-}
-
-.article h1{
-    margin-bottom:45px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-weight:700;
-}
-
-.meta{
-    margin-bottom:18px;
-
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:9px;
 
     font-weight:600;
 
-    letter-spacing:2px;
+    letter-spacing:1.8px;
+
+    line-height:1.4;
 
     text-transform:uppercase;
 
-    color:var(--cyan);
-}
-
-.article-text{
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:15px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#555D5F;
-}
-
-.article-text p{
-    margin-bottom:30px;
+    color:var(--muted);
 }
 
 
 /* =====================================================
-   WRITING GALLERY
-===================================================== */
-
-.gallery{
-    margin-top:55px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:18px;
-}
-
-.gallery img{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    object-fit:cover;
-
-    display:block;
-
-    background:#EEEEEE;
-}
-
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-.back{
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:10px 16px;
-
-    border:1px solid var(--cyan);
-
-    color:var(--cyan);
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:10px;
-
-    font-weight:600;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.back:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-}
-
-
-/* =====================================================
-   ALL BUTTON / CLICKABLE HOVER
+   ALL CLICKABLE HOVER
 ===================================================== */
 
 button:hover,
 a.outline-btn:hover,
 a.back:hover{
     background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
     color:#FFFFFF;
 }
 
@@ -990,6 +942,8 @@ a.back:hover{
 ===================================================== */
 
 @media(max-width:800px){
+
+    /* HEADER */
 
     header{
         min-height:72px;
@@ -1028,9 +982,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       HERO MOBILE
-    ================================================= */
+    /* HERO */
 
     .hero{
         width:92%;
@@ -1061,9 +1013,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       WRITING
-    ================================================= */
+    /* LATEST WRITING */
 
     .latest{
         width:92%;
@@ -1076,9 +1026,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       GENERAL
-    ================================================= */
+    /* GENERAL PAGE */
 
     .page{
         width:90%;
@@ -1091,9 +1039,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       TRAINING MOBILE
-    ================================================= */
+    /* ABOUT TRAINING */
 
     .training{
         grid-template-columns:repeat(2,minmax(0,1fr));
@@ -1110,36 +1056,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       EDUCATION
-    ================================================= */
-
-    .education-row{
-        grid-template-columns:1fr 100px;
-
-        gap:15px;
-    }
-
-    .degree{
-        font-size:17px;
-    }
-
-    .institution{
-        font-size:11px;
-    }
-
-    .year{
-        font-size:10px;
-    }
-
-
-    /* =================================================
-       GALLERY
-    ================================================= */
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
+    /* ARTICLE */
 
     .article{
         width:90%;
@@ -1147,10 +1064,21 @@ a.back:hover{
         margin:45px auto;
     }
 
+    .article h1{
+        font-size:40px;
+    }
 
-    /* =================================================
-       CONTACT
-    ================================================= */
+
+    /* GALLERY */
+
+    .gallery{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    /* CONTACT */
 
     .contact-section{
         width:92%;
@@ -1161,9 +1089,7 @@ a.back:hover{
     }
 
 
-    /* =================================================
-       FOOTER
-    ================================================= */
+    /* FOOTER */
 
     footer{
         flex-direction:column;
@@ -1182,6 +1108,42 @@ a.back:hover{
 
 @media(max-width:480px){
 
+    .logo{
+        font-size:13px;
+
+        letter-spacing:1.5px;
+    }
+
+    nav{
+        gap:4px;
+    }
+
+    nav a{
+        padding:5px;
+
+        font-size:7px;
+
+        letter-spacing:.8px;
+    }
+
+    .contact-btn{
+        padding:6px 8px;
+    }
+
+
+    .hero-photo{
+        min-height:400px;
+    }
+
+    .hero-text{
+        padding:38px 8%;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+
     .training{
         grid-template-columns:1fr;
     }
@@ -1192,33 +1154,14 @@ a.back:hover{
         font-size:15px;
     }
 
-    .education-row{
+
+    .article h1{
+        font-size:34px;
+    }
+
+
+    .gallery{
         grid-template-columns:1fr;
     }
 
-    .year{
-        grid-column:1;
-
-        grid-row:auto;
-
-        text-align:left;
-
-        margin-top:3px;
-    }
-
-    .degree{
-        grid-column:1;
-
-        grid-row:auto;
-    }
-
-    .institution{
-        grid-column:1;
-
-        grid-row:auto;
-
-        margin-top:0;
-    }
-
 }
-```
