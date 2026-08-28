@@ -385,16 +385,27 @@ color:#77736d;
 }
 
 .training{
-display:flex;
-flex-wrap:wrap;
+display;
+grid-template-columns(2,1fr);
 gap:10px;
+margin-top:5px;
 }
 
 .training span{
-padding:10px 14px;
-border:1px solid #d7d3cb;
+display;
+align-items;
+min-height:54px;
+padding:14px 18px;
+background:#353a35;
+color:#f5f3ef;
+border:1px solid #353a35;
 font-size:10px;
+font-weight:500;
+letter-spacing:.3px;
+line-height:1.5;
 }
+
+.training span
 
 .topic{
 border-top:1px solid #d7d3cb;
