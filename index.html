@@ -15,8 +15,8 @@
 <style>
 
 /* =====================================================
-   HOME PAGE — FINAL
-   COLOR SYSTEM
+   HOME PAGE
+   FINAL VERSION
 ===================================================== */
 
 :root{
@@ -36,6 +36,8 @@
 ===================================================== */
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -44,13 +46,11 @@ html{
 }
 
 body{
-    margin:0;
-    padding:0;
-
     background:#FFFFFF !important;
     color:var(--text);
 
     font-family:"DM Sans", Arial, sans-serif !important;
+    font-weight:400;
 }
 
 a{
@@ -61,11 +61,12 @@ a{
 
 /* =====================================================
    HEADER
-   FIXED SIZE / SAME POSITION ON ALL PAGES
+   SAME ON ALL PAGES
 ===================================================== */
 
 header{
     width:100%;
+
     min-height:72px !important;
 
     padding:0 4vw !important;
@@ -82,10 +83,12 @@ header{
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo{
-    flex-shrink:0;
+    flex:0 0 auto;
 
     font-family:"DM Sans", Arial, sans-serif !important;
 
@@ -94,22 +97,27 @@ header{
 
     letter-spacing:2.4px !important;
 
+    line-height:1 !important;
+
     color:var(--text) !important;
 
     white-space:nowrap;
 }
 
 
-/* NAVIGATION */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 nav{
     display:flex !important;
+
     align-items:center !important;
     justify-content:flex-end !important;
 
-    gap:28px !important;
+    gap:24px !important;
 
-    flex-shrink:0;
+    flex:0 0 auto;
 
     white-space:nowrap;
 }
@@ -120,11 +128,12 @@ nav a{
     align-items:center !important;
     justify-content:center !important;
 
+    height:34px !important;
     min-height:34px !important;
 
     padding:7px 9px !important;
 
-    border:1px solid transparent;
+    border:1px solid transparent !important;
 
     font-family:"DM Sans", Arial, sans-serif !important;
 
@@ -139,16 +148,19 @@ nav a{
 
     color:#252525 !important;
 
-    background:transparent;
+    background:transparent !important;
 
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease;
+        border-color .25s ease !important;
 }
 
 
-/* BLUE HOVER */
+/* =====================================================
+   NAV HOVER
+   NORMAL BLUE / CYAN
+===================================================== */
 
 nav a:hover{
     background:var(--cyan-hover) !important;
@@ -159,10 +171,14 @@ nav a:hover{
 }
 
 
-/* CONTACT */
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact-btn{
-    padding:9px 16px !important;
+    height:34px !important;
+
+    padding:8px 15px !important;
 
     background:var(--cyan-light) !important;
 
@@ -186,6 +202,7 @@ nav a:hover{
 
 .hero{
     width:94% !important;
+
     max-width:1500px !important;
 
     margin:18px auto 0 !important;
@@ -199,8 +216,8 @@ nav a:hover{
 
 
 /* =====================================================
-   LEFT SIDE OF PHOTO
-   WHITE TEXT ON BLUE
+   LEFT BLUE PANEL
+   WHITE TEXT
 ===================================================== */
 
 .hero-text{
@@ -222,7 +239,9 @@ nav a:hover{
 }
 
 
-/* DESCRIPTION */
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
 
 .hero-description{
     max-width:500px !important;
@@ -242,11 +261,14 @@ nav a:hover{
 
 
 /* =====================================================
-   ABOUT BUTTON
+   ABOUT ME BUTTON
 ===================================================== */
 
 .outline-btn{
-    display:inline-block !important;
+    display:inline-flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
 
     padding:11px 20px !important;
 
@@ -264,16 +286,15 @@ nav a:hover{
 
     letter-spacing:1.7px !important;
 
+    line-height:1 !important;
+
     text-transform:uppercase !important;
 
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease;
+        border-color .25s ease !important;
 }
-
-
-/* HOVER */
 
 .outline-btn:hover{
     background:var(--cyan-hover) !important;
@@ -325,6 +346,11 @@ nav a:hover{
     border-top:1px solid var(--border) !important;
 }
 
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
 .section-title{
     margin-bottom:24px !important;
 
@@ -344,21 +370,29 @@ nav a:hover{
 }
 
 
-/* WRITING GRID */
+/* =====================================================
+   WRITING GRID
+===================================================== */
 
 .grid{
     display:grid !important;
 
-    grid-template-columns:repeat(3,1fr) !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
 
     gap:18px !important;
+
+    width:100% !important;
 }
 
 
-/* CARD */
+/* =====================================================
+   WRITING CARD
+===================================================== */
 
 .card{
     display:block !important;
+
+    width:100% !important;
 
     background:#FFFFFF !important;
 
@@ -366,7 +400,9 @@ nav a:hover{
 }
 
 
-/* COVER */
+/* =====================================================
+   WRITING COVER
+===================================================== */
 
 .cover{
     width:100% !important;
@@ -391,16 +427,18 @@ nav a:hover{
 
     transition:
         transform .45s ease,
-        filter .3s ease;
+        filter .3s ease !important;
 }
 
 
-/* COVER HOVER */
+/* =====================================================
+   COVER HOVER
+===================================================== */
 
 .card:hover .cover img{
     transform:scale(1.025) !important;
 
-    filter:saturate(1.08);
+    filter:saturate(1.08) !important;
 }
 
 
@@ -414,7 +452,7 @@ nav a:hover{
 
 
 /* =====================================================
-   CONTACT
+   CONTACT SECTION
 ===================================================== */
 
 .contact-section{
@@ -434,6 +472,11 @@ nav a:hover{
 .contact-section .section-title{
     margin-bottom:28px !important;
 }
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
 
 .social-links{
     display:flex !important;
@@ -464,13 +507,14 @@ nav a:hover{
 
     letter-spacing:1.3px !important;
 
+    line-height:1 !important;
+
     text-transform:uppercase !important;
 
     color:#4F514B !important;
 
     transition:
-        color .25s ease,
-        background-color .25s ease;
+        color .25s ease !important;
 }
 
 .social-link:hover{
@@ -546,470 +590,11 @@ footer{
 
     letter-spacing:1.8px !important;
 
+    line-height:1 !important;
+
     text-transform:uppercase !important;
 
     color:var(--muted) !important;
-}
-
-
-/* =====================================================
-   GLOBAL HOVER SYSTEM
-   SAME BLUE-CYAN EVERYWHERE
-===================================================== */
-
-.training span:hover,
-.back:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   GENERAL PAGE
-===================================================== */
-
-.page{
-    width:92%;
-
-    max-width:1250px;
-
-    margin:55px auto;
-}
-
-.eyebrow{
-    margin-bottom:18px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:11px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-h1{
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-weight:700;
-
-    font-size:52px;
-
-    line-height:1.15;
-
-    color:var(--text);
-}
-
-.intro{
-    max-width:760px;
-
-    margin:28px 0 60px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#5F625F;
-}
-
-
-/* =====================================================
-   BLOCKS
-===================================================== */
-
-.block{
-    padding:30px 0;
-
-    border-top:1px solid var(--border);
-}
-
-.block h2,
-.section-label{
-    margin-bottom:22px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:14px;
-
-    font-weight:700;
-
-    letter-spacing:1.8px;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-.block p{
-    max-width:760px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:14px;
-
-    line-height:2;
-
-    color:#5F625F;
-}
-
-
-/* =====================================================
-   EDUCATION
-===================================================== */
-
-.education{
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:0;
-}
-
-.education-item{
-    min-height:auto;
-
-    padding:22px 24px;
-
-    border:1px solid var(--border);
-
-    background:#FFFFFF;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease;
-}
-
-.education-item:hover{
-    background:var(--cyan-light);
-}
-
-.education-item h3{
-    margin-bottom:8px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:20px;
-
-    font-weight:700;
-}
-
-.education-item p{
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:12px;
-
-    line-height:1.7;
-
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   RELEVANT STUDIES & TRAINING
-   SQUARE CARDS
-===================================================== */
-
-.training{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:18px;
-
-    width:100%;
-}
-
-.training span{
-    aspect-ratio:1 / 1 !important;
-
-    width:100%;
-
-    padding:25px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    background:var(--cyan-light);
-
-    color:var(--cyan);
-
-    border:1px solid var(--cyan-light);
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    line-height:1.5;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease;
-}
-
-.training span:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-4px);
-}
-
-
-/* =====================================================
-   CV EDUCATION ROW
-   DEGREE LEFT / YEAR RIGHT
-===================================================== */
-
-.education-row{
-    display:grid;
-
-    grid-template-columns:minmax(0,1fr) 120px;
-
-    align-items:start;
-
-    gap:20px;
-
-    padding:18px 0;
-
-    border-bottom:1px solid var(--border);
-}
-
-
-/* DEGREE */
-
-.degree{
-    grid-column:1;
-
-    grid-row:1;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-    color:var(--text);
-}
-
-
-/* INSTITUTION */
-
-.institution{
-    grid-column:1;
-
-    grid-row:2;
-
-    margin-top:-12px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:12px;
-
-    font-weight:400;
-
-    color:var(--muted);
-}
-
-
-/* YEAR */
-
-.year{
-    grid-column:2;
-
-    grid-row:1 / span 2;
-
-    text-align:right;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:12px;
-
-    font-weight:600;
-
-    color:var(--cyan);
-
-    white-space:nowrap;
-}
-
-
-/* =====================================================
-   TOPICS
-===================================================== */
-
-.topic{
-    padding:30px 0;
-
-    border-top:1px solid var(--border);
-}
-
-.topic h2{
-    margin-bottom:12px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:25px;
-
-    font-weight:700;
-
-    color:var(--text);
-}
-
-.topic p{
-    max-width:700px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:14px;
-
-    line-height:1.9;
-
-    color:#5F625F;
-}
-
-
-/* =====================================================
-   ARTICLES / WRITING
-===================================================== */
-
-.article{
-    width:82%;
-
-    max-width:900px;
-
-    margin:65px auto;
-}
-
-.article h1{
-    margin-bottom:45px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-weight:700;
-}
-
-.meta{
-    margin-bottom:18px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:9px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-.article-text{
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:15px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#555955;
-}
-
-.article-text p{
-    margin-bottom:30px;
-}
-
-
-/* =====================================================
-   WRITING GALLERY
-===================================================== */
-
-.gallery{
-    margin-top:55px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:18px;
-}
-
-.gallery img{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    object-fit:cover;
-
-    display:block;
-
-    background:var(--cyan-light);
-}
-
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-.back{
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:10px 16px;
-
-    border:1px solid var(--cyan);
-
-    color:var(--cyan);
-
-    background:#FFFFFF;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:10px;
-
-    font-weight:600;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.back:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
 }
 
 
@@ -1027,11 +612,13 @@ h1{
         gap:15px !important;
     }
 
+
     .logo{
         font-size:14px !important;
 
         letter-spacing:1.8px !important;
     }
+
 
     nav{
         gap:6px !important;
@@ -1041,7 +628,10 @@ h1{
         justify-content:flex-end !important;
     }
 
+
     nav a{
+        height:30px !important;
+
         min-height:30px !important;
 
         padding:5px 6px !important;
@@ -1051,12 +641,17 @@ h1{
         letter-spacing:1px !important;
     }
 
+
     .contact-btn{
+        height:30px !important;
+
         padding:7px 10px !important;
     }
 
 
-    /* HERO */
+    /* =================================================
+       HERO MOBILE
+    ================================================= */
 
     .hero{
         width:92% !important;
@@ -1066,6 +661,7 @@ h1{
         min-height:auto !important;
     }
 
+
     .hero-photo{
         grid-column:1 !important;
 
@@ -1073,6 +669,7 @@ h1{
 
         min-height:480px !important;
     }
+
 
     .hero-text{
         grid-column:1 !important;
@@ -1082,16 +679,20 @@ h1{
         padding:45px 8% !important;
     }
 
+
     .hero-description{
         font-size:16px !important;
     }
 
 
-    /* WRITING */
+    /* =================================================
+       WRITING MOBILE
+    ================================================= */
 
     .latest{
         width:92% !important;
     }
+
 
     .grid{
         grid-template-columns:1fr !important;
@@ -1100,82 +701,23 @@ h1{
     }
 
 
-    /* GENERAL */
-
-    .page{
-        width:90%;
-
-        margin:45px auto;
-    }
-
-    h1{
-        font-size:40px;
-    }
-
-
-    /* TRAINING */
-
-    .training{
-        grid-template-columns:repeat(2,1fr);
-
-        gap:14px;
-    }
-
-    .training span{
-        aspect-ratio:1 / 1 !important;
-
-        padding:18px;
-
-        font-size:14px;
-    }
-
-
-    /* EDUCATION */
-
-    .education-row{
-        grid-template-columns:minmax(0,1fr) 100px;
-
-        gap:15px;
-    }
-
-    .degree{
-        font-size:17px;
-    }
-
-    .institution{
-        font-size:11px;
-    }
-
-    .year{
-        font-size:10px;
-    }
-
-
-    /* GALLERY */
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
-
-    .article{
-        width:90%;
-
-        margin:45px auto;
-    }
-
-
-    /* CONTACT */
+    /* =================================================
+       CONTACT MOBILE
+    ================================================= */
 
     .contact-section{
         width:92% !important;
     }
+
 
     .social-links{
         gap:32px !important;
     }
 
 
-    /* FOOTER */
+    /* =================================================
+       FOOTER MOBILE
+    ================================================= */
 
     footer{
         flex-direction:column !important;
@@ -1194,42 +736,16 @@ h1{
 
 @media(max-width:480px){
 
-    .training{
-        grid-template-columns:1fr;
+    .hero-photo{
+        min-height:420px !important;
     }
 
-    .training span{
-        aspect-ratio:1 / 1 !important;
-
-        font-size:15px;
+    .hero-text{
+        padding:40px 8% !important;
     }
 
-    .education-row{
-        grid-template-columns:1fr;
-    }
-
-    .year{
-        grid-column:1;
-
-        grid-row:auto;
-
-        text-align:right;
-
-        margin-top:3px;
-    }
-
-    .degree{
-        grid-column:1;
-
-        grid-row:auto;
-    }
-
-    .institution{
-        grid-column:1;
-
-        grid-row:auto;
-
-        margin-top:0;
+    .hero-description{
+        font-size:15px !important;
     }
 
 }
@@ -1244,6 +760,7 @@ h1{
 
 <!-- =====================================================
      HEADER
+     HOME / ABOUT / WRITING / CONTACT
 ===================================================== -->
 
 <header>
@@ -1255,20 +772,16 @@ h1{
 
     <nav>
 
+        <a href="index.html">
+            Home
+        </a>
+
         <a href="about.html">
             About
         </a>
 
-        <a href="research.html">
-            Research
-        </a>
-
         <a href="writing.html">
             Writing
-        </a>
-
-        <a href="cv.html">
-            CV
         </a>
 
         <a href="#contact" class="contact-btn">
