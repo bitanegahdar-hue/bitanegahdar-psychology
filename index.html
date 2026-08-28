@@ -45,7 +45,7 @@ a {
 ========================= */
 
 header {
-    height: 55px;
+    height: 62px;
     padding: 0 5vw;
 
     display: flex;
@@ -56,33 +56,48 @@ header {
 }
 
 .logo {
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 15px;
+    letter-spacing: 2.4px;
     font-weight: 600;
 }
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 28px;
 }
 
 .navigation a {
     font-size: 9px;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 
-    padding: 7px 13px;
+    transition: opacity .3s ease;
+}
 
-    border: 1px solid #aaa69e;
+.navigation a:hover {
+    opacity: .55;
+}
+
+
+/* CONTACT */
+
+.navigation .contact-button {
+    padding: 9px 17px;
+
+    border: 1px solid #52745b;
+
+    background: #52745b;
+
+    color: #ffffff;
 
     transition: all .3s ease;
 }
 
-.navigation a:hover {
-    background: #252422;
-    color: #f5f3ef;
-    border-color: #252422;
+.navigation .contact-button:hover {
+    background: transparent;
+    color: #52745b;
+    opacity: 1;
 }
 
 
@@ -97,6 +112,7 @@ header {
     margin: 15px auto 0;
 
     display: grid;
+
     grid-template-columns: 43% 57%;
 
     min-height: 575px;
@@ -104,27 +120,17 @@ header {
 
 
 /* =========================
-   HERO TEXT
+   LEFT SIDE
 ========================= */
 
 .hero-text {
     padding: 7% 9% 7% 4%;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
-}
-
-.hero-name {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(25px, 3vw, 40px);
-
-    font-weight: 400;
-
-    line-height: 1.15;
-
-    margin-bottom: 25px;
 }
 
 .hero-description {
@@ -141,7 +147,7 @@ header {
 
 
 /* =========================
-   RECTANGLE BUTTON
+   BUTTON
 ========================= */
 
 .outline-button {
@@ -162,7 +168,9 @@ header {
 
 .outline-button:hover {
     background: #252422;
+
     color: #f5f3ef;
+
     border-color: #252422;
 }
 
@@ -182,8 +190,8 @@ header {
     background:
         linear-gradient(
             135deg,
-            #272724,
-            #46443e
+            #292a27,
+            #4a4943
         );
 
     transition: transform 1s ease;
@@ -193,37 +201,9 @@ header {
     transform: scale(1.008);
 }
 
-.photo-placeholder {
-
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: rgba(255,255,255,.55);
-
-    font-size: 9px;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
-}
-
-.photo-placeholder span {
-
-    border: 1px solid rgba(255,255,255,.25);
-
-    padding: 12px 18px;
-}
-
 
 /* =========================
-   QUICK MENU
+   QUICK NAV
 ========================= */
 
 .quick-nav {
@@ -268,69 +248,6 @@ header {
 
 
 /* =========================
-   LATEST WRITING
-========================= */
-
-.latest {
-
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 75px auto;
-
-    display: grid;
-
-    grid-template-columns: 25% 75%;
-
-    border-top: 1px solid #d7d3cb;
-
-    padding-top: 35px;
-}
-
-.section-label {
-
-    font-size: 9px;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
-
-    color: #77736d;
-}
-
-.latest-content {
-
-    padding-left: 7%;
-}
-
-.latest-content h2 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(32px, 4vw, 52px);
-
-    font-weight: 400;
-
-    line-height: 1.15;
-
-    margin-bottom: 20px;
-}
-
-.latest-content p {
-
-    max-width: 620px;
-
-    color: #625e58;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-
-    margin-bottom: 22px;
-}
-
-
-/* =========================
    ABOUT
 ========================= */
 
@@ -348,6 +265,17 @@ header {
     display: grid;
 
     grid-template-columns: 25% 75%;
+}
+
+.section-label {
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #77736d;
 }
 
 .about-content {
@@ -370,6 +298,43 @@ header {
 
 
 /* =========================
+   RESEARCH
+========================= */
+
+.research {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 75px auto;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #d7d3cb;
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+}
+
+.research-content {
+
+    padding-left: 7%;
+
+    max-width: 700px;
+}
+
+.research-content p {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #625e58;
+}
+
+
+/* =========================
    CV
 ========================= */
 
@@ -384,11 +349,14 @@ header {
 
     border-top: 1px solid #d7d3cb;
 
-    display: flex;
+    display: grid;
 
-    justify-content: space-between;
+    grid-template-columns: 25% 75%;
+}
 
-    align-items: center;
+.cv-content {
+
+    padding-left: 7%;
 }
 
 
@@ -406,15 +374,60 @@ header {
     padding: 35px 0;
 
     border-top: 1px solid #d7d3cb;
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
 }
 
-.contact p {
+.social-links {
 
-    margin-top: 18px;
+    padding-left: 7%;
 
-    font-size: 14px;
+    display: flex;
 
-    color: #625e58;
+    align-items: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+.social-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+    color: #4f4b45;
+
+    transition: opacity .3s ease;
+}
+
+.social-link:hover {
+    opacity: .55;
+}
+
+.social-icon {
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
 }
 
 
@@ -454,19 +467,19 @@ footer {
 
         padding: 15px 6vw;
 
-        align-items: flex-start;
+        align-items: center;
 
     }
 
     .logo {
 
-        font-size: 10px;
+        font-size: 11px;
 
     }
 
     .navigation {
 
-        gap: 5px;
+        gap: 10px;
 
         justify-content: flex-end;
 
@@ -478,7 +491,11 @@ footer {
 
         font-size: 7px;
 
-        padding: 6px 8px;
+    }
+
+    .navigation .contact-button {
+
+        padding: 7px 10px;
 
     }
 
@@ -504,7 +521,7 @@ footer {
 
         order: 2;
 
-        padding: 50px 3%;
+        padding: 45px 3%;
 
     }
 
@@ -516,8 +533,10 @@ footer {
 
     }
 
-    .latest,
-    .about {
+    .about,
+    .research,
+    .cv,
+    .contact {
 
         width: 88%;
 
@@ -525,8 +544,10 @@ footer {
 
     }
 
-    .latest-content,
-    .about-content {
+    .about-content,
+    .research-content,
+    .cv-content,
+    .social-links {
 
         padding-left: 0;
 
@@ -534,17 +555,9 @@ footer {
 
     }
 
-    .cv {
+    .social-links {
 
-        width: 88%;
-
-        align-items: flex-start;
-
-    }
-
-    .contact {
-
-        width: 88%;
+        gap: 20px;
 
     }
 
@@ -593,7 +606,7 @@ footer {
             CV
         </a>
 
-        <a href="#contact">
+        <a href="#contact" class="contact-button">
             Contact
         </a>
 
@@ -609,13 +622,7 @@ footer {
 
 <section class="hero">
 
-
     <div class="hero-text">
-
-        <h1 class="hero-name">
-            Bita Negahdar
-        </h1>
-
 
         <p class="hero-description">
 
@@ -635,20 +642,12 @@ footer {
     </div>
 
 
-    <!-- PHOTO PLACEHOLDER -->
+    <!-- PHOTO AREA
+         YOUR PHOTO WILL GO HERE -->
 
     <div class="hero-photo">
 
-        <div class="photo-placeholder">
-
-            <span>
-                Your Photograph
-            </span>
-
-        </div>
-
     </div>
-
 
 </section>
 
@@ -681,41 +680,19 @@ footer {
 
 
 <!-- =========================
-     LATEST WRITING
+     WRITING
 ========================= -->
 
-<section class="latest" id="writing">
+<section id="writing" style="
+    width:90%;
+    max-width:1400px;
+    margin:75px auto;
+    padding-top:35px;
+    border-top:1px solid #d7d3cb;
+">
 
-    <div>
-
-        <div class="section-label">
-            Latest Writing
-        </div>
-
-    </div>
-
-
-    <div class="latest-content">
-
-        <h2>
-            Latest articles
-        </h2>
-
-
-        <p>
-
-            New psychological writings,
-            research-based reflections,
-            and observations on human behavior
-            will appear here.
-
-        </p>
-
-
-        <a href="#" class="outline-button">
-            View Writing
-        </a>
-
+    <div class="section-label">
+        Writing
     </div>
 
 </section>
@@ -767,7 +744,7 @@ footer {
      RESEARCH
 ========================= -->
 
-<section class="latest" id="research">
+<section class="research" id="research">
 
     <div>
 
@@ -778,20 +755,9 @@ footer {
     </div>
 
 
-    <div class="latest-content">
+    <div class="research-content">
 
-        <p>
-
-            Research interests, academic projects,
-            publications, and ongoing psychological
-            studies will be presented here.
-
-        </p>
-
-
-        <a href="#" class="outline-button">
-            View Research
-        </a>
+        <!-- Content will be added later -->
 
     </div>
 
@@ -808,15 +774,17 @@ footer {
     <div>
 
         <div class="section-label">
-            Curriculum Vitae
+            CV
         </div>
 
     </div>
 
 
-    <a href="#" class="outline-button">
-        View CV
-    </a>
+    <div class="cv-content">
+
+        <!-- CV content will be added later -->
+
+    </div>
 
 </section>
 
@@ -828,14 +796,71 @@ footer {
 
 <section class="contact" id="contact">
 
-    <div class="section-label">
-        Contact
+    <div>
+
+        <div class="section-label">
+            Contact
+        </div>
+
     </div>
 
 
-    <p>
-        Email: your-email@example.com
-    </p>
+    <div class="social-links">
+
+
+        <!-- INSTAGRAM -->
+
+        <a href="#" class="social-link">
+
+            <span class="social-icon">
+                ◎
+            </span>
+
+            Instagram
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a href="#" class="social-link">
+
+            <span class="social-icon">
+                in
+            </span>
+
+            LinkedIn
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a href="#" class="social-link">
+
+            <span class="social-icon">
+                ☎
+            </span>
+
+            Phone
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a href="#" class="social-link">
+
+            <span class="social-icon">
+                ✉
+            </span>
+
+            Email
+
+        </a>
+
+
+    </div>
 
 </section>
 
@@ -852,7 +877,7 @@ footer {
     </div>
 
     <div>
-        PSYCHOLOGY · RESEARCH · COUNSELING
+        Psychology
     </div>
 
 </footer>
