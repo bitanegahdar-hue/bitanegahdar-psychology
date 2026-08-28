@@ -5,7 +5,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bita Negahdar | CV</title>
@@ -27,7 +26,9 @@
 }
 
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .cv-eyebrow{
     font-size:9px;
@@ -54,7 +55,9 @@
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 .cv-section{
     border-top:1px solid #d7d3cb;
@@ -71,14 +74,22 @@
 }
 
 
-/* EDUCATION */
+/* =========================
+   EDUCATION
+========================= */
 
 .education-row{
     display:grid;
-    grid-template-columns:1fr 150px;
+
+    /* رشته سمت چپ / سال نزدیک‌تر در سمت راست */
+    grid-template-columns:1fr 90px;
+
     align-items:start;
-    gap:30px;
+
+    gap:20px;
+
     padding:22px 0;
+
     border-bottom:1px solid #d7d3cb;
 }
 
@@ -88,88 +99,111 @@
 
 .degree{
     font-family:Georgia,"Times New Roman",serif;
+
     font-size:20px;
+
     font-weight:400;
+
     line-height:1.4;
 }
 
 .institution{
     font-size:11px;
+
     color:#77736d;
+
     margin-top:6px;
+
     line-height:1.6;
 }
 
 .year{
     text-align:right;
+
     font-size:11px;
+
     color:#77736d;
+
     white-space:nowrap;
+
     padding-top:3px;
 }
 
 
-/* TRAINING */
+/* =========================
+   RELEVANT STUDIES & TRAINING
+========================= */
 
 .training{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:10px;
 }
 
 .training-item{
-display:flex;
-align-items:center;
-min-height:64px;
-padding:16px 20px;
-background:#353a35;
-color:#f5f3ef;
-font-size:13px;
-font-weight:500;
-line-height:1.5;
-letter-spacing:.1px;
-transition:.2s ease;
+    display:flex;
+
+    align-items:center;
+
+    min-height:64px;
+
+    padding:16px 20px;
+
+    background:#353a35;
+
+    color:#f5f3ef;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+    letter-spacing:.1px;
+
+    transition:.2s ease;
 }
-
-.training-item:hover
-
 
 .training-item:hover{
     background:#52745b;
 }
 
 
-/* RESEARCH */
-
-.cv-text{
-    max-width:760px;
-    font-size:14px;
-    line-height:2;
-    color:#625e58;
-}
-
-
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .cv-contact{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:20px;
 }
 
 .cv-contact-item{
     padding:18px;
+
     border:1px solid #d7d3cb;
+
     font-size:11px;
+
     color:#625e58;
 }
 
 .cv-contact-label{
     display:block;
+
     font-size:8px;
+
     letter-spacing:1.8px;
+
     text-transform:uppercase;
+
     color:#77736d;
+
     margin-bottom:8px;
 }
 
@@ -178,12 +212,15 @@ transition:.2s ease;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
     .cv-page{
         width:88%;
+
         margin:45px auto 70px;
     }
 
@@ -192,7 +229,8 @@ transition:.2s ease;
     }
 
     .education-row{
-        grid-template-columns:1fr 100px;
+        grid-template-columns:1fr 85px;
+
         gap:15px;
     }
 
@@ -256,7 +294,7 @@ transition:.2s ease;
 </header>
 
 <!-- =========================
-     CV
+     CV CONTENT
 ========================= -->
 
 <main class="cv-page">
@@ -273,8 +311,10 @@ transition:.2s ease;
 
 
 <p class="cv-intro">
+
     Psychology trainee developing a professional path in psychological
     research, counseling, and the study of human behavior.
+
 </p>
 
 
@@ -355,7 +395,7 @@ transition:.2s ease;
 
 
 <!-- =========================
-     RELEVANT STUDIES
+     RELEVANT STUDIES & TRAINING
 ========================= -->
 
 <section class="cv-section">
@@ -367,73 +407,33 @@ transition:.2s ease;
 
     <div class="training">
 
+
         <div class="training-item">
             Schema Therapy
         </div>
+
 
         <div class="training-item">
             Cognitive Behavioral Therapy (CBT)
         </div>
 
+
         <div class="training-item">
             QEEG Brain Mapping Workshop
         </div>
+
 
         <div class="training-item">
             Acceptance and Commitment Therapy (ACT)
         </div>
 
+
         <div class="training-item">
             Suicide Crisis Management
         </div>
 
+
     </div>
-
-</section>
-
-
-
-<!-- =========================
-     RESEARCH INTERESTS
-========================= -->
-
-<section class="cv-section">
-
-    <h2 class="cv-section-title">
-        Research Interests
-    </h2>
-
-
-    <p class="cv-text">
-
-        Human behavior, identity and self-concept, psychological adjustment,
-        body image, emotional processes, and the relationship between
-        individual experience and social context.
-
-    </p>
-
-</section>
-
-
-
-<!-- =========================
-     PROFESSIONAL FOCUS
-========================= -->
-
-<section class="cv-section">
-
-    <h2 class="cv-section-title">
-        Professional Focus
-    </h2>
-
-
-    <p class="cv-text">
-
-        Developing professional experience in psychological research,
-        counseling, and human behavior with an emphasis on evidence-based
-        approaches and interdisciplinary perspectives.
-
-    </p>
 
 </section>
 
@@ -473,7 +473,10 @@ transition:.2s ease;
                 LinkedIn
             </span>
 
-            <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank">
+            <a
+                href="https://www.linkedin.com/in/bita-negahdar/"
+                target="_blank"
+            >
                 bita-negahdar
             </a>
 
