@@ -63,6 +63,7 @@ header {
     justify-content: space-between;
 
     background: #f5f3ef;
+
 }
 
 
@@ -120,7 +121,7 @@ header {
 
     background: #52745b;
 
-    color: white;
+    color: #ffffff;
 
     transition: all .3s ease;
 
@@ -247,13 +248,6 @@ header {
 }
 
 
-/*
-   PHOTO PLACEHOLDER
-
-   Your photo will be inserted here later.
-*/
-
-
 /* =========================
    LATEST WRITING
 ========================= */
@@ -376,6 +370,8 @@ header {
 
     border-top: 1px solid #d7d3cb;
 
+    text-align: center;
+
 }
 
 
@@ -389,7 +385,7 @@ header {
 
     color: #77736d;
 
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 
 }
 
@@ -404,9 +400,9 @@ header {
 
     align-items: center;
 
-    justify-content: flex-start;
+    justify-content: center;
 
-    gap: 45px;
+    gap: 55px;
 
     flex-wrap: wrap;
 
@@ -417,11 +413,17 @@ header {
 
     display: flex;
 
+    flex-direction: column;
+
     align-items: center;
 
-    gap: 12px;
+    justify-content: center;
 
-    font-size: 10px;
+    gap: 9px;
+
+    min-width: 80px;
+
+    font-size: 9px;
 
     letter-spacing: 1.2px;
 
@@ -442,7 +444,7 @@ header {
 
 
 /* =========================
-   LARGE FOOTER ICONS
+   REAL SVG ICONS
 ========================= */
 
 .social-icon {
@@ -457,9 +459,41 @@ header {
 
     justify-content: center;
 
-    font-size: 38px;
+}
 
-    font-weight: 300;
+
+.social-icon svg {
+
+    width: 42px;
+
+    height: 42px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+/* LinkedIn needs filled letters */
+
+.linkedin-icon text {
+
+    fill: currentColor;
+
+    stroke: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 600;
 
 }
 
@@ -599,18 +633,25 @@ footer {
 
     .social-links {
 
-        gap: 25px;
+        gap: 30px;
 
     }
 
 
     .social-icon {
 
-        width: 42px;
+        width: 45px;
 
-        height: 42px;
+        height: 45px;
 
-        font-size: 32px;
+    }
+
+
+    .social-icon svg {
+
+        width: 39px;
+
+        height: 39px;
 
     }
 
@@ -622,6 +663,8 @@ footer {
         flex-direction: column;
 
         gap: 10px;
+
+        text-align: center;
 
     }
 
@@ -701,8 +744,6 @@ footer {
 <section class="hero">
 
 
-    <!-- LEFT -->
-
     <div class="hero-text">
 
 
@@ -726,8 +767,6 @@ footer {
     </div>
 
 
-
-    <!-- RIGHT : PHOTO -->
 
     <div class="hero-photo">
 
@@ -759,13 +798,11 @@ footer {
 
         <a href="writing.html" class="writing-card">
 
-
             <h3>
 
                 New Writing
 
             </h3>
-
 
             <p>
 
@@ -774,13 +811,11 @@ footer {
 
             </p>
 
-
         </a>
 
 
 
         <a href="writing.html" class="writing-card">
-
 
             <h3>
 
@@ -788,13 +823,11 @@ footer {
 
             </h3>
 
-
             <p>
 
                 New content will appear here.
 
             </p>
-
 
         </a>
 
@@ -802,13 +835,11 @@ footer {
 
         <a href="writing.html" class="writing-card">
 
-
             <h3>
 
                 More
 
             </h3>
-
 
             <p>
 
@@ -816,7 +847,6 @@ footer {
                 of writings.
 
             </p>
-
 
         </a>
 
@@ -849,11 +879,21 @@ footer {
 
         <a href="#" class="social-link">
 
+
             <span class="social-icon">
 
-                ◎
+                <svg viewBox="0 0 24 24">
+
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                    <circle cx="12" cy="12" r="4"></circle>
+
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+
+                </svg>
 
             </span>
+
 
             Instagram
 
@@ -865,11 +905,30 @@ footer {
 
         <a href="#" class="social-link">
 
-            <span class="social-icon">
 
-                in
+            <span class="social-icon linkedin-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        fill="none">
+                    </rect>
+
+                    <text
+                        x="6"
+                        y="17">
+                        in
+                    </text>
+
+                </svg>
 
             </span>
+
 
             LinkedIn
 
@@ -881,11 +940,33 @@ footer {
 
         <a href="#" class="social-link">
 
+
             <span class="social-icon">
 
-                ☎
+                <svg viewBox="0 0 24 24">
+
+                    <path d="
+                        M7.5 3.5
+                        C6.4 3.5 5.5 4.4 5.5 5.5
+                        C5.5 13.2 10.8 18.5 18.5 18.5
+                        C19.6 18.5 20.5 17.6 20.5 16.5
+                        V14.8
+                        C20.5 14.2 20.1 13.7 19.5 13.5
+                        L16.6 12.5
+                        C16.1 12.3 15.5 12.5 15.2 13
+                        L14.2 14.2
+                        C12.4 13.3 10.7 11.6 9.8 9.8
+                        L11 8.8
+                        C11.5 8.5 11.7 7.9 11.5 7.4
+                        L10.5 4.5
+                        C10.3 3.9 9.8 3.5 9.2 3.5
+                        Z">
+                    </path>
+
+                </svg>
 
             </span>
+
 
             Phone
 
@@ -897,11 +978,25 @@ footer {
 
         <a href="#" class="social-link">
 
+
             <span class="social-icon">
 
-                ✉
+                <svg viewBox="0 0 24 24">
+
+                    <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2">
+                    </rect>
+
+                    <path d="M4 7l8 6 8-6"></path>
+
+                </svg>
 
             </span>
+
 
             Email
 
