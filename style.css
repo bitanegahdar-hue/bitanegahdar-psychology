@@ -1,3 +1,4 @@
+```css
 /* =====================================================
    GLOBAL RESET
 ===================================================== */
@@ -14,9 +15,10 @@ html{
 
 body{
     background:#FFFFFF;
-    color:#252525;
+    color:#202321;
     font-family:"DM Sans", Arial, sans-serif;
     font-weight:400;
+    -webkit-font-smoothing:antialiased;
 }
 
 a{
@@ -30,26 +32,27 @@ a{
 ===================================================== */
 
 :root{
+
     --white:#FFFFFF;
 
     /* very light green */
-    --green-light:#E8F3EE;
+    --green-light:#EAF5F0;
 
-    /* soft green */
-    --green:#D7E9E1;
+    /* light fresh green */
+    --green:#D2EBDD;
 
-    /* dark green */
-    --green-dark:#315F59;
+    /* green text */
+    --green-dark:#286B5C;
 
-    /* blue hover */
+    /* BLUE FROM PALETTE / HOVER */
     --blue:#315F91;
 
-    /* soft border */
-    --border:#D9E3DE;
+    /* very soft border */
+    --border:#DCE7E2;
 
-    --text:#252525;
+    --text:#202321;
 
-    --muted:#6D706D;
+    --muted:#69706C;
 }
 
 
@@ -59,7 +62,7 @@ a{
 
 header{
     width:100%;
-    min-height:72px;
+    min-height:78px;
 
     padding:0 4vw;
 
@@ -78,7 +81,7 @@ header{
     font-size:20px;
     font-weight:700;
 
-    letter-spacing:2.4px;
+    letter-spacing:2.5px;
 
     color:var(--text);
 }
@@ -87,7 +90,7 @@ nav{
     display:flex;
     align-items:center;
 
-    gap:28px;
+    gap:24px;
 }
 
 nav a{
@@ -95,28 +98,31 @@ nav a{
     align-items:center;
     justify-content:center;
 
-    min-height:34px;
+    min-height:38px;
 
-    padding:5px 8px;
+    padding:7px 10px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:11px;
-    font-weight:600;
+    font-size:12px;
+    font-weight:700;
 
-    letter-spacing:1.5px;
+    letter-spacing:1.4px;
 
     text-transform:uppercase;
 
     color:var(--text);
 
     transition:
-        background-color .25s ease,
-        color .25s ease;
+        background-color .22s ease,
+        color .22s ease;
 }
 
 
-/* BLUE + WHITE HOVER */
+/* =====================================================
+   MENU HOVER
+   BLUE BACKGROUND + WHITE TEXT
+===================================================== */
 
 nav a:hover{
     background:var(--blue);
@@ -124,12 +130,14 @@ nav a:hover{
 }
 
 
-/* CONTACT */
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
 
 .contact-btn{
-    padding:9px 16px;
+    padding:10px 18px;
 
-    background:var(--green);
+    background:var(--green-light);
 
     color:var(--green-dark) !important;
 
@@ -153,22 +161,25 @@ nav a:hover{
     width:94%;
     max-width:1500px;
 
-    margin:18px auto 0;
+    margin:20px auto 0;
 
     display:grid;
 
+    /* TEXT LEFT / PHOTO RIGHT */
     grid-template-columns:44% 56%;
 
-    min-height:560px;
+    min-height:590px;
 }
 
 
-/* LEFT TEXT PANEL */
+/* =====================================================
+   LEFT TEXT PANEL
+===================================================== */
 
 .hero-text{
     grid-column:1;
 
-    padding:8% 11% 8% 7%;
+    padding:9% 12% 9% 8%;
 
     display:flex;
     flex-direction:column;
@@ -183,11 +194,11 @@ nav a:hover{
 .hero-description{
     max-width:500px;
 
-    margin-bottom:30px;
+    margin-bottom:32px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:17px;
+    font-size:18px;
 
     font-weight:500;
 
@@ -197,12 +208,14 @@ nav a:hover{
 }
 
 
-/* ABOUT BUTTON */
+/* =====================================================
+   ABOUT BUTTON
+===================================================== */
 
 .outline-btn{
     display:inline-block;
 
-    padding:11px 20px;
+    padding:12px 21px;
 
     border:1px solid var(--green-dark);
 
@@ -214,16 +227,16 @@ nav a:hover{
 
     font-size:10px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:1.7px;
 
     text-transform:uppercase;
 
     transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
+        background-color .22s ease,
+        color .22s ease,
+        border-color .22s ease;
 }
 
 .outline-btn:hover{
@@ -235,16 +248,18 @@ nav a:hover{
 }
 
 
-/* RIGHT PHOTO */
+/* =====================================================
+   RIGHT PHOTO
+===================================================== */
 
 .hero-photo{
     grid-column:2;
 
-    min-height:560px;
+    min-height:590px;
 
     overflow:hidden;
 
-    background:#E8E8E8;
+    background:#F1F3F2;
 }
 
 .hero-photo img{
@@ -265,23 +280,23 @@ nav a:hover{
     width:94%;
     max-width:1500px;
 
-    margin:55px auto 0;
+    margin:65px auto 0;
 
-    padding-top:28px;
+    padding-top:30px;
 
     border-top:1px solid var(--border);
 }
 
 .section-title{
-    margin-bottom:24px;
+    margin-bottom:26px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:12px;
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:2.2px;
+    letter-spacing:2.4px;
 
     text-transform:uppercase;
 
@@ -293,8 +308,13 @@ nav a:hover{
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:18px;
+    gap:20px;
 }
+
+
+/* =====================================================
+   WRITING CARD
+===================================================== */
 
 .card{
     display:block;
@@ -313,7 +333,7 @@ nav a:hover{
 
     position:relative;
 
-    background:#E8F3EE;
+    background:var(--green-light);
 }
 
 .cover img{
@@ -344,9 +364,9 @@ nav a:hover{
     width:94%;
     max-width:1500px;
 
-    margin:55px auto 0;
+    margin:65px auto 0;
 
-    padding:35px 0;
+    padding:38px 0;
 
     border-top:1px solid var(--border);
 
@@ -354,7 +374,7 @@ nav a:hover{
 }
 
 .contact-section .section-title{
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 .social-links{
@@ -382,20 +402,23 @@ nav a:hover{
 
     font-size:10px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:1.3px;
 
     text-transform:uppercase;
 
-    color:#4F514B;
+    color:#4F5652;
 
     transition:
-        color .25s ease;
+        color .22s ease,
+        transform .22s ease;
 }
 
 .social-link:hover{
     color:var(--blue);
+
+    transform:translateY(-2px);
 }
 
 .social-icon{
@@ -440,7 +463,7 @@ nav a:hover{
 footer{
     margin-top:55px;
 
-    padding:24px 4vw;
+    padding:25px 4vw;
 
     border-top:1px solid var(--border);
 
@@ -452,7 +475,7 @@ footer{
 
     font-size:9px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:1.8px;
 
@@ -471,7 +494,7 @@ footer{
 
     max-width:1250px;
 
-    margin:55px auto;
+    margin:60px auto;
 }
 
 .eyebrow{
@@ -479,11 +502,11 @@ footer{
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:11px;
+    font-size:12px;
 
     font-weight:700;
 
-    letter-spacing:2px;
+    letter-spacing:2.2px;
 
     text-transform:uppercase;
 
@@ -495,27 +518,27 @@ h1{
 
     font-weight:700;
 
-    font-size:52px;
+    font-size:56px;
 
-    line-height:1.15;
+    line-height:1.12;
 
     color:var(--text);
 }
 
 .intro{
-    max-width:760px;
+    max-width:780px;
 
-    margin:28px 0 60px;
+    margin:30px 0 65px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:16px;
+    font-size:17px;
 
     font-weight:400;
 
-    line-height:2;
+    line-height:1.95;
 
-    color:#5F625F;
+    color:#565D59;
 }
 
 
@@ -524,20 +547,20 @@ h1{
 ===================================================== */
 
 .block{
-    padding:30px 0;
+    padding:34px 0;
 
     border-top:1px solid var(--border);
 }
 
 .block h2,
 .section-label{
-    margin-bottom:22px;
+    margin-bottom:24px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:14px;
+    font-size:15px;
 
-    font-weight:700;
+    font-weight:800;
 
     letter-spacing:1.8px;
 
@@ -547,15 +570,15 @@ h1{
 }
 
 .block p{
-    max-width:760px;
+    max-width:780px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:14px;
+    font-size:15px;
 
     line-height:2;
 
-    color:#5F625F;
+    color:#565D59;
 }
 
 
@@ -582,11 +605,13 @@ h1{
 
     transition:
         background-color .25s ease,
-        color .25s ease;
+        border-color .25s ease;
 }
 
 .education-item:hover{
     background:var(--green-light);
+
+    border-color:var(--green);
 }
 
 .education-item h3{
@@ -628,7 +653,9 @@ h1{
 .training span{
     aspect-ratio:1 / 1;
 
-    padding:25px;
+    min-height:180px;
+
+    padding:26px;
 
     display:flex;
 
@@ -642,25 +669,28 @@ h1{
 
     color:var(--green-dark);
 
-    border:1px solid var(--border);
+    border:1px solid var(--green);
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:16px;
+    font-size:17px;
 
-    font-weight:700;
+    font-weight:800;
 
-    line-height:1.5;
+    line-height:1.45;
 
     transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease;
+        background-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        border-color .25s ease;
 }
 
 
-/* BLUE + WHITE HOVER */
+/* =====================================================
+   TRAINING HOVER
+   BLUE + WHITE
+===================================================== */
 
 .training span:hover{
     background:var(--blue);
@@ -669,7 +699,7 @@ h1{
 
     color:#FFFFFF;
 
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
 
@@ -680,19 +710,21 @@ h1{
 .education-row{
     display:grid;
 
-    grid-template-columns:1fr 160px;
+    grid-template-columns:minmax(0,1fr) 125px;
 
     align-items:start;
 
-    gap:25px;
+    gap:18px;
 
-    padding:18px 0;
+    padding:20px 0;
 
     border-bottom:1px solid var(--border);
 }
 
 
-/* DEGREE LEFT */
+/* =====================================================
+   DEGREE LEFT
+===================================================== */
 
 .degree{
     grid-column:1;
@@ -701,24 +733,26 @@ h1{
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:20px;
+    font-size:21px;
 
     font-weight:700;
 
-    line-height:1.4;
+    line-height:1.35;
 
     color:var(--text);
 }
 
 
-/* INSTITUTION LEFT UNDER DEGREE */
+/* =====================================================
+   INSTITUTION
+===================================================== */
 
 .institution{
     grid-column:1;
 
     grid-row:2;
 
-    margin-top:-12px;
+    margin-top:-8px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
@@ -730,12 +764,16 @@ h1{
 }
 
 
-/* YEAR RIGHT */
+/* =====================================================
+   YEAR RIGHT
+===================================================== */
 
 .year{
     grid-column:2;
 
     grid-row:1 / span 2;
+
+    align-self:start;
 
     text-align:right;
 
@@ -743,11 +781,13 @@ h1{
 
     font-size:12px;
 
-    font-weight:600;
+    font-weight:700;
 
     color:var(--green-dark);
 
     white-space:nowrap;
+
+    padding-top:3px;
 }
 
 
@@ -756,17 +796,17 @@ h1{
 ===================================================== */
 
 .topic{
-    padding:30px 0;
+    padding:32px 0;
 
     border-top:1px solid var(--border);
 }
 
 .topic h2{
-    margin-bottom:12px;
+    margin-bottom:14px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:25px;
+    font-size:27px;
 
     font-weight:700;
 
@@ -774,15 +814,15 @@ h1{
 }
 
 .topic p{
-    max-width:700px;
+    max-width:720px;
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:14px;
+    font-size:15px;
 
-    line-height:1.9;
+    line-height:1.95;
 
-    color:#5F625F;
+    color:#565D59;
 }
 
 
@@ -795,7 +835,7 @@ h1{
 
     max-width:900px;
 
-    margin:65px auto;
+    margin:70px auto;
 }
 
 .article h1{
@@ -811,9 +851,9 @@ h1{
 
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:9px;
+    font-size:10px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:2px;
 
@@ -825,13 +865,13 @@ h1{
 .article-text{
     font-family:"DM Sans", Arial, sans-serif;
 
-    font-size:15px;
+    font-size:16px;
 
     font-weight:400;
 
     line-height:2;
 
-    color:#555955;
+    color:#555C58;
 }
 
 .article-text p{
@@ -862,7 +902,7 @@ h1{
 
     display:block;
 
-    background:#E8F3EE;
+    background:var(--green-light);
 }
 
 
@@ -875,7 +915,7 @@ h1{
 
     margin-top:35px;
 
-    padding:10px 16px;
+    padding:11px 17px;
 
     border:1px solid var(--green-dark);
 
@@ -885,15 +925,16 @@ h1{
 
     font-size:10px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:1.5px;
 
     text-transform:uppercase;
 
     transition:
-        background-color .25s ease,
-        color .25s ease;
+        background-color .22s ease,
+        color .22s ease,
+        border-color .22s ease;
 }
 
 .back:hover{
@@ -926,7 +967,7 @@ h1{
     }
 
     nav{
-        gap:6px;
+        gap:5px;
 
         flex-wrap:wrap;
 
@@ -936,7 +977,7 @@ h1{
     nav a{
         min-height:30px;
 
-        padding:4px 6px;
+        padding:5px 7px;
 
         font-size:8px;
 
@@ -948,7 +989,9 @@ h1{
     }
 
 
-    /* HERO */
+    /* =================================================
+       HERO
+    ================================================= */
 
     .hero{
         width:92%;
@@ -979,7 +1022,9 @@ h1{
     }
 
 
-    /* WRITING */
+    /* =================================================
+       WRITING
+    ================================================= */
 
     .latest{
         width:92%;
@@ -988,24 +1033,32 @@ h1{
     .grid{
         grid-template-columns:1fr;
 
-        gap:18px;
+        gap:20px;
     }
 
 
-    /* GENERAL */
+    /* =================================================
+       GENERAL
+    ================================================= */
 
     .page{
         width:90%;
 
-        margin:45px auto;
+        margin:48px auto;
     }
 
     h1{
-        font-size:40px;
+        font-size:42px;
+    }
+
+    .intro{
+        font-size:15px;
     }
 
 
-    /* TRAINING */
+    /* =================================================
+       TRAINING
+    ================================================= */
 
     .training{
         grid-template-columns:repeat(2,1fr);
@@ -1014,22 +1067,28 @@ h1{
     }
 
     .training span{
+        min-height:0;
+
         padding:18px;
 
         font-size:14px;
     }
 
 
-    /* EDUCATION */
+    /* =================================================
+       EDUCATION
+    ================================================= */
 
     .education-row{
-        grid-template-columns:1fr 100px;
+        grid-template-columns:minmax(0,1fr) 100px;
 
-        gap:15px;
+        gap:12px;
+
+        padding:18px 0;
     }
 
     .degree{
-        font-size:17px;
+        font-size:18px;
     }
 
     .institution{
@@ -1041,7 +1100,9 @@ h1{
     }
 
 
-    /* GALLERY */
+    /* =================================================
+       GALLERY
+    ================================================= */
 
     .gallery{
         grid-template-columns:1fr;
@@ -1050,11 +1111,13 @@ h1{
     .article{
         width:90%;
 
-        margin:45px auto;
+        margin:48px auto;
     }
 
 
-    /* CONTACT */
+    /* =================================================
+       CONTACT
+    ================================================= */
 
     .contact-section{
         width:92%;
@@ -1065,7 +1128,9 @@ h1{
     }
 
 
-    /* FOOTER */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     footer{
         flex-direction:column;
@@ -1123,3 +1188,4 @@ h1{
     }
 
 }
+```
