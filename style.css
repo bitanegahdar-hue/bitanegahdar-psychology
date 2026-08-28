@@ -1,133 +1,101 @@
-/* =====================================================
-   GLOBAL RESET
-===================================================== */
+<!DOCTYPE html>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<html lang="en">
 
-html{
-    scroll-behavior:smooth;
-}
+<head>
 
-body{
-    margin:0;
-    padding:0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    background:#FFFFFF;
-    color:#252525;
+<title>About | Bita Negahdar</title>
 
-    font-family:"DM Sans", Arial, sans-serif;
-    font-weight:400;
-}
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+<link rel="stylesheet" href="style.css">
 
+<style>
 
 /* =====================================================
-   COLOR SYSTEM
+   ABOUT PAGE — FINAL
 ===================================================== */
 
 :root{
-
-    --white:#FFFFFF;
-
-    --cyan-pale:#CFFAFE;
-
     --cyan:#0891B2;
-
     --cyan-hover:#06B6D4;
-
-    --text:#252525;
-
-    --muted:#626A6D;
-
-    --border:#D9E5E8;
+    --cyan-pale:#CFFAFE;
 }
 
 
 /* =====================================================
    HEADER
+   SAME MENU ON EVERY PAGE
+   Home / About / Writing / Contact
 ===================================================== */
 
 header{
-    width:100%;
-    min-height:76px;
+    width:100% !important;
+    min-height:76px !important;
+    height:76px !important;
 
-    padding:0 4vw;
+    padding:0 4vw !important;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
 
-    background:#FFFFFF;
-
-    border-bottom:1px solid var(--border);
+    background:#FFFFFF !important;
 }
 
 .logo{
-    flex-shrink:0;
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    letter-spacing:2.4px !important;
 
-    font-family:"DM Sans", Arial, sans-serif;
+    color:#252525 !important;
 
-    font-size:20px;
-    font-weight:700;
-
-    letter-spacing:2.4px;
-
-    color:var(--text);
-
-    white-space:nowrap;
+    white-space:nowrap !important;
 }
 
 nav{
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
 
-    gap:24px;
+    gap:24px !important;
 
-    flex-shrink:0;
-
-    white-space:nowrap;
+    flex-shrink:0 !important;
 }
 
 nav a{
-    display:inline-flex;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
 
-    align-items:center;
-    justify-content:center;
+    min-height:38px !important;
+    height:38px !important;
 
-    min-height:38px;
+    padding:7px 11px !important;
 
-    padding:7px 11px;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-family:"DM Sans", Arial, sans-serif;
+    font-size:12px !important;
+    font-weight:600 !important;
 
-    font-size:12px;
-    font-weight:600;
+    letter-spacing:1.4px !important;
 
-    letter-spacing:1.4px;
+    text-transform:uppercase !important;
 
-    line-height:1;
+    color:#252525 !important;
 
-    text-transform:uppercase;
+    border:1px solid transparent !important;
 
-    color:var(--text);
-
-    background:transparent;
-
-    border:1px solid transparent;
+    white-space:nowrap !important;
 
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease;
+        border-color .25s ease !important;
 }
 
 
@@ -136,645 +104,11 @@ nav a{
 ===================================================== */
 
 nav a:hover{
-    background:var(--cyan-hover);
+    background:#06B6D4 !important;
 
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-}
-
-
-/* =====================================================
-   CONTACT BUTTON
-===================================================== */
-
-.contact-btn{
-    padding:9px 17px;
-
-    background:var(--cyan-pale);
-
-    border-color:var(--cyan-pale);
-
-    color:var(--cyan) !important;
-}
-
-.contact-btn:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
+    border-color:#06B6D4 !important;
 
     color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   HOME HERO
-===================================================== */
-
-.hero{
-    width:94%;
-    max-width:1500px;
-
-    margin:18px auto 0;
-
-    display:grid;
-
-    grid-template-columns:44% 56%;
-
-    min-height:560px;
-}
-
-
-/* =====================================================
-   HERO TEXT
-===================================================== */
-
-.hero-text{
-    grid-column:1;
-
-    padding:8% 11% 8% 7%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    background:var(--cyan-pale);
-
-    color:var(--cyan);
-}
-
-.hero-description{
-    max-width:500px;
-
-    margin:0 0 30px 0;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:17px;
-
-    font-weight:500;
-
-    line-height:1.85;
-
-    color:var(--cyan);
-}
-
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
-
-.outline-btn{
-    display:inline-block;
-
-    padding:11px 20px;
-
-    border:1px solid var(--cyan);
-
-    background:transparent;
-
-    color:var(--cyan);
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:10px;
-
-    font-weight:700;
-
-    letter-spacing:1.7px;
-
-    text-transform:uppercase;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.outline-btn:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-}
-
-
-/* =====================================================
-   HERO PHOTO
-===================================================== */
-
-.hero-photo{
-    grid-column:2;
-
-    min-height:560px;
-
-    overflow:hidden;
-
-    background:#EEEEEE;
-}
-
-.hero-photo img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-}
-
-
-/* =====================================================
-   LATEST WRITING
-===================================================== */
-
-.latest{
-    width:94%;
-    max-width:1500px;
-
-    margin:55px auto 0;
-
-    padding-top:28px;
-
-    border-top:1px solid var(--border);
-}
-
-.section-title{
-    margin-bottom:24px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:2.2px;
-
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-
-/* =====================================================
-   WRITING GRID
-===================================================== */
-
-.grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-
-    width:100%;
-}
-
-
-/* =====================================================
-   WRITING CARD
-===================================================== */
-
-.card{
-    display:block;
-
-    width:100%;
-
-    background:#FFFFFF;
-
-    overflow:hidden;
-
-    transition:transform .25s ease;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-}
-
-
-/* =====================================================
-   WRITING COVER
-===================================================== */
-
-.cover{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    overflow:hidden;
-
-    position:relative;
-
-    background:#EEEEEE;
-
-    border:1px solid var(--border);
-}
-
-.cover img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:
-        transform .45s ease,
-        filter .3s ease;
-}
-
-.card:hover .cover img{
-    transform:scale(1.025);
-
-    filter:saturate(1.08);
-}
-
-
-/* =====================================================
-   HIDE WRITING TEXT UNDER COVERS
-===================================================== */
-
-.card-info,
-.card-number,
-.card-title{
-    display:none !important;
-}
-
-
-/* =====================================================
-   GENERAL PAGE
-   USED BY ABOUT / WRITING
-===================================================== */
-
-.page{
-    width:92%;
-    max-width:1250px;
-
-    margin:55px auto;
-}
-
-.eyebrow{
-    margin-bottom:18px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:11px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-h1{
-    margin:0;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.15;
-
-    color:var(--text);
-}
-
-.intro{
-    max-width:760px;
-
-    margin:28px 0 60px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   GENERAL BLOCKS
-   USED BY ABOUT
-===================================================== */
-
-.block{
-    padding:30px 0;
-
-    border-top:1px solid var(--border);
-}
-
-.block h2,
-.section-label{
-    margin-bottom:22px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:1.8px;
-
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-.block p{
-    max-width:760px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:14px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   EDUCATION
-   USED BY ABOUT
-===================================================== */
-
-.education{
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:0;
-}
-
-.education-item{
-    min-height:auto;
-
-    padding:22px 24px;
-
-    border:1px solid var(--border);
-
-    background:#FFFFFF;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.education-item:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-}
-
-.education-item:hover h3,
-.education-item:hover p{
-    color:#FFFFFF;
-}
-
-.education-item h3{
-    margin-bottom:8px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-    color:var(--text);
-}
-
-.education-item p{
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:12px;
-
-    font-weight:400;
-
-    line-height:1.7;
-
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   RELEVANT STUDIES & TRAINING
-   USED BY ABOUT
-===================================================== */
-
-.training{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-
-    width:100%;
-}
-
-.training span{
-    width:100%;
-
-    aspect-ratio:1 / 1;
-
-    min-height:0;
-
-    padding:25px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    background:var(--cyan-pale);
-
-    color:var(--cyan);
-
-    border:1px solid var(--border);
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    line-height:1.5;
-
-    cursor:pointer;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease;
-}
-
-.training span:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
-
-    transform:translateY(-4px);
-}
-
-
-/* =====================================================
-   ARTICLES / WRITING
-===================================================== */
-
-.article{
-    width:82%;
-    max-width:900px;
-
-    margin:65px auto;
-}
-
-.article h1{
-    margin-bottom:45px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.15;
-
-    color:var(--text);
-}
-
-.meta{
-    margin-bottom:18px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:9px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-    color:var(--cyan);
-}
-
-.article-text{
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:15px;
-
-    font-weight:400;
-
-    line-height:2;
-
-    color:#555D5F;
-}
-
-.article-text p{
-    margin:0 0 30px;
-}
-
-
-/* =====================================================
-   WRITING GALLERY
-===================================================== */
-
-.gallery{
-    margin-top:55px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,minmax(0,1fr));
-
-    gap:18px;
-}
-
-.gallery img{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    object-fit:cover;
-
-    display:block;
-
-    background:#EEEEEE;
-}
-
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-.back{
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:10px 16px;
-
-    border:1px solid var(--cyan);
-
-    background:#FFFFFF;
-
-    color:var(--cyan);
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:10px;
-
-    font-weight:600;
-
-    letter-spacing:1.5px;
-
-    line-height:1;
-
-    text-transform:uppercase;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-.back:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
 }
 
 
@@ -782,108 +116,255 @@ h1{
    CONTACT
 ===================================================== */
 
-.contact-section{
-    width:94%;
-    max-width:1500px;
+.contact-btn{
+    padding:9px 17px !important;
 
-    margin:55px auto 0;
+    background:#CFFAFE !important;
 
-    padding:35px 0;
+    border:1px solid #CFFAFE !important;
 
-    border-top:1px solid var(--border);
-
-    text-align:center;
+    color:#0891B2 !important;
 }
 
-.contact-section .section-title{
-    margin-bottom:28px;
-}
+.contact-btn:hover{
+    background:#06B6D4 !important;
 
-.social-links{
-    display:flex;
+    border-color:#06B6D4 !important;
 
-    justify-content:center;
-
-    align-items:center;
-
-    gap:60px;
-
-    flex-wrap:wrap;
-}
-
-.social-link{
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:9px;
-
-    padding:8px 12px;
-
-    font-family:"DM Sans", Arial, sans-serif;
-
-    font-size:10px;
-
-    font-weight:600;
-
-    letter-spacing:1.3px;
-
-    line-height:1.3;
-
-    text-transform:uppercase;
-
-    color:#4F5557;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease;
-}
-
-.social-link:hover{
-    background:var(--cyan-hover);
-
-    color:#FFFFFF;
+    color:#FFFFFF !important;
 }
 
 
 /* =====================================================
-   SOCIAL ICONS
+   GENERAL ABOUT PAGE
 ===================================================== */
 
-.social-icon{
-    width:48px;
-    height:48px;
+.page{
+    width:92% !important;
 
-    display:block;
+    max-width:1250px !important;
+
+    margin:55px auto !important;
 }
 
-.social-icon svg{
-    width:100%;
-    height:100%;
+.eyebrow{
+    margin-bottom:18px !important;
 
-    fill:none;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    stroke:currentColor;
+    font-size:11px !important;
+    font-weight:700 !important;
 
-    stroke-width:1.6;
+    letter-spacing:2px !important;
 
-    stroke-linecap:round;
+    text-transform:uppercase !important;
 
-    stroke-linejoin:round;
+    color:#0891B2 !important;
 }
 
-.linkedin-fill{
-    fill:currentColor;
+h1{
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    stroke:none;
+    font-size:52px !important;
+
+    font-weight:700 !important;
+
+    line-height:1.15 !important;
+
+    color:#252525 !important;
 }
 
-.linkedin-white{
-    fill:#FFFFFF;
+.intro{
+    max-width:760px !important;
 
-    stroke:none;
+    margin:28px 0 60px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:16px !important;
+
+    font-weight:400 !important;
+
+    line-height:2 !important;
+
+    color:#5F6668 !important;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.block{
+    padding:30px 0 !important;
+
+    border-top:1px solid #D9E5E8 !important;
+}
+
+.block h2,
+.section-label{
+    margin-bottom:22px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:15px !important;
+
+    font-weight:700 !important;
+
+    letter-spacing:1.8px !important;
+
+    text-transform:uppercase !important;
+
+    color:#0891B2 !important;
+}
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
+
+.education{
+    display:grid !important;
+
+    grid-template-columns:1fr !important;
+
+    gap:14px !important;
+
+    width:100% !important;
+}
+
+.education-item{
+    width:100% !important;
+
+    min-height:130px !important;
+
+    padding:25px 28px !important;
+
+    border:1px solid #D9E5E8 !important;
+
+    background:#CFFAFE !important;
+
+    color:#0891B2 !important;
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    justify-content:center !important;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease !important;
+}
+
+.education-item:hover{
+    background:#06B6D4 !important;
+
+    border-color:#06B6D4 !important;
+
+    color:#FFFFFF !important;
+
+    transform:translateY(-4px) !important;
+
+    cursor:pointer !important;
+}
+
+.education-item:hover h3,
+.education-item:hover p{
+    color:#FFFFFF !important;
+}
+
+.education-item h3{
+    margin-bottom:8px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:20px !important;
+
+    font-weight:700 !important;
+
+    color:#0891B2 !important;
+
+    transition:color .3s ease !important;
+}
+
+.education-item p{
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:12px !important;
+
+    line-height:1.7 !important;
+
+    color:#626A6D !important;
+
+    transition:color .3s ease !important;
+}
+
+
+/* =====================================================
+   RELEVANT STUDIES & TRAINING
+===================================================== */
+
+.training{
+    display:grid !important;
+
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+
+    gap:18px !important;
+
+    width:100% !important;
+}
+
+.training span{
+    width:100% !important;
+
+    aspect-ratio:1 / 1 !important;
+
+    min-height:0 !important;
+
+    padding:25px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    text-align:center !important;
+
+    background:#CFFAFE !important;
+
+    color:#0891B2 !important;
+
+    border:1px solid #D9E5E8 !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:16px !important;
+
+    font-weight:700 !important;
+
+    line-height:1.5 !important;
+
+    cursor:pointer !important;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        border-color .3s ease !important;
+}
+
+.training span:hover{
+    background:#06B6D4 !important;
+
+    border-color:#06B6D4 !important;
+
+    color:#FFFFFF !important;
+
+    transform:translateY(-4px) !important;
 }
 
 
@@ -892,48 +373,29 @@ h1{
 ===================================================== */
 
 footer{
-    margin-top:55px;
+    margin-top:55px !important;
 
-    padding:24px 4vw;
+    padding:24px 4vw !important;
 
-    background:#FFFFFF;
+    background:#FFFFFF !important;
 
-    border-top:1px solid var(--border);
+    border-top:1px solid #D9E5E8 !important;
 
-    display:flex;
+    display:flex !important;
 
-    align-items:center;
+    justify-content:space-between !important;
 
-    justify-content:space-between;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-family:"DM Sans", Arial, sans-serif;
+    font-size:9px !important;
 
-    font-size:9px;
+    font-weight:600 !important;
 
-    font-weight:600;
+    letter-spacing:1.8px !important;
 
-    letter-spacing:1.8px;
+    text-transform:uppercase !important;
 
-    line-height:1.4;
-
-    text-transform:uppercase;
-
-    color:var(--muted);
-}
-
-
-/* =====================================================
-   ALL CLICKABLE HOVER
-===================================================== */
-
-button:hover,
-a.outline-btn:hover,
-a.back:hover{
-    background:var(--cyan-hover);
-
-    border-color:var(--cyan-hover);
-
-    color:#FFFFFF;
+    color:#626A6D !important;
 }
 
 
@@ -943,160 +405,83 @@ a.back:hover{
 
 @media(max-width:800px){
 
-    /* HEADER */
-
     header{
-        min-height:72px;
+        min-height:72px !important;
+        height:auto !important;
 
-        padding:14px 5vw;
+        padding:14px 5vw !important;
 
-        gap:15px;
+        gap:15px !important;
     }
 
     .logo{
-        font-size:14px;
+        font-size:14px !important;
 
-        letter-spacing:1.8px;
+        letter-spacing:1.8px !important;
     }
 
     nav{
-        gap:6px;
+        gap:6px !important;
 
-        flex-wrap:wrap;
+        flex-wrap:wrap !important;
 
-        justify-content:flex-end;
+        justify-content:flex-end !important;
     }
 
     nav a{
-        min-height:30px;
+        min-height:30px !important;
+        height:30px !important;
 
-        padding:5px 6px;
+        padding:5px 6px !important;
 
-        font-size:8px;
+        font-size:8px !important;
 
-        letter-spacing:1px;
+        letter-spacing:1px !important;
     }
 
     .contact-btn{
-        padding:7px 10px;
+        padding:7px 10px !important;
     }
 
 
-    /* HERO */
-
-    .hero{
-        width:92%;
-
-        grid-template-columns:1fr;
-
-        min-height:auto;
-    }
-
-    .hero-photo{
-        grid-column:1;
-
-        grid-row:1;
-
-        min-height:480px;
-    }
-
-    .hero-text{
-        grid-column:1;
-
-        grid-row:2;
-
-        padding:45px 8%;
-    }
-
-    .hero-description{
-        font-size:16px;
-    }
-
-
-    /* LATEST WRITING */
-
-    .latest{
-        width:92%;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
-
-    /* GENERAL PAGE */
+    /* PAGE */
 
     .page{
-        width:90%;
+        width:90% !important;
 
-        margin:45px auto;
+        margin:45px auto !important;
     }
 
     h1{
-        font-size:40px;
+        font-size:40px !important;
     }
 
 
-    /* ABOUT TRAINING */
+    /* TRAINING */
 
     .training{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
 
-        gap:14px;
+        gap:14px !important;
     }
 
     .training span{
-        aspect-ratio:1 / 1;
+        aspect-ratio:1 / 1 !important;
 
-        padding:18px;
+        padding:18px !important;
 
-        font-size:14px;
-    }
-
-
-    /* ARTICLE */
-
-    .article{
-        width:90%;
-
-        margin:45px auto;
-    }
-
-    .article h1{
-        font-size:40px;
-    }
-
-
-    /* GALLERY */
-
-    .gallery{
-        grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-section{
-        width:92%;
-    }
-
-    .social-links{
-        gap:32px;
+        font-size:14px !important;
     }
 
 
     /* FOOTER */
 
     footer{
-        flex-direction:column;
+        flex-direction:column !important;
 
-        text-align:center;
+        text-align:center !important;
 
-        gap:10px;
+        gap:10px !important;
     }
 
 }
@@ -1108,60 +493,206 @@ a.back:hover{
 
 @media(max-width:480px){
 
-    .logo{
-        font-size:13px;
-
-        letter-spacing:1.5px;
-    }
-
-    nav{
-        gap:4px;
-    }
-
-    nav a{
-        padding:5px;
-
-        font-size:7px;
-
-        letter-spacing:.8px;
-    }
-
-    .contact-btn{
-        padding:6px 8px;
-    }
-
-
-    .hero-photo{
-        min-height:400px;
-    }
-
-    .hero-text{
-        padding:38px 8%;
-    }
-
-    .hero-description{
-        font-size:15px;
-    }
-
-
     .training{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr !important;
     }
 
     .training span{
-        aspect-ratio:1 / 1;
+        aspect-ratio:1 / 1 !important;
 
-        font-size:15px;
-    }
-
-
-    .article h1{
-        font-size:34px;
-    }
-
-
-    .gallery{
-        grid-template-columns:1fr;
+        font-size:15px !important;
     }
 
 }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+     FIXED MENU:
+     HOME / ABOUT / WRITING / CONTACT
+===================================================== -->
+
+<header>
+
+```
+<div class="logo">
+    BITA NEGAHDAR
+</div>
+
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="writing.html">
+        Writing
+    </a>
+
+    <a href="index.html#contact" class="contact-btn">
+        Contact
+    </a>
+
+</nav>
+```
+
+</header>
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="page">
+
+```
+<div class="eyebrow">
+    About
+</div>
+
+
+<h1>
+    Bita Negahdar
+</h1>
+
+
+<p class="intro">
+
+    I am currently developing my professional path in psychology,
+    with an interest in psychological research, counseling,
+    and the study of human behavior. My approach is informed
+    by an interest in how people construct identity, respond
+    to change, and regulate themselves within their social and
+    environmental contexts.
+
+</p>
+
+
+<!-- =================================================
+     EDUCATION
+================================================= -->
+
+<section class="block">
+
+    <h2>
+        Education
+    </h2>
+
+
+    <div class="education">
+
+
+        <div class="education-item">
+
+            <h3>
+                MA — Psychology
+            </h3>
+
+            <p>
+                2024 – 2026
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>
+                MA — Photography
+            </h3>
+
+            <p>
+                2014 – 2016<br>
+                Tehran University of Art
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>
+                BGD
+            </h3>
+
+            <p>
+                2003 – 2007
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     RELEVANT STUDIES & TRAINING
+================================================= -->
+
+<section class="block">
+
+    <h2>
+        Relevant Studies &amp; Training
+    </h2>
+
+
+    <div class="training">
+
+        <span>
+            Schema Therapy
+        </span>
+
+        <span>
+            Cognitive Behavioral Therapy (CBT)
+        </span>
+
+        <span>
+            QEEG Brain Mapping Workshop
+        </span>
+
+        <span>
+            Acceptance and Commitment Therapy (ACT)
+        </span>
+
+        <span>
+            Suicide Crisis Management
+        </span>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+```
+<div>
+    BITA NEGAHDAR
+</div>
+
+<div>
+    Psychology
+</div>
+```
+
+</footer>
+
+</body>
+</html>
