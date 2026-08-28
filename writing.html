@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -197,10 +198,192 @@
 
 
 /* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    width:100% !important;
+    min-height:76px !important;
+    height:76px !important;
+
+    padding:0 4vw !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    background:#FFFFFF !important;
+
+    border-bottom:1px solid #D9E5E8 !important;
+}
+
+.logo{
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:20px !important;
+    font-weight:700 !important;
+
+    letter-spacing:2.4px !important;
+
+    color:#252525 !important;
+
+    white-space:nowrap !important;
+}
+
+nav{
+    display:flex !important;
+
+    align-items:center !important;
+    justify-content:flex-end !important;
+
+    gap:24px !important;
+
+    flex-shrink:0 !important;
+}
+
+nav a{
+    display:inline-flex !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:38px !important;
+    height:38px !important;
+
+    padding:7px 11px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:12px !important;
+    font-weight:600 !important;
+
+    letter-spacing:1.4px !important;
+
+    text-transform:uppercase !important;
+
+    color:#252525 !important;
+
+    border:1px solid transparent !important;
+
+    white-space:nowrap !important;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease !important;
+}
+
+nav a:hover{
+    background:#06B6D4 !important;
+
+    border-color:#06B6D4 !important;
+
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.contact-btn{
+    padding:9px 17px !important;
+
+    background:#CFFAFE !important;
+
+    border:1px solid #CFFAFE !important;
+
+    color:#0891B2 !important;
+}
+
+.contact-btn:hover{
+    background:#06B6D4 !important;
+
+    border-color:#06B6D4 !important;
+
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    margin-top:55px !important;
+
+    padding:24px 4vw !important;
+
+    background:#FFFFFF !important;
+
+    border-top:1px solid #D9E5E8 !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:space-between !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:9px !important;
+
+    font-weight:600 !important;
+
+    letter-spacing:1.8px !important;
+
+    text-transform:uppercase !important;
+
+    color:#626A6D !important;
+}
+
+
+/* =====================================================
    MOBILE
 ===================================================== */
 
 @media(max-width:800px){
+
+    header{
+        min-height:72px !important;
+        height:auto !important;
+
+        padding:14px 5vw !important;
+
+        gap:15px !important;
+    }
+
+    .logo{
+        font-size:14px !important;
+
+        letter-spacing:1.8px !important;
+    }
+
+    nav{
+        gap:6px !important;
+
+        flex-wrap:wrap !important;
+
+        justify-content:flex-end !important;
+    }
+
+    nav a{
+        min-height:30px !important;
+        height:30px !important;
+
+        padding:5px 6px !important;
+
+        font-size:8px !important;
+
+        letter-spacing:1px !important;
+    }
+
+    .contact-btn{
+        padding:7px 10px !important;
+    }
+
+
+    /* PAGE */
 
     .page{
         width:90% !important;
@@ -214,10 +397,24 @@
         margin-bottom:35px !important;
     }
 
+
+    /* GRID */
+
     .grid{
         grid-template-columns:1fr !important;
 
         gap:30px !important;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+        flex-direction:column !important;
+
+        text-align:center !important;
+
+        gap:10px !important;
     }
 
 }
@@ -243,9 +440,7 @@
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -253,37 +448,34 @@
 
 <header>
 
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
+```
+<div class="logo">
+    BITA NEGAHDAR
+</div>
 
 
-    <nav>
+<nav>
 
-        <a href="index.html">
-            Home
-        </a>
+    <a href="index.html">
+        Home
+    </a>
 
-        <a href="about.html">
-            About
-        </a>
+    <a href="about.html">
+        About
+    </a>
 
-        <a href="research.html">
-            Research
-        </a>
+    <a href="writing.html">
+        Writing
+    </a>
 
-        <a href="cv.html">
-            CV
-        </a>
+    <a href="index.html#contact" class="contact-btn">
+        Contact
+    </a>
 
-        <a href="index.html#contact" class="contact-btn">
-            Contact
-        </a>
-
-    </nav>
+</nav>
+```
 
 </header>
-
 
 <!-- =====================================================
      WRITING PAGE
@@ -291,120 +483,120 @@
 
 <main class="page">
 
-
-    <div class="eyebrow">
-        Writing
-    </div>
-
-
-    <h1>
-        Selected Writing
-    </h1>
+```
+<div class="eyebrow">
+    Writing
+</div>
 
 
-    <div class="grid">
+<h1>
+    Selected Writing
+</h1>
 
 
-        <!-- =================================================
-             WRITING 01
-        ================================================= -->
+<div class="grid">
 
-        <a href="writing-1.html" class="card">
 
-            <div class="cover">
+    <!-- =================================================
+         WRITING 01
+    ================================================= -->
 
-                <img
-                    src="images/cover-1.jpeg"
-                    alt="Writing 01 — The Self Attached to Things"
-                >
+    <a href="writing-1.html" class="card">
 
+        <div class="cover">
+
+            <img
+                src="images/cover-1.jpeg"
+                alt="Writing 01 — The Self Attached to Things"
+            >
+
+        </div>
+
+
+        <div class="card-info">
+
+            <div class="card-number">
+                Writing 01
             </div>
 
 
-            <div class="card-info">
-
-                <div class="card-number">
-                    Writing 01
-                </div>
-
-
-                <div class="card-title">
-                    The Self Attached to Things
-                </div>
-
+            <div class="card-title">
+                The Self Attached to Things
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
-        <!-- =================================================
-             WRITING 02
-        ================================================= -->
+    <!-- =================================================
+         WRITING 02
+    ================================================= -->
 
-        <a href="writing-2.html" class="card">
+    <a href="writing-2.html" class="card">
 
-            <div class="cover">
+        <div class="cover">
 
-                <img
-                    src="images/cover-2.jpeg"
-                    alt="Writing 02 — When Success Becomes Self-Sacrifice"
-                >
+            <img
+                src="images/cover-2.jpeg"
+                alt="Writing 02 — When Success Becomes Self-Sacrifice"
+            >
 
-            </div>
-
-
-            <div class="card-info">
-
-                <div class="card-number">
-                    Writing 02
-                </div>
+        </div>
 
 
-                <div class="card-title">
-                    When Success Becomes Self-Sacrifice
-                </div>
+        <div class="card-info">
 
-            </div>
-
-        </a>
-
-
-        <!-- =================================================
-             WRITING 03
-        ================================================= -->
-
-        <a href="writing-3.html" class="card">
-
-            <div class="cover">
-
-                <img
-                    src="images/cover-3.jpeg"
-                    alt="Writing 03 — The Self That Remains"
-                >
-
+            <div class="card-number">
+                Writing 02
             </div>
 
 
-            <div class="card-info">
-
-                <div class="card-number">
-                    Writing 03
-                </div>
-
-
-                <div class="card-title">
-                    The Self That Remains
-                </div>
-
+            <div class="card-title">
+                When Success Becomes Self-Sacrifice
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
-    </div>
+    <!-- =================================================
+         WRITING 03
+    ================================================= -->
+
+    <a href="writing-3.html" class="card">
+
+        <div class="cover">
+
+            <img
+                src="images/cover-3.jpeg"
+                alt="Writing 03 — The Self That Remains"
+            >
+
+        </div>
+
+
+        <div class="card-info">
+
+            <div class="card-number">
+                Writing 03
+            </div>
+
+
+            <div class="card-title">
+                The Self That Remains
+            </div>
+
+        </div>
+
+    </a>
+
+
+</div>
+```
 
 </main>
-
 
 <!-- =====================================================
      FOOTER
@@ -412,16 +604,18 @@
 
 <footer>
 
-    <div>
-        BITA NEGAHDAR
-    </div>
+```
+<div>
+    BITA NEGAHDAR
+</div>
 
-    <div>
-        Psychology
-    </div>
+<div>
+    Psychology
+</div>
+```
 
 </footer>
 
-
 </body>
+
 </html>
