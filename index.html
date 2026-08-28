@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -9,55 +8,163 @@
 
 <title>Bita Negahdar | Psychology</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* =========================
-   HOME HERO
-========================= */
+/* =====================================================
+   GLOBAL HOME PAGE
+===================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background:#F3EBDD !important;
+    color:#292825;
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-weight:400;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    width:100%;
+    height:68px;
+
+    padding:0 4vw;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#F3EBDD;
+
+    border-bottom:1px solid #D8CCB9;
+}
+
+.logo{
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:20px !important;
+    font-weight:700 !important;
+
+    letter-spacing:2.2px;
+
+    color:#292825;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+}
+
+nav a{
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:11px !important;
+    font-weight:500;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    color:#292825;
+
+    transition:
+        color .25s ease,
+        background-color .25s ease;
+}
+
+nav a:not(.contact-btn):hover{
+    color:#3F8580;
+}
+
+.contact-btn{
+    padding:10px 18px;
+
+    background:#3F8580;
+
+    color:#F8F2E8 !important;
+
+    border:1px solid #3F8580;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+.contact-btn:hover{
+    background:#286C70;
+    border-color:#286C70;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
-    width:90%;
-    max-width:1400px;
+    width:94%;
+    max-width:1500px;
+
     margin:18px auto 0;
 
     display:grid;
 
-    /* LEFT TEXT / RIGHT PHOTO */
-    grid-template-columns:43% 57%;
+    grid-template-columns:44% 56%;
 
     min-height:560px;
 }
 
 
-/* LEFT SIDE */
+/* LEFT COLORED AREA */
 
 .hero-text{
     grid-column:1;
 
-    padding:8% 10% 8% 4%;
+    padding:8% 11% 8% 7%;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:flex-start;
+
+    background:#3F8580;
+
+    color:#F8F2E8;
 }
 
 
-/* SHORT INTRO */
+/* INTRO TEXT */
 
 .hero-description{
-    max-width:430px;
+    max-width:500px;
 
-    font-size:14px;
-    line-height:1.9;
+    margin:0 0 30px 0;
 
-    color:#625e58;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    margin-bottom:28px;
+    font-size:17px;
+
+    font-weight:400;
+
+    line-height:1.85;
+
+    color:#F8F2E8;
 }
 
 
@@ -68,23 +175,36 @@
 
     width:auto;
 
-    padding:10px 18px;
+    padding:11px 20px;
 
-    border:1px solid #77736d;
+    border:1px solid #F8F2E8;
 
-    font-size:9px;
+    color:#F8F2E8;
 
-    letter-spacing:1.8px;
+    background:transparent;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    letter-spacing:1.7px;
 
     text-transform:uppercase;
 
-    transition:.2s ease;
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease;
 }
 
 .outline-btn:hover{
-    background:#353a35;
-    border-color:#353a35;
-    color:#f5f3ef;
+    background:#F8F2E8;
+
+    color:#286C70;
+
+    border-color:#F8F2E8;
 }
 
 
@@ -97,9 +217,8 @@
 
     overflow:hidden;
 
-    background:#333532;
+    background:#D8CCB9;
 }
-
 
 .hero-photo img{
     width:100%;
@@ -111,34 +230,42 @@
 }
 
 
-/* =========================
+/* =====================================================
    LATEST WRITING
-========================= */
+===================================================== */
 
 .latest{
-    width:90%;
-    max-width:1400px;
+    width:94%;
+    max-width:1500px;
 
     margin:55px auto 0;
 
     padding-top:28px;
 
-    border-top:1px solid #d7d3cb;
+    border-top:1px solid #D8CCB9;
 }
 
 
-.section-title{
-    font-size:10px;
+/* SECTION TITLE */
 
-    letter-spacing:2.5px;
+.section-title{
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
 
     text-transform:uppercase;
 
-    color:#77736d;
+    color:#4D625F;
 
     margin-bottom:22px;
 }
 
+
+/* GRID */
 
 .grid{
     display:grid;
@@ -149,21 +276,30 @@
 }
 
 
+/* CARD */
+
 .card{
-    background:#ebe8e2;
+    background:transparent;
 
     overflow:hidden;
+
+    display:block;
 }
 
+
+/* COVER */
 
 .cover{
     width:100%;
 
-    aspect-ratio:4/5;
+    aspect-ratio:4 / 5;
 
     overflow:hidden;
-}
 
+    background:#D8CCB9;
+
+    position:relative;
+}
 
 .cover img{
     width:100%;
@@ -173,59 +309,59 @@
 
     display:block;
 
-    transition:transform .45s ease;
+    transition:
+        transform .5s ease,
+        filter .5s ease;
 }
 
+
+/* HOVER */
 
 .card:hover .cover img{
-    transform:scale(1.03);
+    transform:scale(1.025);
+
+    filter:saturate(1.08);
 }
 
+
+/* REMOVE ALL TITLES UNDER COVERS */
 
 .card-info{
-    padding:17px 3px 20px;
+    display:none !important;
 }
 
-
-.card-number{
-    font-size:8px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:#77736d;
-
-    margin-bottom:7px;
-}
-
-
+.card-number,
 .card-title{
-    font-family:Georgia,"Times New Roman",serif;
-
-    font-size:21px;
-
-    line-height:1.3;
+    display:none !important;
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact-section{
-    width:90%;
-    max-width:1400px;
+    width:94%;
+    max-width:1500px;
 
     margin:55px auto 0;
 
-    padding:32px 0;
+    padding:35px 0;
 
-    border-top:1px solid #d7d3cb;
+    border-top:1px solid #D8CCB9;
 
     text-align:center;
 }
 
+
+/* CONTACT TITLE */
+
+.contact-section .section-title{
+    margin-bottom:28px;
+}
+
+
+/* SOCIAL LINKS */
 
 .social-links{
     display:flex;
@@ -234,11 +370,10 @@
 
     align-items:center;
 
-    gap:52px;
+    gap:60px;
 
     flex-wrap:wrap;
 }
-
 
 .social-link{
     display:flex;
@@ -247,25 +382,36 @@
 
     align-items:center;
 
-    gap:8px;
+    gap:9px;
 
-    font-size:9px;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
-    letter-spacing:1.2px;
+    font-size:10px;
+
+    font-weight:500;
+
+    letter-spacing:1.3px;
 
     text-transform:uppercase;
 
-    color:#4f4b45;
+    color:#4F514B;
+
+    transition:color .25s ease;
+}
+
+.social-link:hover{
+    color:#3F8580;
 }
 
 
+/* ICON */
+
 .social-icon{
-    width:42px;
-    height:42px;
+    width:48px;
+    height:48px;
 
     display:block;
 }
-
 
 .social-icon svg{
     width:100%;
@@ -283,53 +429,60 @@
 }
 
 
+/* LINKEDIN */
+
 .linkedin-fill{
     fill:currentColor;
 
     stroke:none;
 }
 
-
 .linkedin-white{
-    fill:#f5f3ef;
+    fill:#F3EBDD;
 
     stroke:none;
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-    margin-top:60px;
+    margin-top:55px;
 
-    padding:22px 5vw;
+    padding:24px 4vw;
 
-    border-top:1px solid #d7d3cb;
+    border-top:1px solid #D8CCB9;
 
     display:flex;
 
     justify-content:space-between;
 
-    font-size:8px;
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:9px;
+
+    font-weight:500;
 
     letter-spacing:1.8px;
 
     text-transform:uppercase;
 
-    color:#77736d;
+    color:#77736D;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media(max-width:800px){
 
     header{
         height:auto;
+
+        min-height:68px;
 
         padding:14px 6vw;
 
@@ -338,12 +491,14 @@ footer{
 
 
     .logo{
-        font-size:11px;
+        font-size:14px !important;
+
+        letter-spacing:1.8px;
     }
 
 
     nav{
-        gap:10px;
+        gap:12px;
 
         flex-wrap:wrap;
 
@@ -352,20 +507,29 @@ footer{
 
 
     nav a{
-        font-size:7px;
+        font-size:8px !important;
+
+        letter-spacing:1px;
     }
 
 
+    .contact-btn{
+        padding:8px 12px;
+    }
+
+
+    /* HERO */
+
     .hero{
-        width:88%;
+        width:92%;
 
         grid-template-columns:1fr;
 
         min-height:auto;
+
+        margin-top:12px;
     }
 
-
-    /* PHOTO FIRST ON MOBILE */
 
     .hero-photo{
         grid-column:1;
@@ -376,39 +540,56 @@ footer{
     }
 
 
-    /* TEXT SECOND ON MOBILE */
-
     .hero-text{
         grid-column:1;
 
         grid-row:2;
 
-        padding:38px 3%;
+        padding:45px 8%;
     }
 
 
-    .latest,
-    .contact-section{
-        width:88%;
+    .hero-description{
+        font-size:16px;
+
+        line-height:1.8;
+    }
+
+
+    /* WRITING */
+
+    .latest{
+        width:92%;
     }
 
 
     .grid{
         grid-template-columns:1fr;
+
+        gap:18px;
     }
 
+
+    /* CONTACT */
+
+    .contact-section{
+        width:92%;
+    }
+
+
+    .social-links{
+        gap:35px;
+    }
+
+
+    /* FOOTER */
 
     footer{
         flex-direction:column;
 
         text-align:center;
 
-        gap:9px;
-    }
-
-
-    .social-links{
-        gap:30px;
+        gap:10px;
     }
 
 }
@@ -417,387 +598,368 @@ footer{
 
 </head>
 
+
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
-```
-<div class="logo">
-    BITA NEGAHDAR
-</div>
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
 
 
-<nav>
+    <nav>
 
-    <a href="about.html">
-        About
-    </a>
+        <a href="about.html">
+            About
+        </a>
 
-    <a href="research.html">
-        Research
-    </a>
+        <a href="research.html">
+            Research
+        </a>
 
-    <a href="writing.html">
-        Writing
-    </a>
+        <a href="writing.html">
+            Writing
+        </a>
 
-    <a href="cv.html">
-        CV
-    </a>
+        <a href="cv.html">
+            CV
+        </a>
 
-    <a href="#contact" class="contact-btn">
-        Contact
-    </a>
+        <a href="#contact" class="contact-btn">
+            Contact
+        </a>
 
-</nav>
-```
+    </nav>
 
 </header>
 
-<!-- =========================
+
+
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
-```
-<!-- LEFT -->
 
-<div class="hero-text">
+    <!-- LEFT COLORED TEXT -->
 
-    <p class="hero-description">
+    <div class="hero-text">
 
-        Psychology trainee developing a professional path in psychological
-        research, counseling, and the study of human behavior.
+        <p class="hero-description">
 
-    </p>
+            Psychology trainee developing a professional path
+            in psychological research, counseling, and the study
+            of human behavior.
 
-
-    <a href="about.html" class="outline-btn">
-        About Me
-    </a>
-
-</div>
+        </p>
 
 
+        <a href="about.html" class="outline-btn">
 
-<!-- RIGHT -->
+            About Me
 
-<div class="hero-photo">
+        </a>
 
-    <img
-        src="images/BitaNegahdar.jpg"
-        alt="Bita Negahdar"
-    >
+    </div>
 
-</div>
-```
+
+
+    <!-- RIGHT PHOTO -->
+
+    <div class="hero-photo">
+
+        <img
+            src="images/BitaNegahdar.jpg"
+            alt="Bita Negahdar"
+        >
+
+    </div>
+
 
 </section>
 
-<!-- =========================
+
+
+<!-- =====================================================
      LATEST WRITING
-========================= -->
+===================================================== -->
 
 <section class="latest">
 
-```
-<div class="section-title">
-    Latest Writing
-</div>
+
+    <div class="section-title">
+        Latest Writing
+    </div>
 
 
-<div class="grid">
+    <div class="grid">
 
 
-    <!-- WRITING 01 -->
+        <!-- WRITING 01 -->
 
-    <a href="writing-1.html" class="card">
+        <a
+            href="writing-1.html"
+            class="card"
+        >
 
-        <div class="cover">
+            <div class="cover">
 
-            <img
-                src="images/cover-1.jpeg"
-                alt="Writing 1"
-            >
+                <img
+                    src="images/cover-1.jpeg"
+                    alt="Writing 01"
+                >
 
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 01
             </div>
 
-            <div class="card-title">
-                The Self Attached to Things
+        </a>
+
+
+
+        <!-- WRITING 02 -->
+
+        <a
+            href="writing-2.html"
+            class="card"
+        >
+
+            <div class="cover">
+
+                <img
+                    src="images/cover-2.jpeg"
+                    alt="Writing 02"
+                >
+
             </div>
 
-        </div>
-
-    </a>
+        </a>
 
 
 
-    <!-- WRITING 02 -->
+        <!-- WRITING 03 -->
 
-    <a href="writing-2.html" class="card">
+        <a
+            href="writing-3.html"
+            class="card"
+        >
 
-        <div class="cover">
+            <div class="cover">
 
-            <img
-                src="images/cover-2.jpeg"
-                alt="Writing 2"
-            >
+                <img
+                    src="images/cover-3.jpeg"
+                    alt="Writing 03"
+                >
 
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 02
             </div>
 
-            <div class="card-title">
-                When Success Becomes Self-Sacrifice
-            </div>
-
-        </div>
-
-    </a>
+        </a>
 
 
-
-    <!-- WRITING 03 -->
-
-    <a href="writing-3.html" class="card">
-
-        <div class="cover">
-
-            <img
-                src="images/cover-3.jpeg"
-                alt="Writing 3"
-            >
-
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 03
-            </div>
-
-            <div class="card-title">
-                The Self That Remains
-            </div>
-
-        </div>
-
-    </a>
-
-
-</div>
-```
+    </div>
 
 </section>
 
-<!-- =========================
+
+
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
-<section class="contact-section" id="contact">
-
-```
-<div class="section-title">
-    Contact
-</div>
+<section
+    class="contact-section"
+    id="contact"
+>
 
 
-<div class="social-links">
+    <div class="section-title">
+        Contact
+    </div>
 
 
-    <!-- INSTAGRAM -->
-
-    <a
-        href="https://www.instagram.com/bitanegahdar.ir/"
-        target="_blank"
-        class="social-link"
-    >
-
-        <span class="social-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <rect
-                    x="3"
-                    y="3"
-                    width="18"
-                    height="18"
-                    rx="5"
-                ></rect>
-
-                <circle
-                    cx="12"
-                    cy="12"
-                    r="4"
-                ></circle>
-
-                <circle
-                    cx="17.5"
-                    cy="6.5"
-                    r="1"
-                ></circle>
-
-            </svg>
-
-        </span>
-
-        Instagram
-
-    </a>
+    <div class="social-links">
 
 
+        <!-- INSTAGRAM -->
 
-    <!-- LINKEDIN -->
+        <a
+            href="https://www.instagram.com/bitanegahdar.ir/"
+            target="_blank"
+            class="social-link"
+        >
 
-    <a
-        href="https://www.linkedin.com/in/bita-negahdar/"
-        target="_blank"
-        class="social-link"
-    >
+            <span class="social-icon">
 
-        <span class="social-icon">
+                <svg viewBox="0 0 24 24">
 
-            <svg viewBox="0 0 24 24">
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                    ></rect>
 
-                <rect
-                    x="2"
-                    y="2"
-                    width="20"
-                    height="20"
-                    rx="2.5"
-                    class="linkedin-fill"
-                ></rect>
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                    ></circle>
 
-                <rect
-                    x="6"
-                    y="10"
-                    width="2.2"
-                    height="8"
-                    class="linkedin-white"
-                ></rect>
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                    ></circle>
 
-                <circle
-                    cx="7.1"
-                    cy="7"
-                    r="1.2"
-                    class="linkedin-white"
-                ></circle>
+                </svg>
 
-                <path
-                    d="M11 10v8M11 13c.8-2.5 5-3 5 1v4"
-                    stroke="#f5f3ef"
-                    stroke-width="2.2"
-                    fill="none"
-                    stroke-linecap="round"
-                ></path>
+            </span>
 
-            </svg>
+            Instagram
 
-        </span>
-
-        LinkedIn
-
-    </a>
+        </a>
 
 
 
-    <!-- PHONE -->
+        <!-- LINKEDIN -->
 
-    <a
-        href="tel:+989119382619"
-        class="social-link"
-    >
+        <a
+            href="https://www.linkedin.com/in/bita-negahdar/"
+            target="_blank"
+            class="social-link"
+        >
 
-        <span class="social-icon">
+            <span class="social-icon">
 
-            <svg viewBox="0 0 24 24">
+                <svg viewBox="0 0 24 24">
 
-                <path
-                    d="M7.5 3.5C6.4 3.5 5.5 4.4 5.5 5.5C5.5 13.2 10.8 18.5 18.5 18.5C19.6 18.5 20.5 17.6 20.5 16.5V14.8C20.5 14.2 20.1 13.7 19.5 13.5L16.6 12.5C16.1 12.3 15.5 12.5 15.2 13L14.2 14.2C12.4 13.3 10.7 11.6 9.8 9.8L11 8.8C11.5 8.5 11.7 7.9 11.5 7.4L10.5 4.5C10.3 3.9 9.8 3.5 9.2 3.5Z"
-                ></path>
+                    <rect
+                        x="2"
+                        y="2"
+                        width="20"
+                        height="20"
+                        rx="2.5"
+                        class="linkedin-fill"
+                    ></rect>
 
-            </svg>
+                    <rect
+                        x="6"
+                        y="10"
+                        width="2.2"
+                        height="8"
+                        class="linkedin-white"
+                    ></rect>
 
-        </span>
+                    <circle
+                        cx="7.1"
+                        cy="7"
+                        r="1.2"
+                        class="linkedin-white"
+                    ></circle>
 
-        Phone
+                    <path
+                        d="M11 10v8M11 13c.8-2.5 5-3 5 1v4"
+                        stroke="#F3EBDD"
+                        stroke-width="2.2"
+                        fill="none"
+                        stroke-linecap="round"
+                    ></path>
 
-    </a>
+                </svg>
 
+            </span>
 
+            LinkedIn
 
-    <!-- EMAIL -->
-
-    <a
-        href="mailto:bitanegahdar@gmail.com"
-        class="social-link"
-    >
-
-        <span class="social-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <rect
-                    x="3"
-                    y="5"
-                    width="18"
-                    height="14"
-                    rx="2"
-                ></rect>
-
-                <path
-                    d="M4 7l8 6 8-6"
-                ></path>
-
-            </svg>
-
-        </span>
-
-        Email
-
-    </a>
+        </a>
 
 
-</div>
-```
+
+        <!-- PHONE -->
+
+        <a
+            href="tel:+989119382619"
+            class="social-link"
+        >
+
+            <span class="social-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M7.5 3.5C6.4 3.5 5.5 4.4 5.5 5.5C5.5 13.2 10.8 18.5 18.5 18.5C19.6 18.5 20.5 17.6 20.5 16.5V14.8C20.5 14.2 20.1 13.7 19.5 13.5L16.6 12.5C16.1 12.3 15.5 12.5 15.2 13L14.2 14.2C12.4 13.3 10.7 11.6 9.8 9.8L11 8.8C11.5 8.5 11.7 7.9 11.5 7.4L10.5 4.5C10.3 3.9 9.8 3.5 9.2 3.5Z"
+                    ></path>
+
+                </svg>
+
+            </span>
+
+            Phone
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a
+            href="mailto:bitanegahdar@gmail.com"
+            class="social-link"
+        >
+
+            <span class="social-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"
+                    ></rect>
+
+                    <path
+                        d="M4 7l8 6 8-6"
+                    ></path>
+
+                </svg>
+
+            </span>
+
+            Email
+
+        </a>
+
+
+    </div>
 
 </section>
 
-<!-- =========================
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-```
-<div>
-    BITA NEGAHDAR
-</div>
+    <div>
+        BITA NEGAHDAR
+    </div>
 
-<div>
-    Psychology
-</div>
-```
+    <div>
+        Psychology
+    </div>
 
 </footer>
+
 
 </body>
 
