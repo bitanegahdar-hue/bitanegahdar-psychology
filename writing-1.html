@@ -1,140 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Self Attached to Things | Bita Negahdar</title>
+<title>Writing | Bita Negahdar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================================
+   WRITING PAGE
+===================================================== */
+
+.writing-page{
+    width:92%;
+    max-width:1250px;
+    margin:55px auto;
+}
+
+
+/* =====================================================
+   HEADER TEXT
+===================================================== */
+
+.writing-page .eyebrow{
+    margin-bottom:18px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#0891B2;
+}
+
+.writing-page h1{
+    margin-bottom:28px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:52px;
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:#252525;
+}
+
+.writing-intro{
+    max-width:760px;
+
+    margin-bottom:60px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:16px;
+    font-weight:400;
+
+    line-height:2;
+
+    color:#5F6668;
+}
+
+
+/* =====================================================
+   WRITING GRID
+===================================================== */
+
+.writing-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+    width:100%;
+}
+
+
+/* =====================================================
+   WRITING CARD
+===================================================== */
+
+.writing-card{
+    display:block;
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    overflow:hidden;
+
+    transition:
+        transform .25s ease;
+}
+
+.writing-card:hover{
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.writing-cover{
+    width:100%;
+
+    aspect-ratio:4 / 5;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#CFFAFE;
+
+    border:1px solid #D9E5E8;
+}
+
+.writing-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease,
+        filter .3s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.writing-card:hover .writing-cover img{
+    transform:scale(1.025);
+
+    filter:saturate(1.08);
+}
+
+
+/* =====================================================
+   WRITING NUMBER
+===================================================== */
+
+.writing-number{
+    margin-top:14px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:1.8px;
+
+    color:#0891B2;
+}
+
+
+/* =====================================================
+   WRITING TITLE
+===================================================== */
+
+.writing-title{
+    margin-top:7px;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:18px;
+    font-weight:600;
+
+    line-height:1.4;
+
+    color:#252525;
+
+    transition:color .25s ease;
+}
+
+
+/* =====================================================
+   TITLE HOVER
+===================================================== */
+
+.writing-card:hover .writing-title{
+    color:#06B6D4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:800px){
+
+    .writing-page{
+        width:90%;
+        margin:45px auto;
+    }
+
+    .writing-page h1{
+        font-size:40px;
+    }
+
+    .writing-intro{
+        font-size:15px;
+
+        margin-bottom:45px;
+    }
+
+    .writing-grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+    .writing-page h1{
+        font-size:36px;
+    }
+
+    .writing-cover{
+        aspect-ratio:4 / 5;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
-<div class="logo">BITA NEGAHDAR</div>
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
 
-<nav>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="research.html">Research</a>
-<a href="writing.html">Writing</a>
-<a href="cv.html">CV</a>
-<a href="index.html#contact" class="contact-btn">Contact</a>
+    <nav>
 
-</nav>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="research.html">
+            Research
+        </a>
+
+        <a href="cv.html">
+            CV
+        </a>
+
+        <a href="index.html#contact" class="contact-btn">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
-<article class="article">
+<!-- =====================================================
+     WRITING CONTENT
+===================================================== -->
 
-<div class="meta">
-Writing 01
-</div>
-
-<h1>
-The Self Attached to Things
-</h1>
+<main class="writing-page">
 
 
-<div class="article-text">
-
-<p>
-Russell Belk’s concept of the extended self explores how
-external possessions and objects can become incorporated
-into our sense of identity and function as forms of
-external scaffolding for the self.
-</p>
+    <div class="eyebrow">
+        Writing
+    </div>
 
 
-<p>
-In moments of crisis, the self is no longer an abstract
-concept. It becomes attached to the body, objects,
-environment, and social roles through which identity
-is ordinarily maintained.
-</p>
+    <h1>
+        Writing
+    </h1>
 
 
-<p>
-Sandro Giordano’s photographic series
-<em>In Extremis</em> can be approached through this
-psychological lens. Following a cycling accident,
-Giordano described an impulse to reconstruct the
-experience of falling and to externalize inner falls
-through photography.
-</p>
+    <p class="writing-intro">
+
+        Reflections on identity, psychological experience,
+        human behavior, and the relationship between the
+        individual and the world around them.
+
+    </p>
 
 
-<p>
-From a psychological perspective, the objects present
-in these images can be considered forms of external
-identity scaffolding: structures through which people
-maintain a relatively stable image of themselves within
-the social world.
-</p>
+    <!-- =================================================
+         WRITING GRID
+    ================================================= -->
+
+    <div class="writing-grid">
 
 
-<p>
-At the critical moment, these structures collapse.
-What remains is the body without the usual effort
-to maintain appearance, control, or social presentation.
-</p>
+        <!-- WRITING 01 -->
+
+        <a href="writing-1.html" class="writing-card">
+
+            <div class="writing-cover">
+
+                <img
+                    src="images/cover-1.jpeg"
+                    alt="The Self Attached to Things"
+                >
+
+            </div>
 
 
-<p>
-The reconstruction of falling can therefore also be
-understood as an attempt to transform a passive
-experience into an active creative act. The images
-become mirrors through which we can consider the
-often invisible supports on which our own psychological
-balance depends.
-</p>
+            <div class="writing-number">
+                WRITING 01
+            </div>
 
 
-<p>
-The therapeutic function Giordano describes should,
-however, be understood as his personal account rather
-than evidence that art directly replaces psychotherapy.
-Art may instead serve as a complementary way of
-examining experience, identity, and defensive processes.
-</p>
+            <div class="writing-title">
+                The Self Attached to Things
+            </div>
 
-</div>
+        </a>
 
 
-<div class="gallery">
 
-<img src="images/write-1-1.jpg" alt="Writing 1 image 1">
-<img src="images/write-1-2.jpg" alt="Writing 1 image 2">
-<img src="images/write-1-3.jpg" alt="Writing 1 image 3">
-<img src="images/write-1-4.jpg" alt="Writing 1 image 4">
-<img src="images/write-1-5.jpg" alt="Writing 1 image 5">
-<img src="images/write-1-6.jpg" alt="Writing 1 image 6">
-<img src="images/write-1-7.jpg" alt="Writing 1 image 7">
-<img src="images/write-1-8.jpg" alt="Writing 1 image 8">
+        <!-- WRITING 02 -->
 
-</div>
+        <a href="writing-2.html" class="writing-card">
+
+            <div class="writing-cover">
+
+                <img
+                    src="images/cover-2.jpeg"
+                    alt="When Success Becomes Self-Sacrifice"
+                >
+
+            </div>
 
 
-<a href="writing.html" class="back">
-Back to Writing
-</a>
+            <div class="writing-number">
+                WRITING 02
+            </div>
 
-</article>
 
+            <div class="writing-title">
+                When Success Becomes Self-Sacrifice
+            </div>
+
+        </a>
+
+
+
+        <!-- WRITING 03 -->
+
+        <a href="writing-3.html" class="writing-card">
+
+            <div class="writing-cover">
+
+                <img
+                    src="images/cover-3.jpeg"
+                    alt="The Self That Remains"
+                >
+
+            </div>
+
+
+            <div class="writing-number">
+                WRITING 03
+            </div>
+
+
+            <div class="writing-title">
+                The Self That Remains
+            </div>
+
+        </a>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<div>BITA NEGAHDAR</div>
-<div>Psychology</div>
+    <div>
+        BITA NEGAHDAR
+    </div>
+
+    <div>
+        Psychology
+    </div>
 
 </footer>
 
+
 </body>
+
 </html>
