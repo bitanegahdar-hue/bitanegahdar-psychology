@@ -1,7 +1,9 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +11,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400&display=swap"
+rel="stylesheet">
+
 
 <style>
 
@@ -45,59 +51,90 @@ a {
 ========================= */
 
 header {
+
     height: 62px;
+
     padding: 0 5vw;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     background: #f5f3ef;
 }
 
+
 .logo {
+
     font-size: 15px;
+
     letter-spacing: 2.4px;
+
     font-weight: 600;
+
 }
+
 
 .navigation {
+
     display: flex;
+
     align-items: center;
+
     gap: 28px;
+
 }
 
+
 .navigation a {
+
     font-size: 9px;
+
     letter-spacing: 1.5px;
+
     text-transform: uppercase;
 
     transition: opacity .3s ease;
+
 }
+
 
 .navigation a:hover {
+
     opacity: .55;
+
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT BUTTON
+========================= */
 
 .navigation .contact-button {
+
     padding: 9px 17px;
 
     border: 1px solid #52745b;
 
     background: #52745b;
 
-    color: #ffffff;
+    color: white;
 
     transition: all .3s ease;
+
 }
 
+
 .navigation .contact-button:hover {
+
     background: transparent;
+
     color: #52745b;
+
     opacity: 1;
+
 }
 
 
@@ -106,7 +143,9 @@ header {
 ========================= */
 
 .hero {
+
     width: 90%;
+
     max-width: 1400px;
 
     margin: 15px auto 0;
@@ -116,14 +155,16 @@ header {
     grid-template-columns: 43% 57%;
 
     min-height: 575px;
+
 }
 
 
 /* =========================
-   LEFT SIDE
+   HERO TEXT
 ========================= */
 
 .hero-text {
+
     padding: 7% 9% 7% 4%;
 
     display: flex;
@@ -131,9 +172,12 @@ header {
     flex-direction: column;
 
     justify-content: center;
+
 }
 
+
 .hero-description {
+
     max-width: 430px;
 
     font-size: 14px;
@@ -143,14 +187,16 @@ header {
     color: #625e58;
 
     margin-bottom: 32px;
+
 }
 
 
 /* =========================
-   BUTTON
+   ABOUT BUTTON
 ========================= */
 
 .outline-button {
+
     width: fit-content;
 
     border: 1px solid #77736d;
@@ -164,14 +210,18 @@ header {
     text-transform: uppercase;
 
     transition: all .3s ease;
+
 }
 
+
 .outline-button:hover {
+
     background: #252422;
 
     color: #f5f3ef;
 
     border-color: #252422;
+
 }
 
 
@@ -194,169 +244,119 @@ header {
             #4a4943
         );
 
-    transition: transform 1s ease;
 }
 
-.hero-photo:hover {
-    transform: scale(1.008);
-}
+
+/*
+   PHOTO PLACEHOLDER
+
+   Your photo will be inserted here later.
+*/
 
 
 /* =========================
-   QUICK NAV
+   LATEST WRITING
 ========================= */
 
-.quick-nav {
+.latest-writing {
 
     width: 90%;
+
     max-width: 1400px;
 
-    margin: 15px auto 0;
+    margin: 65px auto 0;
 
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 8px;
-}
-
-.quick-nav a {
-
-    border: 1px solid #aaa69e;
-
-    padding: 13px;
-
-    text-align: center;
-
-    font-size: 9px;
-
-    letter-spacing: 1.6px;
-
-    text-transform: uppercase;
-
-    transition: .3s ease;
-}
-
-.quick-nav a:hover {
-
-    background: #252422;
-
-    color: #f5f3ef;
-
-    border-color: #252422;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 75px auto;
-
-    padding-top: 35px;
+    padding-top: 30px;
 
     border-top: 1px solid #d7d3cb;
 
-    display: grid;
-
-    grid-template-columns: 25% 75%;
 }
 
-.section-label {
 
-    font-size: 9px;
+.section-title {
+
+    font-size: 10px;
 
     letter-spacing: 2.5px;
 
     text-transform: uppercase;
 
     color: #77736d;
-}
 
-.about-content {
+    margin-bottom: 25px;
 
-    padding-left: 7%;
-
-    max-width: 700px;
-}
-
-.about-content p {
-
-    font-size: 14px;
-
-    line-height: 1.9;
-
-    color: #625e58;
-
-    margin-bottom: 20px;
 }
 
 
 /* =========================
-   RESEARCH
+   WRITING CARDS
 ========================= */
 
-.research {
-
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 75px auto;
-
-    padding-top: 35px;
-
-    border-top: 1px solid #d7d3cb;
+.writing-grid {
 
     display: grid;
 
-    grid-template-columns: 25% 75%;
-}
+    grid-template-columns: repeat(3, 1fr);
 
-.research-content {
+    gap: 12px;
 
-    padding-left: 7%;
-
-    max-width: 700px;
-}
-
-.research-content p {
-
-    font-size: 14px;
-
-    line-height: 1.9;
-
-    color: #625e58;
 }
 
 
-/* =========================
-   CV
-========================= */
+.writing-card {
 
-.cv {
+    min-height: 150px;
 
-    width: 90%;
-    max-width: 1400px;
+    padding: 25px;
 
-    margin: 75px auto;
+    border: 1px solid #d7d3cb;
 
-    padding: 35px 0;
+    background: rgba(255,255,255,.18);
 
-    border-top: 1px solid #d7d3cb;
+    transition: all .3s ease;
 
-    display: grid;
-
-    grid-template-columns: 25% 75%;
 }
 
-.cv-content {
 
-    padding-left: 7%;
+.writing-card:hover {
+
+    background: #252422;
+
+    color: #f5f3ef;
+
+}
+
+
+.writing-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    margin-bottom: 12px;
+
+}
+
+
+.writing-card p {
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #77736d;
+
+}
+
+
+.writing-card:hover p {
+
+    color: #d8d5ce;
+
 }
 
 
@@ -367,31 +367,51 @@ header {
 .contact {
 
     width: 90%;
+
     max-width: 1400px;
 
-    margin: 75px auto;
+    margin: 70px auto 0;
 
     padding: 35px 0;
 
     border-top: 1px solid #d7d3cb;
 
-    display: grid;
-
-    grid-template-columns: 25% 75%;
 }
 
-.social-links {
 
-    padding-left: 7%;
+.contact-title {
+
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #77736d;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
 
     display: flex;
 
     align-items: center;
 
-    gap: 28px;
+    justify-content: flex-start;
+
+    gap: 45px;
 
     flex-wrap: wrap;
+
 }
+
 
 .social-link {
 
@@ -399,7 +419,7 @@ header {
 
     align-items: center;
 
-    gap: 9px;
+    gap: 12px;
 
     font-size: 10px;
 
@@ -410,16 +430,26 @@ header {
     color: #4f4b45;
 
     transition: opacity .3s ease;
+
 }
 
+
 .social-link:hover {
+
     opacity: .55;
+
 }
+
+
+/* =========================
+   LARGE FOOTER ICONS
+========================= */
 
 .social-icon {
 
-    width: 21px;
-    height: 21px;
+    width: 48px;
+
+    height: 48px;
 
     display: flex;
 
@@ -427,7 +457,10 @@ header {
 
     justify-content: center;
 
-    font-size: 16px;
+    font-size: 38px;
+
+    font-weight: 300;
+
 }
 
 
@@ -437,7 +470,9 @@ header {
 
 footer {
 
-    padding: 30px 5vw;
+    margin-top: 35px;
+
+    padding: 25px 5vw;
 
     border-top: 1px solid #d7d3cb;
 
@@ -452,6 +487,7 @@ footer {
     text-transform: uppercase;
 
     color: #77736d;
+
 }
 
 
@@ -460,6 +496,7 @@ footer {
 ========================= */
 
 @media (max-width: 800px) {
+
 
     header {
 
@@ -471,11 +508,13 @@ footer {
 
     }
 
+
     .logo {
 
         font-size: 11px;
 
     }
+
 
     .navigation {
 
@@ -487,17 +526,22 @@ footer {
 
     }
 
+
     .navigation a {
 
         font-size: 7px;
 
     }
 
+
     .navigation .contact-button {
 
         padding: 7px 10px;
 
     }
+
+
+    /* HERO */
 
     .hero {
 
@@ -509,6 +553,7 @@ footer {
 
     }
 
+
     .hero-photo {
 
         order: 1;
@@ -516,6 +561,7 @@ footer {
         min-height: 430px;
 
     }
+
 
     .hero-text {
 
@@ -525,41 +571,51 @@ footer {
 
     }
 
-    .quick-nav {
+
+    /* WRITING */
+
+    .latest-writing {
 
         width: 88%;
-
-        grid-template-columns: repeat(2, 1fr);
 
     }
 
-    .about,
-    .research,
-    .cv,
-    .contact {
 
-        width: 88%;
+    .writing-grid {
 
         grid-template-columns: 1fr;
 
     }
 
-    .about-content,
-    .research-content,
-    .cv-content,
-    .social-links {
 
-        padding-left: 0;
+    /* CONTACT */
 
-        margin-top: 25px;
+    .contact {
+
+        width: 88%;
 
     }
 
+
     .social-links {
 
-        gap: 20px;
+        gap: 25px;
 
     }
+
+
+    .social-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 32px;
+
+    }
+
+
+    /* FOOTER */
 
     footer {
 
@@ -572,6 +628,7 @@ footer {
 }
 
 </style>
+
 </head>
 
 
@@ -584,33 +641,54 @@ footer {
 
 <header>
 
+
     <div class="logo">
+
         BITA NEGAHDAR
+
     </div>
+
 
     <nav class="navigation">
 
-        <a href="#about">
+
+        <a href="about.html">
+
             About
+
         </a>
 
-        <a href="#research">
+
+        <a href="research.html">
+
             Research
+
         </a>
 
-        <a href="#writing">
+
+        <a href="writing.html">
+
             Writing
+
         </a>
 
-        <a href="#cv">
+
+        <a href="cv.html">
+
             CV
+
         </a>
+
 
         <a href="#contact" class="contact-button">
+
             Contact
+
         </a>
 
+
     </nav>
+
 
 </header>
 
@@ -622,101 +700,13 @@ footer {
 
 <section class="hero">
 
+
+    <!-- LEFT -->
+
     <div class="hero-text">
 
+
         <p class="hero-description">
-
-            Psychology graduate student developing
-            a professional path in psychology,
-            counseling, and psychological research,
-            with an interest in human behavior
-            and emotional experience.
-
-        </p>
-
-
-        <a href="#about" class="outline-button">
-            About Me
-        </a>
-
-    </div>
-
-
-    <!-- PHOTO AREA
-         YOUR PHOTO WILL GO HERE -->
-
-    <div class="hero-photo">
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     QUICK NAV
-========================= -->
-
-<div class="quick-nav">
-
-    <a href="#about">
-        About
-    </a>
-
-    <a href="#research">
-        Research
-    </a>
-
-    <a href="#writing">
-        Writing
-    </a>
-
-    <a href="#cv">
-        CV
-    </a>
-
-</div>
-
-
-
-<!-- =========================
-     WRITING
-========================= -->
-
-<section id="writing" style="
-    width:90%;
-    max-width:1400px;
-    margin:75px auto;
-    padding-top:35px;
-    border-top:1px solid #d7d3cb;
-">
-
-    <div class="section-label">
-        Writing
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="about" id="about">
-
-    <div>
-
-        <div class="section-label">
-            About
-        </div>
-
-    </div>
-
-
-    <div class="about-content">
-
-        <p>
 
             I am currently developing my professional
             path in psychology, with a focus on
@@ -726,65 +716,113 @@ footer {
         </p>
 
 
-        <p>
+        <a href="about.html" class="outline-button">
 
-            My academic background also includes
-            previous studies in Photography
-            and Graphic Design.
+            About Me
 
-        </p>
+        </a>
+
 
     </div>
+
+
+
+    <!-- RIGHT : PHOTO -->
+
+    <div class="hero-photo">
+
+        <!-- Your photograph will be placed here -->
+
+    </div>
+
 
 </section>
 
 
 
 <!-- =========================
-     RESEARCH
+     LATEST WRITING
 ========================= -->
 
-<section class="research" id="research">
-
-    <div>
-
-        <div class="section-label">
-            Research
-        </div>
-
-    </div>
+<section class="latest-writing" id="writing">
 
 
-    <div class="research-content">
+    <div class="section-title">
 
-        <!-- Content will be added later -->
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CV
-========================= -->
-
-<section class="cv" id="cv">
-
-    <div>
-
-        <div class="section-label">
-            CV
-        </div>
+        Latest Writing
 
     </div>
 
 
-    <div class="cv-content">
+    <div class="writing-grid">
 
-        <!-- CV content will be added later -->
+
+        <a href="writing.html" class="writing-card">
+
+
+            <h3>
+
+                New Writing
+
+            </h3>
+
+
+            <p>
+
+                Latest psychological writing
+                and research-based reflections.
+
+            </p>
+
+
+        </a>
+
+
+
+        <a href="writing.html" class="writing-card">
+
+
+            <h3>
+
+                Recent Article
+
+            </h3>
+
+
+            <p>
+
+                New content will appear here.
+
+            </p>
+
+
+        </a>
+
+
+
+        <a href="writing.html" class="writing-card">
+
+
+            <h3>
+
+                More
+
+            </h3>
+
+
+            <p>
+
+                Explore the complete collection
+                of writings.
+
+            </p>
+
+
+        </a>
+
 
     </div>
+
 
 </section>
 
@@ -796,11 +834,10 @@ footer {
 
 <section class="contact" id="contact">
 
-    <div>
 
-        <div class="section-label">
-            Contact
-        </div>
+    <div class="contact-title">
+
+        Contact
 
     </div>
 
@@ -813,7 +850,9 @@ footer {
         <a href="#" class="social-link">
 
             <span class="social-icon">
+
                 ◎
+
             </span>
 
             Instagram
@@ -821,12 +860,15 @@ footer {
         </a>
 
 
+
         <!-- LINKEDIN -->
 
         <a href="#" class="social-link">
 
             <span class="social-icon">
+
                 in
+
             </span>
 
             LinkedIn
@@ -834,12 +876,15 @@ footer {
         </a>
 
 
+
         <!-- PHONE -->
 
         <a href="#" class="social-link">
 
             <span class="social-icon">
+
                 ☎
+
             </span>
 
             Phone
@@ -847,12 +892,15 @@ footer {
         </a>
 
 
+
         <!-- EMAIL -->
 
         <a href="#" class="social-link">
 
             <span class="social-icon">
+
                 ✉
+
             </span>
 
             Email
@@ -861,6 +909,7 @@ footer {
 
 
     </div>
+
 
 </section>
 
@@ -872,17 +921,25 @@ footer {
 
 <footer>
 
-    <div>
-        BITA NEGAHDAR
-    </div>
 
     <div>
-        Psychology
+
+        BITA NEGAHDAR
+
     </div>
+
+
+    <div>
+
+        Psychology
+
+    </div>
+
 
 </footer>
 
 
 </body>
+
 </html>
 ```
