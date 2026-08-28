@@ -1,3 +1,4 @@
+```css
 /* =====================================================
    GLOBAL RESET
 ===================================================== */
@@ -12,24 +13,10 @@ html{
     scroll-behavior:smooth;
 }
 
-:root{
-    --white:#FFFFFF;
-
-    /* YOUR COLORS */
-    --cyan-light:#CFFAFE;   /* RGB 207 250 254 */
-    --cyan:#06B6D4;         /* RGB 6 182 212 */
-    --cyan-dark:#0891B2;    /* RGB 8 145 178 */
-
-    --border:#D8E7EA;
-
-    --text:#252525;
-    --muted:#666666;
-}
-
 body{
     background:#FFFFFF;
-    color:var(--text);
-    font-family:"DM Sans",Arial,sans-serif;
+    color:#252525;
+    font-family:"DM Sans", Arial, sans-serif;
     font-weight:400;
 }
 
@@ -40,12 +27,40 @@ a{
 
 
 /* =====================================================
+   COLOR SYSTEM
+===================================================== */
+
+:root{
+
+    --white:#FFFFFF;
+
+    /* PALE CYAN / HERO PANEL */
+    --cyan-pale:#CFFAFE;
+
+    /* NORMAL CYAN */
+    --cyan:#0891B2;
+
+    /* HOVER CYAN */
+    --cyan-hover:#06B6D4;
+
+    /* DARK TEXT */
+    --text:#252525;
+
+    /* MUTED TEXT */
+    --muted:#626A6D;
+
+    /* BORDER */
+    --border:#D9E5E8;
+}
+
+
+/* =====================================================
    HEADER
 ===================================================== */
 
 header{
     width:100%;
-    min-height:72px;
+    min-height:76px;
 
     padding:0 4vw;
 
@@ -72,7 +87,8 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:28px;
+
+    gap:24px;
 }
 
 nav a{
@@ -80,16 +96,16 @@ nav a{
     align-items:center;
     justify-content:center;
 
-    min-height:34px;
+    min-height:38px;
 
-    padding:7px 9px;
+    padding:7px 11px;
 
     font-family:"DM Sans",Arial,sans-serif;
 
-    font-size:11px;
+    font-size:12px;
     font-weight:600;
 
-    letter-spacing:1.5px;
+    letter-spacing:1.4px;
 
     text-transform:uppercase;
 
@@ -102,30 +118,34 @@ nav a{
 
 
 /* =====================================================
-   MENU HOVER
+   NAV HOVER
 ===================================================== */
 
 nav a:hover{
-    background:#06B6D4;
+    background:var(--cyan-hover);
     color:#FFFFFF;
 }
 
 
-/* CONTACT BUTTON */
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
 
 .contact-btn{
-    padding:9px 16px;
+    padding:9px 17px;
 
-    background:#CFFAFE;
+    background:var(--cyan-pale);
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 
-    border:1px solid #CFFAFE;
+    border:1px solid var(--cyan-pale);
 }
 
 .contact-btn:hover{
-    background:#06B6D4 !important;
-    border-color:#06B6D4 !important;
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
     color:#FFFFFF !important;
 }
 
@@ -142,13 +162,16 @@ nav a:hover{
 
     display:grid;
 
+    /* TEXT LEFT / PHOTO RIGHT */
     grid-template-columns:44% 56%;
 
     min-height:560px;
 }
 
 
-/* LEFT COLORED PANEL */
+/* =====================================================
+   HERO TEXT — LEFT OF PHOTO
+===================================================== */
 
 .hero-text{
     grid-column:1;
@@ -160,9 +183,9 @@ nav a:hover{
     justify-content:center;
     align-items:flex-start;
 
-    background:#CFFAFE;
+    background:var(--cyan-pale);
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 .hero-description{
@@ -173,11 +196,12 @@ nav a:hover{
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:17px;
+
     font-weight:500;
 
     line-height:1.85;
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 
@@ -190,16 +214,17 @@ nav a:hover{
 
     padding:11px 20px;
 
-    border:1px solid #0891B2;
+    border:1px solid var(--cyan);
 
     background:transparent;
 
-    color:#0891B2;
+    color:var(--cyan);
 
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
-    font-weight:600;
+
+    font-weight:700;
 
     letter-spacing:1.7px;
 
@@ -212,16 +237,16 @@ nav a:hover{
 }
 
 .outline-btn:hover{
-    background:#06B6D4;
+    background:var(--cyan-hover);
 
-    border-color:#06B6D4;
+    border-color:var(--cyan-hover);
 
     color:#FFFFFF;
 }
 
 
 /* =====================================================
-   RIGHT PHOTO
+   HERO PHOTO — RIGHT
 ===================================================== */
 
 .hero-photo{
@@ -265,13 +290,14 @@ nav a:hover{
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:12px;
+
     font-weight:700;
 
     letter-spacing:2.2px;
 
     text-transform:uppercase;
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 .grid{
@@ -282,12 +308,24 @@ nav a:hover{
     gap:18px;
 }
 
+
+/* =====================================================
+   WRITING CARDS
+===================================================== */
+
 .card{
     display:block;
 
     background:#FFFFFF;
 
     overflow:hidden;
+
+    transition:
+        transform .25s ease;
+}
+
+.card:hover{
+    transform:translateY(-3px);
 }
 
 .cover{
@@ -299,7 +337,7 @@ nav a:hover{
 
     position:relative;
 
-    background:#CFFAFE;
+    background:#EEEEEE;
 }
 
 .cover img{
@@ -321,34 +359,21 @@ nav a:hover{
     filter:saturate(1.08);
 }
 
+
+/* =====================================================
+   REMOVE WRITING TITLES UNDER COVERS
+===================================================== */
+
 .card-info{
-    padding:15px 3px 22px;
+    display:none !important;
 }
 
 .card-number{
-    margin-bottom:7px;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:10px;
-    font-weight:700;
-
-    letter-spacing:1.8px;
-
-    text-transform:uppercase;
-
-    color:#0891B2;
+    display:none !important;
 }
 
 .card-title{
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:18px;
-    font-weight:600;
-
-    line-height:1.4;
-
-    color:#252525;
+    display:none !important;
 }
 
 
@@ -377,6 +402,7 @@ nav a:hover{
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     gap:60px;
@@ -393,22 +419,29 @@ nav a:hover{
 
     gap:9px;
 
+    padding:8px 12px;
+
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:10px;
+
     font-weight:600;
 
     letter-spacing:1.3px;
 
     text-transform:uppercase;
 
-    color:#4F514B;
+    color:#4F5557;
 
-    transition:color .25s ease;
+    transition:
+        background-color .25s ease,
+        color .25s ease;
 }
 
 .social-link:hover{
-    color:#06B6D4;
+    background:var(--cyan-hover);
+
+    color:#FFFFFF;
 }
 
 .social-icon{
@@ -429,16 +462,19 @@ nav a:hover{
     stroke-width:1.6;
 
     stroke-linecap:round;
+
     stroke-linejoin:round;
 }
 
 .linkedin-fill{
     fill:currentColor;
+
     stroke:none;
 }
 
 .linkedin-white{
     fill:#FFFFFF;
+
     stroke:none;
 }
 
@@ -458,11 +494,10 @@ footer{
 
     justify-content:space-between;
 
-    background:#FFFFFF;
-
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:9px;
+
     font-weight:600;
 
     letter-spacing:1.8px;
@@ -479,6 +514,7 @@ footer{
 
 .page{
     width:92%;
+
     max-width:1250px;
 
     margin:55px auto;
@@ -490,13 +526,14 @@ footer{
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:11px;
+
     font-weight:700;
 
     letter-spacing:2px;
 
     text-transform:uppercase;
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 h1{
@@ -508,7 +545,7 @@ h1{
 
     line-height:1.15;
 
-    color:#252525;
+    color:var(--text);
 }
 
 .intro{
@@ -519,16 +556,17 @@ h1{
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:16px;
+
     font-weight:400;
 
     line-height:2;
 
-    color:#5F625F;
+    color:#5F6668;
 }
 
 
 /* =====================================================
-   BLOCKS
+   GENERAL BLOCKS
 ===================================================== */
 
 .block{
@@ -543,14 +581,15 @@ h1{
 
     font-family:"DM Sans",Arial,sans-serif;
 
-    font-size:16px;
+    font-size:15px;
+
     font-weight:700;
 
     letter-spacing:1.8px;
 
     text-transform:uppercase;
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 .block p{
@@ -562,7 +601,7 @@ h1{
 
     line-height:2;
 
-    color:#5F625F;
+    color:#5F6668;
 }
 
 
@@ -594,9 +633,16 @@ h1{
 }
 
 .education-item:hover{
-    background:#CFFAFE;
+    background:var(--cyan-hover);
 
-    border-color:#06B6D4;
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
+}
+
+.education-item:hover h3,
+.education-item:hover p{
+    color:#FFFFFF;
 }
 
 .education-item h3{
@@ -605,6 +651,7 @@ h1{
     font-family:"DM Sans",Arial,sans-serif;
 
     font-size:20px;
+
     font-weight:700;
 }
 
@@ -621,7 +668,7 @@ h1{
 
 /* =====================================================
    RELEVANT STUDIES & TRAINING
-   REAL SQUARE CARDS
+   TRUE SQUARE CARDS
 ===================================================== */
 
 .training{
@@ -635,127 +682,76 @@ h1{
 }
 
 
-/* EACH TRAINING CARD */
+/* EACH CARD IS A SQUARE */
 
 .training span{
-    width:100% !important;
+    width:100%;
 
-    aspect-ratio:1 / 1 !important;
+    aspect-ratio:1 / 1;
 
-    min-height:0 !important;
+    min-height:0;
 
-    height:auto !important;
+    padding:25px;
 
-    padding:24px !important;
+    display:flex;
 
-    display:flex !important;
+    align-items:center;
 
-    align-items:center !important;
+    justify-content:center;
 
-    justify-content:center !important;
+    text-align:center;
 
-    text-align:center !important;
+    background:var(--cyan-pale);
 
-    background:#CFFAFE !important;
+    color:var(--cyan);
 
-    color:#0891B2 !important;
+    border:1px solid var(--border);
 
-    border:1px solid #B8E8EE !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:16px;
 
-    font-size:16px !important;
+    font-weight:700;
 
-    font-weight:700 !important;
+    line-height:1.5;
 
-    line-height:1.5 !important;
+    cursor:pointer;
 
     transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease,
-        transform .25s ease !important;
-}
-
-
-/* TRAINING HOVER */
-
-.training span:hover{
-    background:#06B6D4 !important;
-
-    border-color:#06B6D4 !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-4px) !important;
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        border-color .3s ease;
 }
 
 
 /* =====================================================
-   IF TRAINING ITEMS ARE LINKS
+   TRAINING HOVER — BLUE/CYAN + WHITE
 ===================================================== */
 
-.training a{
-    width:100% !important;
+.training span:hover{
+    background:var(--cyan-hover);
 
-    aspect-ratio:1 / 1 !important;
+    border-color:var(--cyan-hover);
 
-    min-height:0 !important;
+    color:#FFFFFF;
 
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    text-align:center !important;
-
-    padding:24px !important;
-
-    background:#CFFAFE !important;
-
-    color:#0891B2 !important;
-
-    border:1px solid #B8E8EE !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:16px !important;
-
-    font-weight:700 !important;
-
-    line-height:1.5 !important;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease,
-        transform .25s ease !important;
-}
-
-.training a:hover{
-    background:#06B6D4 !important;
-
-    border-color:#06B6D4 !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-4px) !important;
+    transform:translateY(-4px);
 }
 
 
 /* =====================================================
-   CV EDUCATION
+   CV EDUCATION ROW
 ===================================================== */
 
 .education-row{
     display:grid;
 
-    grid-template-columns:1fr 160px;
+    grid-template-columns:1fr 150px;
 
     align-items:start;
 
-    gap:25px;
+    gap:20px;
 
     padding:18px 0;
 
@@ -767,6 +763,7 @@ h1{
 
 .degree{
     grid-column:1;
+
     grid-row:1;
 
     font-family:"DM Sans",Arial,sans-serif;
@@ -777,7 +774,7 @@ h1{
 
     line-height:1.4;
 
-    color:#252525;
+    color:var(--text);
 }
 
 
@@ -785,9 +782,10 @@ h1{
 
 .institution{
     grid-column:1;
+
     grid-row:2;
 
-    margin-top:-12px;
+    margin-top:-10px;
 
     font-family:"DM Sans",Arial,sans-serif;
 
@@ -814,7 +812,7 @@ h1{
 
     font-weight:600;
 
-    color:#0891B2;
+    color:var(--cyan);
 
     white-space:nowrap;
 }
@@ -839,7 +837,7 @@ h1{
 
     font-weight:700;
 
-    color:#252525;
+    color:var(--text);
 }
 
 .topic p{
@@ -851,7 +849,7 @@ h1{
 
     line-height:1.9;
 
-    color:#5F625F;
+    color:#5F6668;
 }
 
 
@@ -888,7 +886,7 @@ h1{
 
     text-transform:uppercase;
 
-    color:#0891B2;
+    color:var(--cyan);
 }
 
 .article-text{
@@ -900,7 +898,7 @@ h1{
 
     line-height:2;
 
-    color:#555955;
+    color:#555D5F;
 }
 
 .article-text p{
@@ -931,7 +929,7 @@ h1{
 
     display:block;
 
-    background:#CFFAFE;
+    background:#EEEEEE;
 }
 
 
@@ -946,11 +944,9 @@ h1{
 
     padding:10px 16px;
 
-    border:1px solid #0891B2;
+    border:1px solid var(--cyan);
 
-    color:#0891B2;
-
-    background:#FFFFFF;
+    color:var(--cyan);
 
     font-family:"DM Sans",Arial,sans-serif;
 
@@ -969,22 +965,23 @@ h1{
 }
 
 .back:hover{
-    background:#06B6D4;
+    background:var(--cyan-hover);
 
-    border-color:#06B6D4;
+    border-color:var(--cyan-hover);
 
     color:#FFFFFF;
 }
 
 
 /* =====================================================
-   GENERAL LINK HOVER
+   ALL BUTTON / CLICKABLE HOVER
 ===================================================== */
 
-.page a:hover,
-.article a:hover,
-.block a:hover{
-    color:#06B6D4;
+button:hover,
+a.outline-btn:hover,
+a.back:hover{
+    background:var(--cyan-hover);
+    color:#FFFFFF;
 }
 
 
@@ -1031,7 +1028,9 @@ h1{
     }
 
 
-    /* HERO */
+    /* =================================================
+       HERO MOBILE
+    ================================================= */
 
     .hero{
         width:92%;
@@ -1062,7 +1061,9 @@ h1{
     }
 
 
-    /* WRITING */
+    /* =================================================
+       WRITING
+    ================================================= */
 
     .latest{
         width:92%;
@@ -1075,7 +1076,9 @@ h1{
     }
 
 
-    /* GENERAL */
+    /* =================================================
+       GENERAL
+    ================================================= */
 
     .page{
         width:90%;
@@ -1088,25 +1091,28 @@ h1{
     }
 
 
-    /* TRAINING */
+    /* =================================================
+       TRAINING MOBILE
+    ================================================= */
 
     .training{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        grid-template-columns:repeat(2,minmax(0,1fr));
 
-        gap:14px !important;
+        gap:14px;
     }
 
-    .training span,
-    .training a{
-        aspect-ratio:1 / 1 !important;
+    .training span{
+        aspect-ratio:1 / 1;
 
-        padding:18px !important;
+        padding:18px;
 
-        font-size:14px !important;
+        font-size:14px;
     }
 
 
-    /* EDUCATION */
+    /* =================================================
+       EDUCATION
+    ================================================= */
 
     .education-row{
         grid-template-columns:1fr 100px;
@@ -1127,7 +1133,9 @@ h1{
     }
 
 
-    /* GALLERY */
+    /* =================================================
+       GALLERY
+    ================================================= */
 
     .gallery{
         grid-template-columns:1fr;
@@ -1140,7 +1148,9 @@ h1{
     }
 
 
-    /* CONTACT */
+    /* =================================================
+       CONTACT
+    ================================================= */
 
     .contact-section{
         width:92%;
@@ -1151,7 +1161,9 @@ h1{
     }
 
 
-    /* FOOTER */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     footer{
         flex-direction:column;
@@ -1171,14 +1183,13 @@ h1{
 @media(max-width:480px){
 
     .training{
-        grid-template-columns:1fr !important;
+        grid-template-columns:1fr;
     }
 
-    .training span,
-    .training a{
-        aspect-ratio:1 / 1 !important;
+    .training span{
+        aspect-ratio:1 / 1;
 
-        font-size:15px !important;
+        font-size:15px;
     }
 
     .education-row{
@@ -1210,3 +1221,4 @@ h1{
     }
 
 }
+```
