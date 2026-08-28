@@ -444,7 +444,7 @@ header {
 
 
 /* =========================
-   REAL SVG ICONS
+   ICONS
 ========================= */
 
 .social-icon {
@@ -462,11 +462,22 @@ header {
 }
 
 
+/* ALL SVG */
+
 .social-icon svg {
 
     width: 42px;
 
     height: 42px;
+
+    display: block;
+
+}
+
+
+/* INSTAGRAM / PHONE / EMAIL */
+
+.line-icon {
 
     fill: none;
 
@@ -481,19 +492,35 @@ header {
 }
 
 
-/* LinkedIn needs filled letters */
+/* =========================
+   LINKEDIN
+========================= */
 
-.linkedin-icon text {
+.linkedin-svg {
+
+    width: 42px;
+
+    height: 42px;
+
+}
+
+
+.linkedin-box {
 
     fill: currentColor;
 
-    stroke: none;
+}
 
-    font-family: Arial, sans-serif;
 
-    font-size: 24px;
+.linkedin-text {
 
-    font-weight: 600;
+    fill: #f5f3ef;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
 
 }
 
@@ -798,11 +825,13 @@ footer {
 
         <a href="writing.html" class="writing-card">
 
+
             <h3>
 
                 New Writing
 
             </h3>
+
 
             <p>
 
@@ -811,11 +840,13 @@ footer {
 
             </p>
 
+
         </a>
 
 
 
         <a href="writing.html" class="writing-card">
+
 
             <h3>
 
@@ -823,11 +854,13 @@ footer {
 
             </h3>
 
+
             <p>
 
                 New content will appear here.
 
             </p>
+
 
         </a>
 
@@ -835,11 +868,13 @@ footer {
 
         <a href="writing.html" class="writing-card">
 
+
             <h3>
 
                 More
 
             </h3>
+
 
             <p>
 
@@ -847,6 +882,7 @@ footer {
                 of writings.
 
             </p>
+
 
         </a>
 
@@ -882,13 +918,29 @@ footer {
 
             <span class="social-icon">
 
-                <svg viewBox="0 0 24 24">
+                <svg
+                    viewBox="0 0 24 24"
+                    class="line-icon">
 
-                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5">
+                    </rect>
 
-                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4">
+                    </circle>
 
-                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1">
+                    </circle>
 
                 </svg>
 
@@ -906,26 +958,63 @@ footer {
         <a href="#" class="social-link">
 
 
-            <span class="social-icon linkedin-icon">
+            <span class="social-icon">
 
-                <svg viewBox="0 0 24 24">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    class="linkedin-svg">
+
+                    <!-- Official-style LinkedIn square -->
 
                     <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="2"
-                        fill="none">
+                        x="2"
+                        y="2"
+                        width="20"
+                        height="20"
+                        rx="2.5"
+                        class="linkedin-box">
                     </rect>
 
-                    <text
+
+                    <!-- i -->
+
+                    <rect
                         x="6"
-                        y="17">
-                        in
-                    </text>
+                        y="10"
+                        width="2.2"
+                        height="8"
+                        fill="#f5f3ef">
+                    </rect>
+
+
+                    <circle
+                        cx="7.1"
+                        cy="7"
+                        r="1.2"
+                        fill="#f5f3ef">
+                    </circle>
+
+
+                    <!-- n -->
+
+                    <path
+                        d="
+                        M11 10
+                        V18
+                        M11 13
+                        C11.8 10.5 16 10 16 14
+                        V18
+                        "
+                        fill="none"
+                        stroke="#f5f3ef"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
 
                 </svg>
+
 
             </span>
 
@@ -943,7 +1032,11 @@ footer {
 
             <span class="social-icon">
 
-                <svg viewBox="0 0 24 24">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    class="line-icon">
+
 
                     <path d="
                         M7.5 3.5
@@ -963,7 +1056,9 @@ footer {
                         Z">
                     </path>
 
+
                 </svg>
+
 
             </span>
 
@@ -981,7 +1076,11 @@ footer {
 
             <span class="social-icon">
 
-                <svg viewBox="0 0 24 24">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    class="line-icon">
+
 
                     <rect
                         x="3"
@@ -991,9 +1090,16 @@ footer {
                         rx="2">
                     </rect>
 
-                    <path d="M4 7l8 6 8-6"></path>
+
+                    <path
+                        d="M4 7
+                        L12 13
+                        L20 7">
+                    </path>
+
 
                 </svg>
+
 
             </span>
 
