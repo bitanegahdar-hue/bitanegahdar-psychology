@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +17,6 @@
 
 /* =====================================================
    HOME PAGE
-   FINAL VERSION
 ===================================================== */
 
 :root{
@@ -49,7 +49,7 @@ body{
     background:#FFFFFF !important;
     color:var(--text);
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
     font-weight:400;
 }
 
@@ -61,7 +61,6 @@ a{
 
 /* =====================================================
    HEADER
-   SAME ON ALL PAGES
 ===================================================== */
 
 header{
@@ -90,7 +89,7 @@ header{
 .logo{
     flex:0 0 auto;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:20px !important;
     font-weight:700 !important;
@@ -135,7 +134,7 @@ nav a{
 
     border:1px solid transparent !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:11px !important;
     font-weight:600 !important;
@@ -156,12 +155,6 @@ nav a{
         border-color .25s ease !important;
 }
 
-
-/* =====================================================
-   NAV HOVER
-   NORMAL BLUE / CYAN
-===================================================== */
-
 nav a:hover{
     background:var(--cyan-hover) !important;
 
@@ -172,7 +165,7 @@ nav a:hover{
 
 
 /* =====================================================
-   CONTACT
+   CONTACT BUTTON
 ===================================================== */
 
 .contact-btn{
@@ -217,7 +210,6 @@ nav a:hover{
 
 /* =====================================================
    LEFT BLUE PANEL
-   WHITE TEXT
 ===================================================== */
 
 .hero-text{
@@ -248,7 +240,7 @@ nav a:hover{
 
     margin:0 0 30px 0 !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:17px !important;
 
@@ -261,7 +253,7 @@ nav a:hover{
 
 
 /* =====================================================
-   ABOUT ME BUTTON
+   ABOUT BUTTON
 ===================================================== */
 
 .outline-btn{
@@ -278,7 +270,7 @@ nav a:hover{
 
     color:#FFFFFF !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:10px !important;
 
@@ -354,7 +346,7 @@ nav a:hover{
 .section-title{
     margin-bottom:24px !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:12px !important;
 
@@ -397,6 +389,13 @@ nav a:hover{
     background:#FFFFFF !important;
 
     overflow:hidden !important;
+
+    transition:
+        transform .3s ease !important;
+}
+
+.card:hover{
+    transform:translateY(-5px) !important;
 }
 
 
@@ -414,6 +413,12 @@ nav a:hover{
     position:relative !important;
 
     background:var(--cyan-light) !important;
+
+    border:1px solid transparent !important;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease !important;
 }
 
 .cover img{
@@ -432,13 +437,20 @@ nav a:hover{
 
 
 /* =====================================================
-   COVER HOVER
+   STRONGER WRITING HOVER
 ===================================================== */
 
-.card:hover .cover img{
-    transform:scale(1.025) !important;
+.card:hover .cover{
+    border-color:var(--cyan-hover) !important;
 
-    filter:saturate(1.08) !important;
+    box-shadow:
+        0 10px 25px rgba(6,182,212,.18) !important;
+}
+
+.card:hover .cover img{
+    transform:scale(1.045) !important;
+
+    filter:saturate(1.12) brightness(1.03) !important;
 }
 
 
@@ -462,7 +474,7 @@ nav a:hover{
 
     margin:55px auto 0 !important;
 
-    padding:35px 0 !important;
+    padding:35px 0 40px !important;
 
     border-top:1px solid var(--border) !important;
 
@@ -470,12 +482,12 @@ nav a:hover{
 }
 
 .contact-section .section-title{
-    margin-bottom:28px !important;
+    margin-bottom:30px !important;
 }
 
 
 /* =====================================================
-   SOCIAL LINKS
+   SOCIAL / PROFESSIONAL LINKS
 ===================================================== */
 
 .social-links{
@@ -485,81 +497,64 @@ nav a:hover{
 
     align-items:center !important;
 
-    gap:60px !important;
+    gap:45px !important;
 
     flex-wrap:wrap !important;
 }
 
+
+/* =====================================================
+   ICON LINK
+===================================================== */
+
 .social-link{
     display:flex !important;
 
-    flex-direction:column !important;
-
     align-items:center !important;
 
-    gap:9px !important;
+    justify-content:center !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    width:58px !important;
 
-    font-size:10px !important;
+    height:58px !important;
 
-    font-weight:600 !important;
-
-    letter-spacing:1.3px !important;
-
-    line-height:1 !important;
-
-    text-transform:uppercase !important;
-
-    color:#4F514B !important;
+    border-radius:50% !important;
 
     transition:
-        color .25s ease !important;
+        transform .25s ease,
+        background-color .25s ease,
+        box-shadow .25s ease !important;
 }
 
 .social-link:hover{
-    color:var(--cyan-hover) !important;
+    transform:translateY(-5px) scale(1.06) !important;
+
+    background:#CFFAFE !important;
+
+    box-shadow:
+        0 8px 20px rgba(8,145,178,.16) !important;
 }
 
 
 /* =====================================================
-   ICONS
+   UPLOADED ICONS
 ===================================================== */
 
 .social-icon{
-    width:48px !important;
+    width:42px !important;
 
-    height:48px !important;
+    height:42px !important;
 
     display:block !important;
+
+    object-fit:contain !important;
+
+    transition:
+        transform .25s ease !important;
 }
 
-.social-icon svg{
-    width:100% !important;
-
-    height:100% !important;
-
-    fill:none;
-
-    stroke:currentColor;
-
-    stroke-width:1.6;
-
-    stroke-linecap:round;
-
-    stroke-linejoin:round;
-}
-
-.linkedin-fill{
-    fill:currentColor;
-
-    stroke:none;
-}
-
-.linkedin-white{
-    fill:#FFFFFF;
-
-    stroke:none;
+.social-link:hover .social-icon{
+    transform:scale(1.08) !important;
 }
 
 
@@ -582,7 +577,7 @@ footer{
 
     justify-content:space-between !important;
 
-    font-family:"DM Sans", Arial, sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:9px !important;
 
@@ -612,13 +607,11 @@ footer{
         gap:15px !important;
     }
 
-
     .logo{
         font-size:14px !important;
 
         letter-spacing:1.8px !important;
     }
-
 
     nav{
         gap:6px !important;
@@ -627,7 +620,6 @@ footer{
 
         justify-content:flex-end !important;
     }
-
 
     nav a{
         height:30px !important;
@@ -640,7 +632,6 @@ footer{
 
         letter-spacing:1px !important;
     }
-
 
     .contact-btn{
         height:30px !important;
@@ -661,7 +652,6 @@ footer{
         min-height:auto !important;
     }
 
-
     .hero-photo{
         grid-column:1 !important;
 
@@ -670,7 +660,6 @@ footer{
         min-height:480px !important;
     }
 
-
     .hero-text{
         grid-column:1 !important;
 
@@ -678,7 +667,6 @@ footer{
 
         padding:45px 8% !important;
     }
-
 
     .hero-description{
         font-size:16px !important;
@@ -692,7 +680,6 @@ footer{
     .latest{
         width:92% !important;
     }
-
 
     .grid{
         grid-template-columns:1fr !important;
@@ -709,9 +696,20 @@ footer{
         width:92% !important;
     }
 
-
     .social-links{
-        gap:32px !important;
+        gap:24px !important;
+    }
+
+    .social-link{
+        width:52px !important;
+
+        height:52px !important;
+    }
+
+    .social-icon{
+        width:38px !important;
+
+        height:38px !important;
     }
 
 
@@ -760,7 +758,6 @@ footer{
 
 <!-- =====================================================
      HEADER
-     HOME / ABOUT / WRITING / CONTACT
 ===================================================== -->
 
 <header>
@@ -800,8 +797,6 @@ footer{
 <section class="hero">
 
 
-    <!-- LEFT BLUE PANEL -->
-
     <div class="hero-text">
 
         <p class="hero-description">
@@ -818,8 +813,6 @@ footer{
 
     </div>
 
-
-    <!-- RIGHT PHOTO -->
 
     <div class="hero-photo">
 
@@ -848,8 +841,6 @@ footer{
     <div class="grid">
 
 
-        <!-- WRITING 01 -->
-
         <a href="writing-1.html" class="card">
 
             <div class="cover">
@@ -864,8 +855,6 @@ footer{
         </a>
 
 
-        <!-- WRITING 02 -->
-
         <a href="writing-2.html" class="card">
 
             <div class="cover">
@@ -879,8 +868,6 @@ footer{
 
         </a>
 
-
-        <!-- WRITING 03 -->
 
         <a href="writing-3.html" class="card">
 
@@ -922,37 +909,14 @@ footer{
             target="_blank"
             rel="noopener"
             class="social-link"
+            aria-label="Instagram"
         >
 
-            <span class="social-icon">
-
-                <svg viewBox="0 0 24 24">
-
-                    <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                    ></rect>
-
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                    ></circle>
-
-                    <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1"
-                    ></circle>
-
-                </svg>
-
-            </span>
-
-            Instagram
+            <img
+                src="images/instagram.png"
+                alt=""
+                class="social-icon"
+            >
 
         </a>
 
@@ -964,49 +928,14 @@ footer{
             target="_blank"
             rel="noopener"
             class="social-link"
+            aria-label="LinkedIn"
         >
 
-            <span class="social-icon">
-
-                <svg viewBox="0 0 24 24">
-
-                    <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="2.5"
-                        class="linkedin-fill"
-                    ></rect>
-
-                    <rect
-                        x="6"
-                        y="10"
-                        width="2.2"
-                        height="8"
-                        class="linkedin-white"
-                    ></rect>
-
-                    <circle
-                        cx="7.1"
-                        cy="7"
-                        r="1.2"
-                        class="linkedin-white"
-                    ></circle>
-
-                    <path
-                        d="M11 10v8M11 13c.8-2.5 5-3 5 1v4"
-                        stroke="#FFFFFF"
-                        stroke-width="2.2"
-                        fill="none"
-                        stroke-linecap="round"
-                    ></path>
-
-                </svg>
-
-            </span>
-
-            LinkedIn
+            <img
+                src="images/linkedin.png"
+                alt=""
+                class="social-icon"
+            >
 
         </a>
 
@@ -1016,21 +945,14 @@ footer{
         <a
             href="tel:+989119382619"
             class="social-link"
+            aria-label="Phone"
         >
 
-            <span class="social-icon">
-
-                <svg viewBox="0 0 24 24">
-
-                    <path
-                        d="M7.5 3.5C6.4 3.5 5.5 4.4 5.5 5.5C5.5 13.2 10.8 18.5 18.5 18.5C19.6 18.5 20.5 17.6 20.5 16.5V14.8C20.5 14.2 20.1 13.7 19.5 13.5L16.6 12.5C16.1 12.3 15.5 12.5 15.2 13L14.2 14.2C12.4 13.3 10.7 11.6 9.8 9.8L11 8.8C11.5 8.5 11.7 7.9 11.5 7.4L10.5 4.5C10.3 3.9 9.8 3.5 9.2 3.5Z"
-                    ></path>
-
-                </svg>
-
-            </span>
-
-            Phone
+            <img
+                src="images/phone.png"
+                alt=""
+                class="social-icon"
+            >
 
         </a>
 
@@ -1040,29 +962,33 @@ footer{
         <a
             href="mailto:bitanegahdar@gmail.com"
             class="social-link"
+            aria-label="Email"
         >
 
-            <span class="social-icon">
+            <img
+                src="images/email.png"
+                alt=""
+                class="social-icon"
+            >
 
-                <svg viewBox="0 0 24 24">
+        </a>
 
-                    <rect
-                        x="3"
-                        y="5"
-                        width="18"
-                        height="14"
-                        rx="2"
-                    ></rect>
 
-                    <path
-                        d="M4 7l8 6 8-6"
-                    ></path>
+        <!-- IRAN PSYCHOLOGY ASSOCIATION -->
 
-                </svg>
+        <a
+            href="https://www.iranpa.org/"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            aria-label="Iran Psychology Association"
+        >
 
-            </span>
-
-            Email
+            <img
+                src="images/iranpa.png"
+                alt=""
+                class="social-icon"
+            >
 
         </a>
 
@@ -1092,3 +1018,4 @@ footer{
 </body>
 
 </html>
+```
