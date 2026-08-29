@@ -32,6 +32,7 @@
 /* =====================================================
    HEADER
    SAME ON EVERY PAGE
+   HOME / ABOUT / WRITING / CONTACT
 ===================================================== */
 
 header{
@@ -247,9 +248,9 @@ nav a:hover{
 .education-item{
     width:100% !important;
 
-    min-height:95px !important;
+    min-height:88px !important;
 
-    padding:18px 22px !important;
+    padding:16px 22px !important;
 
     border:1px solid var(--border) !important;
 
@@ -385,27 +386,14 @@ nav a:hover{
 
 /* =====================================================
    PROFESSIONAL / ACADEMIC LINKS
-   LOGOS ONLY — NO TITLES
+   LOGOS ONLY
+   NO BORDER / NO BOX / CENTERED
 ===================================================== */
 
 .resource-links{
+    width:100% !important;
+
     margin-top:5px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:flex-start !important;
-
-    flex-wrap:wrap !important;
-
-    gap:26px !important;
-}
-
-.resource-link{
-    width:135px !important;
-
-    height:62px !important;
 
     display:flex !important;
 
@@ -413,36 +401,71 @@ nav a:hover{
 
     justify-content:center !important;
 
-    background:#FFFFFF !important;
+    flex-wrap:wrap !important;
 
-    border:1px solid var(--border) !important;
-
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background-color .25s ease !important;
+    gap:34px !important;
 }
 
-.resource-link:hover{
-    transform:translateY(-4px) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    background:var(--cyan-pale) !important;
-}
-
-.resource-link img{
-    max-width:105px !important;
-
-    max-height:42px !important;
-
+.resource-link{
     width:auto !important;
 
     height:auto !important;
 
+    padding:6px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    background:transparent !important;
+
+    border:none !important;
+
+    outline:none !important;
+
+    box-shadow:none !important;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease !important;
+}
+
+.resource-link:hover{
+    transform:translateY(-4px) scale(1.04) !important;
+
+    background:transparent !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+}
+
+.resource-link img{
+    width:auto !important;
+
+    height:auto !important;
+
+    max-width:110px !important;
+
+    max-height:48px !important;
+
     display:block !important;
 
     object-fit:contain !important;
+
+    border:none !important;
+
+    outline:none !important;
+
+    box-shadow:none !important;
+
+    transition:opacity .25s ease !important;
+}
+
+.resource-link:hover img{
+    opacity:.82 !important;
 }
 
 
@@ -528,7 +551,9 @@ footer{
     }
 
 
-    /* PAGE */
+    /* =================================================
+       PAGE
+    ================================================= */
 
     .page{
         width:90% !important;
@@ -547,16 +572,18 @@ footer{
     }
 
 
-    /* EDUCATION */
+    /* =================================================
+       EDUCATION
+    ================================================= */
 
     .education{
         gap:10px !important;
     }
 
     .education-item{
-        min-height:88px !important;
+        min-height:82px !important;
 
-        padding:16px 18px !important;
+        padding:15px 18px !important;
     }
 
     .education-item h3{
@@ -564,7 +591,9 @@ footer{
     }
 
 
-    /* TRAINING */
+    /* =================================================
+       TRAINING
+    ================================================= */
 
     .training{
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
@@ -581,28 +610,36 @@ footer{
     }
 
 
-    /* RESOURCE LOGOS */
+    /* =================================================
+       RESOURCE LOGOS
+    ================================================= */
 
     .resource-links{
         justify-content:center !important;
 
-        gap:14px !important;
+        gap:22px !important;
+
+        padding:5px 0 !important;
     }
 
     .resource-link{
-        width:105px !important;
+        width:auto !important;
 
-        height:55px !important;
+        height:auto !important;
+
+        padding:4px !important;
     }
 
     .resource-link img{
-        max-width:82px !important;
+        max-width:78px !important;
 
-        max-height:35px !important;
+        max-height:34px !important;
     }
 
 
-    /* FOOTER */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     footer{
         flex-direction:column !important;
@@ -626,19 +663,27 @@ footer{
     }
 
     .training{
-        grid-template-columns:1fr !important;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+
+        gap:10px !important;
     }
 
     .training span{
         aspect-ratio:1 / 1 !important;
 
-        font-size:15px !important;
+        padding:14px !important;
+
+        font-size:12px !important;
     }
 
-    .resource-link{
-        width:95px !important;
+    .resource-links{
+        gap:16px !important;
+    }
 
-        height:52px !important;
+    .resource-link img{
+        max-width:65px !important;
+
+        max-height:30px !important;
     }
 
 }
@@ -671,16 +716,8 @@ footer{
         About
     </a>
 
-    <a href="research.html">
-        Research
-    </a>
-
     <a href="writing.html">
         Writing
-    </a>
-
-    <a href="cv.html">
-        CV
     </a>
 
     <a href="index.html#contact" class="contact-btn">
@@ -820,7 +857,7 @@ footer{
 
 <!-- =================================================
      PROFESSIONAL / ACADEMIC LINKS
-     LOGOS ONLY
+     LOGOS ONLY — NO TITLES / NO BORDERS
 ================================================= -->
 
 <section class="block">
@@ -834,10 +871,12 @@ footer{
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <img
                 src="images/apa.png"
                 alt="APA"
             >
+
         </a>
 
 
@@ -847,10 +886,12 @@ footer{
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <img
                 src="images/ipa.png"
                 alt="Iranian Psychological Association"
             >
+
         </a>
 
 
@@ -860,10 +901,12 @@ footer{
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <img
                 src="images/pubmed.png"
                 alt="PubMed"
             >
+
         </a>
 
 
@@ -873,10 +916,12 @@ footer{
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <img
                 src="images/scholar.png"
                 alt="Google Scholar"
             >
+
         </a>
 
 
@@ -886,10 +931,12 @@ footer{
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <img
                 src="images/researchgate.png"
                 alt="ResearchGate"
             >
+
         </a>
 
 
