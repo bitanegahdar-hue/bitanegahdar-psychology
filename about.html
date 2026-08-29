@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -15,22 +16,27 @@
 <style>
 
 /* =====================================================
-   ABOUT PAGE — FINAL
+   ABOUT PAGE
 ===================================================== */
 
 :root{
     --cyan:#0891B2;
     --cyan-hover:#06B6D4;
     --cyan-pale:#CFFAFE;
+    --border:#D9E5E8;
+    --text:#252525;
+    --muted:#626A6D;
 }
 
 
 /* =====================================================
    HEADER
+   SAME ON EVERY PAGE
 ===================================================== */
 
 header{
     width:100% !important;
+
     min-height:76px !important;
     height:76px !important;
 
@@ -41,6 +47,8 @@ header{
     justify-content:space-between !important;
 
     background:#FFFFFF !important;
+
+    border-bottom:1px solid var(--border) !important;
 }
 
 .logo{
@@ -51,15 +59,10 @@ header{
 
     letter-spacing:2.4px !important;
 
-    color:#252525 !important;
+    color:var(--text) !important;
 
     white-space:nowrap !important;
 }
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
 
 nav{
     display:flex !important;
@@ -90,13 +93,15 @@ nav a{
 
     letter-spacing:1.4px !important;
 
+    line-height:1 !important;
+
     text-transform:uppercase !important;
 
-    color:#252525 !important;
+    color:var(--text) !important;
+
+    background:transparent !important;
 
     border:1px solid transparent !important;
-
-    text-decoration:none !important;
 
     white-space:nowrap !important;
 
@@ -106,38 +111,33 @@ nav a{
         border-color .25s ease !important;
 }
 
-
-/* =====================================================
-   NAV HOVER
-===================================================== */
-
 nav a:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover) !important;
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover) !important;
 
     color:#FFFFFF !important;
 }
 
 
 /* =====================================================
-   CONTACT
+   CONTACT BUTTON
 ===================================================== */
 
 .contact-btn{
     padding:9px 17px !important;
 
-    background:#CFFAFE !important;
+    background:var(--cyan-pale) !important;
 
-    border:1px solid #CFFAFE !important;
+    border:1px solid var(--cyan-pale) !important;
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 }
 
 .contact-btn:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover) !important;
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover) !important;
 
     color:#FFFFFF !important;
 }
@@ -167,10 +167,12 @@ nav a:hover{
 
     text-transform:uppercase !important;
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 }
 
-h1{
+.page h1{
+    margin:0 !important;
+
     font-family:"DM Sans",Arial,sans-serif !important;
 
     font-size:52px !important;
@@ -179,7 +181,7 @@ h1{
 
     line-height:1.15 !important;
 
-    color:#252525 !important;
+    color:var(--text) !important;
 }
 
 .intro{
@@ -200,17 +202,16 @@ h1{
 
 
 /* =====================================================
-   SECTION
+   SECTIONS
 ===================================================== */
 
 .block{
     padding:30px 0 !important;
 
-    border-top:1px solid #D9E5E8 !important;
+    border-top:1px solid var(--border) !important;
 }
 
-.block h2,
-.section-label{
+.block h2{
     margin-bottom:22px !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
@@ -221,9 +222,11 @@ h1{
 
     letter-spacing:1.8px !important;
 
+    line-height:1.4 !important;
+
     text-transform:uppercase !important;
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 }
 
 
@@ -236,7 +239,7 @@ h1{
 
     grid-template-columns:1fr !important;
 
-    gap:14px !important;
+    gap:10px !important;
 
     width:100% !important;
 }
@@ -244,15 +247,15 @@ h1{
 .education-item{
     width:100% !important;
 
-    min-height:130px !important;
+    min-height:95px !important;
 
-    padding:25px 28px !important;
+    padding:18px 22px !important;
 
-    border:1px solid #D9E5E8 !important;
+    border:1px solid var(--border) !important;
 
-    background:#CFFAFE !important;
+    background:var(--cyan-pale) !important;
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 
     display:flex !important;
 
@@ -267,21 +270,46 @@ h1{
         transform .3s ease !important;
 }
 
-
-/* =====================================================
-   EDUCATION HOVER
-===================================================== */
-
 .education-item:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover) !important;
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover) !important;
 
     color:#FFFFFF !important;
 
-    transform:translateY(-4px) !important;
+    transform:translateY(-3px) !important;
 
     cursor:pointer !important;
+}
+
+.education-item h3{
+    margin:0 0 6px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:18px !important;
+
+    font-weight:700 !important;
+
+    line-height:1.4 !important;
+
+    color:var(--cyan) !important;
+
+    transition:color .3s ease !important;
+}
+
+.education-item p{
+    margin:0 !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:11px !important;
+
+    line-height:1.6 !important;
+
+    color:var(--muted) !important;
+
+    transition:color .3s ease !important;
 }
 
 .education-item:hover h3,
@@ -291,38 +319,7 @@ h1{
 
 
 /* =====================================================
-   EDUCATION TEXT
-===================================================== */
-
-.education-item h3{
-    margin-bottom:8px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:20px !important;
-
-    font-weight:700 !important;
-
-    color:#0891B2 !important;
-
-    transition:color .3s ease !important;
-}
-
-.education-item p{
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:12px !important;
-
-    line-height:1.7 !important;
-
-    color:#626A6D !important;
-
-    transition:color .3s ease !important;
-}
-
-
-/* =====================================================
-   TRAINING
+   RELEVANT STUDIES & TRAINING
 ===================================================== */
 
 .training{
@@ -330,7 +327,7 @@ h1{
 
     grid-template-columns:repeat(3,minmax(0,1fr)) !important;
 
-    gap:18px !important;
+    gap:12px !important;
 
     width:100% !important;
 }
@@ -342,7 +339,7 @@ h1{
 
     min-height:0 !important;
 
-    padding:25px !important;
+    padding:18px !important;
 
     display:flex !important;
 
@@ -352,15 +349,15 @@ h1{
 
     text-align:center !important;
 
-    background:#CFFAFE !important;
+    background:var(--cyan-pale) !important;
 
-    color:#0891B2 !important;
+    color:var(--cyan) !important;
 
-    border:1px solid #D9E5E8 !important;
+    border:1px solid var(--border) !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:16px !important;
+    font-size:14px !important;
 
     font-weight:700 !important;
 
@@ -375,19 +372,77 @@ h1{
         border-color .3s ease !important;
 }
 
-
-/* =====================================================
-   TRAINING HOVER
-===================================================== */
-
 .training span:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover) !important;
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover) !important;
 
     color:#FFFFFF !important;
 
+    transform:translateY(-3px) !important;
+}
+
+
+/* =====================================================
+   PROFESSIONAL / ACADEMIC LINKS
+   LOGOS ONLY — NO TITLES
+===================================================== */
+
+.resource-links{
+    margin-top:5px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:flex-start !important;
+
+    flex-wrap:wrap !important;
+
+    gap:26px !important;
+}
+
+.resource-link{
+    width:135px !important;
+
+    height:62px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    background:#FFFFFF !important;
+
+    border:1px solid var(--border) !important;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background-color .25s ease !important;
+}
+
+.resource-link:hover{
     transform:translateY(-4px) !important;
+
+    border-color:var(--cyan-hover) !important;
+
+    background:var(--cyan-pale) !important;
+}
+
+.resource-link img{
+    max-width:105px !important;
+
+    max-height:42px !important;
+
+    width:auto !important;
+
+    height:auto !important;
+
+    display:block !important;
+
+    object-fit:contain !important;
 }
 
 
@@ -402,9 +457,11 @@ footer{
 
     background:#FFFFFF !important;
 
-    border-top:1px solid #D9E5E8 !important;
+    border-top:1px solid var(--border) !important;
 
     display:flex !important;
+
+    align-items:center !important;
 
     justify-content:space-between !important;
 
@@ -416,9 +473,11 @@ footer{
 
     letter-spacing:1.8px !important;
 
+    line-height:1.4 !important;
+
     text-transform:uppercase !important;
 
-    color:#626A6D !important;
+    color:var(--muted) !important;
 }
 
 
@@ -477,8 +536,31 @@ footer{
         margin:45px auto !important;
     }
 
-    h1{
+    .page h1{
         font-size:40px !important;
+    }
+
+    .intro{
+        font-size:15px !important;
+
+        margin-bottom:45px !important;
+    }
+
+
+    /* EDUCATION */
+
+    .education{
+        gap:10px !important;
+    }
+
+    .education-item{
+        min-height:88px !important;
+
+        padding:16px 18px !important;
+    }
+
+    .education-item h3{
+        font-size:17px !important;
     }
 
 
@@ -487,15 +569,36 @@ footer{
     .training{
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
 
-        gap:14px !important;
+        gap:12px !important;
     }
 
     .training span{
         aspect-ratio:1 / 1 !important;
 
-        padding:18px !important;
+        padding:16px !important;
 
-        font-size:14px !important;
+        font-size:13px !important;
+    }
+
+
+    /* RESOURCE LOGOS */
+
+    .resource-links{
+        justify-content:center !important;
+
+        gap:14px !important;
+    }
+
+    .resource-link{
+        width:105px !important;
+
+        height:55px !important;
+    }
+
+    .resource-link img{
+        max-width:82px !important;
+
+        max-height:35px !important;
     }
 
 
@@ -518,6 +621,10 @@ footer{
 
 @media(max-width:480px){
 
+    .page h1{
+        font-size:36px !important;
+    }
+
     .training{
         grid-template-columns:1fr !important;
     }
@@ -528,15 +635,19 @@ footer{
         font-size:15px !important;
     }
 
+    .resource-link{
+        width:95px !important;
+
+        height:52px !important;
+    }
+
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -544,38 +655,42 @@ footer{
 
 <header>
 
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
+```
+<div class="logo">
+    BITA NEGAHDAR
+</div>
 
 
-    <!--
-        ثابت در تمام صفحات:
-        Home | About | Writing | Contact
-    -->
+<nav>
 
-    <nav>
+    <a href="index.html">
+        Home
+    </a>
 
-        <a href="index.html">
-            Home
-        </a>
+    <a href="about.html">
+        About
+    </a>
 
-        <a href="about.html">
-            About
-        </a>
+    <a href="research.html">
+        Research
+    </a>
 
-        <a href="writing.html">
-            Writing
-        </a>
+    <a href="writing.html">
+        Writing
+    </a>
 
-        <a href="index.html#contact" class="contact-btn">
-            Contact
-        </a>
+    <a href="cv.html">
+        CV
+    </a>
 
-    </nav>
+    <a href="index.html#contact" class="contact-btn">
+        Contact
+    </a>
+
+</nav>
+```
 
 </header>
-
 
 <!-- =====================================================
      MAIN
@@ -583,128 +698,207 @@ footer{
 
 <main class="page">
 
+```
+<div class="eyebrow">
+    About
+</div>
 
-    <div class="eyebrow">
-        About
+
+<h1>
+    Bita Negahdar
+</h1>
+
+
+<p class="intro">
+
+    I am currently developing my professional path in psychology,
+    with an interest in psychological research, counseling,
+    and the study of human behavior. My approach is informed
+    by an interest in how people construct identity, respond
+    to change, and regulate themselves within their social and
+    environmental contexts.
+
+</p>
+
+
+<!-- =================================================
+     EDUCATION
+================================================= -->
+
+<section class="block">
+
+    <h2>
+        Education
+    </h2>
+
+
+    <div class="education">
+
+
+        <div class="education-item">
+
+            <h3>
+                MA — Psychology
+            </h3>
+
+            <p>
+                2024 – 2026
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>
+                MA — Photography
+            </h3>
+
+            <p>
+                2014 – 2016<br>
+                Tehran University of Art
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>
+                BGD
+            </h3>
+
+            <p>
+                2003 – 2007
+            </p>
+
+        </div>
+
+
     </div>
 
-
-    <h1>
-        Bita Negahdar
-    </h1>
+</section>
 
 
-    <p class="intro">
+<!-- =================================================
+     RELEVANT STUDIES & TRAINING
+================================================= -->
 
-        I am currently developing my professional path in psychology,
-        with an interest in psychological research, counseling,
-        and the study of human behavior. My approach is informed
-        by an interest in how people construct identity, respond
-        to change, and regulate themselves within their social and
-        environmental contexts.
+<section class="block">
 
-    </p>
-
-
-    <!-- =================================================
-         EDUCATION
-    ================================================= -->
-
-    <section class="block">
-
-        <h2>
-            Education
-        </h2>
+    <h2>
+        Relevant Studies &amp; Training
+    </h2>
 
 
-        <div class="education">
+    <div class="training">
+
+        <span>
+            Schema Therapy
+        </span>
+
+        <span>
+            Cognitive Behavioral Therapy (CBT)
+        </span>
+
+        <span>
+            QEEG Brain Mapping Workshop
+        </span>
+
+        <span>
+            Acceptance and Commitment Therapy (ACT)
+        </span>
+
+        <span>
+            Suicide Crisis Management
+        </span>
+
+    </div>
+
+</section>
 
 
-            <div class="education-item">
+<!-- =================================================
+     PROFESSIONAL / ACADEMIC LINKS
+     LOGOS ONLY
+================================================= -->
 
-                <h3>
-                    MA — Psychology
-                </h3>
+<section class="block">
 
-                <p>
-                    2024 – 2026
-                </p>
-
-            </div>
+    <div class="resource-links">
 
 
-            <div class="education-item">
-
-                <h3>
-                    MA — Photography
-                </h3>
-
-                <p>
-                    2014 – 2016<br>
-                    Tehran University of Art
-                </p>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <h3>
-                    BGD
-                </h3>
-
-                <p>
-                    2003 – 2007
-                </p>
-
-            </div>
+        <a
+            href="https://www.apa.org/"
+            class="resource-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="images/apa.png"
+                alt="APA"
+            >
+        </a>
 
 
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
-         RELEVANT STUDIES & TRAINING
-    ================================================= -->
-
-    <section class="block">
-
-        <h2>
-            Relevant Studies &amp; Training
-        </h2>
+        <a
+            href="https://www.iranpa.org/"
+            class="resource-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="images/ipa.png"
+                alt="Iranian Psychological Association"
+            >
+        </a>
 
 
-        <div class="training">
+        <a
+            href="https://pubmed.ncbi.nlm.nih.gov/"
+            class="resource-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="images/pubmed.png"
+                alt="PubMed"
+            >
+        </a>
 
-            <span>
-                Schema Therapy
-            </span>
 
-            <span>
-                Cognitive Behavioral Therapy (CBT)
-            </span>
+        <a
+            href="https://scholar.google.com/"
+            class="resource-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="images/scholar.png"
+                alt="Google Scholar"
+            >
+        </a>
 
-            <span>
-                QEEG Brain Mapping Workshop
-            </span>
 
-            <span>
-                Acceptance and Commitment Therapy (ACT)
-            </span>
+        <a
+            href="https://www.researchgate.net/"
+            class="resource-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img
+                src="images/researchgate.png"
+                alt="ResearchGate"
+            >
+        </a>
 
-            <span>
-                Suicide Crisis Management
-            </span>
 
-        </div>
+    </div>
 
-    </section>
-
+</section>
+```
 
 </main>
-
 
 <!-- =====================================================
      FOOTER
@@ -712,17 +906,17 @@ footer{
 
 <footer>
 
-    <div>
-        BITA NEGAHDAR
-    </div>
+```
+<div>
+    BITA NEGAHDAR
+</div>
 
-    <div>
-        Psychology
-    </div>
+<div>
+    Psychology
+</div>
+```
 
 </footer>
 
-
 </body>
-
 </html>
