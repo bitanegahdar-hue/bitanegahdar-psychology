@@ -1,220 +1,579 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About | Bita Negahdar</title>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
+```css
 /* =====================================================
-   ABOUT PAGE
+   BITA NEGAHDAR — MASTER STYLESHEET
+   One consistent system for all pages
 ===================================================== */
 
-.page{
-    width:92% !important;
-    max-width:1250px !important;
-    margin:55px auto !important;
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+
+    background:#FFFFFF;
+    color:#252525;
+
+    font-family:"DM Sans", Arial, sans-serif;
+    font-weight:400;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+
+/* =====================================================
+   COLOR SYSTEM
+===================================================== */
+
+:root{
+
+    --white:#FFFFFF;
+
+    --cyan-pale:#CFFAFE;
+
+    --cyan:#0891B2;
+
+    --cyan-hover:#06B6D4;
+
+    --text:#252525;
+
+    --muted:#626A6D;
+
+    --border:#D9E5E8;
 }
 
 
 /* =====================================================
    HEADER
-   SAME ON EVERY PAGE
-   HOME / ABOUT / WRITING / CONTACT
+   SAME SIZE ON ALL PAGES
 ===================================================== */
 
 header{
-    width:100% !important;
-    min-height:76px !important;
-    height:76px !important;
+    width:100%;
 
-    padding:0 4vw !important;
+    height:76px;
+    min-height:76px;
 
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
+    padding:0 4vw;
 
-    background:#FFFFFF !important;
-    border-bottom:1px solid #D9E5E8 !important;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#FFFFFF;
+
+    border-bottom:1px solid var(--border);
+
+    position:relative;
+    z-index:10;
 }
+
+
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo{
-    flex:0 0 auto !important;
+    flex:0 0 auto;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
-    font-size:20px !important;
-    font-weight:700 !important;
+    font-size:20px;
+    font-weight:700;
 
-    letter-spacing:2.4px !important;
-    line-height:1 !important;
+    letter-spacing:2.4px;
+    line-height:1;
 
-    color:#252525 !important;
+    color:var(--text);
 
-    white-space:nowrap !important;
+    white-space:nowrap;
 }
 
+
+/* =====================================================
+   NAVIGATION
+   SAME SIZE ON ALL PAGES
+===================================================== */
+
 nav{
-    display:flex !important;
+    display:flex;
 
-    align-items:center !important;
-    justify-content:flex-end !important;
+    align-items:center;
+    justify-content:flex-end;
 
-    gap:24px !important;
+    gap:24px;
 
-    flex:0 0 auto !important;
+    flex:0 0 auto;
 
-    white-space:nowrap !important;
+    white-space:nowrap;
 }
 
 nav a{
-    display:inline-flex !important;
+    display:inline-flex;
 
-    align-items:center !important;
-    justify-content:center !important;
+    align-items:center;
+    justify-content:center;
 
-    height:38px !important;
-    min-height:38px !important;
+    height:38px;
+    min-height:38px;
 
-    padding:7px 11px !important;
+    padding:7px 11px;
 
-    border:1px solid transparent !important;
+    border:1px solid transparent;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-family:"DM Sans",Arial,sans-serif;
 
-    font-size:12px !important;
-    font-weight:600 !important;
+    font-size:12px;
+    font-weight:600;
 
-    letter-spacing:1.4px !important;
-    line-height:1 !important;
+    letter-spacing:1.4px;
+    line-height:1;
 
-    text-transform:uppercase !important;
+    text-transform:uppercase;
 
-    color:#252525 !important;
+    color:var(--text);
 
-    background:transparent !important;
+    background:transparent;
 
-    white-space:nowrap !important;
+    white-space:nowrap;
 
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease !important;
+        border-color .25s ease;
 }
 
 nav a:hover{
-    background:#06B6D4 !important;
-    border-color:#06B6D4 !important;
-    color:#FFFFFF !important;
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
 }
 
 
 /* =====================================================
-   CONTACT
+   CONTACT BUTTON
 ===================================================== */
 
 .contact-btn{
-    height:38px !important;
+    height:38px;
 
-    padding:9px 17px !important;
+    padding:9px 17px;
 
-    background:#CFFAFE !important;
-    border:1px solid #CFFAFE !important;
+    background:var(--cyan-pale);
 
-    color:#0891B2 !important;
+    border:1px solid var(--cyan-pale);
+
+    color:var(--cyan) !important;
 }
 
 .contact-btn:hover{
-    background:#06B6D4 !important;
-    border-color:#06B6D4 !important;
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
     color:#FFFFFF !important;
 }
 
 
 /* =====================================================
-   ABOUT HEADER
+   HOME HERO
 ===================================================== */
 
-.eyebrow{
-    margin-bottom:18px !important;
+.hero{
+    width:94%;
+    max-width:1500px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    margin:18px auto 0;
 
-    font-size:11px !important;
-    font-weight:700 !important;
+    display:grid;
 
-    letter-spacing:2px !important;
-    line-height:1.4 !important;
+    grid-template-columns:44% 56%;
 
-    text-transform:uppercase !important;
-
-    color:#0891B2 !important;
-}
-
-.page h1{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:52px !important;
-    font-weight:700 !important;
-
-    line-height:1.15 !important;
-
-    color:#252525 !important;
-}
-
-.intro{
-    max-width:760px !important;
-
-    margin:28px 0 60px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:16px !important;
-    font-weight:400 !important;
-
-    line-height:2 !important;
-
-    color:#5F6668 !important;
+    min-height:560px;
 }
 
 
 /* =====================================================
-   SECTIONS
+   HERO TEXT
+===================================================== */
+
+.hero-text{
+    grid-column:1;
+
+    padding:8% 11% 8% 7%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    background:var(--cyan-pale);
+
+    color:var(--cyan);
+}
+
+.hero-description{
+    max-width:500px;
+
+    margin:0 0 30px 0;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    line-height:1.85;
+
+    color:var(--cyan);
+}
+
+
+/* =====================================================
+   ABOUT BUTTON
+===================================================== */
+
+.outline-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:11px 20px;
+
+    border:1px solid var(--cyan);
+
+    background:transparent;
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1.7px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.outline-btn:hover{
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
+}
+
+
+/* =====================================================
+   HERO PHOTO
+===================================================== */
+
+.hero-photo{
+    grid-column:2;
+
+    min-height:560px;
+
+    overflow:hidden;
+
+    background:#EEEEEE;
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+
+/* =====================================================
+   LATEST WRITING
+===================================================== */
+
+.latest{
+    width:94%;
+    max-width:1500px;
+
+    margin:55px auto 0;
+
+    padding-top:28px;
+
+    border-top:1px solid var(--border);
+}
+
+.section-title{
+    margin-bottom:24px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:2.2px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+
+/* =====================================================
+   HOME WRITING GRID
+===================================================== */
+
+.grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+    width:100%;
+}
+
+
+/* =====================================================
+   WRITING CARD
+===================================================== */
+
+.card{
+    display:block;
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   WRITING COVER
+===================================================== */
+
+.cover{
+    width:100%;
+
+    aspect-ratio:4 / 5;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:var(--cyan-pale);
+
+    border:1px solid var(--border);
+}
+
+.cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .55s ease,
+        filter .4s ease;
+}
+
+
+/* =====================================================
+   CLEAR HOVER EFFECT
+   HOME PAGE COVERS
+===================================================== */
+
+.cover::after{
+    content:"VIEW";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(8,145,178,.78);
+
+    color:#FFFFFF;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:2.5px;
+
+    opacity:0;
+
+    transform:scale(.96);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.card:hover .cover::after{
+    opacity:1;
+
+    transform:scale(1);
+}
+
+.card:hover .cover img{
+    transform:scale(1.08);
+
+    filter:saturate(1.12);
+}
+
+
+/* =====================================================
+   IMPORTANT:
+   HOME PAGE HAS NO TEXT UNDER COVERS
+===================================================== */
+
+.latest .card-info,
+.latest .card-number,
+.latest .card-title{
+    display:none !important;
+}
+
+
+/* =====================================================
+   GENERAL PAGE
+   ABOUT / OTHER PAGES
+===================================================== */
+
+.page{
+    width:92%;
+    max-width:1250px;
+
+    margin:55px auto;
+}
+
+.eyebrow{
+    margin-bottom:18px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+.page h1,
+h1{
+    margin:0;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:var(--text);
+}
+
+.intro{
+    max-width:760px;
+
+    margin:28px 0 60px;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#5F6668;
+}
+
+
+/* =====================================================
+   GENERAL BLOCKS
 ===================================================== */
 
 .block{
-    width:100% !important;
+    padding:30px 0;
 
-    padding:30px 0 !important;
-
-    border-top:1px solid #D9E5E8 !important;
+    border-top:1px solid var(--border);
 }
 
-.block h2{
-    margin:0 0 22px !important;
+.block h2,
+.section-label{
+    margin-bottom:22px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:15px;
 
-    font-size:15px !important;
-    font-weight:700 !important;
+    font-weight:700;
 
-    letter-spacing:1.8px !important;
-    line-height:1.4 !important;
+    letter-spacing:1.8px;
 
-    text-transform:uppercase !important;
+    line-height:1.4;
 
-    color:#0891B2 !important;
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+.block p{
+    max-width:760px;
+
+    font-size:14px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#5F6668;
 }
 
 
@@ -223,147 +582,542 @@ nav a:hover{
 ===================================================== */
 
 .education{
-    width:100% !important;
+    display:grid;
 
-    display:grid !important;
+    grid-template-columns:1fr;
 
-    grid-template-columns:1fr !important;
+    gap:14px;
 
-    gap:14px !important;
+    width:100%;
 }
 
 .education-item{
-    width:100% !important;
+    width:100%;
 
-    min-height:110px !important;
+    min-height:110px;
 
-    padding:22px 24px !important;
+    padding:22px 24px;
 
-    display:flex !important;
+    display:flex;
 
-    flex-direction:column !important;
+    flex-direction:column;
 
-    justify-content:center !important;
+    justify-content:center;
 
-    border:1px solid #D9E5E8 !important;
+    border:1px solid var(--border);
 
-    background:#CFFAFE !important;
+    background:var(--cyan-pale);
 
     transition:
         background-color .3s ease,
         color .3s ease,
         border-color .3s ease,
-        transform .3s ease !important;
+        transform .3s ease;
 }
 
 .education-item:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover);
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover);
 
-    color:#FFFFFF !important;
+    color:#FFFFFF;
 
-    transform:translateY(-4px) !important;
+    transform:translateY(-4px);
 }
 
 .education-item:hover h3,
 .education-item:hover p{
-    color:#FFFFFF !important;
+    color:#FFFFFF;
 }
 
 .education-item h3{
-    margin:0 0 8px !important;
+    margin-bottom:8px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:20px;
 
-    font-size:20px !important;
-    font-weight:700 !important;
+    font-weight:700;
 
-    line-height:1.4 !important;
+    line-height:1.4;
 
-    color:#0891B2 !important;
+    color:var(--cyan);
 
-    transition:color .3s ease !important;
+    transition:color .3s ease;
 }
 
 .education-item p{
-    margin:0 !important;
+    font-size:12px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    line-height:1.7;
 
-    font-size:12px !important;
-    font-weight:400 !important;
+    color:var(--muted);
 
-    line-height:1.7 !important;
-
-    color:#626A6D !important;
-
-    transition:color .3s ease !important;
+    transition:color .3s ease;
 }
 
 
 /* =====================================================
-   TRAINING
+   RELEVANT STUDIES & TRAINING
    DESKTOP
 ===================================================== */
 
 .training{
-    width:100% !important;
+    display:grid;
 
-    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
 
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:18px;
 
-    gap:18px !important;
+    width:100%;
 
-    justify-items:stretch !important;
+    justify-items:stretch;
 }
 
 .training span{
-    width:100% !important;
+    width:100%;
 
-    aspect-ratio:1 / 1 !important;
+    aspect-ratio:1 / 1;
 
-    padding:25px !important;
+    padding:25px;
 
-    display:flex !important;
+    display:flex;
 
-    align-items:center !important;
+    align-items:center;
+    justify-content:center;
 
-    justify-content:center !important;
+    text-align:center;
 
-    text-align:center !important;
+    background:var(--cyan-pale);
 
-    background:#CFFAFE !important;
+    color:var(--cyan);
 
-    color:#0891B2 !important;
+    border:1px solid var(--border);
 
-    border:1px solid #D9E5E8 !important;
+    font-size:16px;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-weight:700;
 
-    font-size:16px !important;
-    font-weight:700 !important;
+    line-height:1.5;
 
-    line-height:1.5 !important;
-
-    cursor:pointer !important;
+    cursor:pointer;
 
     transition:
         background-color .3s ease,
         color .3s ease,
         transform .3s ease,
-        border-color .3s ease !important;
+        border-color .3s ease;
 }
 
 .training span:hover{
-    background:#06B6D4 !important;
+    background:var(--cyan-hover);
 
-    border-color:#06B6D4 !important;
+    border-color:var(--cyan-hover);
 
-    color:#FFFFFF !important;
+    color:#FFFFFF;
 
-    transform:translateY(-4px) !important;
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   WRITING PAGE
+===================================================== */
+
+.writing-page{
+    width:92%;
+    max-width:1250px;
+
+    margin:55px auto;
+}
+
+.writing-page .eyebrow{
+    margin-bottom:18px;
+}
+
+.writing-page h1{
+    margin-bottom:28px;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:var(--text);
+}
+
+.writing-intro{
+    max-width:760px;
+
+    margin-bottom:60px;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:#5F6668;
+}
+
+
+/* =====================================================
+   WRITING GRID
+===================================================== */
+
+.writing-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+    width:100%;
+}
+
+
+/* =====================================================
+   WRITING CARD
+===================================================== */
+
+.writing-card{
+    display:block;
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease;
+}
+
+.writing-card:hover{
+    transform:translateY(-4px);
+}
+
+
+/* =====================================================
+   WRITING COVER
+===================================================== */
+
+.writing-cover{
+    width:100%;
+
+    aspect-ratio:4 / 5;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:var(--cyan-pale);
+
+    border:1px solid var(--border);
+}
+
+.writing-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .55s ease,
+        filter .4s ease;
+}
+
+
+/* =====================================================
+   CLEAR HOVER EFFECT
+   WRITING PAGE
+===================================================== */
+
+.writing-cover::after{
+    content:"VIEW";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(8,145,178,.78);
+
+    color:#FFFFFF;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2.5px;
+
+    opacity:0;
+
+    transform:scale(.96);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.writing-card:hover .writing-cover::after{
+    opacity:1;
+
+    transform:scale(1);
+}
+
+.writing-card:hover .writing-cover img{
+    transform:scale(1.08);
+
+    filter:saturate(1.12);
+}
+
+
+/* =====================================================
+   REMOVE TITLES / NUMBERS UNDER WRITING COVERS
+===================================================== */
+
+.writing-number,
+.writing-title,
+.card-info,
+.card-number,
+.card-title{
+    display:none !important;
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article{
+    width:82%;
+    max-width:900px;
+
+    margin:65px auto;
+}
+
+.article h1{
+    margin-bottom:45px;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:var(--text);
+}
+
+.meta{
+    margin-bottom:18px;
+
+    font-size:9px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+
+    text-transform:uppercase;
+
+    color:var(--cyan);
+}
+
+.article-text{
+    font-size:15px;
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#555D5F;
+}
+
+.article-text p{
+    margin:0 0 30px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery{
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:18px;
+}
+
+.gallery img{
+    width:100%;
+
+    aspect-ratio:4 / 5;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#EEEEEE;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-top:35px;
+
+    padding:10px 16px;
+
+    border:1px solid var(--cyan);
+
+    background:#FFFFFF;
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.back:hover{
+    background:var(--cyan-hover);
+
+    border-color:var(--cyan-hover);
+
+    color:#FFFFFF;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section{
+    width:94%;
+    max-width:1500px;
+
+    margin:55px auto 0;
+
+    padding:35px 0;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+}
+
+.contact-section .section-title{
+    margin-bottom:28px;
+}
+
+.social-links{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+}
+
+.social-link{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 12px;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.3px;
+
+    line-height:1.3;
+
+    text-transform:uppercase;
+
+    color:#4F5557;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease;
+}
+
+.social-link:hover{
+    background:var(--cyan-hover);
+
+    color:#FFFFFF;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icon{
+    width:48px;
+    height:48px;
+
+    display:block;
+}
+
+.social-icon svg{
+    width:100%;
+    height:100%;
+
+    fill:none;
+
+    stroke:currentColor;
+
+    stroke-width:1.6;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+}
+
+.linkedin-fill{
+    fill:currentColor;
+
+    stroke:none;
+}
+
+.linkedin-white{
+    fill:#FFFFFF;
+
+    stroke:none;
 }
 
 
@@ -372,175 +1126,287 @@ nav a:hover{
 ===================================================== */
 
 footer{
-    margin-top:55px !important;
+    margin-top:55px;
 
-    padding:24px 4vw !important;
+    padding:24px 4vw;
 
-    background:#FFFFFF !important;
+    background:#FFFFFF;
 
-    border-top:1px solid #D9E5E8 !important;
+    border-top:1px solid var(--border);
 
-    display:flex !important;
+    display:flex;
 
-    align-items:center !important;
+    align-items:center;
 
-    justify-content:space-between !important;
+    justify-content:space-between;
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:9px;
 
-    font-size:9px !important;
-    font-weight:600 !important;
+    font-weight:600;
 
-    letter-spacing:1.8px !important;
-    line-height:1.4 !important;
+    letter-spacing:1.8px;
 
-    text-transform:uppercase !important;
+    line-height:1.4;
 
-    color:#626A6D !important;
+    text-transform:uppercase;
+
+    color:var(--muted);
 }
 
 
 /* =====================================================
    MOBILE
+   <= 800px
 ===================================================== */
 
 @media(max-width:800px){
 
-    /* =========================
+    /* =================================================
        HEADER
-    ========================= */
+       SAME SYSTEM ON EVERY PAGE
+    ================================================= */
 
     header{
-        min-height:72px !important;
-        height:72px !important;
+        height:72px;
+        min-height:72px;
 
-        padding:0 5vw !important;
+        padding:0 5vw;
 
-        gap:12px !important;
+        gap:12px;
     }
 
     .logo{
-        font-size:14px !important;
+        font-size:14px;
 
-        letter-spacing:1.8px !important;
+        letter-spacing:1.8px;
     }
 
     nav{
-        gap:6px !important;
+        gap:6px;
 
-        flex-wrap:nowrap !important;
+        flex-wrap:nowrap;
 
-        justify-content:flex-end !important;
+        justify-content:flex-end;
     }
 
     nav a{
-        height:30px !important;
-        min-height:30px !important;
+        height:30px;
+        min-height:30px;
 
-        padding:5px 6px !important;
+        padding:5px 6px;
 
-        font-size:8px !important;
+        font-size:8px;
 
-        letter-spacing:1px !important;
+        letter-spacing:1px;
     }
 
     .contact-btn{
-        height:30px !important;
+        height:30px;
 
-        padding:7px 10px !important;
+        padding:7px 10px;
     }
 
 
-    /* =========================
-       PAGE
-    ========================= */
+    /* =================================================
+       HOME
+    ================================================= */
+
+    .hero{
+        width:92%;
+
+        grid-template-columns:1fr;
+
+        min-height:auto;
+    }
+
+    .hero-photo{
+        grid-column:1;
+        grid-row:1;
+
+        min-height:480px;
+    }
+
+    .hero-text{
+        grid-column:1;
+        grid-row:2;
+
+        padding:45px 8%;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+
+    /* =================================================
+       HOME WRITING
+    ================================================= */
+
+    .latest{
+        width:92%;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    /* =================================================
+       GENERAL PAGE
+    ================================================= */
 
     .page{
-        width:90% !important;
+        width:90%;
 
-        max-width:none !important;
+        max-width:none;
 
-        margin:45px auto !important;
+        margin:45px auto;
     }
 
-    .page h1{
-        font-size:40px !important;
-    }
-
-    .intro{
-        font-size:15px !important;
-
-        line-height:1.9 !important;
-
-        margin-bottom:45px !important;
+    .page h1,
+    h1{
+        font-size:40px;
     }
 
 
-    /* =========================
+    /* =================================================
        EDUCATION
-    ========================= */
+    ================================================= */
 
     .education{
-        gap:10px !important;
+        gap:10px;
     }
 
     .education-item{
-        min-height:95px !important;
+        min-height:95px;
 
-        padding:18px 20px !important;
+        padding:18px 20px;
     }
 
     .education-item h3{
-        font-size:17px !important;
+        font-size:17px;
     }
 
     .education-item p{
-        font-size:11px !important;
+        font-size:11px;
     }
 
 
-    /* =========================
+    /* =================================================
        TRAINING
-       SMALL + CENTERED
-    ========================= */
+       HALF-SIZE + CENTERED
+    ================================================= */
 
     .training{
-        width:100% !important;
+        width:100%;
 
-        grid-template-columns:repeat(2,150px) !important;
+        grid-template-columns:repeat(2,150px);
 
-        gap:14px !important;
+        gap:14px;
 
-        justify-content:center !important;
+        justify-content:center;
 
-        justify-items:center !important;
+        justify-items:center;
     }
 
     .training span{
-        width:150px !important;
+        width:150px;
+        height:150px;
 
-        height:150px !important;
+        aspect-ratio:1 / 1;
 
-        aspect-ratio:1 / 1 !important;
+        padding:16px;
 
-        padding:16px !important;
+        font-size:12px;
 
-        font-size:12px !important;
-
-        line-height:1.45 !important;
+        line-height:1.45;
     }
 
 
-    /* =========================
+    /* =================================================
+       WRITING PAGE
+    ================================================= */
+
+    .writing-page{
+        width:90%;
+
+        max-width:none;
+
+        margin:45px auto;
+    }
+
+    .writing-page h1{
+        font-size:40px;
+    }
+
+    .writing-intro{
+        font-size:15px;
+
+        line-height:1.9;
+
+        margin-bottom:45px;
+    }
+
+    .writing-grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+
+    /* =================================================
+       ARTICLE
+    ================================================= */
+
+    .article{
+        width:90%;
+
+        max-width:none;
+
+        margin:45px auto;
+    }
+
+    .article h1{
+        font-size:40px;
+    }
+
+
+    /* =================================================
+       GALLERY
+    ================================================= */
+
+    .gallery{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    /* =================================================
+       CONTACT
+    ================================================= */
+
+    .contact-section{
+        width:92%;
+    }
+
+    .social-links{
+        gap:32px;
+    }
+
+
+    /* =================================================
        FOOTER
-    ========================= */
+    ================================================= */
 
     footer{
-        flex-direction:column !important;
+        flex-direction:column;
 
-        text-align:center !important;
+        text-align:center;
 
-        gap:10px !important;
+        gap:10px;
     }
 
 }
@@ -548,263 +1414,127 @@ footer{
 
 /* =====================================================
    SMALL MOBILE
+   <= 480px
 ===================================================== */
 
 @media(max-width:480px){
 
+    /* =================================================
+       HEADER
+    ================================================= */
+
     header{
-        padding:0 4vw !important;
+        padding:0 4vw;
+
+        gap:6px;
     }
 
     .logo{
-        font-size:12px !important;
+        font-size:12px;
 
-        letter-spacing:1.4px !important;
+        letter-spacing:1.4px;
     }
 
     nav{
-        gap:3px !important;
+        gap:3px;
     }
 
     nav a{
-        height:28px !important;
-        min-height:28px !important;
+        height:28px;
+        min-height:28px;
 
-        padding:5px 4px !important;
+        padding:5px 4px;
 
-        font-size:7px !important;
+        font-size:7px;
 
-        letter-spacing:.7px !important;
+        letter-spacing:.7px;
     }
 
     .contact-btn{
-        height:28px !important;
+        height:28px;
 
-        padding:6px 7px !important;
+        padding:6px 7px;
     }
 
+
+    /* =================================================
+       HOME
+    ================================================= */
+
+    .hero-photo{
+        min-height:400px;
+    }
+
+    .hero-text{
+        padding:38px 8%;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+
+    /* =================================================
+       ABOUT
+    ================================================= */
 
     .page{
-        width:90% !important;
+        width:90%;
 
-        margin:40px auto !important;
+        margin:40px auto;
     }
 
-    .page h1{
-        font-size:36px !important;
+    .page h1,
+    h1{
+        font-size:36px;
     }
 
 
-    /* EVEN SMALLER TRAINING SQUARES */
+    /* =================================================
+       TRAINING
+       EVEN SMALLER
+    ================================================= */
 
     .training{
-        grid-template-columns:repeat(2,125px) !important;
+        grid-template-columns:repeat(2,125px);
 
-        gap:12px !important;
+        gap:12px;
+
+        justify-content:center;
     }
 
     .training span{
-        width:125px !important;
+        width:125px;
+        height:125px;
 
-        height:125px !important;
+        padding:12px;
 
-        padding:12px !important;
+        font-size:11px;
+    }
 
-        font-size:11px !important;
+
+    /* =================================================
+       WRITING
+    ================================================= */
+
+    .writing-page{
+        width:90%;
+
+        margin:40px auto;
+    }
+
+    .writing-page h1{
+        font-size:36px;
+    }
+
+
+    /* =================================================
+       ARTICLE
+    ================================================= */
+
+    .article h1{
+        font-size:34px;
     }
 
 }
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     HEADER
-     HOME / ABOUT / WRITING / CONTACT
-===================================================== -->
-
-<header>
-
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
-
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="writing.html">
-            Writing
-        </a>
-
-        <a href="index.html#contact" class="contact-btn">
-            Contact
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main class="page">
-
-
-    <div class="eyebrow">
-        About
-    </div>
-
-
-    <h1>
-        Bita Negahdar
-    </h1>
-
-
-    <p class="intro">
-
-        I am currently developing my professional path in psychology,
-        with an interest in psychological research, counseling,
-        and the study of human behavior. My approach is informed
-        by an interest in how people construct identity, respond
-        to change, and regulate themselves within their social and
-        environmental contexts.
-
-    </p>
-
-
-    <!-- =================================================
-         EDUCATION
-    ================================================= -->
-
-    <section class="block">
-
-        <h2>
-            Education
-        </h2>
-
-
-        <div class="education">
-
-
-            <div class="education-item">
-
-                <h3>
-                    MA — Psychology
-                </h3>
-
-                <p>
-                    2024 – 2026
-                </p>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <h3>
-                    MA — Photography
-                </h3>
-
-                <p>
-                    2014 – 2016<br>
-                    Tehran University of Art
-                </p>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <h3>
-                    BGD
-                </h3>
-
-                <p>
-                    2003 – 2007
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =================================================
-         RELEVANT STUDIES & TRAINING
-    ================================================= -->
-
-    <section class="block">
-
-        <h2>
-            Relevant Studies &amp; Training
-        </h2>
-
-
-        <div class="training">
-
-            <span>
-                Schema Therapy
-            </span>
-
-            <span>
-                Cognitive Behavioral Therapy (CBT)
-            </span>
-
-            <span>
-                QEEG Brain Mapping Workshop
-            </span>
-
-            <span>
-                Acceptance and Commitment Therapy (ACT)
-            </span>
-
-            <span>
-                Suicide Crisis Management
-            </span>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div>
-        BITA NEGAHDAR
-    </div>
-
-    <div>
-        Psychology
-    </div>
-
-</footer>
-
-
-</body>
-
-</html>
 ```
