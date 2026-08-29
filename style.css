@@ -1,10 +1,3 @@
-```css
-/* =====================================================
-   BITA NEGAHDAR — MASTER STYLESHEET
-   One consistent system for all pages
-===================================================== */
-
-
 /* =====================================================
    GLOBAL RESET
 ===================================================== */
@@ -35,17 +28,12 @@ a{
     text-decoration:none;
 }
 
-img{
-    max-width:100%;
-}
-
 
 /* =====================================================
    COLOR SYSTEM
 ===================================================== */
 
 :root{
-
     --white:#FFFFFF;
 
     --cyan-pale:#CFFAFE;
@@ -63,13 +51,11 @@ img{
 
 
 /* =====================================================
-   HEADER
-   SAME SIZE ON ALL PAGES
+   HEADER — SAME ON ALL PAGES
 ===================================================== */
 
 header{
     width:100%;
-
     height:76px;
     min-height:76px;
 
@@ -82,25 +68,18 @@ header{
     background:#FFFFFF;
 
     border-bottom:1px solid var(--border);
-
-    position:relative;
-    z-index:10;
 }
 
-
-/* =====================================================
-   LOGO
-===================================================== */
-
 .logo{
-    flex:0 0 auto;
+    flex-shrink:0;
 
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:20px;
     font-weight:700;
 
     letter-spacing:2.4px;
+
     line-height:1;
 
     color:var(--text);
@@ -108,21 +87,14 @@ header{
     white-space:nowrap;
 }
 
-
-/* =====================================================
-   NAVIGATION
-   SAME SIZE ON ALL PAGES
-===================================================== */
-
 nav{
     display:flex;
-
     align-items:center;
     justify-content:flex-end;
 
     gap:24px;
 
-    flex:0 0 auto;
+    flex-shrink:0;
 
     white-space:nowrap;
 }
@@ -138,14 +110,13 @@ nav a{
 
     padding:7px 11px;
 
-    border:1px solid transparent;
-
-    font-family:"DM Sans",Arial,sans-serif;
+    font-family:"DM Sans", Arial, sans-serif;
 
     font-size:12px;
     font-weight:600;
 
     letter-spacing:1.4px;
+
     line-height:1;
 
     text-transform:uppercase;
@@ -154,13 +125,18 @@ nav a{
 
     background:transparent;
 
-    white-space:nowrap;
+    border:1px solid transparent;
 
     transition:
         background-color .25s ease,
         color .25s ease,
         border-color .25s ease;
 }
+
+
+/* =====================================================
+   NAV HOVER
+===================================================== */
 
 nav a:hover{
     background:var(--cyan-hover);
@@ -176,13 +152,11 @@ nav a:hover{
 ===================================================== */
 
 .contact-btn{
-    height:38px;
-
     padding:9px 17px;
 
     background:var(--cyan-pale);
 
-    border:1px solid var(--cyan-pale);
+    border-color:var(--cyan-pale);
 
     color:var(--cyan) !important;
 }
@@ -212,11 +186,6 @@ nav a:hover{
 
     min-height:560px;
 }
-
-
-/* =====================================================
-   HERO TEXT
-===================================================== */
 
 .hero-text{
     grid-column:1;
@@ -250,16 +219,8 @@ nav a:hover{
     color:var(--cyan);
 }
 
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
-
 .outline-btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
+    display:inline-block;
 
     padding:11px 20px;
 
@@ -274,8 +235,6 @@ nav a:hover{
     font-weight:700;
 
     letter-spacing:1.7px;
-
-    line-height:1;
 
     text-transform:uppercase;
 
@@ -351,7 +310,7 @@ nav a:hover{
 
 
 /* =====================================================
-   HOME WRITING GRID
+   WRITING GRID
 ===================================================== */
 
 .grid{
@@ -379,7 +338,7 @@ nav a:hover{
     overflow:hidden;
 
     transition:
-        transform .3s ease;
+        transform .25s ease;
 }
 
 .card:hover{
@@ -400,7 +359,7 @@ nav a:hover{
 
     position:relative;
 
-    background:var(--cyan-pale);
+    background:#EEEEEE;
 
     border:1px solid var(--border);
 }
@@ -414,76 +373,19 @@ nav a:hover{
     object-fit:cover;
 
     transition:
-        transform .55s ease,
-        filter .4s ease;
-}
-
-
-/* =====================================================
-   CLEAR HOVER EFFECT
-   HOME PAGE COVERS
-===================================================== */
-
-.cover::after{
-    content:"VIEW";
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    background:rgba(8,145,178,.78);
-
-    color:#FFFFFF;
-
-    font-family:"DM Sans",Arial,sans-serif;
-
-    font-size:11px;
-    font-weight:700;
-
-    letter-spacing:2.5px;
-
-    opacity:0;
-
-    transform:scale(.96);
-
-    transition:
-        opacity .3s ease,
-        transform .3s ease;
-}
-
-.card:hover .cover::after{
-    opacity:1;
-
-    transform:scale(1);
+        transform .45s ease,
+        filter .3s ease;
 }
 
 .card:hover .cover img{
-    transform:scale(1.08);
+    transform:scale(1.025);
 
-    filter:saturate(1.12);
-}
-
-
-/* =====================================================
-   IMPORTANT:
-   HOME PAGE HAS NO TEXT UNDER COVERS
-===================================================== */
-
-.latest .card-info,
-.latest .card-number,
-.latest .card-title{
-    display:none !important;
+    filter:saturate(1.08);
 }
 
 
 /* =====================================================
    GENERAL PAGE
-   ABOUT / OTHER PAGES
 ===================================================== */
 
 .page{
@@ -509,7 +411,6 @@ nav a:hover{
     color:var(--cyan);
 }
 
-.page h1,
 h1{
     margin:0;
 
@@ -594,9 +495,9 @@ h1{
 .education-item{
     width:100%;
 
-    min-height:110px;
+    min-height:130px;
 
-    padding:22px 24px;
+    padding:25px 28px;
 
     display:flex;
 
@@ -607,6 +508,8 @@ h1{
     border:1px solid var(--border);
 
     background:var(--cyan-pale);
+
+    color:var(--cyan);
 
     transition:
         background-color .3s ease,
@@ -623,6 +526,8 @@ h1{
     color:#FFFFFF;
 
     transform:translateY(-4px);
+
+    cursor:pointer;
 }
 
 .education-item:hover h3,
@@ -668,8 +573,6 @@ h1{
     gap:18px;
 
     width:100%;
-
-    justify-items:stretch;
 }
 
 .training span{
@@ -677,11 +580,14 @@ h1{
 
     aspect-ratio:1 / 1;
 
+    min-height:0;
+
     padding:25px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
@@ -719,178 +625,7 @@ h1{
 
 
 /* =====================================================
-   WRITING PAGE
-===================================================== */
-
-.writing-page{
-    width:92%;
-    max-width:1250px;
-
-    margin:55px auto;
-}
-
-.writing-page .eyebrow{
-    margin-bottom:18px;
-}
-
-.writing-page h1{
-    margin-bottom:28px;
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.15;
-
-    color:var(--text);
-}
-
-.writing-intro{
-    max-width:760px;
-
-    margin-bottom:60px;
-
-    font-size:16px;
-
-    line-height:2;
-
-    color:#5F6668;
-}
-
-
-/* =====================================================
-   WRITING GRID
-===================================================== */
-
-.writing-grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:18px;
-
-    width:100%;
-}
-
-
-/* =====================================================
-   WRITING CARD
-===================================================== */
-
-.writing-card{
-    display:block;
-
-    width:100%;
-
-    background:#FFFFFF;
-
-    overflow:hidden;
-
-    transition:
-        transform .3s ease;
-}
-
-.writing-card:hover{
-    transform:translateY(-4px);
-}
-
-
-/* =====================================================
-   WRITING COVER
-===================================================== */
-
-.writing-cover{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    overflow:hidden;
-
-    position:relative;
-
-    background:var(--cyan-pale);
-
-    border:1px solid var(--border);
-}
-
-.writing-cover img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:
-        transform .55s ease,
-        filter .4s ease;
-}
-
-
-/* =====================================================
-   CLEAR HOVER EFFECT
-   WRITING PAGE
-===================================================== */
-
-.writing-cover::after{
-    content:"VIEW";
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    background:rgba(8,145,178,.78);
-
-    color:#FFFFFF;
-
-    font-size:11px;
-
-    font-weight:700;
-
-    letter-spacing:2.5px;
-
-    opacity:0;
-
-    transform:scale(.96);
-
-    transition:
-        opacity .3s ease,
-        transform .3s ease;
-}
-
-.writing-card:hover .writing-cover::after{
-    opacity:1;
-
-    transform:scale(1);
-}
-
-.writing-card:hover .writing-cover img{
-    transform:scale(1.08);
-
-    filter:saturate(1.12);
-}
-
-
-/* =====================================================
-   REMOVE TITLES / NUMBERS UNDER WRITING COVERS
-===================================================== */
-
-.writing-number,
-.writing-title,
-.card-info,
-.card-number,
-.card-title{
-    display:none !important;
-}
-
-
-/* =====================================================
-   ARTICLE
+   ARTICLES / WRITING
 ===================================================== */
 
 .article{
@@ -944,7 +679,7 @@ h1{
 
 
 /* =====================================================
-   GALLERY
+   WRITING GALLERY
 ===================================================== */
 
 .gallery{
@@ -975,10 +710,7 @@ h1{
 ===================================================== */
 
 .back{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
+    display:inline-block;
 
     margin-top:35px;
 
@@ -1040,6 +772,7 @@ h1{
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     gap:60px;
@@ -1155,24 +888,24 @@ footer{
 
 
 /* =====================================================
-   MOBILE
-   <= 800px
+   MOBILE — ALL PAGES
 ===================================================== */
 
 @media(max-width:800px){
 
-    /* =================================================
+    /* =========================
        HEADER
-       SAME SYSTEM ON EVERY PAGE
-    ================================================= */
+    ========================= */
 
     header{
-        height:72px;
+        width:100%;
+
+        height:auto;
         min-height:72px;
 
-        padding:0 5vw;
+        padding:14px 5vw;
 
-        gap:12px;
+        gap:15px;
     }
 
     .logo{
@@ -1184,9 +917,11 @@ footer{
     nav{
         gap:6px;
 
-        flex-wrap:nowrap;
+        flex-wrap:wrap;
 
         justify-content:flex-end;
+
+        align-items:center;
     }
 
     nav a{
@@ -1201,15 +936,13 @@ footer{
     }
 
     .contact-btn{
-        height:30px;
-
         padding:7px 10px;
     }
 
 
-    /* =================================================
-       HOME
-    ================================================= */
+    /* =========================
+       HOME HERO
+    ========================= */
 
     .hero{
         width:92%;
@@ -1238,9 +971,9 @@ footer{
     }
 
 
-    /* =================================================
-       HOME WRITING
-    ================================================= */
+    /* =========================
+       LATEST WRITING
+    ========================= */
 
     .latest{
         width:92%;
@@ -1253,9 +986,9 @@ footer{
     }
 
 
-    /* =================================================
+    /* =========================
        GENERAL PAGE
-    ================================================= */
+    ========================= */
 
     .page{
         width:90%;
@@ -1265,100 +998,72 @@ footer{
         margin:45px auto;
     }
 
-    .page h1,
     h1{
         font-size:40px;
     }
 
+    .intro{
+        font-size:15px;
 
-    /* =================================================
+        margin-bottom:45px;
+    }
+
+
+    /* =========================
        EDUCATION
-    ================================================= */
+    ========================= */
 
     .education{
-        gap:10px;
+        width:100%;
+
+        gap:12px;
     }
 
     .education-item{
-        min-height:95px;
+        min-height:110px;
 
-        padding:18px 20px;
+        padding:20px 22px;
     }
 
     .education-item h3{
-        font-size:17px;
-    }
-
-    .education-item p{
-        font-size:11px;
+        font-size:18px;
     }
 
 
-    /* =================================================
+    /* =========================
        TRAINING
-       HALF-SIZE + CENTERED
-    ================================================= */
+       SMALL + CENTERED
+    ========================= */
 
     .training{
         width:100%;
 
-        grid-template-columns:repeat(2,150px);
+        display:grid;
 
-        gap:14px;
+        grid-template-columns:repeat(2, 130px);
 
         justify-content:center;
 
-        justify-items:center;
+        gap:12px;
     }
 
     .training span{
-        width:150px;
-        height:150px;
+        width:130px;
+        height:130px;
 
         aspect-ratio:1 / 1;
 
-        padding:16px;
+        padding:14px;
 
-        font-size:12px;
+        font-size:11px;
 
         line-height:1.45;
     }
 
 
-    /* =================================================
-       WRITING PAGE
-    ================================================= */
-
-    .writing-page{
-        width:90%;
-
-        max-width:none;
-
-        margin:45px auto;
-    }
-
-    .writing-page h1{
-        font-size:40px;
-    }
-
-    .writing-intro{
-        font-size:15px;
-
-        line-height:1.9;
-
-        margin-bottom:45px;
-    }
-
-    .writing-grid{
-        grid-template-columns:1fr;
-
-        gap:30px;
-    }
-
-
-    /* =================================================
+    /* =========================
        ARTICLE
-    ================================================= */
+    ========================= */
 
     .article{
         width:90%;
@@ -1370,12 +1075,14 @@ footer{
 
     .article h1{
         font-size:40px;
+
+        margin-bottom:35px;
     }
 
 
-    /* =================================================
+    /* =========================
        GALLERY
-    ================================================= */
+    ========================= */
 
     .gallery{
         grid-template-columns:1fr;
@@ -1384,9 +1091,9 @@ footer{
     }
 
 
-    /* =================================================
+    /* =========================
        CONTACT
-    ================================================= */
+    ========================= */
 
     .contact-section{
         width:92%;
@@ -1397,9 +1104,9 @@ footer{
     }
 
 
-    /* =================================================
+    /* =========================
        FOOTER
-    ================================================= */
+    ========================= */
 
     footer{
         flex-direction:column;
@@ -1414,19 +1121,16 @@ footer{
 
 /* =====================================================
    SMALL MOBILE
-   <= 480px
 ===================================================== */
 
 @media(max-width:480px){
 
-    /* =================================================
-       HEADER
-    ================================================= */
+    /* HEADER */
 
     header{
-        padding:0 4vw;
+        padding:13px 4vw;
 
-        gap:6px;
+        gap:10px;
     }
 
     .logo{
@@ -1440,10 +1144,10 @@ footer{
     }
 
     nav a{
-        height:28px;
-        min-height:28px;
+        height:27px;
+        min-height:27px;
 
-        padding:5px 4px;
+        padding:4px 5px;
 
         font-size:7px;
 
@@ -1451,15 +1155,11 @@ footer{
     }
 
     .contact-btn{
-        height:28px;
-
         padding:6px 7px;
     }
 
 
-    /* =================================================
-       HOME
-    ================================================= */
+    /* HOME */
 
     .hero-photo{
         min-height:400px;
@@ -1474,9 +1174,7 @@ footer{
     }
 
 
-    /* =================================================
-       ABOUT
-    ================================================= */
+    /* PAGE */
 
     .page{
         width:90%;
@@ -1484,57 +1182,57 @@ footer{
         margin:40px auto;
     }
 
-    .page h1,
     h1{
         font-size:36px;
     }
 
 
-    /* =================================================
-       TRAINING
-       EVEN SMALLER
-    ================================================= */
+    /* EDUCATION */
+
+    .education-item{
+        min-height:100px;
+
+        padding:18px 20px;
+    }
+
+    .education-item h3{
+        font-size:17px;
+    }
+
+
+    /* TRAINING
+       EVEN SMALLER ON VERY SMALL SCREENS
+    */
 
     .training{
-        grid-template-columns:repeat(2,125px);
+        grid-template-columns:repeat(2, 110px);
 
-        gap:12px;
-
-        justify-content:center;
+        gap:10px;
     }
 
     .training span{
-        width:125px;
-        height:125px;
+        width:110px;
+        height:110px;
 
-        padding:12px;
+        padding:10px;
 
-        font-size:11px;
+        font-size:10px;
+
+        line-height:1.4;
     }
 
 
-    /* =================================================
-       WRITING
-    ================================================= */
-
-    .writing-page{
-        width:90%;
-
-        margin:40px auto;
-    }
-
-    .writing-page h1{
-        font-size:36px;
-    }
-
-
-    /* =================================================
-       ARTICLE
-    ================================================= */
+    /* ARTICLE */
 
     .article h1{
         font-size:34px;
     }
 
+
+    /* GALLERY */
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
 }
-```
