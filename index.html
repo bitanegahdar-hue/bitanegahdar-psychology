@@ -1,5 +1,5 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -207,11 +207,6 @@ nav a:hover{
     min-height:560px !important;
 }
 
-
-/* =====================================================
-   LEFT BLUE PANEL
-===================================================== */
-
 .hero-text{
     grid-column:1 !important;
 
@@ -338,11 +333,6 @@ nav a:hover{
     border-top:1px solid var(--border) !important;
 }
 
-
-/* =====================================================
-   SECTION TITLE
-===================================================== */
-
 .section-title{
     margin-bottom:24px !important;
 
@@ -376,11 +366,6 @@ nav a:hover{
     width:100% !important;
 }
 
-
-/* =====================================================
-   WRITING CARD
-===================================================== */
-
 .card{
     display:block !important;
 
@@ -390,8 +375,7 @@ nav a:hover{
 
     overflow:hidden !important;
 
-    transition:
-        transform .3s ease !important;
+    transition:transform .3s ease !important;
 }
 
 .card:hover{
@@ -435,11 +419,6 @@ nav a:hover{
         filter .3s ease !important;
 }
 
-
-/* =====================================================
-   STRONGER WRITING HOVER
-===================================================== */
-
 .card:hover .cover{
     border-color:var(--cyan-hover) !important;
 
@@ -465,6 +444,7 @@ nav a:hover{
 
 /* =====================================================
    CONTACT SECTION
+   CENTERED — ICONS ONLY — NO BOXES
 ===================================================== */
 
 .contact-section{
@@ -487,7 +467,7 @@ nav a:hover{
 
 
 /* =====================================================
-   SOCIAL / PROFESSIONAL LINKS
+   CONTACT ICONS
 ===================================================== */
 
 .social-links{
@@ -497,15 +477,12 @@ nav a:hover{
 
     align-items:center !important;
 
-    gap:45px !important;
+    gap:48px !important;
 
     flex-wrap:wrap !important;
+
+    width:100% !important;
 }
-
-
-/* =====================================================
-   ICON LINK
-===================================================== */
 
 .social-link{
     display:flex !important;
@@ -518,26 +495,34 @@ nav a:hover{
 
     height:58px !important;
 
-    border-radius:50% !important;
+    background:transparent !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+    border-radius:0 !important;
 
     transition:
         transform .25s ease,
-        background-color .25s ease,
-        box-shadow .25s ease !important;
+        opacity .25s ease !important;
 }
 
 .social-link:hover{
-    transform:translateY(-5px) scale(1.06) !important;
+    transform:translateY(-5px) scale(1.08) !important;
 
-    background:#CFFAFE !important;
+    background:transparent !important;
 
-    box-shadow:
-        0 8px 20px rgba(8,145,178,.16) !important;
+    border:none !important;
+
+    box-shadow:none !important;
+
+    opacity:.82 !important;
 }
 
 
 /* =====================================================
-   UPLOADED ICONS
+   UPLOADED CONTACT ICONS
 ===================================================== */
 
 .social-icon{
@@ -549,8 +534,13 @@ nav a:hover{
 
     object-fit:contain !important;
 
-    transition:
-        transform .25s ease !important;
+    border:none !important;
+
+    box-shadow:none !important;
+
+    background:transparent !important;
+
+    transition:transform .25s ease !important;
 }
 
 .social-link:hover .social-icon{
@@ -640,9 +630,7 @@ footer{
     }
 
 
-    /* =================================================
-       HERO MOBILE
-    ================================================= */
+    /* HERO */
 
     .hero{
         width:92% !important;
@@ -673,9 +661,7 @@ footer{
     }
 
 
-    /* =================================================
-       WRITING MOBILE
-    ================================================= */
+    /* WRITING */
 
     .latest{
         width:92% !important;
@@ -688,16 +674,14 @@ footer{
     }
 
 
-    /* =================================================
-       CONTACT MOBILE
-    ================================================= */
+    /* CONTACT */
 
     .contact-section{
         width:92% !important;
     }
 
     .social-links{
-        gap:24px !important;
+        gap:26px !important;
     }
 
     .social-link{
@@ -713,9 +697,7 @@ footer{
     }
 
 
-    /* =================================================
-       FOOTER MOBILE
-    ================================================= */
+    /* FOOTER */
 
     footer{
         flex-direction:column !important;
@@ -746,15 +728,29 @@ footer{
         font-size:15px !important;
     }
 
+    .social-links{
+        gap:20px !important;
+    }
+
+    .social-link{
+        width:48px !important;
+
+        height:48px !important;
+    }
+
+    .social-icon{
+        width:36px !important;
+
+        height:36px !important;
+    }
+
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -762,33 +758,34 @@ footer{
 
 <header>
 
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
+```
+<div class="logo">
+    BITA NEGAHDAR
+</div>
 
 
-    <nav>
+<nav>
 
-        <a href="index.html">
-            Home
-        </a>
+    <a href="index.html">
+        Home
+    </a>
 
-        <a href="about.html">
-            About
-        </a>
+    <a href="about.html">
+        About
+    </a>
 
-        <a href="writing.html">
-            Writing
-        </a>
+    <a href="writing.html">
+        Writing
+    </a>
 
-        <a href="#contact" class="contact-btn">
-            Contact
-        </a>
+    <a href="#contact" class="contact-btn">
+        Contact
+    </a>
 
-    </nav>
+</nav>
+```
 
 </header>
-
 
 <!-- =====================================================
      HERO
@@ -796,36 +793,35 @@ footer{
 
 <section class="hero">
 
+```
+<div class="hero-text">
 
-    <div class="hero-text">
+    <p class="hero-description">
 
-        <p class="hero-description">
+        Psychology trainee developing a professional path in psychological
+        research, counseling, and the study of human behavior.
 
-            Psychology trainee developing a professional path in psychological
-            research, counseling, and the study of human behavior.
-
-        </p>
-
-
-        <a href="about.html" class="outline-btn">
-            About Me
-        </a>
-
-    </div>
+    </p>
 
 
-    <div class="hero-photo">
+    <a href="about.html" class="outline-btn">
+        About Me
+    </a>
 
-        <img
-            src="images/BitaNegahdar.jpg"
-            alt="Bita Negahdar"
-        >
+</div>
 
-    </div>
 
+<div class="hero-photo">
+
+    <img
+        src="images/BitaNegahdar.jpg"
+        alt="Bita Negahdar"
+    >
+
+</div>
+```
 
 </section>
-
 
 <!-- =====================================================
      LATEST WRITING
@@ -833,170 +829,163 @@ footer{
 
 <section class="latest">
 
-    <div class="section-title">
-        Latest Writing
-    </div>
+```
+<div class="section-title">
+    Latest Writing
+</div>
 
 
-    <div class="grid">
+<div class="grid">
 
 
-        <a href="writing-1.html" class="card">
+    <a href="writing-1.html" class="card">
 
-            <div class="cover">
+        <div class="cover">
 
-                <img
-                    src="images/cover-1.jpeg"
-                    alt="Writing 01"
-                >
+            <img
+                src="images/cover-1.jpeg"
+                alt="Writing 01"
+            >
 
-            </div>
+        </div>
 
-        </a>
-
-
-        <a href="writing-2.html" class="card">
-
-            <div class="cover">
-
-                <img
-                    src="images/cover-2.jpeg"
-                    alt="Writing 02"
-                >
-
-            </div>
-
-        </a>
+    </a>
 
 
-        <a href="writing-3.html" class="card">
+    <a href="writing-2.html" class="card">
 
-            <div class="cover">
+        <div class="cover">
 
-                <img
-                    src="images/cover-3.jpeg"
-                    alt="Writing 03"
-                >
+            <img
+                src="images/cover-2.jpeg"
+                alt="Writing 02"
+            >
 
-            </div>
+        </div>
 
-        </a>
+    </a>
 
 
-    </div>
+    <a href="writing-3.html" class="card">
+
+        <div class="cover">
+
+            <img
+                src="images/cover-3.jpeg"
+                alt="Writing 03"
+            >
+
+        </div>
+
+    </a>
+
+
+</div>
+```
 
 </section>
 
-
 <!-- =====================================================
      CONTACT
+     ICONS ONLY
 ===================================================== -->
 
 <section class="contact-section" id="contact">
 
-    <div class="section-title">
-        Contact
-    </div>
+```
+<div class="section-title">
+    Contact
+</div>
 
 
-    <div class="social-links">
+<div class="social-links">
 
 
-        <!-- INSTAGRAM -->
+    <a
+        href="https://www.instagram.com/bitanegahdar.ir/"
+        target="_blank"
+        rel="noopener"
+        class="social-link"
+        aria-label="Instagram"
+    >
 
-        <a
-            href="https://www.instagram.com/bitanegahdar.ir/"
-            target="_blank"
-            rel="noopener"
-            class="social-link"
-            aria-label="Instagram"
+        <img
+            src="images/instagram.png"
+            alt=""
+            class="social-icon"
         >
 
-            <img
-                src="images/instagram.png"
-                alt=""
-                class="social-icon"
-            >
-
-        </a>
+    </a>
 
 
-        <!-- LINKEDIN -->
+    <a
+        href="https://www.linkedin.com/in/bita-negahdar/"
+        target="_blank"
+        rel="noopener"
+        class="social-link"
+        aria-label="LinkedIn"
+    >
 
-        <a
-            href="https://www.linkedin.com/in/bita-negahdar/"
-            target="_blank"
-            rel="noopener"
-            class="social-link"
-            aria-label="LinkedIn"
+        <img
+            src="images/linkedin.png"
+            alt=""
+            class="social-icon"
         >
 
-            <img
-                src="images/linkedin.png"
-                alt=""
-                class="social-icon"
-            >
-
-        </a>
+    </a>
 
 
-        <!-- PHONE -->
+    <a
+        href="tel:+989119382619"
+        class="social-link"
+        aria-label="Phone"
+    >
 
-        <a
-            href="tel:+989119382619"
-            class="social-link"
-            aria-label="Phone"
+        <img
+            src="images/phone.png"
+            alt=""
+            class="social-icon"
         >
 
-            <img
-                src="images/phone.png"
-                alt=""
-                class="social-icon"
-            >
-
-        </a>
+    </a>
 
 
-        <!-- EMAIL -->
+    <a
+        href="mailto:bitanegahdar@gmail.com"
+        class="social-link"
+        aria-label="Email"
+    >
 
-        <a
-            href="mailto:bitanegahdar@gmail.com"
-            class="social-link"
-            aria-label="Email"
+        <img
+            src="images/email.png"
+            alt=""
+            class="social-icon"
         >
 
-            <img
-                src="images/email.png"
-                alt=""
-                class="social-icon"
-            >
-
-        </a>
+    </a>
 
 
-        <!-- IRAN PSYCHOLOGY ASSOCIATION -->
+    <a
+        href="https://www.iranpa.org/"
+        target="_blank"
+        rel="noopener"
+        class="social-link"
+        aria-label="Iran Psychology Association"
+    >
 
-        <a
-            href="https://www.iranpa.org/"
-            target="_blank"
-            rel="noopener"
-            class="social-link"
-            aria-label="Iran Psychology Association"
+        <img
+            src="images/iranpa.png"
+            alt=""
+            class="social-icon"
         >
 
-            <img
-                src="images/iranpa.png"
-                alt=""
-                class="social-icon"
-            >
-
-        </a>
+    </a>
 
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- =====================================================
      FOOTER
@@ -1004,18 +993,18 @@ footer{
 
 <footer>
 
-    <div>
-        BITA NEGAHDAR
-    </div>
+```
+<div>
+    BITA NEGAHDAR
+</div>
 
-    <div>
-        Psychology
-    </div>
+<div>
+    Psychology
+</div>
+```
 
 </footer>
-
 
 </body>
 
 </html>
-```
