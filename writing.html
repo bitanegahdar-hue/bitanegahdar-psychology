@@ -87,11 +87,13 @@
 
     overflow:hidden !important;
 
-    transition:transform .25s ease !important;
+    text-decoration:none !important;
+
+    transition:transform .3s ease !important;
 }
 
 .card:hover{
-    transform:translateY(-4px) !important;
+    transform:translateY(-5px) !important;
 }
 
 
@@ -113,6 +115,11 @@
     border:1px solid #D9E5E8 !important;
 }
 
+
+/* =====================================================
+   COVER IMAGE
+===================================================== */
+
 .cover img{
     width:100% !important;
     height:100% !important;
@@ -122,8 +129,47 @@
     object-fit:cover !important;
 
     transition:
-        transform .45s ease,
-        filter .3s ease !important;
+        transform .5s ease,
+        filter .4s ease !important;
+}
+
+
+/* =====================================================
+   STRONG HOVER OVERLAY
+===================================================== */
+
+.cover::after{
+    content:"VIEW WRITING";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(6,182,212,.78);
+
+    color:#FFFFFF;
+
+    font-family:"DM Sans",Arial,sans-serif;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    opacity:0;
+
+    transform:scale(.96);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
 }
 
 
@@ -132,75 +178,37 @@
 ===================================================== */
 
 .card:hover .cover img{
-    transform:scale(1.025) !important;
+    transform:scale(1.055);
 
-    filter:saturate(1.08) !important;
+    filter:saturate(1.12);
 }
 
 
 /* =====================================================
-   CARD INFO
+   OVERLAY HOVER
 ===================================================== */
 
-.card-info{
-    display:block !important;
+.card:hover .cover::after{
+    opacity:1;
 
-    padding:14px 2px 24px !important;
+    transform:scale(1);
 }
 
 
 /* =====================================================
-   WRITING NUMBER
+   REMOVE ALL TEXT UNDER COVERS
 ===================================================== */
 
-.card-number{
-    display:block !important;
-
-    margin-bottom:7px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:10px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.8px !important;
-
-    text-transform:uppercase !important;
-
-    color:#0891B2 !important;
-}
-
-
-/* =====================================================
-   WRITING TITLE
-===================================================== */
-
+.card-info,
+.card-number,
 .card-title{
-    display:block !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:18px !important;
-
-    font-weight:600 !important;
-
-    line-height:1.4 !important;
-
-    color:#252525 !important;
-
-    transition:color .25s ease !important;
-}
-
-.card:hover .card-title{
-    color:#06B6D4 !important;
+    display:none !important;
 }
 
 
 /* =====================================================
    HEADER
    SAME ON EVERY PAGE
-   HOME / ABOUT / WRITING / CONTACT
 ===================================================== */
 
 header{
@@ -242,6 +250,8 @@ nav{
     gap:24px !important;
 
     flex-shrink:0 !important;
+
+    white-space:nowrap !important;
 }
 
 nav a{
@@ -446,6 +456,11 @@ footer{
         aspect-ratio:4 / 5 !important;
     }
 
+    .cover::after{
+        font-size:10px;
+        letter-spacing:1.7px;
+    }
+
 }
 
 </style>
@@ -456,8 +471,6 @@ footer{
 
 <!-- =====================================================
      HEADER
-     FIXED MENU:
-     HOME / ABOUT / WRITING / CONTACT
 ===================================================== -->
 
 <header>
@@ -521,22 +534,8 @@ footer{
 
             <img
                 src="images/cover-1.jpeg"
-                alt="Writing 01 — The Self Attached to Things"
+                alt="The Self Attached to Things"
             >
-
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 01
-            </div>
-
-
-            <div class="card-title">
-                The Self Attached to Things
-            </div>
 
         </div>
 
@@ -553,22 +552,8 @@ footer{
 
             <img
                 src="images/cover-2.jpeg"
-                alt="Writing 02 — When Success Becomes Self-Sacrifice"
+                alt="When Success Becomes Self-Sacrifice"
             >
-
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 02
-            </div>
-
-
-            <div class="card-title">
-                When Success Becomes Self-Sacrifice
-            </div>
 
         </div>
 
@@ -585,22 +570,8 @@ footer{
 
             <img
                 src="images/cover-3.jpeg"
-                alt="Writing 03 — The Self That Remains"
+                alt="The Self That Remains"
             >
-
-        </div>
-
-
-        <div class="card-info">
-
-            <div class="card-number">
-                Writing 03
-            </div>
-
-
-            <div class="card-title">
-                The Self That Remains
-            </div>
 
         </div>
 
