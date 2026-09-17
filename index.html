@@ -11,10 +11,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
 
 /* =====================================================
-   GLOBAL
+   GLOBAL RESET
 ===================================================== */
 
 *{
@@ -29,6 +30,7 @@ html{
 
 body{
     margin:0;
+    padding:0;
     background:#FFFFFF;
     color:#252525;
     font-family:"DM Sans", Arial, sans-serif;
@@ -98,26 +100,203 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   HERO
+   HERO / MAIN VISUAL
 ===================================================== */
 
 .hero{
     width:100%;
-    min-height:590px;
+    height:590px;
     display:grid;
-    grid-template-columns:33.333% 50% 16.667%;
-    background:#111111;
+    grid-template-columns:66.6667% 33.3333%;
+    background:#0891B2;
+    overflow:hidden;
 }
 
 
 /* =====================================================
-   PERSONAL PHOTO
+   BLUE AREA
+===================================================== */
+
+.hero-blue{
+    position:relative;
+    height:590px;
+    background:#0891B2;
+    color:#FFFFFF;
+    overflow:hidden;
+    padding:55px 6%;
+}
+
+
+/* subtle graphic circles */
+
+.hero-blue::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(255,255,255,0.10);
+    border-radius:50%;
+    right:-100px;
+    top:-100px;
+}
+
+.hero-blue::after{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:50%;
+    left:-80px;
+    bottom:-70px;
+}
+
+
+/* =====================================================
+   HERO INTRO
+===================================================== */
+
+.hero-intro{
+    position:relative;
+    z-index:3;
+    max-width:600px;
+}
+
+.hero-eyebrow{
+    font-size:11px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:#CFFAFE;
+    margin-bottom:17px;
+}
+
+.hero-intro h1{
+    font-size:43px;
+    line-height:1.05;
+    font-weight:500;
+    letter-spacing:-1px;
+    margin-bottom:18px;
+}
+
+.hero-intro p{
+    max-width:470px;
+    font-size:14px;
+    line-height:1.8;
+    color:#F0FDFF;
+}
+
+
+/* =====================================================
+   THREE CIRCLES
+===================================================== */
+
+.hero-navigation{
+    position:absolute;
+    left:6%;
+    right:6%;
+    top:52%;
+    transform:translateY(-50%);
+    z-index:5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:55px;
+}
+
+
+/* individual circle link */
+
+.hero-circle-link{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    cursor:pointer;
+    color:#FFFFFF;
+    transition:transform 0.3s ease;
+}
+
+.hero-circle-link:hover{
+    transform:translateY(-7px);
+}
+
+
+/* circle */
+
+.hero-circle{
+    width:116px;
+    height:116px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.75);
+    background:rgba(255,255,255,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-circle-link:hover .hero-circle{
+    background:#FFFFFF;
+    border-color:#FFFFFF;
+    color:#0891B2;
+    transform:scale(1.04);
+}
+
+.hero-circle-number{
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.hero-circle-title{
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:0.3px;
+    white-space:nowrap;
+}
+
+
+/* =====================================================
+   SMALL SLIDESHOW INDICATOR
+===================================================== */
+
+.hero-slide-info{
+    position:absolute;
+    left:6%;
+    bottom:35px;
+    z-index:5;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.hero-slide-line{
+    width:55px;
+    height:1px;
+    background:rgba(255,255,255,0.55);
+}
+
+.hero-slide-number{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#CFFAFE;
+}
+
+
+/* =====================================================
+   RIGHT PHOTO
 ===================================================== */
 
 .hero-photo{
-    position:relative;
-    overflow:hidden;
+    height:590px;
     background:#222222;
+    overflow:hidden;
+    position:relative;
 }
 
 .hero-photo img{
@@ -125,138 +304,6 @@ nav a.contact-link:hover{
     height:100%;
     object-fit:cover;
     object-position:center;
-}
-
-
-/* =====================================================
-   SLIDESHOW
-===================================================== */
-
-.hero-slideshow{
-    position:relative;
-    height:590px;
-    overflow:hidden;
-    background:#000000;
-}
-
-.slide{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transition:opacity 0.8s ease;
-}
-
-.slide.active{
-    opacity:1;
-}
-
-.slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.slide-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,0.60),
-        rgba(0,0,0,0.05) 55%,
-        rgba(0,0,0,0.08)
-    );
-}
-
-.slide-content{
-    position:absolute;
-    left:35px;
-    bottom:40px;
-    color:#FFFFFF;
-    max-width:430px;
-}
-
-.slide-number{
-    font-size:11px;
-    letter-spacing:2px;
-    color:#CFFAFE;
-    margin-bottom:9px;
-    text-transform:uppercase;
-}
-
-.slide-title{
-    font-size:27px;
-    font-weight:500;
-    line-height:1.2;
-    margin-bottom:8px;
-}
-
-.slide-description{
-    font-size:13px;
-    line-height:1.7;
-    color:#E5E5E5;
-}
-
-
-/* =====================================================
-   SLIDESHOW DOTS
-===================================================== */
-
-.slider-dots{
-    position:absolute;
-    right:30px;
-    bottom:38px;
-    display:flex;
-    gap:7px;
-    z-index:5;
-}
-
-.slider-dot{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.45);
-    cursor:pointer;
-    transition:0.25s ease;
-}
-
-.slider-dot.active{
-    background:#06B6D4;
-    transform:scale(1.25);
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.hero-intro{
-    background:#0891B2;
-    color:#FFFFFF;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:35px 28px;
-}
-
-.hero-intro .eyebrow{
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:18px;
-    color:#CFFAFE;
-}
-
-.hero-intro h1{
-    font-size:25px;
-    line-height:1.15;
-    font-weight:500;
-    margin-bottom:20px;
-}
-
-.hero-intro p{
-    font-size:12px;
-    line-height:1.8;
-    color:#F0FDFF;
 }
 
 
@@ -595,19 +642,24 @@ footer p{
 @media(max-width:1000px){
 
     .hero{
-        grid-template-columns:32% 48% 20%;
+        grid-template-columns:65% 35%;
     }
 
-    .hero-intro{
-        padding:25px 20px;
+    .hero-navigation{
+        gap:25px;
+    }
+
+    .hero-circle{
+        width:95px;
+        height:95px;
+    }
+
+    .hero-circle-title{
+        font-size:11px;
     }
 
     .hero-intro h1{
-        font-size:21px;
-    }
-
-    .hero-intro p{
-        font-size:11px;
+        font-size:36px;
     }
 
     .writing-grid{
@@ -638,53 +690,59 @@ footer p{
         gap:15px 20px;
     }
 
+
     .hero{
+        height:auto;
         display:flex;
         flex-direction:column;
-        min-height:auto;
     }
+
+
+    .hero-blue{
+        width:100%;
+        height:570px;
+        min-height:570px;
+        padding:45px 7%;
+    }
+
 
     .hero-photo{
         width:100%;
-        height:430px;
-        order:1;
-    }
-
-    .hero-slideshow{
-        width:100%;
-        height:480px;
+        height:450px;
         order:2;
     }
 
+
     .hero-intro{
-        width:100%;
-        min-height:280px;
-        order:3;
-        padding:45px 8%;
+        max-width:100%;
     }
 
     .hero-intro h1{
-        font-size:28px;
+        font-size:38px;
     }
 
-    .hero-intro p{
-        font-size:13px;
+
+    .hero-navigation{
+        left:5%;
+        right:5%;
+        top:55%;
+        gap:18px;
     }
 
-    .slide-content{
-        left:25px;
-        bottom:35px;
-        right:25px;
+    .hero-circle{
+        width:92px;
+        height:92px;
     }
 
-    .slide-title{
-        font-size:24px;
+    .hero-circle-title{
+        font-size:10px;
     }
 
-    .slider-dots{
-        right:25px;
-        bottom:30px;
+
+    .hero-slide-info{
+        bottom:28px;
     }
+
 
     .section{
         padding:65px 6%;
@@ -737,20 +795,45 @@ footer p{
         font-size:11px;
     }
 
+
+    .hero-blue{
+        height:600px;
+        min-height:600px;
+    }
+
+
+    .hero-intro h1{
+        font-size:34px;
+    }
+
+
+    .hero-navigation{
+        gap:8px;
+        top:56%;
+    }
+
+
+    .hero-circle{
+        width:82px;
+        height:82px;
+    }
+
+    .hero-circle-number{
+        font-size:9px;
+    }
+
+    .hero-circle-title{
+        font-size:9px;
+    }
+
+
     .hero-photo{
         height:390px;
     }
 
-    .hero-slideshow{
-        height:430px;
-    }
 
     .writing-grid{
         grid-template-columns:1fr;
-    }
-
-    .writing-card{
-        aspect-ratio:4 / 5;
     }
 
     .contact-links{
@@ -767,6 +850,26 @@ footer p{
 /* =====================================================
    SLIDESHOW ANIMATION
 ===================================================== */
+
+@keyframes heroPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.025);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+.hero-blue{
+    animation:heroPulse 10s ease-in-out infinite;
+}
 
 </style>
 
@@ -813,160 +916,125 @@ footer p{
 <section class="hero">
 
 
-    <!-- PERSONAL PHOTO -->
+    <!-- =================================================
+         BLUE TWO-THIRDS
+    ================================================== -->
+
+    <div class="hero-blue">
+
+
+        <!-- INTRO TEXT -->
+
+        <div class="hero-intro">
+
+            <div class="hero-eyebrow">
+                Psychology · Visual Culture
+            </div>
+
+            <h1>
+                Bita<br>
+                Negahdar
+            </h1>
+
+            <p>
+                Psychology trainee exploring psychological processes, visual culture, and human experience.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             THREE HORIZONTAL CIRCLES
+        ================================================== -->
+
+        <div class="hero-navigation">
+
+
+            <a href="about.html" class="hero-circle-link">
+
+                <div class="hero-circle">
+
+                    <span class="hero-circle-number">
+                        01
+                    </span>
+
+                </div>
+
+                <div class="hero-circle-title">
+                    About Me
+                </div>
+
+            </a>
+
+
+
+            <a href="#contact" class="hero-circle-link">
+
+                <div class="hero-circle">
+
+                    <span class="hero-circle-number">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="hero-circle-title">
+                    Consultation
+                </div>
+
+            </a>
+
+
+
+            <a href="writing-4.html" class="hero-circle-link">
+
+                <div class="hero-circle">
+
+                    <span class="hero-circle-number">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="hero-circle-title">
+                    Latest Writing
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- SLIDE INDICATOR -->
+
+        <div class="hero-slide-info">
+
+            <div class="hero-slide-line"></div>
+
+            <div class="hero-slide-number">
+                01 / 04
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         RIGHT ONE-THIRD PHOTO
+    ================================================== -->
 
     <div class="hero-photo">
 
-        <img src="images/BitaNegahdar.jpg" alt="Bita Negahdar">
-
-    </div>
-
-
-
-    <!-- SLIDESHOW -->
-
-    <div class="hero-slideshow">
-
-
-        <div class="slide active">
-
-            <img src="images/cover-1.jpeg" alt="Writing 1">
-
-            <div class="slide-overlay"></div>
-
-            <div class="slide-content">
-
-                <div class="slide-number">
-                    Writing 01
-                </div>
-
-                <div class="slide-title">
-                    Identity, Objects &amp; the Extended Self
-                </div>
-
-                <div class="slide-description">
-                    Psychological perspectives on identity, objects and the construction of self.
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="slide">
-
-            <img src="images/cover-2.jpeg" alt="Writing 2">
-
-            <div class="slide-overlay"></div>
-
-            <div class="slide-content">
-
-                <div class="slide-number">
-                    Writing 02
-                </div>
-
-                <div class="slide-title">
-                    The Body as a Psychological Space
-                </div>
-
-                <div class="slide-description">
-                    Reading bodily movement and visual representation through psychology.
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="slide">
-
-            <img src="images/cover-3.jpeg" alt="Writing 3">
-
-            <div class="slide-overlay"></div>
-
-            <div class="slide-content">
-
-                <div class="slide-number">
-                    Writing 03
-                </div>
-
-                <div class="slide-title">
-                    Photography, Memory &amp; Self-Continuity
-                </div>
-
-                <div class="slide-description">
-                    Visual representation and the psychological experience of continuity.
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="slide">
-
-            <img src="images/cover-4.jpg" alt="Writing 4">
-
-            <div class="slide-overlay"></div>
-
-            <div class="slide-content">
-
-                <div class="slide-number">
-                    Writing 04
-                </div>
-
-                <div class="slide-title">
-                    Tokyo Compression
-                </div>
-
-                <div class="slide-description">
-                    Crowding, isolation and the psychology of visual proximity.
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- DOTS -->
-
-        <div class="slider-dots">
-
-            <div class="slider-dot active" onclick="showSlide(0)"></div>
-
-            <div class="slider-dot" onclick="showSlide(1)"></div>
-
-            <div class="slider-dot" onclick="showSlide(2)"></div>
-
-            <div class="slider-dot" onclick="showSlide(3)"></div>
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- INTRO -->
-
-    <div class="hero-intro">
-
-        <div class="eyebrow">
-            Psychology
-        </div>
-
-        <h1>
-            Bita<br>
-            Negahdar
-        </h1>
-
-        <p>
-            Psychology trainee exploring the intersection of psychological processes, visual culture, and human experience.
-        </p>
+        <img
+            src="images/BitaNegahdar.jpg"
+            alt="Bita Negahdar"
+        >
 
     </div>
 
@@ -1089,7 +1157,7 @@ footer p{
             </div>
 
             <h2 class="section-title">
-                Art × Psychology
+                Research Library
             </h2>
 
         </div>
@@ -1108,7 +1176,10 @@ footer p{
 
             <div class="research-image">
 
-                <img src="images/research-psychology.jpg" alt="Psychology Research">
+                <img
+                    src="images/research-psychology.jpg"
+                    alt="Psychology Research"
+                >
 
             </div>
 
@@ -1136,7 +1207,10 @@ footer p{
 
             <div class="research-image">
 
-                <img src="images/research-art-psychology.jpg" alt="Art and Psychology Research">
+                <img
+                    src="images/research-art-psychology.jpg"
+                    alt="Art and Psychology Research"
+                >
 
             </div>
 
@@ -1164,7 +1238,10 @@ footer p{
 
             <div class="research-image">
 
-                <img src="images/research-visual-culture.jpg" alt="Visual Culture Research">
+                <img
+                    src="images/research-visual-culture.jpg"
+                    alt="Visual Culture Research"
+                >
 
             </div>
 
@@ -1204,7 +1281,10 @@ footer p{
 
         <div class="art-image">
 
-            <img src="images/art-psychology-cover.jpg" alt="Art and Psychology">
+            <img
+                src="images/art-psychology-cover.jpg"
+                alt="Art and Psychology"
+            >
 
         </div>
 
@@ -1263,9 +1343,15 @@ footer p{
         <div class="contact-links">
 
 
-            <a href="mailto:bitanegahdar@gmail.com" class="contact-item">
+            <a
+                href="mailto:bitanegahdar@gmail.com"
+                class="contact-item"
+            >
 
-                <img src="images/email.png" alt="Email">
+                <img
+                    src="images/email.png"
+                    alt="Email"
+                >
 
                 <span>
                     Email
@@ -1275,9 +1361,16 @@ footer p{
 
 
 
-            <a href="https://www.instagram.com/bitanegahdar.ir" target="_blank" class="contact-item">
+            <a
+                href="https://www.instagram.com/bitanegahdar.ir"
+                target="_blank"
+                class="contact-item"
+            >
 
-                <img src="images/instagram.png" alt="Instagram">
+                <img
+                    src="images/instagram.png"
+                    alt="Instagram"
+                >
 
                 <span>
                     Instagram
@@ -1287,9 +1380,16 @@ footer p{
 
 
 
-            <a href="https://www.linkedin.com/in/bita-negahdar" target="_blank" class="contact-item">
+            <a
+                href="https://www.linkedin.com/in/bita-negahdar"
+                target="_blank"
+                class="contact-item"
+            >
 
-                <img src="images/Linkedin.png" alt="LinkedIn">
+                <img
+                    src="images/Linkedin.png"
+                    alt="LinkedIn"
+                >
 
                 <span>
                     LinkedIn
@@ -1299,9 +1399,15 @@ footer p{
 
 
 
-            <a href="tel:+989119382619" class="contact-item">
+            <a
+                href="tel:+989119382619"
+                class="contact-item"
+            >
 
-                <img src="images/Phone.png" alt="Phone">
+                <img
+                    src="images/Phone.png"
+                    alt="Phone"
+                >
 
                 <span>
                     Phone
@@ -1349,65 +1455,6 @@ footer p{
     </p>
 
 </footer>
-
-
-
-<!-- =====================================================
-     SLIDESHOW SCRIPT
-===================================================== -->
-
-<script>
-
-let currentSlide = 0;
-
-const slides = document.querySelectorAll(".slide");
-
-const dots = document.querySelectorAll(".slider-dot");
-
-
-function showSlide(index){
-
-    slides.forEach((slide) => {
-
-        slide.classList.remove("active");
-
-    });
-
-
-    dots.forEach((dot) => {
-
-        dot.classList.remove("active");
-
-    });
-
-
-    currentSlide = index;
-
-    slides[currentSlide].classList.add("active");
-
-    dots[currentSlide].classList.add("active");
-
-}
-
-
-function nextSlide(){
-
-    currentSlide++;
-
-    if(currentSlide >= slides.length){
-
-        currentSlide = 0;
-
-    }
-
-    showSlide(currentSlide);
-
-}
-
-
-setInterval(nextSlide, 5000);
-
-</script>
 
 
 </body>
