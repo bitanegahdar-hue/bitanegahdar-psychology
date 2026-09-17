@@ -24,6 +24,9 @@
     --cyan-hover:#06B6D4;
     --cyan-light:#CFFAFE;
 
+    --black:#111111;
+    --black-soft:#1B1B1B;
+
     --white:#FFFFFF;
     --text:#252525;
     --muted:#6D706D;
@@ -60,7 +63,7 @@ a{
 
 
 /* =====================================================
-   HEADER
+   HEADER — BLACK
 ===================================================== */
 
 header{
@@ -74,9 +77,9 @@ header{
     align-items:center !important;
     justify-content:space-between !important;
 
-    background:#FFFFFF !important;
+    background:var(--black) !important;
 
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid #2D2D2D;
 
     position:relative;
 }
@@ -98,7 +101,7 @@ header{
 
     line-height:1 !important;
 
-    color:var(--text) !important;
+    color:#FFFFFF !important;
 
     white-space:nowrap;
 }
@@ -114,7 +117,7 @@ nav{
     align-items:center !important;
     justify-content:flex-end !important;
 
-    gap:24px !important;
+    gap:12px !important;
 
     flex:0 0 auto;
 
@@ -130,22 +133,22 @@ nav a{
     height:34px !important;
     min-height:34px !important;
 
-    padding:7px 9px !important;
+    padding:7px 10px !important;
 
     border:1px solid transparent !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:14px !important;
+    font-size:12px !important;
     font-weight:700 !important;
 
-    letter-spacing:1.2px !important;
+    letter-spacing:1.1px !important;
 
     line-height:1 !important;
 
     text-transform:uppercase !important;
 
-    color:#252525 !important;
+    color:#FFFFFF !important;
 
     background:transparent !important;
 
@@ -173,11 +176,11 @@ nav a:hover{
 
     padding:8px 15px !important;
 
-    background:var(--cyan-light) !important;
+    background:var(--cyan) !important;
 
-    border-color:var(--cyan-light) !important;
+    border-color:var(--cyan) !important;
 
-    color:var(--cyan) !important;
+    color:#FFFFFF !important;
 }
 
 .contact-btn:hover{
@@ -190,7 +193,7 @@ nav a:hover{
 
 
 /* =====================================================
-   HERO
+   HERO / SLIDESHOW
 ===================================================== */
 
 .hero{
@@ -202,15 +205,24 @@ nav a:hover{
 
     display:grid !important;
 
-    grid-template-columns:44% 56% !important;
+    grid-template-columns:33.333% 66.667% !important;
 
-    min-height:560px !important;
+    min-height:500px !important;
+
+    background:var(--black) !important;
+
+    overflow:hidden !important;
 }
+
+
+/* =====================================================
+   HERO TEXT — ONE THIRD
+===================================================== */
 
 .hero-text{
     grid-column:1 !important;
 
-    padding:8% 11% 8% 7% !important;
+    padding:8% 11% 8% 8% !important;
 
     display:flex !important;
 
@@ -223,6 +235,10 @@ nav a:hover{
     background:var(--cyan) !important;
 
     color:#FFFFFF !important;
+
+    position:relative !important;
+
+    z-index:5 !important;
 }
 
 
@@ -233,11 +249,11 @@ nav a:hover{
 .hero-description{
     max-width:500px !important;
 
-    margin:0 0 30px 0 !important;
+    margin:0 0 28px 0 !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:17px !important;
+    font-size:16px !important;
 
     font-weight:500 !important;
 
@@ -288,29 +304,63 @@ nav a:hover{
 }
 
 .outline-btn:hover{
-    background:var(--cyan-hover) !important;
+    background:#111111 !important;
 
-    border-color:var(--cyan-hover) !important;
+    border-color:#111111 !important;
 
     color:#FFFFFF !important;
 }
 
 
 /* =====================================================
-   RIGHT PHOTO
+   SLIDESHOW AREA — TWO THIRDS
 ===================================================== */
 
-.hero-photo{
+.hero-slideshow{
+
     grid-column:2 !important;
 
-    min-height:560px !important;
+    min-height:500px !important;
+
+    position:relative !important;
 
     overflow:hidden !important;
 
-    background:#EEEEEE !important;
+    background:#111111 !important;
 }
 
-.hero-photo img{
+
+/* =====================================================
+   SLIDES
+===================================================== */
+
+.slide{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+
+    height:100% !important;
+
+    opacity:0 !important;
+
+    visibility:hidden !important;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease !important;
+}
+
+.slide:first-child{
+    opacity:1 !important;
+
+    visibility:visible !important;
+}
+
+.slide img{
+
     width:100% !important;
 
     height:100% !important;
@@ -318,6 +368,187 @@ nav a:hover{
     display:block !important;
 
     object-fit:cover !important;
+
+    transition:transform 7s ease !important;
+}
+
+.slide:first-child img{
+    transform:scale(1.04) !important;
+}
+
+
+/* =====================================================
+   SLIDESHOW DARK OVERLAY
+===================================================== */
+
+.slide-overlay{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.60) 0%,
+            rgba(0,0,0,.20) 48%,
+            rgba(0,0,0,.05) 100%
+        ) !important;
+
+    z-index:2 !important;
+}
+
+
+/* =====================================================
+   SLIDE CONTENT
+===================================================== */
+
+.slide-content{
+
+    position:absolute !important;
+
+    left:42px !important;
+
+    bottom:45px !important;
+
+    max-width:430px !important;
+
+    z-index:4 !important;
+
+    color:#FFFFFF !important;
+}
+
+.slide-label{
+
+    font-size:9px !important;
+
+    font-weight:700 !important;
+
+    letter-spacing:2px !important;
+
+    text-transform:uppercase !important;
+
+    color:#FFFFFF !important;
+
+    margin-bottom:12px !important;
+}
+
+.slide-title{
+
+    font-size:28px !important;
+
+    font-weight:600 !important;
+
+    line-height:1.25 !important;
+
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   SLIDESHOW QUICK BUTTONS
+===================================================== */
+
+.slide-buttons{
+
+    position:absolute !important;
+
+    top:28px !important;
+
+    left:28px !important;
+
+    display:flex !important;
+
+    flex-wrap:wrap !important;
+
+    gap:8px !important;
+
+    z-index:10 !important;
+
+    max-width:470px !important;
+}
+
+.slide-button{
+
+    display:inline-flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    min-height:32px !important;
+
+    padding:7px 12px !important;
+
+    border:1px solid rgba(255,255,255,.65) !important;
+
+    background:rgba(0,0,0,.45) !important;
+
+    backdrop-filter:blur(4px) !important;
+
+    color:#FFFFFF !important;
+
+    font-size:9px !important;
+
+    font-weight:700 !important;
+
+    letter-spacing:1.2px !important;
+
+    text-transform:uppercase !important;
+
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        color .25s ease !important;
+}
+
+.slide-button:hover{
+
+    background:var(--cyan) !important;
+
+    border-color:var(--cyan) !important;
+
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   SLIDESHOW DOTS
+===================================================== */
+
+.slide-dots{
+
+    position:absolute !important;
+
+    right:28px !important;
+
+    bottom:30px !important;
+
+    display:flex !important;
+
+    gap:7px !important;
+
+    z-index:10 !important;
+}
+
+.slide-dot{
+
+    width:8px !important;
+
+    height:8px !important;
+
+    border:1px solid #FFFFFF !important;
+
+    background:transparent !important;
+
+    border-radius:50% !important;
+
+    opacity:.8 !important;
+}
+
+.slide-dot.active{
+
+    background:#FFFFFF !important;
 }
 
 
@@ -363,9 +594,9 @@ nav a:hover{
 .grid{
     display:grid !important;
 
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
 
-    gap:18px !important;
+    gap:16px !important;
 
     width:100% !important;
 }
@@ -467,11 +698,11 @@ nav a:hover{
 
 .library-intro{
 
-    max-width:720px !important;
+    max-width:760px !important;
 
     margin:0 0 28px 0 !important;
 
-    font-size:15px !important;
+    font-size:14px !important;
 
     line-height:1.8 !important;
 
@@ -496,33 +727,88 @@ nav a:hover{
 
 .research-card{
 
-    min-height:210px !important;
+    min-height:360px !important;
 
-    padding:28px 26px 25px !important;
+    background:#111111 !important;
 
-    background:#F7FCFC !important;
+    overflow:hidden !important;
 
-    border:1px solid var(--border) !important;
+    position:relative !important;
 
     display:flex !important;
 
     flex-direction:column !important;
 
-    justify-content:space-between !important;
+    justify-content:flex-end !important;
 
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background-color .25s ease !important;
+    transition:transform .3s ease !important;
 }
 
 .research-card:hover{
 
-    transform:translateY(-5px) !important;
+    transform:translateY(-6px) !important;
+}
 
-    border-color:var(--cyan-hover) !important;
+.research-cover{
 
-    background:#FFFFFF !important;
+    position:absolute !important;
+
+    inset:0 !important;
+
+    z-index:1 !important;
+
+    overflow:hidden !important;
+}
+
+.research-cover img{
+
+    width:100% !important;
+
+    height:100% !important;
+
+    display:block !important;
+
+    object-fit:cover !important;
+
+    opacity:.62 !important;
+
+    transition:
+        transform .5s ease,
+        opacity .4s ease !important;
+}
+
+.research-card:hover .research-cover img{
+
+    transform:scale(1.06) !important;
+
+    opacity:.75 !important;
+}
+
+.research-overlay{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    z-index:2 !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.08) 15%,
+            rgba(0,0,0,.88) 100%
+        ) !important;
+}
+
+.research-content{
+
+    position:relative !important;
+
+    z-index:3 !important;
+
+    padding:26px !important;
+
+    color:#FFFFFF !important;
 }
 
 .research-category{
@@ -535,33 +821,33 @@ nav a:hover{
 
     text-transform:uppercase !important;
 
-    color:var(--cyan) !important;
+    color:#6EE7F7 !important;
 
-    margin-bottom:16px !important;
+    margin-bottom:12px !important;
 }
 
 .research-title{
 
-    font-size:17px !important;
+    font-size:19px !important;
 
     font-weight:600 !important;
 
-    line-height:1.45 !important;
+    line-height:1.35 !important;
 
-    color:var(--text) !important;
+    color:#FFFFFF !important;
 
-    margin-bottom:12px !important;
+    margin-bottom:10px !important;
 }
 
 .research-meta{
 
     font-size:11px !important;
 
-    line-height:1.6 !important;
+    line-height:1.65 !important;
 
-    color:var(--muted) !important;
+    color:rgba(255,255,255,.75) !important;
 
-    margin-bottom:20px !important;
+    margin-bottom:17px !important;
 }
 
 .research-link{
@@ -570,13 +856,11 @@ nav a:hover{
 
     align-items:center !important;
 
-    align-self:flex-start !important;
-
     padding:8px 13px !important;
 
-    border:1px solid var(--cyan) !important;
+    border:1px solid rgba(255,255,255,.7) !important;
 
-    color:var(--cyan) !important;
+    color:#FFFFFF !important;
 
     font-size:9px !important;
 
@@ -588,14 +872,14 @@ nav a:hover{
 
     transition:
         background-color .25s ease,
-        color .25s ease !important;
+        border-color .25s ease !important;
 }
 
 .research-link:hover{
 
     background:var(--cyan) !important;
 
-    color:#FFFFFF !important;
+    border-color:var(--cyan) !important;
 }
 
 
@@ -620,77 +904,88 @@ nav a:hover{
 
     display:grid !important;
 
-    grid-template-columns:38% 62% !important;
+    grid-template-columns:50% 50% !important;
 
-    min-height:280px !important;
+    min-height:360px !important;
 
-    border:1px solid var(--border) !important;
+    background:var(--black) !important;
 
     overflow:hidden !important;
 }
 
 .art-visual{
 
-    background:var(--cyan-light) !important;
-
-    min-height:280px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    padding:40px !important;
+    min-height:360px !important;
 
     position:relative !important;
 
     overflow:hidden !important;
+
+    background:#111111 !important;
 }
 
-.art-visual::before{
+.art-visual img{
 
-    content:"" !important;
+    width:100% !important;
 
-    width:170px !important;
+    height:100% !important;
 
-    height:170px !important;
+    display:block !important;
 
-    border:1px solid var(--cyan) !important;
+    object-fit:cover !important;
+
+    opacity:.68 !important;
+
+    transition:
+        transform .5s ease,
+        opacity .4s ease !important;
+}
+
+.art-layout:hover .art-visual img{
+
+    transform:scale(1.04) !important;
+
+    opacity:.82 !important;
+}
+
+.art-visual-overlay{
 
     position:absolute !important;
 
-    transform:rotate(45deg) !important;
+    inset:0 !important;
 
-    opacity:.45 !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.05)
+        ) !important;
 }
 
-.art-visual::after{
+.art-visual-label{
 
-    content:"VISUAL\nPSYCHOLOGY" !important;
+    position:absolute !important;
 
-    white-space:pre !important;
+    left:30px !important;
 
-    position:relative !important;
+    top:28px !important;
 
-    z-index:2 !important;
+    z-index:3 !important;
 
-    font-size:14px !important;
+    color:#FFFFFF !important;
+
+    font-size:9px !important;
 
     font-weight:700 !important;
 
-    line-height:1.5 !important;
+    letter-spacing:2px !important;
 
-    letter-spacing:3px !important;
-
-    text-align:center !important;
-
-    color:var(--cyan) !important;
+    text-transform:uppercase !important;
 }
 
 .art-content{
 
-    padding:38px 42px !important;
+    padding:42px !important;
 
     display:flex !important;
 
@@ -698,7 +993,9 @@ nav a:hover{
 
     justify-content:center !important;
 
-    background:#FFFFFF !important;
+    background:var(--black) !important;
+
+    color:#FFFFFF !important;
 }
 
 .art-label{
@@ -711,14 +1008,14 @@ nav a:hover{
 
     text-transform:uppercase !important;
 
-    color:var(--cyan) !important;
+    color:#6EE7F7 !important;
 
-    margin-bottom:16px !important;
+    margin-bottom:15px !important;
 }
 
 .art-title{
 
-    font-size:25px !important;
+    font-size:27px !important;
 
     font-weight:600 !important;
 
@@ -726,20 +1023,20 @@ nav a:hover{
 
     margin-bottom:15px !important;
 
-    color:var(--text) !important;
+    color:#FFFFFF !important;
 }
 
 .art-description{
 
-    max-width:650px !important;
+    max-width:600px !important;
 
     font-size:14px !important;
 
-    line-height:1.8 !important;
+    line-height:1.85 !important;
 
-    color:var(--muted) !important;
+    color:rgba(255,255,255,.72) !important;
 
-    margin-bottom:22px !important;
+    margin-bottom:24px !important;
 
     direction:rtl !important;
 
@@ -754,7 +1051,7 @@ nav a:hover{
 
     padding:10px 17px !important;
 
-    border:1px solid var(--text) !important;
+    border:1px solid rgba(255,255,255,.75) !important;
 
     font-size:9px !important;
 
@@ -763,6 +1060,8 @@ nav a:hover{
     letter-spacing:1.5px !important;
 
     text-transform:uppercase !important;
+
+    color:#FFFFFF !important;
 
     transition:
         background-color .25s ease,
@@ -812,7 +1111,7 @@ nav a:hover{
 
     display:grid !important;
 
-    grid-template-columns:110px 1fr 100px !important;
+    grid-template-columns:100px 1fr 100px !important;
 
     align-items:center !important;
 
@@ -901,26 +1200,33 @@ nav a:hover{
 
 
 /* =====================================================
-   CONTACT SECTION
-   CENTERED — NO BOXES
+   CONTACT SECTION — BLACK
 ===================================================== */
 
 .contact-section{
-    width:94% !important;
 
-    max-width:1500px !important;
+    width:100% !important;
+
+    max-width:none !important;
 
     margin:70px auto 0 !important;
 
-    padding:35px 0 40px !important;
+    padding:55px 4vw 50px !important;
 
-    border-top:1px solid var(--border) !important;
+    background:var(--black) !important;
+
+    border-top:none !important;
 
     text-align:center !important;
+
+    color:#FFFFFF !important;
 }
 
 .contact-section .section-title{
+
     margin-bottom:30px !important;
+
+    color:#FFFFFF !important;
 }
 
 
@@ -929,6 +1235,7 @@ nav a:hover{
 ===================================================== */
 
 .social-links{
+
     display:flex !important;
 
     justify-content:center !important;
@@ -945,6 +1252,7 @@ nav a:hover{
 }
 
 .social-link{
+
     display:flex !important;
 
     align-items:center !important;
@@ -969,13 +1277,8 @@ nav a:hover{
 }
 
 .social-link:hover{
+
     transform:translateY(-5px) scale(1.08) !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
 
     opacity:.82 !important;
 }
@@ -986,6 +1289,7 @@ nav a:hover{
 ===================================================== */
 
 .social-icon{
+
     width:42px !important;
 
     height:42px !important;
@@ -1004,16 +1308,17 @@ nav a:hover{
 }
 
 .social-link:hover .social-icon{
+
     transform:scale(1.08) !important;
 }
 
 
 /* =====================================================
    PROFESSIONAL / ACADEMIC RESOURCES
-   LOGOS ONLY — CENTERED — NO BOXES
 ===================================================== */
 
 .resource-links{
+
     display:flex !important;
 
     justify-content:center !important;
@@ -1030,6 +1335,7 @@ nav a:hover{
 }
 
 .resource-link{
+
     display:flex !important;
 
     align-items:center !important;
@@ -1052,18 +1358,14 @@ nav a:hover{
 }
 
 .resource-link:hover{
+
     transform:translateY(-4px) scale(1.05) !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
 
     opacity:.82 !important;
 }
 
 .resource-link img{
+
     max-width:100px !important;
 
     max-height:44px !important;
@@ -1085,17 +1387,18 @@ nav a:hover{
 
 
 /* =====================================================
-   FOOTER
+   FOOTER — BLACK
 ===================================================== */
 
 footer{
-    margin-top:55px !important;
+
+    margin-top:0 !important;
 
     padding:24px 4vw !important;
 
-    background:#FFFFFF !important;
+    background:#000000 !important;
 
-    border-top:1px solid var(--border) !important;
+    border-top:1px solid #2B2B2B !important;
 
     display:flex !important;
 
@@ -1115,7 +1418,7 @@ footer{
 
     text-transform:uppercase !important;
 
-    color:var(--muted) !important;
+    color:#777777 !important;
 }
 
 
@@ -1126,6 +1429,7 @@ footer{
 @media(max-width:800px){
 
     header{
+
         min-height:72px !important;
 
         padding:14px 5vw !important;
@@ -1134,13 +1438,15 @@ footer{
     }
 
     .logo{
+
         font-size:14px !important;
 
         letter-spacing:1.8px !important;
     }
 
     nav{
-        gap:6px !important;
+
+        gap:5px !important;
 
         flex-wrap:wrap !important;
 
@@ -1148,29 +1454,32 @@ footer{
     }
 
     nav a{
+
         height:30px !important;
 
         min-height:30px !important;
 
         padding:5px 6px !important;
 
-        font-size:10px !important;
+        font-size:9px !important;
 
         font-weight:700 !important;
 
-        letter-spacing:1px !important;
+        letter-spacing:.8px !important;
     }
 
     .contact-btn{
+
         height:30px !important;
 
-        padding:7px 10px !important;
+        padding:7px 9px !important;
     }
 
 
     /* HERO */
 
     .hero{
+
         width:92% !important;
 
         grid-template-columns:1fr !important;
@@ -1178,97 +1487,154 @@ footer{
         min-height:auto !important;
     }
 
-    .hero-photo{
-        grid-column:1 !important;
-
-        grid-row:1 !important;
-
-        min-height:480px !important;
-    }
-
     .hero-text{
+
         grid-column:1 !important;
 
         grid-row:2 !important;
 
-        padding:45px 8% !important;
+        padding:42px 8% !important;
+    }
+
+    .hero-slideshow{
+
+        grid-column:1 !important;
+
+        grid-row:1 !important;
+
+        min-height:430px !important;
     }
 
     .hero-description{
-        font-size:16px !important;
+
+        font-size:15px !important;
 
         direction:rtl !important;
 
         text-align:right !important;
     }
 
+    .slide-content{
+
+        left:25px !important;
+
+        bottom:35px !important;
+
+        max-width:70% !important;
+    }
+
+    .slide-title{
+
+        font-size:23px !important;
+    }
+
+    .slide-buttons{
+
+        top:20px !important;
+
+        left:20px !important;
+
+        right:20px !important;
+
+        max-width:none !important;
+    }
+
+    .slide-button{
+
+        font-size:8px !important;
+
+        padding:6px 9px !important;
+    }
+
+    .slide-dots{
+
+        right:20px !important;
+
+        bottom:22px !important;
+    }
+
 
     /* WRITING */
 
     .latest{
+
         width:92% !important;
     }
 
     .grid{
-        grid-template-columns:1fr !important;
 
-        gap:18px !important;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+
+        gap:14px !important;
     }
 
 
     /* RESEARCH */
 
     .research-library{
+
         width:92% !important;
     }
 
     .research-grid{
+
         grid-template-columns:1fr !important;
 
         gap:14px !important;
     }
 
     .research-card{
-        min-height:190px !important;
+
+        min-height:330px !important;
     }
 
 
     /* ART PSYCHOLOGY */
 
     .art-psychology{
+
         width:92% !important;
     }
 
     .art-layout{
+
         grid-template-columns:1fr !important;
+
+        min-height:auto !important;
     }
 
     .art-visual{
-        min-height:220px !important;
+
+        min-height:300px !important;
     }
 
     .art-content{
-        padding:32px 26px !important;
+
+        padding:34px 26px !important;
     }
 
     .art-title{
-        font-size:22px !important;
+
+        font-size:23px !important;
     }
 
 
     /* LATEST ADDITIONS */
 
     .latest-additions{
+
         width:92% !important;
     }
 
     .addition-item{
+
         grid-template-columns:75px 1fr !important;
 
         gap:14px !important;
     }
 
     .addition-action{
+
         display:none !important;
     }
 
@@ -1276,22 +1642,26 @@ footer{
     /* CONTACT */
 
     .contact-section{
-        width:92% !important;
+
+        width:100% !important;
     }
 
     .social-links{
+
         gap:26px !important;
 
         margin-bottom:35px !important;
     }
 
     .social-link{
+
         width:52px !important;
 
         height:52px !important;
     }
 
     .social-icon{
+
         width:38px !important;
 
         height:38px !important;
@@ -1301,16 +1671,19 @@ footer{
     /* RESOURCES */
 
     .resource-links{
+
         gap:24px !important;
     }
 
     .resource-link{
+
         width:90px !important;
 
         height:52px !important;
     }
 
     .resource-link img{
+
         max-width:90px !important;
 
         max-height:40px !important;
@@ -1320,6 +1693,7 @@ footer{
     /* FOOTER */
 
     footer{
+
         flex-direction:column !important;
 
         text-align:center !important;
@@ -1336,71 +1710,96 @@ footer{
 
 @media(max-width:480px){
 
-    .hero-photo{
-        min-height:420px !important;
+    .hero-slideshow{
+
+        min-height:390px !important;
     }
 
     .hero-text{
-        padding:40px 8% !important;
+
+        padding:38px 8% !important;
     }
 
     .hero-description{
-        font-size:15px !important;
+
+        font-size:14px !important;
 
         direction:rtl !important;
 
         text-align:right !important;
     }
 
-    .social-links{
-        gap:20px !important;
+    .slide-buttons{
+
+        gap:5px !important;
     }
 
-    .social-link{
-        width:48px !important;
+    .slide-button{
 
-        height:48px !important;
+        font-size:7px !important;
+
+        padding:5px 7px !important;
+
+        min-height:28px !important;
     }
 
-    .social-icon{
-        width:36px !important;
+    .slide-content{
 
-        height:36px !important;
+        left:20px !important;
+
+        bottom:28px !important;
+
+        max-width:75% !important;
     }
 
-    .resource-links{
-        gap:18px !important;
+    .slide-title{
+
+        font-size:20px !important;
     }
 
-    .resource-link{
-        width:78px !important;
+    .slide-label{
 
-        height:48px !important;
+        font-size:8px !important;
     }
 
-    .resource-link img{
-        max-width:78px !important;
 
-        max-height:36px !important;
+    .grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:16px !important;
     }
+
+
+    .research-card{
+
+        min-height:300px !important;
+    }
+
+    .research-content{
+
+        padding:22px !important;
+    }
+
 
     .art-visual{
-        min-height:190px !important;
+
+        min-height:250px !important;
     }
 
     .art-content{
+
         padding:28px 20px !important;
     }
 
     .art-title{
-        font-size:20px !important;
+
+        font-size:21px !important;
     }
 
-    .research-card{
-        padding:24px 20px !important;
-    }
 
     .addition-item{
+
         grid-template-columns:1fr !important;
 
         gap:7px !important;
@@ -1409,7 +1808,47 @@ footer{
     }
 
     .addition-date{
+
         margin-bottom:2px !important;
+    }
+
+
+    .social-links{
+
+        gap:20px !important;
+    }
+
+    .social-link{
+
+        width:48px !important;
+
+        height:48px !important;
+    }
+
+    .social-icon{
+
+        width:36px !important;
+
+        height:36px !important;
+    }
+
+    .resource-links{
+
+        gap:18px !important;
+    }
+
+    .resource-link{
+
+        width:78px !important;
+
+        height:48px !important;
+    }
+
+    .resource-link img{
+
+        max-width:78px !important;
+
+        max-height:36px !important;
     }
 
 }
@@ -1418,7 +1857,9 @@ footer{
 
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -1445,6 +1886,14 @@ footer{
         Writing
     </a>
 
+    <a href="#research">
+        Research
+    </a>
+
+    <a href="#art-psychology">
+        Art &amp; Psychology
+    </a>
+
     <a href="#contact" class="contact-btn">
         Contact
     </a>
@@ -1455,10 +1904,15 @@ footer{
 
 
 <!-- =====================================================
-     HERO
+     HERO + SLIDESHOW
 ===================================================== -->
 
 <section class="hero">
+
+
+<!-- =================================================
+     ONE THIRD — PERSONAL INTRO
+================================================= -->
 
 <div class="hero-text">
 
@@ -1480,12 +1934,155 @@ footer{
 </div>
 
 
-<div class="hero-photo">
+<!-- =================================================
+     TWO THIRD — SLIDESHOW
+================================================= -->
 
-    <img
-        src="images/BitaNegahdar.jpg"
-        alt="Bita Negahdar"
-    >
+<div class="hero-slideshow">
+
+
+    <!-- SLIDE 01 -->
+
+    <div class="slide">
+
+        <img
+            src="images/cover-1.jpeg"
+            alt="Psychology and Visual Culture"
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <div class="slide-label">
+                Visual Culture × Psychology
+            </div>
+
+            <div class="slide-title">
+                Image, Identity &amp; Psychological Experience
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 02 -->
+
+    <div class="slide">
+
+        <img
+            src="images/cover-2.jpeg"
+            alt="Art and Psychology"
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <div class="slide-label">
+                Art &amp; Psychology
+            </div>
+
+            <div class="slide-title">
+                Reading Psychological Experience Through Images
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 03 -->
+
+    <div class="slide">
+
+        <img
+            src="images/cover-3.jpeg"
+            alt="Identity and Visual Representation"
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <div class="slide-label">
+                Research &amp; Writing
+            </div>
+
+            <div class="slide-title">
+                Identity, Representation &amp; The Self
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 04 -->
+
+    <div class="slide">
+
+        <img
+            src="images/cover-4.jpg"
+            alt="Tokyo Compression"
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+
+            <div class="slide-label">
+                Latest Writing
+            </div>
+
+            <div class="slide-title">
+                Michael Wolf &amp; The Psychology of Crowding
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         QUICK NAVIGATION
+    ================================================= -->
+
+    <div class="slide-buttons">
+
+        <a href="writing.html" class="slide-button">
+            Writing
+        </a>
+
+        <a href="#research" class="slide-button">
+            Research Library
+        </a>
+
+        <a href="#art-psychology" class="slide-button">
+            Art &amp; Psychology
+        </a>
+
+        <a href="about.html" class="slide-button">
+            About
+        </a>
+
+    </div>
+
+
+    <!-- =================================================
+         SLIDE DOTS
+    ================================================= -->
+
+    <div class="slide-dots">
+
+        <span class="slide-dot active"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+
+    </div>
+
 
 </div>
 
@@ -1548,10 +2145,6 @@ footer{
     </a>
 
 
-    <!-- =================================================
-         WRITING 04
-    ================================================= -->
-
     <a href="writing-4.html" class="card">
 
         <div class="cover">
@@ -1575,7 +2168,7 @@ footer{
      RESEARCH LIBRARY
 ===================================================== -->
 
-<section class="research-library">
+<section class="research-library" id="research">
 
 <div class="section-title">
     Research Library
@@ -1592,83 +2185,119 @@ footer{
 <div class="research-grid">
 
 
-    <!-- RESOURCE 01 -->
+    <!-- RESEARCH 01 -->
 
     <a href="#" class="research-card">
 
-        <div>
+        <div class="research-cover">
+
+            <img
+                src="images/cover-1.jpeg"
+                alt="Child Drawing Research"
+            >
+
+            <div class="research-overlay"></div>
+
+        </div>
+
+
+        <div class="research-content">
 
             <div class="research-category">
                 Child Drawing
             </div>
 
             <div class="research-title">
-                Research Papers on Children's Drawings
+                Children's Drawings &amp; Psychological Interpretation
             </div>
 
             <div class="research-meta">
-                Selected academic papers and studies concerning children's drawings, visual expression, and psychological interpretation.
+                Selected academic papers concerning children's drawings, visual expression and psychological interpretation.
             </div>
 
-        </div>
+            <span class="research-link">
+                Explore
+            </span>
 
-        <span class="research-link">
-            Explore
-        </span>
+        </div>
 
     </a>
 
 
-    <!-- RESOURCE 02 -->
+    <!-- RESEARCH 02 -->
 
     <a href="#" class="research-card">
 
-        <div>
+        <div class="research-cover">
+
+            <img
+                src="images/cover-2.jpeg"
+                alt="Psychological Assessment"
+            >
+
+            <div class="research-overlay"></div>
+
+        </div>
+
+
+        <div class="research-content">
 
             <div class="research-category">
                 Psychological Assessment
             </div>
 
             <div class="research-title">
-                Psychological Assessment & Projective Methods
+                Projective Methods &amp; Visual Assessment
             </div>
 
             <div class="research-meta">
                 Research materials related to visual and projective approaches in psychological assessment.
             </div>
 
-        </div>
+            <span class="research-link">
+                Explore
+            </span>
 
-        <span class="research-link">
-            Explore
-        </span>
+        </div>
 
     </a>
 
 
-    <!-- RESOURCE 03 -->
+    <!-- RESEARCH 03 -->
 
     <a href="#" class="research-card">
 
-        <div>
+        <div class="research-cover">
 
-            <div class="research-category">
-                Art & Psychology
-            </div>
+            <img
+                src="images/cover-3.jpeg"
+                alt="Art and Psychology"
+            >
 
-            <div class="research-title">
-                Art, Image & Psychological Experience
-            </div>
-
-            <div class="research-meta">
-                Selected studies examining the relationship between visual representation, psychology, identity, and human experience.
-            </div>
+            <div class="research-overlay"></div>
 
         </div>
 
-        <span class="research-link">
-            Explore
-        </span>
+
+        <div class="research-content">
+
+            <div class="research-category">
+                Art &amp; Psychology
+            </div>
+
+            <div class="research-title">
+                Art, Image &amp; Psychological Experience
+            </div>
+
+            <div class="research-meta">
+                Selected studies examining visual representation, identity and psychological experience.
+            </div>
+
+            <span class="research-link">
+                Explore
+            </span>
+
+        </div>
 
     </a>
 
@@ -1682,7 +2311,7 @@ footer{
      ART × PSYCHOLOGY
 ===================================================== -->
 
-<section class="art-psychology">
+<section class="art-psychology" id="art-psychology">
 
 <div class="section-title">
     Art × Psychology
@@ -1693,6 +2322,18 @@ footer{
 
 
     <div class="art-visual">
+
+        <img
+            src="images/cover-4.jpg"
+            alt="Visual Psychology"
+        >
+
+        <div class="art-visual-overlay"></div>
+
+        <div class="art-visual-label">
+            Visual Psychology
+        </div>
+
     </div>
 
 
@@ -1737,8 +2378,6 @@ footer{
 <div class="additions-list">
 
 
-    <!-- ADDITION 01 -->
-
     <a href="#" class="addition-item">
 
         <div class="addition-date">
@@ -1764,8 +2403,6 @@ footer{
     </a>
 
 
-    <!-- ADDITION 02 -->
-
     <a href="#" class="addition-item">
 
         <div class="addition-date">
@@ -1790,8 +2427,6 @@ footer{
 
     </a>
 
-
-    <!-- ADDITION 03 -->
 
     <a href="#" class="addition-item">
 
@@ -1824,7 +2459,7 @@ footer{
 
 
 <!-- =====================================================
-     CONTACT
+     CONTACT — BLACK
 ===================================================== -->
 
 <section class="contact-section" id="contact">
@@ -2019,7 +2654,7 @@ footer{
 
 
 <!-- =====================================================
-     FOOTER
+     FOOTER — BLACK
 ===================================================== -->
 
 <footer>
@@ -2033,6 +2668,76 @@ footer{
 </div>
 
 </footer>
+
+
+<!-- =====================================================
+     SIMPLE SLIDESHOW SCRIPT
+===================================================== -->
+
+<script>
+
+(function(){
+
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".slide-dot");
+
+    if(!slides.length){
+        return;
+    }
+
+    let current = 0;
+
+    function showSlide(index){
+
+        slides.forEach(function(slide, i){
+
+            slide.style.opacity = i === index ? "1" : "0";
+
+            slide.style.visibility = i === index ? "visible" : "hidden";
+
+        });
+
+
+        dots.forEach(function(dot, i){
+
+            dot.classList.toggle(
+                "active",
+                i === index
+            );
+
+        });
+
+    }
+
+
+    function nextSlide(){
+
+        current = (current + 1) % slides.length;
+
+        showSlide(current);
+
+    }
+
+
+    setInterval(nextSlide, 5000);
+
+
+    dots.forEach(function(dot, index){
+
+        dot.addEventListener("click", function(){
+
+            current = index;
+
+            showSlide(current);
+
+        });
+
+    });
+
+})();
+
+</script>
+
 
 </body>
 
