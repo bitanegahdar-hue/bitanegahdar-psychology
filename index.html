@@ -193,7 +193,7 @@ nav a:hover{
 
 
 /* =====================================================
-   HERO / SLIDESHOW
+   HERO
 ===================================================== */
 
 .hero{
@@ -212,11 +212,13 @@ nav a:hover{
     background:var(--black) !important;
 
     overflow:hidden !important;
+
+    position:relative !important;
 }
 
 
 /* =====================================================
-   HERO TEXT — ONE THIRD
+   HERO TEXT — LEFT
 ===================================================== */
 
 .hero-text{
@@ -313,7 +315,7 @@ nav a:hover{
 
 
 /* =====================================================
-   SLIDESHOW AREA — TWO THIRDS
+   SLIDESHOW AREA
 ===================================================== */
 
 .hero-slideshow{
@@ -390,8 +392,8 @@ nav a:hover{
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.60) 0%,
-            rgba(0,0,0,.20) 48%,
+            rgba(0,0,0,.62) 0%,
+            rgba(0,0,0,.22) 48%,
             rgba(0,0,0,.05) 100%
         ) !important;
 
@@ -446,69 +448,42 @@ nav a:hover{
 
 
 /* =====================================================
-   SLIDESHOW QUICK BUTTONS
+   PERSONAL PHOTO — SMALL RECTANGLE ON SLIDESHOW
 ===================================================== */
 
-.slide-buttons{
+.hero-photo{
 
     position:absolute !important;
 
     top:28px !important;
 
-    left:28px !important;
+    right:28px !important;
 
-    display:flex !important;
+    width:118px !important;
 
-    flex-wrap:wrap !important;
+    height:148px !important;
 
-    gap:8px !important;
+    z-index:8 !important;
 
-    z-index:10 !important;
+    overflow:hidden !important;
 
-    max-width:470px !important;
+    background:#111111 !important;
+
+    border:1px solid rgba(255,255,255,.85) !important;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.28) !important;
 }
 
-.slide-button{
+.hero-photo img{
 
-    display:inline-flex !important;
+    width:100% !important;
 
-    align-items:center !important;
+    height:100% !important;
 
-    justify-content:center !important;
+    display:block !important;
 
-    min-height:32px !important;
-
-    padding:7px 12px !important;
-
-    border:1px solid rgba(255,255,255,.65) !important;
-
-    background:rgba(0,0,0,.45) !important;
-
-    backdrop-filter:blur(4px) !important;
-
-    color:#FFFFFF !important;
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.2px !important;
-
-    text-transform:uppercase !important;
-
-    transition:
-        background-color .25s ease,
-        border-color .25s ease,
-        color .25s ease !important;
-}
-
-.slide-button:hover{
-
-    background:var(--cyan) !important;
-
-    border-color:var(--cyan) !important;
-
-    color:#FFFFFF !important;
+    object-fit:cover !important;
 }
 
 
@@ -544,6 +519,8 @@ nav a:hover{
     border-radius:50% !important;
 
     opacity:.8 !important;
+
+    cursor:pointer !important;
 }
 
 .slide-dot.active{
@@ -691,16 +668,18 @@ nav a:hover{
 
     margin:70px auto 0 !important;
 
-    padding-top:30px !important;
+    padding:48px 0 55px !important;
 
     border-top:1px solid var(--border) !important;
+
+    background:#FFFFFF !important;
 }
 
 .library-intro{
 
-    max-width:760px !important;
+    max-width:850px !important;
 
-    margin:0 0 28px 0 !important;
+    margin:0 0 30px 0 !important;
 
     font-size:14px !important;
 
@@ -727,7 +706,7 @@ nav a:hover{
 
 .research-card{
 
-    min-height:360px !important;
+    min-height:380px !important;
 
     background:#111111 !important;
 
@@ -781,7 +760,7 @@ nav a:hover{
 
     transform:scale(1.06) !important;
 
-    opacity:.75 !important;
+    opacity:.78 !important;
 }
 
 .research-overlay{
@@ -795,8 +774,8 @@ nav a:hover{
     background:
         linear-gradient(
             180deg,
-            rgba(0,0,0,.08) 15%,
-            rgba(0,0,0,.88) 100%
+            rgba(0,0,0,.08) 10%,
+            rgba(0,0,0,.90) 100%
         ) !important;
 }
 
@@ -889,33 +868,52 @@ nav a:hover{
 
 .art-psychology{
 
+    width:100% !important;
+
+    max-width:none !important;
+
+    margin:0 !important;
+
+    padding:55px 3vw 60px !important;
+
+    background:var(--black) !important;
+
+    border-top:none !important;
+}
+
+.art-psychology .section-title{
+
     width:94% !important;
 
     max-width:1500px !important;
 
-    margin:70px auto 0 !important;
+    margin:0 auto 24px auto !important;
 
-    padding-top:30px !important;
-
-    border-top:1px solid var(--border) !important;
+    color:#FFFFFF !important;
 }
 
 .art-layout{
+
+    width:94% !important;
+
+    max-width:1500px !important;
+
+    margin:0 auto !important;
 
     display:grid !important;
 
     grid-template-columns:50% 50% !important;
 
-    min-height:360px !important;
+    min-height:380px !important;
 
-    background:var(--black) !important;
+    background:var(--black-soft) !important;
 
     overflow:hidden !important;
 }
 
 .art-visual{
 
-    min-height:360px !important;
+    min-height:380px !important;
 
     position:relative !important;
 
@@ -934,7 +932,7 @@ nav a:hover{
 
     object-fit:cover !important;
 
-    opacity:.68 !important;
+    opacity:.70 !important;
 
     transition:
         transform .5s ease,
@@ -945,7 +943,7 @@ nav a:hover{
 
     transform:scale(1.04) !important;
 
-    opacity:.82 !important;
+    opacity:.84 !important;
 }
 
 .art-visual-overlay{
@@ -993,7 +991,7 @@ nav a:hover{
 
     justify-content:center !important;
 
-    background:var(--black) !important;
+    background:var(--black-soft) !important;
 
     color:#FFFFFF !important;
 }
@@ -1080,126 +1078,6 @@ nav a:hover{
 
 
 /* =====================================================
-   LATEST ADDITIONS
-===================================================== */
-
-.latest-additions{
-
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:70px auto 0 !important;
-
-    padding-top:30px !important;
-
-    border-top:1px solid var(--border) !important;
-}
-
-.additions-list{
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    width:100% !important;
-
-    border-top:1px solid var(--border) !important;
-}
-
-.addition-item{
-
-    display:grid !important;
-
-    grid-template-columns:100px 1fr 100px !important;
-
-    align-items:center !important;
-
-    gap:24px !important;
-
-    min-height:92px !important;
-
-    padding:18px 5px !important;
-
-    border-bottom:1px solid var(--border) !important;
-
-    transition:
-        padding .25s ease,
-        background-color .25s ease !important;
-}
-
-.addition-item:hover{
-
-    padding-left:15px !important;
-
-    padding-right:15px !important;
-
-    background:#F8FCFC !important;
-}
-
-.addition-date{
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.3px !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--cyan) !important;
-}
-
-.addition-content{
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    gap:6px !important;
-}
-
-.addition-type{
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.5px !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--muted) !important;
-}
-
-.addition-title{
-
-    font-size:15px !important;
-
-    font-weight:600 !important;
-
-    line-height:1.45 !important;
-
-    color:var(--text) !important;
-}
-
-.addition-action{
-
-    justify-self:end !important;
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.4px !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--cyan) !important;
-}
-
-
-/* =====================================================
    CONTACT SECTION — BLACK
 ===================================================== */
 
@@ -1209,13 +1087,13 @@ nav a:hover{
 
     max-width:none !important;
 
-    margin:70px auto 0 !important;
+    margin:0 auto !important;
 
     padding:55px 4vw 50px !important;
 
     background:var(--black) !important;
 
-    border-top:none !important;
+    border-top:1px solid #2D2D2D !important;
 
     text-align:center !important;
 
@@ -1514,36 +1392,32 @@ footer{
         text-align:right !important;
     }
 
+
+    /* MOBILE PERSONAL PHOTO */
+
+    .hero-photo{
+
+        top:20px !important;
+
+        right:20px !important;
+
+        width:92px !important;
+
+        height:116px !important;
+    }
+
     .slide-content{
 
         left:25px !important;
 
         bottom:35px !important;
 
-        max-width:70% !important;
+        max-width:68% !important;
     }
 
     .slide-title{
 
         font-size:23px !important;
-    }
-
-    .slide-buttons{
-
-        top:20px !important;
-
-        left:20px !important;
-
-        right:20px !important;
-
-        max-width:none !important;
-    }
-
-    .slide-button{
-
-        font-size:8px !important;
-
-        padding:6px 9px !important;
     }
 
     .slide-dots{
@@ -1574,6 +1448,8 @@ footer{
     .research-library{
 
         width:92% !important;
+
+        padding:40px 0 45px !important;
     }
 
     .research-grid{
@@ -1593,10 +1469,17 @@ footer{
 
     .art-psychology{
 
+        padding:45px 0 50px !important;
+    }
+
+    .art-psychology .section-title{
+
         width:92% !important;
     }
 
     .art-layout{
+
+        width:92% !important;
 
         grid-template-columns:1fr !important;
 
@@ -1616,26 +1499,6 @@ footer{
     .art-title{
 
         font-size:23px !important;
-    }
-
-
-    /* LATEST ADDITIONS */
-
-    .latest-additions{
-
-        width:92% !important;
-    }
-
-    .addition-item{
-
-        grid-template-columns:75px 1fr !important;
-
-        gap:14px !important;
-    }
-
-    .addition-action{
-
-        display:none !important;
     }
 
 
@@ -1729,18 +1592,16 @@ footer{
         text-align:right !important;
     }
 
-    .slide-buttons{
 
-        gap:5px !important;
-    }
+    .hero-photo{
 
-    .slide-button{
+        top:17px !important;
 
-        font-size:7px !important;
+        right:17px !important;
 
-        padding:5px 7px !important;
+        width:78px !important;
 
-        min-height:28px !important;
+        height:100px !important;
     }
 
     .slide-content{
@@ -1749,7 +1610,7 @@ footer{
 
         bottom:28px !important;
 
-        max-width:75% !important;
+        max-width:72% !important;
     }
 
     .slide-title{
@@ -1795,21 +1656,6 @@ footer{
     .art-title{
 
         font-size:21px !important;
-    }
-
-
-    .addition-item{
-
-        grid-template-columns:1fr !important;
-
-        gap:7px !important;
-
-        padding:20px 5px !important;
-    }
-
-    .addition-date{
-
-        margin-bottom:2px !important;
     }
 
 
@@ -1911,7 +1757,7 @@ footer{
 
 
 <!-- =================================================
-     ONE THIRD — PERSONAL INTRO
+     LEFT — PERSONAL INTRO
 ================================================= -->
 
 <div class="hero-text">
@@ -1935,7 +1781,7 @@ footer{
 
 
 <!-- =================================================
-     TWO THIRD — SLIDESHOW
+     RIGHT — SLIDESHOW
 ================================================= -->
 
 <div class="hero-slideshow">
@@ -2046,26 +1892,15 @@ footer{
 
 
     <!-- =================================================
-         QUICK NAVIGATION
+         PERSONAL PHOTO
     ================================================= -->
 
-    <div class="slide-buttons">
+    <div class="hero-photo">
 
-        <a href="writing.html" class="slide-button">
-            Writing
-        </a>
-
-        <a href="#research" class="slide-button">
-            Research Library
-        </a>
-
-        <a href="#art-psychology" class="slide-button">
-            Art &amp; Psychology
-        </a>
-
-        <a href="about.html" class="slide-button">
-            About
-        </a>
+        <img
+            src="images/BitaNegahdar.jpg"
+            alt="Bita Negahdar"
+        >
 
     </div>
 
@@ -2177,7 +2012,7 @@ footer{
 
 <p class="library-intro">
 
-    A curated collection of research papers and academic resources related to psychology, visual culture, psychological assessment, art, identity, and human experience.
+    A curated collection of recent research papers and academic resources exploring psychology, art, visual culture, identity, psychological assessment, and the relationship between image and human experience.
 
 </p>
 
@@ -2192,8 +2027,8 @@ footer{
         <div class="research-cover">
 
             <img
-                src="images/cover-1.jpeg"
-                alt="Child Drawing Research"
+                src="images/research-psychology.jpg"
+                alt="Psychology Research"
             >
 
             <div class="research-overlay"></div>
@@ -2204,15 +2039,15 @@ footer{
         <div class="research-content">
 
             <div class="research-category">
-                Child Drawing
+                Psychology
             </div>
 
             <div class="research-title">
-                Children's Drawings &amp; Psychological Interpretation
+                Recent Research in Psychology
             </div>
 
             <div class="research-meta">
-                Selected academic papers concerning children's drawings, visual expression and psychological interpretation.
+                Selected recent papers and academic resources covering contemporary psychological research and human experience.
             </div>
 
             <span class="research-link">
@@ -2231,47 +2066,8 @@ footer{
         <div class="research-cover">
 
             <img
-                src="images/cover-2.jpeg"
-                alt="Psychological Assessment"
-            >
-
-            <div class="research-overlay"></div>
-
-        </div>
-
-
-        <div class="research-content">
-
-            <div class="research-category">
-                Psychological Assessment
-            </div>
-
-            <div class="research-title">
-                Projective Methods &amp; Visual Assessment
-            </div>
-
-            <div class="research-meta">
-                Research materials related to visual and projective approaches in psychological assessment.
-            </div>
-
-            <span class="research-link">
-                Explore
-            </span>
-
-        </div>
-
-    </a>
-
-
-    <!-- RESEARCH 03 -->
-
-    <a href="#" class="research-card">
-
-        <div class="research-cover">
-
-            <img
-                src="images/cover-3.jpeg"
-                alt="Art and Psychology"
+                src="images/research-art-psychology.jpg"
+                alt="Art and Psychology Research"
             >
 
             <div class="research-overlay"></div>
@@ -2290,7 +2086,46 @@ footer{
             </div>
 
             <div class="research-meta">
-                Selected studies examining visual representation, identity and psychological experience.
+                Recent studies examining the relationship between artistic expression, images, identity and psychological experience.
+            </div>
+
+            <span class="research-link">
+                Explore
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <!-- RESEARCH 03 -->
+
+    <a href="#" class="research-card">
+
+        <div class="research-cover">
+
+            <img
+                src="images/research-visual-culture.jpg"
+                alt="Visual Culture Research"
+            >
+
+            <div class="research-overlay"></div>
+
+        </div>
+
+
+        <div class="research-content">
+
+            <div class="research-category">
+                Visual Culture
+            </div>
+
+            <div class="research-title">
+                Image, Perception &amp; Human Experience
+            </div>
+
+            <div class="research-meta">
+                Selected research on visual representation, perception, identity, photography and the psychological meaning of images.
             </div>
 
             <span class="research-link">
@@ -2324,8 +2159,8 @@ footer{
     <div class="art-visual">
 
         <img
-            src="images/cover-4.jpg"
-            alt="Visual Psychology"
+            src="images/art-psychology-cover.jpg"
+            alt="Art and Psychology"
         >
 
         <div class="art-visual-overlay"></div>
@@ -2358,100 +2193,6 @@ footer{
         </a>
 
     </div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     LATEST ADDITIONS
-===================================================== -->
-
-<section class="latest-additions">
-
-<div class="section-title">
-    Latest Additions
-</div>
-
-
-<div class="additions-list">
-
-
-    <a href="#" class="addition-item">
-
-        <div class="addition-date">
-            01
-        </div>
-
-        <div class="addition-content">
-
-            <div class="addition-type">
-                Research Paper
-            </div>
-
-            <div class="addition-title">
-                New research material will be added here.
-            </div>
-
-        </div>
-
-        <div class="addition-action">
-            Read
-        </div>
-
-    </a>
-
-
-    <a href="#" class="addition-item">
-
-        <div class="addition-date">
-            02
-        </div>
-
-        <div class="addition-content">
-
-            <div class="addition-type">
-                Article
-            </div>
-
-            <div class="addition-title">
-                New writing and academic resources will appear here.
-            </div>
-
-        </div>
-
-        <div class="addition-action">
-            Read
-        </div>
-
-    </a>
-
-
-    <a href="#" class="addition-item">
-
-        <div class="addition-date">
-            03
-        </div>
-
-        <div class="addition-content">
-
-            <div class="addition-type">
-                Visual Psychology
-            </div>
-
-            <div class="addition-title">
-                Selected materials connecting visual culture and psychology.
-            </div>
-
-        </div>
-
-        <div class="addition-action">
-            Explore
-        </div>
-
-    </a>
-
 
 </div>
 
@@ -2553,7 +2294,7 @@ footer{
 
 <!-- =================================================
      PROFESSIONAL / ACADEMIC SITES
-================================================= -->
+===================================================== -->
 
 <div class="resource-links">
 
