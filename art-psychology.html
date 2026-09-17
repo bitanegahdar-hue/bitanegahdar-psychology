@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Art & Psychology | Bita Negahdar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL RESET
+        ===================================================== */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#FFFFFF;
+            color:#252525;
+            font-family:"DM Sans", Arial, sans-serif;
+            font-weight:400;
+        }
+
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header{
+            height:76px;
+            background:#111111;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 6%;
+        }
+
+        .logo{
+            color:#FFFFFF;
+            font-size:16px;
+            font-weight:600;
+            letter-spacing:1px;
+        }
+
+        nav{
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+
+        nav a{
+            color:#FFFFFF;
+            font-size:11px;
+            font-weight:500;
+            letter-spacing:.8px;
+            transition:.25s ease;
+        }
+
+        nav a:hover{
+            color:#5A70B5;
+        }
+
+        nav .contact-link{
+            border:1px solid #5A70B5;
+            padding:10px 17px;
+            color:#FFFFFF;
+        }
+
+        nav .contact-link:hover{
+            background:#5A70B5;
+            color:#FFFFFF;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero{
+            width:100%;
+            min-height:430px;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            background:#F4F4F4;
+        }
+
+        .hero-image{
+            min-height:430px;
+            background-image:
+                linear-gradient(
+                    rgba(17,17,17,.18),
+                    rgba(17,17,17,.18)
+                ),
+                url("images/art-psychology-cover.jpg");
+            background-size:cover;
+            background-position:center;
+        }
+
+        .hero-content{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            padding:70px 9%;
+            background:#F4F4F4;
+        }
+
+        .hero-label{
+            font-size:10px;
+            font-weight:600;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            color:#5A70B5;
+            margin-bottom:22px;
+        }
+
+        h1{
+            font-size:48px;
+            line-height:1.1;
+            font-weight:500;
+            letter-spacing:-1.5px;
+            margin-bottom:22px;
+            color:#111111;
+        }
+
+        .hero-subtitle{
+            font-size:15px;
+            line-height:1.8;
+            font-weight:400;
+            color:#555555;
+            max-width:430px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro{
+            max-width:850px;
+            margin:0 auto;
+            padding:85px 30px 65px;
+            text-align:center;
+        }
+
+        .intro h2{
+            font-size:24px;
+            font-weight:500;
+            color:#111111;
+            margin-bottom:24px;
+        }
+
+        .intro p{
+            font-size:14px;
+            line-height:2;
+            color:#666666;
+        }
+
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .content{
+            max-width:1100px;
+            margin:0 auto;
+            padding:0 30px 100px;
+        }
+
+        .section-grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:25px;
+        }
+
+        .content-card{
+            border-top:2px solid #5A70B5;
+            padding:30px 5px 10px;
+        }
+
+        .content-card h3{
+            font-size:19px;
+            font-weight:500;
+            color:#111111;
+            margin-bottom:18px;
+        }
+
+        .content-card p{
+            font-size:13px;
+            line-height:2;
+            color:#666666;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer{
+            background:#111111;
+            color:#FFFFFF;
+            text-align:center;
+            padding:35px 20px;
+        }
+
+        footer p{
+            font-size:10px;
+            letter-spacing:1px;
+            color:#AAAAAA;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:800px){
+
+            header{
+                height:auto;
+                min-height:76px;
+                padding:20px 6%;
+                flex-direction:column;
+                gap:20px;
+            }
+
+            nav{
+                gap:17px;
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            nav a{
+                font-size:10px;
+            }
+
+            .hero{
+                grid-template-columns:1fr;
+            }
+
+            .hero-image{
+                min-height:320px;
+            }
+
+            .hero-content{
+                padding:55px 8%;
+            }
+
+            h1{
+                font-size:38px;
+            }
+
+            .section-grid{
+                grid-template-columns:1fr;
+            }
+
+            .intro{
+                padding-top:65px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            Bita Negahdar
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="writing.html">Writing</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="art-psychology.html">
+                Art &amp; Psychology
+            </a>
+
+            <a href="index.html#contact" class="contact-link">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-image"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Art &amp; Psychology
+            </div>
+
+            <h1>
+                Visual Experience<br>
+                and Psychological Meaning
+            </h1>
+
+            <p class="hero-subtitle">
+                A space for exploring the relationship between visual experience,
+                images, and psychological meaning.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRODUCTION
+    ===================================================== -->
+
+    <section class="intro">
+
+        <h2>
+            Art and Psychology
+        </h2>
+
+        <p>
+            This space explores the relationship between visual experience
+            and psychological meaning, with attention to images, perception,
+            identity, and the ways visual forms can become a medium for
+            understanding human experience.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+
+    <main class="content">
+
+        <div class="section-grid">
+
+
+            <article class="content-card">
+
+                <h3>
+                    Visual Experience
+                </h3>
+
+                <p>
+                    Images are not only objects of observation. They can
+                    participate in perception, memory, attention, imagination,
+                    and the formation of personal meaning. This section considers
+                    how visual experience becomes psychologically significant
+                    in everyday life.
+                </p>
+
+            </article>
+
+
+
+            <article class="content-card">
+
+                <h3>
+                    Image in Psychological Practice
+                </h3>
+
+                <p>
+                    Drawing, photography, and visual materials can sometimes
+                    provide alternative ways of communicating experience,
+                    especially when verbal expression is limited. Their use
+                    in psychological practice requires contextual interpretation
+                    and should not be treated as a standalone method of diagnosis.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Bita Negahdar. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
