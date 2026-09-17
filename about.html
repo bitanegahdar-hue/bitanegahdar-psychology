@@ -1,868 +1,20 @@
-<!DOCTYPE html>
+دو ساین خونده نمیشه. phone/ linkedin
+Pasted text(1).txt
+Document
+مشابه فيلدهاي كناريش باشه.
 
-<html lang="en">
+Pasted text(3).txt
+Document
 
-<head>
+دوره MBA در فایل فعلی شما به‌درستی اضافه شده است. برای اضافه کردن دوره سایکوفارماکولوژی، فقط بخش Relevant Studies & Training را تغییر بده.
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+این مورد را بعد از Suicide Crisis Management اضافه کن:
 
-<title>About | Bita Negahdar</title>
+<span>
+    Psychopharmacology
+</span>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* =====================================================
-   ABOUT PAGE
-===================================================== */
-
-:root{
-    --cyan:#0891B2;
-    --cyan-hover:#06B6D4;
-    --cyan-pale:#CFFAFE;
-    --border:#D9E5E8;
-    --text:#252525;
-    --muted:#626A6D;
-}
-
-
-/* =====================================================
-   HEADER
-   SAME ON EVERY PAGE
-   HOME / ABOUT / WRITING / CONTACT
-===================================================== */
-
-header{
-    width:100% !important;
-
-    min-height:76px !important;
-    height:76px !important;
-
-    padding:0 4vw !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-
-    background:#FFFFFF !important;
-
-    border-bottom:1px solid var(--border) !important;
-}
-
-.logo{
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:20px !important;
-    font-weight:700 !important;
-
-    letter-spacing:2.4px !important;
-
-    color:var(--text) !important;
-
-    white-space:nowrap !important;
-}
-
-nav{
-    display:flex !important;
-
-    align-items:center !important;
-    justify-content:flex-end !important;
-
-    gap:24px !important;
-
-    flex-shrink:0 !important;
-}
-
-nav a{
-    display:inline-flex !important;
-
-    align-items:center !important;
-    justify-content:center !important;
-
-    min-height:38px !important;
-    height:38px !important;
-
-    padding:7px 11px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:12px !important;
-    font-weight:600 !important;
-
-    letter-spacing:1.4px !important;
-
-    line-height:1 !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--text) !important;
-
-    background:transparent !important;
-
-    border:1px solid transparent !important;
-
-    white-space:nowrap !important;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease !important;
-}
-
-nav a:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   CONTACT BUTTON
-===================================================== */
-
-.contact-btn{
-    padding:9px 17px !important;
-
-    background:var(--cyan-pale) !important;
-
-    border:1px solid var(--cyan-pale) !important;
-
-    color:var(--cyan) !important;
-}
-
-.contact-btn:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   GENERAL ABOUT PAGE
-===================================================== */
-
-.page{
-    width:92% !important;
-
-    max-width:1250px !important;
-
-    margin:55px auto !important;
-}
-
-.eyebrow{
-    margin-bottom:18px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:11px !important;
-    font-weight:700 !important;
-
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--cyan) !important;
-}
-
-.page h1{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:52px !important;
-
-    font-weight:700 !important;
-
-    line-height:1.15 !important;
-
-    color:var(--text) !important;
-}
-
-.intro{
-    max-width:760px !important;
-
-    margin:28px 0 60px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:16px !important;
-
-    font-weight:400 !important;
-
-    line-height:2 !important;
-
-    color:#5F6668 !important;
-
-    direction:rtl !important;
-
-    text-align:right !important;
-}
-
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-
-.block{
-    padding:30px 0 !important;
-
-    border-top:1px solid var(--border) !important;
-}
-
-.block h2{
-    margin-bottom:22px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:15px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.8px !important;
-
-    line-height:1.4 !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--cyan) !important;
-}
-
-
-/* =====================================================
-   EDUCATION
-===================================================== */
-
-.education{
-    display:grid !important;
-
-    grid-template-columns:1fr !important;
-
-    gap:10px !important;
-
-    width:100% !important;
-}
-
-.education-item{
-    width:50% !important;
-
-    min-height:88px !important;
-
-    padding:16px 22px !important;
-
-    border:1px solid var(--border) !important;
-
-    background:var(--cyan-pale) !important;
-
-    color:var(--cyan) !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    justify-content:center !important;
-
-    text-align:left !important;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .3s ease !important;
-}
-
-.education-item:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-3px) !important;
-
-    cursor:pointer !important;
-}
-
-.education-item h3{
-    margin:0 0 6px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:18px !important;
-
-    font-weight:700 !important;
-
-    line-height:1.4 !important;
-
-    color:var(--cyan) !important;
-
-    text-align:left !important;
-
-    transition:color .3s ease !important;
-}
-
-.education-item p{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:11px !important;
-
-    line-height:1.6 !important;
-
-    color:var(--muted) !important;
-
-    text-align:left !important;
-
-    transition:color .3s ease !important;
-}
-
-.education-item:hover h3,
-.education-item:hover p{
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   RELEVANT STUDIES & TRAINING
-===================================================== */
-
-.training{
-    display:grid !important;
-
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-
-    gap:12px !important;
-
-    width:100% !important;
-}
-
-.training span{
-    width:100% !important;
-
-    aspect-ratio:1 / 1 !important;
-
-    min-height:0 !important;
-
-    padding:18px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    text-align:center !important;
-
-    background:var(--cyan-pale) !important;
-
-    color:var(--cyan) !important;
-
-    border:1px solid var(--border) !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:14px !important;
-
-    font-weight:700 !important;
-
-    line-height:1.5 !important;
-
-    cursor:pointer !important;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease !important;
-}
-
-.training span:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-3px) !important;
-}
-
-
-/* =====================================================
-   PROFESSIONAL / ACADEMIC LINKS
-   LOGOS ONLY
-   NO BORDER / NO BOX / CENTERED
-===================================================== */
-
-.resource-links{
-    width:100% !important;
-
-    margin-top:5px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    flex-wrap:wrap !important;
-
-    gap:34px !important;
-}
-
-.resource-link{
-    width:auto !important;
-
-    height:auto !important;
-
-    padding:6px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    outline:none !important;
-
-    box-shadow:none !important;
-
-    transition:
-        transform .25s ease,
-        opacity .25s ease !important;
-}
-
-.resource-link:hover{
-    transform:translateY(-4px) scale(1.04) !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
-}
-
-.resource-link img{
-    width:auto !important;
-
-    height:auto !important;
-
-    max-width:110px !important;
-
-    max-height:48px !important;
-
-    display:block !important;
-
-    object-fit:contain !important;
-
-    border:none !important;
-
-    outline:none !important;
-
-    box-shadow:none !important;
-
-    transition:opacity .25s ease !important;
-}
-
-.resource-link:hover img{
-    opacity:.82 !important;
-}
-
-
-/* =====================================================
-   RESEARCHGATE — LARGER
-===================================================== */
-
-.resource-link img[alt="ResearchGate"]{
-    max-width:170px !important;
-
-    max-height:70px !important;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-    margin-top:55px !important;
-
-    padding:24px 4vw !important;
-
-    background:#FFFFFF !important;
-
-    border-top:1px solid var(--border) !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:space-between !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:9px !important;
-
-    font-weight:600 !important;
-
-    letter-spacing:1.8px !important;
-
-    line-height:1.4 !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--muted) !important;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:800px){
-
-    header{
-        min-height:72px !important;
-
-        height:auto !important;
-
-        padding:14px 5vw !important;
-
-        gap:15px !important;
-    }
-
-    .logo{
-        font-size:14px !important;
-
-        letter-spacing:1.8px !important;
-    }
-
-    nav{
-        gap:6px !important;
-
-        flex-wrap:wrap !important;
-
-        justify-content:flex-end !important;
-    }
-
-    nav a{
-        min-height:30px !important;
-
-        height:30px !important;
-
-        padding:5px 6px !important;
-
-        font-size:8px !important;
-
-        letter-spacing:1px !important;
-    }
-
-    .contact-btn{
-        padding:7px 10px !important;
-    }
-
-
-    /* =================================================
-       PAGE
-    ================================================= */
-
-    .page{
-        width:90% !important;
-
-        margin:45px auto !important;
-    }
-
-    .page h1{
-        font-size:40px !important;
-    }
-
-    .intro{
-        font-size:15px !important;
-
-        margin-bottom:45px !important;
-    }
-
-
-    /* =================================================
-       EDUCATION
-    ================================================= */
-
-    .education{
-        gap:10px !important;
-    }
-
-    .education-item{
-        width:100% !important;
-
-        min-height:82px !important;
-
-        padding:15px 18px !important;
-
-        text-align:left !important;
-    }
-
-    .education-item h3{
-        font-size:17px !important;
-
-        text-align:left !important;
-    }
-
-    .education-item p{
-        text-align:left !important;
-    }
-
-
-    /* =================================================
-       TRAINING
-    ================================================= */
-
-    .training{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-
-        gap:12px !important;
-    }
-
-    .training span{
-        aspect-ratio:1 / 1 !important;
-
-        padding:16px !important;
-
-        font-size:13px !important;
-    }
-
-
-    /* =================================================
-       RESOURCE LOGOS
-    ================================================= */
-
-    .resource-links{
-        justify-content:center !important;
-
-        gap:22px !important;
-
-        padding:5px 0 !important;
-    }
-
-    .resource-link{
-        width:auto !important;
-
-        height:auto !important;
-
-        padding:4px !important;
-    }
-
-    .resource-link img{
-        max-width:78px !important;
-
-        max-height:34px !important;
-    }
-
-    .resource-link img[alt="ResearchGate"]{
-        max-width:110px !important;
-
-        max-height:50px !important;
-    }
-
-
-    /* =================================================
-       FOOTER
-    ================================================= */
-
-    footer{
-        flex-direction:column !important;
-
-        text-align:center !important;
-
-        gap:10px !important;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:480px){
-
-    .page h1{
-        font-size:36px !important;
-    }
-
-    .training{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-
-        gap:10px !important;
-    }
-
-    .training span{
-        aspect-ratio:1 / 1 !important;
-
-        padding:14px !important;
-
-        font-size:12px !important;
-    }
-
-    .resource-links{
-        gap:16px !important;
-    }
-
-    .resource-link img{
-        max-width:65px !important;
-
-        max-height:30px !important;
-    }
-
-    .resource-link img[alt="ResearchGate"]{
-        max-width:90px !important;
-
-        max-height:36px !important;
-    }
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header>
-
-<div class="logo">
-    BITA NEGAHDAR
-</div>
-
-
-<nav>
-
-    <a href="index.html">
-        Home
-    </a>
-
-    <a href="about.html">
-        About
-    </a>
-
-    <a href="writing.html">
-        Writing
-    </a>
-
-    <a href="index.html#contact" class="contact-btn">
-        Contact
-    </a>
-
-</nav>
-
-</header>
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main class="page">
-
-<div class="eyebrow">
-    About
-</div>
-
-
-<h1>
-    Bita Negahdar
-</h1>
-
-
-<p class="intro">
-   
-بیتا نگاهدار متولد 1365 است و فعالیت حرفه‌ای خود را از 1382 در حوزه هنرهای تجسمی و ارتباطات بصری آغاز کرده است. بیش از بیست سال تجربه حرفه‌ای در زمینه برندینگ، طراحی و هنرهای تجسمی، او را به‌تدریج به سوی مطالعه انسان و حوزه روان‌شناسی سوق داده است؛ مسیری که در ادامه، به شکل‌گیری علاقه‌ای جدی به شناخت انسان، هویت و تجربه زیسته او انجامیده است.
-
-او دارای پیشینه‌ای میان‌رشته‌ای در طراحی گرافیک، عکاسی، هنرهای تجسمی و برندینگ است و در طول سال‌های فعالیت حرفه‌ای خود، در پروژه‌های مختلف طراحی، هویت بصری و مشاوره برند فعالیت داشته است. تجربه کار با تصویر و مواجهه مستمر با شیوه شکل‌گیری و بازنمایی هویت، نگاه او را به رابطه میان انسان، تصویر و معنا عمیق‌تر کرده است.
-
-تحصیل در رشته عکاسی در مقطع کارشناسی ارشد، نقطه دیگری در این مسیر بود؛ جایی که تصویر دیگر صرفاً یک ابزار بصری نبود و به وسیله‌ای برای مشاهده، پرسش و مواجهه با تجربه انسانی تبدیل شد. ادامه این مسیر در حوزه روان‌شناسی، امکان مطالعه علمی‌تر پرسش‌هایی را برای او فراهم کرده است که پیش‌تر از دریچه هنر و تصویر با آن‌ها مواجه شده بود.
-
-علاقه او در حوزه روان‌شناسی بیش از هر چیز بر مطالعه هویت، تجربه فردی، رابطه انسان با خود و بدن، و پیوند میان روان و فرهنگ بصری متمرکز است. برای او، روان‌شناسی ادامه همان مسیر مشاهده و پرسشگری است؛ با این تفاوت که اکنون این پرسش‌ها در چارچوبی علمی و پژوهشی دنبال می‌شوند.
-
-وي در حال توسعه مسیر حرفه‌ای و علمی خود در حوزه روان‌شناسی است و تلاش می‌کند پیشینه خود در هنر، عکاسی و برندینگ را در کنار مطالعات روان‌شناختی قرار دهد.
-
-</p>
-
-
-<!-- =================================================
-     EDUCATION
-===================================================== -->
-
-<section class="block">
-
-    <h2>
-        Education
-    </h2>
-
-
-    <div class="education">
-
-
-        <div class="education-item">
-
-            <h3>
-                MA — Psychology
-            </h3>
-
-            <p>
-                2024 – 2026
-            </p>
-
-        </div>
-
-
-        <div class="education-item">
-
-            <h3>
-                MA — Photography
-            </h3>
-
-            <p>
-                2014 – 2016<br>
-                Tehran University of Art
-            </p>
-
-        </div>
-
-
-        <div class="education-item">
-
-            <h3>
-                BGD
-            </h3>
-
-            <p>
-                2003 – 2007
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =================================================
-     RELEVANT STUDIES & TRAINING
-===================================================== -->
+بخش کامل آموزش‌های تخصصی به این شکل خواهد بود:
 
 <section class="block">
 
@@ -899,117 +51,346 @@ footer{
             Suicide Crisis Management
         </span>
 
+        <span>
+            Psychopharmacology
+        </span>
+
     </div>
 
 </section>
 
+این تغییر فقط یک فیلد جدید به بخش آموزش‌های تخصصی اضافه می‌کند و سایر قسمت‌های فایل دست‌نخورده باقی می‌مانند.
+
+يكجا بفرست
+
+این نسخه کامل بخش آموزش‌های تخصصی است؛ آن را جایگزین بخش قبلی Relevant Studies & Training در فایل about.html کن:
 
 <!-- =================================================
-     PROFESSIONAL / ACADEMIC LINKS
-     LOGOS ONLY — NO TITLES / NO BORDERS
-===================================================== -->
+     RELEVANT STUDIES & TRAINING
+================================================= -->
 
 <section class="block">
 
-    <div class="resource-links">
+    <h2>
+        Relevant Studies &amp; Training
+    </h2>
 
 
-        <a
-            href="https://www.apa.org/"
-            class="resource-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+    <div class="training">
 
-            <img
-                src="images/apa.png"
-                alt="APA"
-            >
+        <span>
+            MBA — Strategic Management<br>
+            University of Tehran<br>
+            One-Year Professional Program | 2024–2025
+        </span>
 
-        </a>
+        <span>
+            Schema Therapy
+        </span>
 
+        <span>
+            Cognitive Behavioral Therapy (CBT)
+        </span>
 
-        <a
-            href="https://www.iranpa.org/"
-            class="resource-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <span>
+            QEEG Brain Mapping Workshop
+        </span>
 
-            <img
-                src="images/ipa.png"
-                alt="Iranian Psychological Association"
-            >
+        <span>
+            Acceptance and Commitment Therapy (ACT)
+        </span>
 
-        </a>
+        <span>
+            Suicide Crisis Management
+        </span>
 
-
-        <a
-            href="https://pubmed.ncbi.nlm.nih.gov/"
-            class="resource-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="images/pubmed.png"
-                alt="PubMed"
-            >
-
-        </a>
-
-
-        <a
-            href="https://scholar.google.com/"
-            class="resource-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="images/scholar.png"
-                alt="Google Scholar"
-            >
-
-        </a>
-
-
-        <a
-            href="https://www.researchgate.net/"
-            class="resource-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="images/researchgate.png"
-                alt="ResearchGate"
-            >
-
-        </a>
-
+        <span>
+            Psychopharmacology
+        </span>
 
     </div>
+
+</section>
+
+فقط این بخش تغییر کرده و بقیه فایل باید بدون تغییر باقی بماند.
+
+Pasted text(4).txt
+Document
+كلش رو يكجا بده 
+
+
+این نسخه کامل about.html است؛ فقط بخش Psychopharmacology به دوره‌های آموزشی اضافه شده و سایر بخش‌ها دست‌نخورده باقی مانده‌اند.
+
+دانلود فایل کامل about.html 
+
+about.html
+HTML
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | Bita Negahdar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style> /* ===================================================== ABOUT PAGE ===================================================== */ :root{ --cyan:#0891B2; --cyan-hover:#06B6D4; --cyan-pale:#CFFAFE; --border:#D9E5E8; --text:#252525; --muted:#626A6D; } /* ===================================================== HEADER SAME ON EVERY PAGE HOME / ABOUT / WRITING / CONTACT ===================================================== */ header{ width:100% !important; min-height:76px !important; height:76px !important; padding:0 4vw !important; display:flex !important; align-items:center !important; justify-content:space-between !important; background:#FFFFFF !important; border-bottom:1px solid var(--border) !important; } .logo{ font-family:"DM Sans",Arial,sans-serif !important; font-size:20px !important; font-weight:700 !important; letter-spacing:2.4px !important; color:var(--text) !important; white-space:nowrap !important; } nav{ display:flex !important; align-items:center !important; justify-content:flex-end !important; gap:24px !important; flex-shrink:0 !important; } nav a{ display:inline-flex !important; align-items:center !important; justify-content:center !important; min-height:38px !important; height:38px !important; padding:7px 11px !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:12px !important; font-weight:600 !important; letter-spacing:1.4px !important; line-height:1 !important; text-transform:uppercase !important; color:var(--text) !important; background:transparent !important; border:1px solid transparent !important; white-space:nowrap !important; transition: background-color .25s ease, color .25s ease, border-color .25s ease !important; } nav a:hover{ background:var(--cyan-hover) !important; border-color:var(--cyan-hover) !important; color:#FFFFFF !important; } /* ===================================================== CONTACT BUTTON ===================================================== */ .contact-btn{ padding:9px 17px !important; background:var(--cyan-pale) !important; border:1px solid var(--cyan-pale) !important; color:var(--cyan) !important; } .contact-btn:hover{ background:var(--cyan-hover) !important; border-color:var(--cyan-hover) !important; color:#FFFFFF !important; } /* ===================================================== GENERAL ABOUT PAGE ===================================================== */ .page{ width:92% !important; max-width:1250px !important; margin:55px auto !important; } .eyebrow{ margin-bottom:18px !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:11px !important; font-weight:700 !important; letter-spacing:2px !important; text-transform:uppercase !important; color:var(--cyan) !important; } .page h1{ margin:0 !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:52px !important; font-weight:700 !important; line-height:1.15 !important; color:var(--text) !important; } .intro{ max-width:760px !important; margin:28px 0 60px !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:16px !important; font-weight:400 !important; line-height:2 !important; color:#5F6668 !important; direction:rtl !important; text-align:right !important; } /* ===================================================== SECTIONS ===================================================== */ .block{ padding:30px 0 !important; border-top:1px solid var(--border) !important; } .block h2{ margin-bottom:22px !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:15px !important; font-weight:700 !important; letter-spacing:1.8px !important; line-height:1.4 !important; text-transform:uppercase !important; color:var(--cyan) !important; } /* ===================================================== EDUCATION ===================================================== */ .education{ display:grid !important; grid-template-columns:1fr !important; gap:10px !important; width:100% !important; } .education-item{ width:50% !important; min-height:88px !important; padding:16px 22px !important; border:1px solid var(--border) !important; background:var(--cyan-pale) !important; color:var(--cyan) !important; display:flex !important; flex-direction:column !important; justify-content:center !important; text-align:left !important; transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease !important; } .education-item:hover{ background:var(--cyan-hover) !important; border-color:var(--cyan-hover) !important; color:#FFFFFF !important; transform:translateY(-3px) !important; cursor:pointer !important; } .education-item h3{ margin:0 0 6px !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:18px !important; font-weight:700 !important; line-height:1.4 !important; color:var(--cyan) !important; text-align:left !important; transition:color .3s ease !important; } .education-item p{ margin:0 !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:11px !important; line-height:1.6 !important; color:var(--muted) !important; text-align:left !important; transition:color .3s ease !important; } .education-item:hover h3, .education-item:hover p{ color:#FFFFFF !important; } /* ===================================================== RELEVANT STUDIES & TRAINING ===================================================== */ .training{ display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:12px !important; width:100% !important; } .training span{ width:100% !important; aspect-ratio:1 / 1 !important; min-height:0 !important; padding:18px !important; display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; background:var(--cyan-pale) !important; color:var(--cyan) !important; border:1px solid var(--border) !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:14px !important; font-weight:700 !important; line-height:1.5 !important; cursor:pointer !important; transition: background-color .3s ease, color .3s ease, transform .3s ease, border-color .3s ease !important; } .training span:hover{ background:var(--cyan-hover) !important; border-color:var(--cyan-hover) !important; color:#FFFFFF !important; transform:translateY(-3px) !important; } /* ===================================================== PROFESSIONAL / ACADEMIC LINKS LOGOS ONLY NO BORDER / NO BOX / CENTERED ===================================================== */ .resource-links{ width:100% !important; margin-top:5px !important; display:flex !important; align-items:center !important; justify-content:center !important; flex-wrap:wrap !important; gap:34px !important; } .resource-link{ width:auto !important; height:auto !important; padding:6px !important; display:flex !important; align-items:center !important; justify-content:center !important; background:transparent !important; border:none !important; outline:none !important; box-shadow:none !important; transition: transform .25s ease, opacity .25s ease !important; } .resource-link:hover{ transform:translateY(-4px) scale(1.04) !important; background:transparent !important; border:none !important; box-shadow:none !important; } .resource-link img{ width:auto !important; height:auto !important; max-width:110px !important; max-height:48px !important; display:block !important; object-fit:contain !important; border:none !important; outline:none !important; box-shadow:none !important; transition:opacity .25s ease !important; } .resource-link:hover img{ opacity:.82 !important; } /* ===================================================== RESEARCHGATE — LARGER ===================================================== */ .resource-link img[alt="ResearchGate"]{ max-width:170px !important; max-height:70px !important; } /* ===================================================== FOOTER ===================================================== */ footer{ margin-top:55px !important; padding:24px 4vw !important; background:#FFFFFF !important; border-top:1px solid var(--border) !important; display:flex !important; align-items:center !important; justify-content:space-between !important; font-family:"DM Sans",Arial,sans-serif !important; font-size:9px !important; font-weight:600 !important; letter-spacing:1.8px !important; line-height:1.4 !important; text-transform:uppercase !important; color:var(--muted) !important; } /* ===================================================== MOBILE ===================================================== */ @media(max-width:800px){ header{ min-height:72px !important; height:auto !important; padding:14px 5vw !important; gap:15px !important; } .logo{ font-size:14px !important; letter-spacing:1.8px !important; } nav{ gap:6px !important; flex-wrap:wrap !important; justify-content:flex-end !important; } nav a{ min-height:30px !important; height:30px !important; padding:5px 6px !important; font-size:8px !important; letter-spacing:1px !important; } .contact-btn{ padding:7px 10px !important; } /* ================================================= PAGE ================================================= */ .page{ width:90% !important; margin:45px auto !important; } .page h1{ font-size:40px !important; } .intro{ font-size:15px !important; margin-bottom:45px !important; } /* ================================================= EDUCATION ================================================= */ .education{ gap:10px !important; } .education-item{ width:100% !important; min-height:82px !important; padding:15px 18px !important; text-align:left !important; } .education-item h3{ font-size:17px !important; text-align:left !important; } .education-item p{ text-align:left !important; } /* ================================================= TRAINING ================================================= */ .training{ grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:12px !important; } .training span{ aspect-ratio:1 / 1 !important; padding:16px !important; font-size:13px !important; } /* ================================================= RESOURCE LOGOS ================================================= */ .resource-links{ justify-content:center !important; gap:22px !important; padding:5px 0 !important; } .resource-link{ width:auto !important; height:auto !important; padding:4px !important; } .resource-link img{ max-width:78px !important; max-height:34px !important; } .resource-link img[alt="ResearchGate"]{ max-width:110px !important; max-height:50px !important; } /* ================================================= FOOTER ================================================= */ footer{ flex-direction:column !important; text-align:center !important; gap:10px !important; } } /* ===================================================== SMALL MOBILE ===================================================== */ @media(max-width:480px){ .page h1{ font-size:36px !important; } .training{ grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:10px !important; } .training span{ aspect-ratio:1 / 1 !important; padding:14px !important; font-size:12px !important; } .resource-links{ gap:16px !important; } .resource-link img{ max-width:65px !important; max-height:30px !important; } .resource-link img[alt="ResearchGate"]{ max-width:90px !important; max-height:36px !important; } } </style>
+
+</head>
+
+<body>
+
+<!-- ===================================================== HEADER ===================================================== -->
+
+<header>
+
+<div class="logo"> BITA NEGAHDAR </div>
+
+<nav>
+
+<a href="index.html">
+    Home
+</a>
+
+<a href="about.html">
+    About
+</a>
+
+<a href="writing.html">
+    Writing
+</a>
+
+<a href="index.html#contact" class="contact-btn">
+    Contact
+</a>
+
+</nav>
+
+</header>
+
+<!-- ===================================================== MAIN ===================================================== -->
+
+<main class="page">
+
+<div class="eyebrow"> About </div>
+
+<h1> Bita Negahdar </h1>
+
+<p class="intro">
+
+بیتا نگاهدار متولد 1365 است و فعالیت حرفه‌ای خود را از 1382 در حوزه هنرهای تجسمی و ارتباطات بصری آغاز کرده است. بیش از بیست سال تجربه حرفه‌ای در زمینه برندینگ، طراحی و هنرهای تجسمی، او را به‌تدریج به سوی مطالعه انسان و حوزه روان‌شناسی سوق داده است؛ مسیری که در ادامه، به شکل‌گیری علاقه‌ای جدی به شناخت انسان، هویت و تجربه زیسته او انجامیده است.
+
+او دارای پیشینه‌ای میان‌رشته‌ای در طراحی گرافیک، عکاسی، هنرهای تجسمی و برندینگ است و در طول سال‌های فعالیت حرفه‌ای خود، در پروژه‌های مختلف طراحی، هویت بصری و مشاوره برند فعالیت داشته است. تجربه کار با تصویر و مواجهه مستمر با شیوه شکل‌گیری و بازنمایی هویت، نگاه او را به رابطه میان انسان، تصویر و معنا عمیق‌تر کرده است.
+
+تحصیل در رشته عکاسی در مقطع کارشناسی ارشد، نقطه دیگری در این مسیر بود؛ جایی که تصویر دیگر صرفاً یک ابزار بصری نبود و به وسیله‌ای برای مشاهده، پرسش و مواجهه با تجربه انسانی تبدیل شد. ادامه این مسیر در حوزه روان‌شناسی، امکان مطالعه علمی‌تر پرسش‌هایی را برای او فراهم کرده است که پیش‌تر از دریچه هنر و تصویر با آن‌ها مواجه شده بود.
+
+علاقه او در حوزه روان‌شناسی بیش از هر چیز بر مطالعه هویت، تجربه فردی، رابطه انسان با خود و بدن، و پیوند میان روان و فرهنگ بصری متمرکز است. برای او، روان‌شناسی ادامه همان مسیر مشاهده و پرسشگری است؛ با این تفاوت که اکنون این پرسش‌ها در چارچوبی علمی و پژوهشی دنبال می‌شوند.
+
+وي در حال توسعه مسیر حرفه‌ای و علمی خود در حوزه روان‌شناسی است و تلاش می‌کند پیشینه خود در هنر، عکاسی و برندینگ را در کنار مطالعات روان‌شناختی قرار دهد.
+
+</p>
+
+<!-- ================================================= EDUCATION ===================================================== -->
+
+<section class="block">
+
+<h2>
+    Education
+</h2>
+
+
+<div class="education">
+
+
+    <div class="education-item">
+
+        <h3>
+            MA — Psychology
+        </h3>
+
+        <p>
+            2024 – 2026
+        </p>
+
+    </div>
+
+
+    <div class="education-item">
+
+        <h3>
+            MA — Photography
+        </h3>
+
+        <p>
+            2014 – 2016<br>
+            Tehran University of Art
+        </p>
+
+    </div>
+
+
+    <div class="education-item">
+
+        <h3>
+            BGD
+        </h3>
+
+        <p>
+            2003 – 2007
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<!-- ================================================= RELEVANT STUDIES & TRAINING ===================================================== -->
+
+<section class="block">
+
+<h2>
+    Relevant Studies &amp; Training
+</h2>
+
+
+<div class="training">
+
+    <span>
+        MBA — Strategic Management<br>
+        University of Tehran<br>
+        One-Year Professional Program | 2024–2025
+    </span>
+
+    <span>
+        Schema Therapy
+    </span>
+
+    <span>
+        Cognitive Behavioral Therapy (CBT)
+    </span>
+
+    <span>
+        QEEG Brain Mapping Workshop
+    </span>
+
+    <span>
+        Acceptance and Commitment Therapy (ACT)
+    </span>
+
+    <span>
+        Suicide Crisis Management
+    </span>
+
+</div>
+
+</section>
+
+<!-- ================================================= PROFESSIONAL / ACADEMIC LINKS LOGOS ONLY — NO TITLES / NO BORDERS ===================================================== -->
+
+<section class="block">
+
+<div class="resource-links">
+
+
+    <a
+        href="https://www.apa.org/"
+        class="resource-link"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            src="images/apa.png"
+            alt="APA"
+        >
+
+    </a>
+
+
+    <a
+        href="https://www.iranpa.org/"
+        class="resource-link"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            src="images/ipa.png"
+            alt="Iranian Psychological Association"
+        >
+
+    </a>
+
+
+    <a
+        href="https://pubmed.ncbi.nlm.nih.gov/"
+        class="resource-link"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            src="images/pubmed.png"
+            alt="PubMed"
+        >
+
+    </a>
+
+
+    <a
+        href="https://scholar.google.com/"
+        class="resource-link"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            src="images/scholar.png"
+            alt="Google Scholar"
+        >
+
+    </a>
+
+
+    <a
+        href="https://www.researchgate.net/"
+        class="resource-link"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            src="images/researchgate.png"
+            alt="ResearchGate"
+        >
+
+    </a>
+
+
+</div>
 
 </section>
 
 </main>
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ===================================================== FOOTER ===================================================== -->
 
 <footer>
 
-<div>
-    BITA NEGAHDAR
-</div>
+<div> BITA NEGAHDAR </div>
 
-<div>
-    Psychology
-</div>
+<div> Psychology </div>
 
 </footer>
 
-</body>
-</html>
+</body> </html>
+
+Close
