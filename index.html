@@ -9,30 +9,9 @@
 
 <title>Bita Negahdar | Psychology</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =====================================================
-   HOME PAGE
-===================================================== */
-
-:root{
-    --cyan:#0891B2;
-    --cyan-hover:#06B6D4;
-    --cyan-light:#CFFAFE;
-
-    --black:#111111;
-    --black-soft:#1B1B1B;
-
-    --white:#FFFFFF;
-    --text:#252525;
-    --muted:#6D706D;
-    --border:#D9E3DE;
-}
-
 
 /* =====================================================
    GLOBAL
@@ -49,10 +28,10 @@ html{
 }
 
 body{
-    background:#FFFFFF !important;
-    color:var(--text);
-
-    font-family:"DM Sans",Arial,sans-serif !important;
+    margin:0;
+    background:#FFFFFF;
+    color:#252525;
+    font-family:"DM Sans", Arial, sans-serif;
     font-weight:400;
 }
 
@@ -61,134 +40,60 @@ a{
     text-decoration:none;
 }
 
+img{
+    display:block;
+    max-width:100%;
+}
+
 
 /* =====================================================
-   HEADER — BLACK
+   HEADER
 ===================================================== */
 
 header{
-    width:100%;
-
-    min-height:72px !important;
-
-    padding:0 4vw !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-
-    background:var(--black) !important;
-
-    border-bottom:1px solid #2D2D2D;
-
+    height:72px;
+    background:#111111;
+    color:#FFFFFF;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
     position:relative;
+    z-index:20;
 }
-
-
-/* =====================================================
-   LOGO
-===================================================== */
 
 .logo{
-    flex:0 0 auto;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:20px !important;
-    font-weight:700 !important;
-
-    letter-spacing:2.4px !important;
-
-    line-height:1 !important;
-
-    color:#FFFFFF !important;
-
-    white-space:nowrap;
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:2px;
 }
 
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
 nav{
-    display:flex !important;
-
-    align-items:center !important;
-    justify-content:flex-end !important;
-
-    gap:12px !important;
-
-    flex:0 0 auto;
-
-    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
 nav a{
-    display:inline-flex !important;
-
-    align-items:center !important;
-    justify-content:center !important;
-
-    height:34px !important;
-    min-height:34px !important;
-
-    padding:7px 10px !important;
-
-    border:1px solid transparent !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:12px !important;
-    font-weight:700 !important;
-
-    letter-spacing:1.1px !important;
-
-    line-height:1 !important;
-
-    text-transform:uppercase !important;
-
-    color:#FFFFFF !important;
-
-    background:transparent !important;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease !important;
+    font-size:13px;
+    font-weight:500;
+    color:#FFFFFF;
+    transition:0.25s ease;
 }
 
 nav a:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
+    color:#06B6D4;
 }
 
-
-/* =====================================================
-   CONTACT BUTTON
-===================================================== */
-
-.contact-btn{
-    height:34px !important;
-
-    padding:8px 15px !important;
-
-    background:var(--cyan) !important;
-
-    border-color:var(--cyan) !important;
-
-    color:#FFFFFF !important;
+nav a.contact-link{
+    border:1px solid #0891B2;
+    padding:9px 17px;
+    border-radius:2px;
 }
 
-.contact-btn:hover{
-    background:var(--cyan-hover) !important;
-
-    border-color:var(--cyan-hover) !important;
-
-    color:#FFFFFF !important;
+nav a.contact-link:hover{
+    background:#0891B2;
+    color:#FFFFFF;
 }
 
 
@@ -197,293 +102,98 @@ nav a:hover{
 ===================================================== */
 
 .hero{
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:18px auto 0 !important;
-
-    display:grid !important;
-
-    grid-template-columns:33.333% 66.667% !important;
-
-    min-height:500px !important;
-
-    background:var(--black) !important;
-
-    overflow:hidden !important;
-
-    position:relative !important;
+    width:100%;
+    min-height:590px;
+    display:grid;
+    grid-template-columns:33.333% 50% 16.667%;
+    background:#111111;
 }
 
 
 /* =====================================================
-   HERO TEXT — LEFT
-===================================================== */
-
-.hero-text{
-    grid-column:1 !important;
-
-    padding:8% 11% 8% 8% !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    justify-content:center !important;
-
-    align-items:flex-start !important;
-
-    background:var(--cyan) !important;
-
-    color:#FFFFFF !important;
-
-    position:relative !important;
-
-    z-index:5 !important;
-}
-
-
-/* =====================================================
-   HERO DESCRIPTION
-===================================================== */
-
-.hero-description{
-    max-width:500px !important;
-
-    margin:0 0 28px 0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:16px !important;
-
-    font-weight:500 !important;
-
-    line-height:1.85 !important;
-
-    color:#FFFFFF !important;
-
-    direction:rtl !important;
-
-    text-align:right !important;
-}
-
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
-
-.outline-btn{
-    display:inline-flex !important;
-
-    align-items:center !important;
-    justify-content:center !important;
-
-    padding:11px 20px !important;
-
-    border:1px solid #FFFFFF !important;
-
-    background:transparent !important;
-
-    color:#FFFFFF !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:10px !important;
-
-    font-weight:600 !important;
-
-    letter-spacing:1.7px !important;
-
-    line-height:1 !important;
-
-    text-transform:uppercase !important;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease !important;
-}
-
-.outline-btn:hover{
-    background:#111111 !important;
-
-    border-color:#111111 !important;
-
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   SLIDESHOW AREA
-===================================================== */
-
-.hero-slideshow{
-
-    grid-column:2 !important;
-
-    min-height:500px !important;
-
-    position:relative !important;
-
-    overflow:hidden !important;
-
-    background:#111111 !important;
-}
-
-
-/* =====================================================
-   SLIDES
-===================================================== */
-
-.slide{
-
-    position:absolute !important;
-
-    inset:0 !important;
-
-    width:100% !important;
-
-    height:100% !important;
-
-    opacity:0 !important;
-
-    visibility:hidden !important;
-
-    transition:
-        opacity .7s ease,
-        visibility .7s ease !important;
-}
-
-.slide:first-child{
-    opacity:1 !important;
-
-    visibility:visible !important;
-}
-
-.slide img{
-
-    width:100% !important;
-
-    height:100% !important;
-
-    display:block !important;
-
-    object-fit:cover !important;
-
-    transition:transform 7s ease !important;
-}
-
-.slide:first-child img{
-    transform:scale(1.04) !important;
-}
-
-
-/* =====================================================
-   SLIDESHOW DARK OVERLAY
-===================================================== */
-
-.slide-overlay{
-
-    position:absolute !important;
-
-    inset:0 !important;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.62) 0%,
-            rgba(0,0,0,.22) 48%,
-            rgba(0,0,0,.05) 100%
-        ) !important;
-
-    z-index:2 !important;
-}
-
-
-/* =====================================================
-   SLIDE CONTENT
-===================================================== */
-
-.slide-content{
-
-    position:absolute !important;
-
-    left:42px !important;
-
-    bottom:45px !important;
-
-    max-width:430px !important;
-
-    z-index:4 !important;
-
-    color:#FFFFFF !important;
-}
-
-.slide-label{
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
-
-    color:#FFFFFF !important;
-
-    margin-bottom:12px !important;
-}
-
-.slide-title{
-
-    font-size:28px !important;
-
-    font-weight:600 !important;
-
-    line-height:1.25 !important;
-
-    color:#FFFFFF !important;
-}
-
-
-/* =====================================================
-   PERSONAL PHOTO — SMALL RECTANGLE ON SLIDESHOW
+   PERSONAL PHOTO
 ===================================================== */
 
 .hero-photo{
-
-    position:absolute !important;
-
-    top:28px !important;
-
-    right:28px !important;
-
-    width:118px !important;
-
-    height:148px !important;
-
-    z-index:8 !important;
-
-    overflow:hidden !important;
-
-    background:#111111 !important;
-
-    border:1px solid rgba(255,255,255,.85) !important;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.28) !important;
+    position:relative;
+    overflow:hidden;
+    background:#222222;
 }
 
 .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
 
-    width:100% !important;
 
-    height:100% !important;
+/* =====================================================
+   SLIDESHOW
+===================================================== */
 
-    display:block !important;
+.hero-slideshow{
+    position:relative;
+    height:590px;
+    overflow:hidden;
+    background:#000000;
+}
 
-    object-fit:cover !important;
+.slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:opacity 0.8s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.slide-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.05) 55%,
+        rgba(0,0,0,0.08)
+    );
+}
+
+.slide-content{
+    position:absolute;
+    left:35px;
+    bottom:40px;
+    color:#FFFFFF;
+    max-width:430px;
+}
+
+.slide-number{
+    font-size:11px;
+    letter-spacing:2px;
+    color:#CFFAFE;
+    margin-bottom:9px;
+    text-transform:uppercase;
+}
+
+.slide-title{
+    font-size:27px;
+    font-weight:500;
+    line-height:1.2;
+    margin-bottom:8px;
+}
+
+.slide-description{
+    font-size:13px;
+    line-height:1.7;
+    color:#E5E5E5;
 }
 
 
@@ -491,41 +201,100 @@ nav a:hover{
    SLIDESHOW DOTS
 ===================================================== */
 
-.slide-dots{
-
-    position:absolute !important;
-
-    right:28px !important;
-
-    bottom:30px !important;
-
-    display:flex !important;
-
-    gap:7px !important;
-
-    z-index:10 !important;
+.slider-dots{
+    position:absolute;
+    right:30px;
+    bottom:38px;
+    display:flex;
+    gap:7px;
+    z-index:5;
 }
 
-.slide-dot{
-
-    width:8px !important;
-
-    height:8px !important;
-
-    border:1px solid #FFFFFF !important;
-
-    background:transparent !important;
-
-    border-radius:50% !important;
-
-    opacity:.8 !important;
-
-    cursor:pointer !important;
+.slider-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.45);
+    cursor:pointer;
+    transition:0.25s ease;
 }
 
-.slide-dot.active{
+.slider-dot.active{
+    background:#06B6D4;
+    transform:scale(1.25);
+}
 
-    background:#FFFFFF !important;
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.hero-intro{
+    background:#0891B2;
+    color:#FFFFFF;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:35px 28px;
+}
+
+.hero-intro .eyebrow{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    color:#CFFAFE;
+}
+
+.hero-intro h1{
+    font-size:25px;
+    line-height:1.15;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero-intro p{
+    font-size:12px;
+    line-height:1.8;
+    color:#F0FDFF;
+}
+
+
+/* =====================================================
+   SECTION GENERAL
+===================================================== */
+
+.section{
+    padding:90px 7%;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:40px;
+}
+
+.section-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#0891B2;
+    margin-bottom:10px;
+}
+
+.section-title{
+    font-size:34px;
+    line-height:1.15;
+    font-weight:500;
+    color:#151515;
+}
+
+.section-intro{
+    max-width:420px;
+    font-size:13px;
+    line-height:1.8;
+    color:#666666;
 }
 
 
@@ -533,126 +302,52 @@ nav a:hover{
    LATEST WRITING
 ===================================================== */
 
-.latest{
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:55px auto 0 !important;
-
-    padding-top:28px !important;
-
-    border-top:1px solid var(--border) !important;
+.writing-section{
+    background:#FFFFFF;
 }
 
-.section-title{
-    margin-bottom:24px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:12px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:2.2px !important;
-
-    line-height:1.4 !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--cyan) !important;
+.writing-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-
-/* =====================================================
-   WRITING GRID
-===================================================== */
-
-.grid{
-    display:grid !important;
-
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-
-    gap:16px !important;
-
-    width:100% !important;
+.writing-card{
+    position:relative;
+    overflow:hidden;
+    background:#111111;
+    aspect-ratio:4 / 5;
 }
 
-.card{
-    display:block !important;
-
-    width:100% !important;
-
-    background:#FFFFFF !important;
-
-    overflow:hidden !important;
-
-    transition:transform .3s ease !important;
+.writing-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.6s ease;
 }
 
-.card:hover{
-    transform:translateY(-5px) !important;
+.writing-card:hover img{
+    transform:scale(1.04);
 }
 
-
-/* =====================================================
-   WRITING COVER
-===================================================== */
-
-.cover{
-    width:100% !important;
-
-    aspect-ratio:4 / 5 !important;
-
-    overflow:hidden !important;
-
-    position:relative !important;
-
-    background:var(--cyan-light) !important;
-
-    border:1px solid transparent !important;
-
-    transition:
-        border-color .3s ease,
-        box-shadow .3s ease !important;
+.writing-card-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:flex-end;
+    padding:22px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.02) 70%
+    );
 }
 
-.cover img{
-    width:100% !important;
-
-    height:100% !important;
-
-    display:block !important;
-
-    object-fit:cover !important;
-
-    transition:
-        transform .45s ease,
-        filter .3s ease !important;
-}
-
-.card:hover .cover{
-    border-color:var(--cyan-hover) !important;
-
-    box-shadow:
-        0 10px 25px rgba(6,182,212,.18) !important;
-}
-
-.card:hover .cover img{
-    transform:scale(1.045) !important;
-
-    filter:saturate(1.12) brightness(1.03) !important;
-}
-
-
-/* =====================================================
-   REMOVE TEXT UNDER COVERS
-===================================================== */
-
-.card-info,
-.card-number,
-.card-title{
-    display:none !important;
+.writing-card-title{
+    color:#FFFFFF;
+    font-size:16px;
+    line-height:1.35;
+    font-weight:500;
 }
 
 
@@ -660,205 +355,75 @@ nav a:hover{
    RESEARCH LIBRARY
 ===================================================== */
 
-.research-library{
-
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:70px auto 0 !important;
-
-    padding:48px 0 55px !important;
-
-    border-top:1px solid var(--border) !important;
-
-    background:#FFFFFF !important;
+.research-section{
+    background:#111111;
+    color:#FFFFFF;
 }
 
-.library-intro{
-
-    max-width:850px !important;
-
-    margin:0 0 30px 0 !important;
-
-    font-size:14px !important;
-
-    line-height:1.8 !important;
-
-    color:var(--muted) !important;
+.research-section .section-title{
+    color:#FFFFFF;
 }
 
-
-/* =====================================================
-   RESEARCH CARDS
-===================================================== */
+.research-section .section-intro{
+    color:#AAAAAA;
+}
 
 .research-grid{
-
-    display:grid !important;
-
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-
-    gap:18px !important;
-
-    width:100% !important;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .research-card{
-
-    min-height:380px !important;
-
-    background:#111111 !important;
-
-    overflow:hidden !important;
-
-    position:relative !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    justify-content:flex-end !important;
-
-    transition:transform .3s ease !important;
+    background:#1B1B1B;
+    overflow:hidden;
+    transition:transform 0.3s ease;
 }
 
 .research-card:hover{
-
-    transform:translateY(-6px) !important;
+    transform:translateY(-4px);
 }
 
-.research-cover{
-
-    position:absolute !important;
-
-    inset:0 !important;
-
-    z-index:1 !important;
-
-    overflow:hidden !important;
+.research-image{
+    width:100%;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
 }
 
-.research-cover img{
-
-    width:100% !important;
-
-    height:100% !important;
-
-    display:block !important;
-
-    object-fit:cover !important;
-
-    opacity:.62 !important;
-
-    transition:
-        transform .5s ease,
-        opacity .4s ease !important;
+.research-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.5s ease;
 }
 
-.research-card:hover .research-cover img{
-
-    transform:scale(1.06) !important;
-
-    opacity:.78 !important;
-}
-
-.research-overlay{
-
-    position:absolute !important;
-
-    inset:0 !important;
-
-    z-index:2 !important;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.08) 10%,
-            rgba(0,0,0,.90) 100%
-        ) !important;
+.research-card:hover .research-image img{
+    transform:scale(1.04);
 }
 
 .research-content{
-
-    position:relative !important;
-
-    z-index:3 !important;
-
-    padding:26px !important;
-
-    color:#FFFFFF !important;
+    padding:25px;
 }
 
-.research-category{
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.8px !important;
-
-    text-transform:uppercase !important;
-
-    color:#6EE7F7 !important;
-
-    margin-bottom:12px !important;
+.research-content .small-label{
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:#06B6D4;
+    margin-bottom:12px;
 }
 
-.research-title{
-
-    font-size:19px !important;
-
-    font-weight:600 !important;
-
-    line-height:1.35 !important;
-
-    color:#FFFFFF !important;
-
-    margin-bottom:10px !important;
+.research-content h3{
+    font-size:20px;
+    font-weight:500;
+    line-height:1.3;
+    margin-bottom:12px;
 }
 
-.research-meta{
-
-    font-size:11px !important;
-
-    line-height:1.65 !important;
-
-    color:rgba(255,255,255,.75) !important;
-
-    margin-bottom:17px !important;
-}
-
-.research-link{
-
-    display:inline-flex !important;
-
-    align-items:center !important;
-
-    padding:8px 13px !important;
-
-    border:1px solid rgba(255,255,255,.7) !important;
-
-    color:#FFFFFF !important;
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.4px !important;
-
-    text-transform:uppercase !important;
-
-    transition:
-        background-color .25s ease,
-        border-color .25s ease !important;
-}
-
-.research-link:hover{
-
-    background:var(--cyan) !important;
-
-    border-color:var(--cyan) !important;
+.research-content p{
+    font-size:12px;
+    line-height:1.75;
+    color:#AAAAAA;
 }
 
 
@@ -866,838 +431,342 @@ nav a:hover{
    ART × PSYCHOLOGY
 ===================================================== */
 
-.art-psychology{
-
-    width:100% !important;
-
-    max-width:none !important;
-
-    margin:0 !important;
-
-    padding:55px 3vw 60px !important;
-
-    background:var(--black) !important;
-
-    border-top:none !important;
+.art-section{
+    background:#FFFFFF;
 }
 
-.art-psychology .section-title{
-
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:0 auto 24px auto !important;
-
-    color:#FFFFFF !important;
+.art-block{
+    display:grid;
+    grid-template-columns:50% 50%;
+    min-height:430px;
+    background:#F4F4F4;
 }
 
-.art-layout{
-
-    width:94% !important;
-
-    max-width:1500px !important;
-
-    margin:0 auto !important;
-
-    display:grid !important;
-
-    grid-template-columns:50% 50% !important;
-
-    min-height:380px !important;
-
-    background:var(--black-soft) !important;
-
-    overflow:hidden !important;
+.art-image{
+    overflow:hidden;
 }
 
-.art-visual{
-
-    min-height:380px !important;
-
-    position:relative !important;
-
-    overflow:hidden !important;
-
-    background:#111111 !important;
-}
-
-.art-visual img{
-
-    width:100% !important;
-
-    height:100% !important;
-
-    display:block !important;
-
-    object-fit:cover !important;
-
-    opacity:.70 !important;
-
-    transition:
-        transform .5s ease,
-        opacity .4s ease !important;
-}
-
-.art-layout:hover .art-visual img{
-
-    transform:scale(1.04) !important;
-
-    opacity:.84 !important;
-}
-
-.art-visual-overlay{
-
-    position:absolute !important;
-
-    inset:0 !important;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.65),
-            rgba(0,0,0,.05)
-        ) !important;
-}
-
-.art-visual-label{
-
-    position:absolute !important;
-
-    left:30px !important;
-
-    top:28px !important;
-
-    z-index:3 !important;
-
-    color:#FFFFFF !important;
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
+.art-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .art-content{
-
-    padding:42px !important;
-
-    display:flex !important;
-
-    flex-direction:column !important;
-
-    justify-content:center !important;
-
-    background:var(--black-soft) !important;
-
-    color:#FFFFFF !important;
+    padding:65px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.art-label{
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
-
-    color:#6EE7F7 !important;
-
-    margin-bottom:15px !important;
+.art-content .section-label{
+    margin-bottom:15px;
 }
 
-.art-title{
-
-    font-size:27px !important;
-
-    font-weight:600 !important;
-
-    line-height:1.3 !important;
-
-    margin-bottom:15px !important;
-
-    color:#FFFFFF !important;
+.art-content h2{
+    font-size:38px;
+    font-weight:500;
+    line-height:1.1;
+    margin-bottom:22px;
+    color:#111111;
 }
 
-.art-description{
-
-    max-width:600px !important;
-
-    font-size:14px !important;
-
-    line-height:1.85 !important;
-
-    color:rgba(255,255,255,.72) !important;
-
-    margin-bottom:24px !important;
-
-    direction:rtl !important;
-
-    text-align:right !important;
-}
-
-.art-button{
-
-    display:inline-flex !important;
-
-    align-self:flex-start !important;
-
-    padding:10px 17px !important;
-
-    border:1px solid rgba(255,255,255,.75) !important;
-
-    font-size:9px !important;
-
-    font-weight:700 !important;
-
-    letter-spacing:1.5px !important;
-
-    text-transform:uppercase !important;
-
-    color:#FFFFFF !important;
-
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease !important;
-}
-
-.art-button:hover{
-
-    background:var(--cyan) !important;
-
-    border-color:var(--cyan) !important;
-
-    color:#FFFFFF !important;
+.art-content p{
+    max-width:470px;
+    font-size:14px;
+    line-height:1.9;
+    color:#555555;
 }
 
 
 /* =====================================================
-   CONTACT SECTION — BLACK
+   CONTACT
 ===================================================== */
 
 .contact-section{
+    background:#111111;
+    color:#FFFFFF;
+    padding:85px 7%;
+}
 
-    width:100% !important;
-
-    max-width:none !important;
-
-    margin:0 auto !important;
-
-    padding:55px 4vw 50px !important;
-
-    background:var(--black) !important;
-
-    border-top:1px solid #2D2D2D !important;
-
-    text-align:center !important;
-
-    color:#FFFFFF !important;
+.contact-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
 .contact-section .section-title{
+    color:#FFFFFF;
+}
 
-    margin-bottom:30px !important;
+.contact-text{
+    max-width:500px;
+}
 
-    color:#FFFFFF !important;
+.contact-text p{
+    font-size:14px;
+    line-height:1.9;
+    color:#AAAAAA;
+    margin-top:20px;
+}
+
+.contact-links{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.contact-item{
+    border:1px solid #333333;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    transition:0.25s ease;
+}
+
+.contact-item:hover{
+    border-color:#0891B2;
+}
+
+.contact-item img{
+    width:25px;
+    height:25px;
+    object-fit:contain;
+}
+
+.contact-item span{
+    font-size:12px;
+    color:#DDDDDD;
 }
 
 
 /* =====================================================
-   PERSONAL CONTACT ICONS
+   PROFESSIONAL LINKS
 ===================================================== */
 
-.social-links{
-
-    display:flex !important;
-
-    justify-content:center !important;
-
-    align-items:center !important;
-
-    gap:48px !important;
-
-    flex-wrap:wrap !important;
-
-    width:100% !important;
-
-    margin-bottom:42px !important;
+.professional-links{
+    margin-top:55px;
+    padding-top:35px;
+    border-top:1px solid #292929;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    flex-wrap:wrap;
 }
 
-.social-link{
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    width:58px !important;
-
-    height:58px !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
-
-    border-radius:0 !important;
-
-    transition:
-        transform .25s ease,
-        opacity .25s ease !important;
+.professional-links img{
+    width:auto;
+    height:28px;
+    object-fit:contain;
+    opacity:0.75;
+    transition:0.25s ease;
 }
 
-.social-link:hover{
-
-    transform:translateY(-5px) scale(1.08) !important;
-
-    opacity:.82 !important;
+.professional-links img:hover{
+    opacity:1;
 }
 
 
 /* =====================================================
-   UPLOADED CONTACT ICONS
-===================================================== */
-
-.social-icon{
-
-    width:42px !important;
-
-    height:42px !important;
-
-    display:block !important;
-
-    object-fit:contain !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
-
-    background:transparent !important;
-
-    transition:transform .25s ease !important;
-}
-
-.social-link:hover .social-icon{
-
-    transform:scale(1.08) !important;
-}
-
-
-/* =====================================================
-   PROFESSIONAL / ACADEMIC RESOURCES
-===================================================== */
-
-.resource-links{
-
-    display:flex !important;
-
-    justify-content:center !important;
-
-    align-items:center !important;
-
-    gap:38px !important;
-
-    flex-wrap:wrap !important;
-
-    width:100% !important;
-
-    margin-top:5px !important;
-}
-
-.resource-link{
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:center !important;
-
-    width:100px !important;
-
-    height:58px !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
-
-    transition:
-        transform .25s ease,
-        opacity .25s ease !important;
-}
-
-.resource-link:hover{
-
-    transform:translateY(-4px) scale(1.05) !important;
-
-    opacity:.82 !important;
-}
-
-.resource-link img{
-
-    max-width:100px !important;
-
-    max-height:44px !important;
-
-    width:auto !important;
-
-    height:auto !important;
-
-    display:block !important;
-
-    object-fit:contain !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
-
-    background:transparent !important;
-}
-
-
-/* =====================================================
-   FOOTER — BLACK
+   FOOTER
 ===================================================== */
 
 footer{
+    background:#111111;
+    color:#777777;
+    text-align:center;
+    padding:25px 20px 35px;
+    border-top:1px solid #222222;
+}
 
-    margin-top:0 !important;
-
-    padding:24px 4vw !important;
-
-    background:#000000 !important;
-
-    border-top:1px solid #2B2B2B !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-
-    justify-content:space-between !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:9px !important;
-
-    font-weight:600 !important;
-
-    letter-spacing:1.8px !important;
-
-    line-height:1 !important;
-
-    text-transform:uppercase !important;
-
-    color:#777777 !important;
+footer p{
+    font-size:11px;
+    letter-spacing:0.5px;
 }
 
 
 /* =====================================================
-   MOBILE
+   RESPONSIVE
 ===================================================== */
 
-@media(max-width:800px){
-
-    header{
-
-        min-height:72px !important;
-
-        padding:14px 5vw !important;
-
-        gap:15px !important;
-    }
-
-    .logo{
-
-        font-size:14px !important;
-
-        letter-spacing:1.8px !important;
-    }
-
-    nav{
-
-        gap:5px !important;
-
-        flex-wrap:wrap !important;
-
-        justify-content:flex-end !important;
-    }
-
-    nav a{
-
-        height:30px !important;
-
-        min-height:30px !important;
-
-        padding:5px 6px !important;
-
-        font-size:9px !important;
-
-        font-weight:700 !important;
-
-        letter-spacing:.8px !important;
-    }
-
-    .contact-btn{
-
-        height:30px !important;
-
-        padding:7px 9px !important;
-    }
-
-
-    /* HERO */
+@media(max-width:1000px){
 
     .hero{
-
-        width:92% !important;
-
-        grid-template-columns:1fr !important;
-
-        min-height:auto !important;
+        grid-template-columns:32% 48% 20%;
     }
 
-    .hero-text{
-
-        grid-column:1 !important;
-
-        grid-row:2 !important;
-
-        padding:42px 8% !important;
+    .hero-intro{
+        padding:25px 20px;
     }
 
-    .hero-slideshow{
-
-        grid-column:1 !important;
-
-        grid-row:1 !important;
-
-        min-height:430px !important;
+    .hero-intro h1{
+        font-size:21px;
     }
 
-    .hero-description{
-
-        font-size:15px !important;
-
-        direction:rtl !important;
-
-        text-align:right !important;
+    .hero-intro p{
+        font-size:11px;
     }
 
-
-    /* MOBILE PERSONAL PHOTO */
-
-    .hero-photo{
-
-        top:20px !important;
-
-        right:20px !important;
-
-        width:92px !important;
-
-        height:116px !important;
-    }
-
-    .slide-content{
-
-        left:25px !important;
-
-        bottom:35px !important;
-
-        max-width:68% !important;
-    }
-
-    .slide-title{
-
-        font-size:23px !important;
-    }
-
-    .slide-dots{
-
-        right:20px !important;
-
-        bottom:22px !important;
-    }
-
-
-    /* WRITING */
-
-    .latest{
-
-        width:92% !important;
-    }
-
-    .grid{
-
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-
-        gap:14px !important;
-    }
-
-
-    /* RESEARCH */
-
-    .research-library{
-
-        width:92% !important;
-
-        padding:40px 0 45px !important;
+    .writing-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .research-grid{
-
-        grid-template-columns:1fr !important;
-
-        gap:14px !important;
+        grid-template-columns:1fr;
     }
 
-    .research-card{
+}
 
-        min-height:330px !important;
+
+@media(max-width:760px){
+
+    header{
+        height:auto;
+        min-height:72px;
+        padding:20px 6%;
+        flex-direction:column;
+        gap:18px;
     }
 
-
-    /* ART PSYCHOLOGY */
-
-    .art-psychology{
-
-        padding:45px 0 50px !important;
+    nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px 20px;
     }
 
-    .art-psychology .section-title{
-
-        width:92% !important;
+    .hero{
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
     }
 
-    .art-layout{
-
-        width:92% !important;
-
-        grid-template-columns:1fr !important;
-
-        min-height:auto !important;
+    .hero-photo{
+        width:100%;
+        height:430px;
+        order:1;
     }
 
-    .art-visual{
+    .hero-slideshow{
+        width:100%;
+        height:480px;
+        order:2;
+    }
 
-        min-height:300px !important;
+    .hero-intro{
+        width:100%;
+        min-height:280px;
+        order:3;
+        padding:45px 8%;
+    }
+
+    .hero-intro h1{
+        font-size:28px;
+    }
+
+    .hero-intro p{
+        font-size:13px;
+    }
+
+    .slide-content{
+        left:25px;
+        bottom:35px;
+        right:25px;
+    }
+
+    .slide-title{
+        font-size:24px;
+    }
+
+    .slider-dots{
+        right:25px;
+        bottom:30px;
+    }
+
+    .section{
+        padding:65px 6%;
+    }
+
+    .section-header{
+        display:block;
+    }
+
+    .section-intro{
+        margin-top:20px;
+    }
+
+    .writing-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .art-block{
+        grid-template-columns:1fr;
+    }
+
+    .art-image{
+        min-height:350px;
     }
 
     .art-content{
-
-        padding:34px 26px !important;
+        padding:45px 30px;
     }
 
-    .art-title{
-
-        font-size:23px !important;
+    .art-content h2{
+        font-size:31px;
     }
 
-
-    /* CONTACT */
-
-    .contact-section{
-
-        width:100% !important;
+    .contact-inner{
+        grid-template-columns:1fr;
+        gap:45px;
     }
 
-    .social-links{
+}
 
-        gap:26px !important;
 
-        margin-bottom:35px !important;
+@media(max-width:480px){
+
+    .logo{
+        font-size:15px;
     }
 
-    .social-link{
-
-        width:52px !important;
-
-        height:52px !important;
+    nav a{
+        font-size:11px;
     }
 
-    .social-icon{
-
-        width:38px !important;
-
-        height:38px !important;
+    .hero-photo{
+        height:390px;
     }
 
-
-    /* RESOURCES */
-
-    .resource-links{
-
-        gap:24px !important;
+    .hero-slideshow{
+        height:430px;
     }
 
-    .resource-link{
-
-        width:90px !important;
-
-        height:52px !important;
+    .writing-grid{
+        grid-template-columns:1fr;
     }
 
-    .resource-link img{
-
-        max-width:90px !important;
-
-        max-height:40px !important;
+    .writing-card{
+        aspect-ratio:4 / 5;
     }
 
+    .contact-links{
+        grid-template-columns:1fr;
+    }
 
-    /* FOOTER */
-
-    footer{
-
-        flex-direction:column !important;
-
-        text-align:center !important;
-
-        gap:10px !important;
+    .professional-links{
+        gap:25px;
     }
 
 }
 
 
 /* =====================================================
-   SMALL MOBILE
+   SLIDESHOW ANIMATION
 ===================================================== */
-
-@media(max-width:480px){
-
-    .hero-slideshow{
-
-        min-height:390px !important;
-    }
-
-    .hero-text{
-
-        padding:38px 8% !important;
-    }
-
-    .hero-description{
-
-        font-size:14px !important;
-
-        direction:rtl !important;
-
-        text-align:right !important;
-    }
-
-
-    .hero-photo{
-
-        top:17px !important;
-
-        right:17px !important;
-
-        width:78px !important;
-
-        height:100px !important;
-    }
-
-    .slide-content{
-
-        left:20px !important;
-
-        bottom:28px !important;
-
-        max-width:72% !important;
-    }
-
-    .slide-title{
-
-        font-size:20px !important;
-    }
-
-    .slide-label{
-
-        font-size:8px !important;
-    }
-
-
-    .grid{
-
-        grid-template-columns:1fr !important;
-
-        gap:16px !important;
-    }
-
-
-    .research-card{
-
-        min-height:300px !important;
-    }
-
-    .research-content{
-
-        padding:22px !important;
-    }
-
-
-    .art-visual{
-
-        min-height:250px !important;
-    }
-
-    .art-content{
-
-        padding:28px 20px !important;
-    }
-
-    .art-title{
-
-        font-size:21px !important;
-    }
-
-
-    .social-links{
-
-        gap:20px !important;
-    }
-
-    .social-link{
-
-        width:48px !important;
-
-        height:48px !important;
-    }
-
-    .social-icon{
-
-        width:36px !important;
-
-        height:36px !important;
-    }
-
-    .resource-links{
-
-        gap:18px !important;
-    }
-
-    .resource-link{
-
-        width:78px !important;
-
-        height:48px !important;
-    }
-
-    .resource-link img{
-
-        max-width:78px !important;
-
-        max-height:36px !important;
-    }
-
-}
 
 </style>
 
@@ -1713,769 +782,630 @@ footer{
 
 <header>
 
-<div class="logo">
-    BITA NEGAHDAR
-</div>
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
 
+    <nav>
 
-<nav>
+        <a href="index.html">Home</a>
 
-    <a href="index.html">
-        Home
-    </a>
+        <a href="about.html">About</a>
 
-    <a href="about.html">
-        About
-    </a>
+        <a href="writing.html">Writing</a>
 
-    <a href="writing.html">
-        Writing
-    </a>
+        <a href="#research">Research</a>
 
-    <a href="#research">
-        Research
-    </a>
+        <a href="#art-psychology">Art &amp; Psychology</a>
 
-    <a href="#art-psychology">
-        Art &amp; Psychology
-    </a>
+        <a href="#contact" class="contact-link">Contact</a>
 
-    <a href="#contact" class="contact-btn">
-        Contact
-    </a>
-
-</nav>
+    </nav>
 
 </header>
 
 
+
 <!-- =====================================================
-     HERO + SLIDESHOW
+     HERO
 ===================================================== -->
 
 <section class="hero">
 
 
-<!-- =================================================
-     LEFT — PERSONAL INTRO
-================================================= -->
-
-<div class="hero-text">
-
-    <p class="hero-description">
-
-        بیتا نگاهدار در حوزه روان‌شناسی فعالیت می‌کند و در حال توسعه مسیر علمی و حرفه‌ای خود در این حوزه است. علاقه او بر مطالعه انسان، هویت، تجربه زیسته و رابطه فرد با خود و دیگری متمرکز است.
-
-        <br><br>
-
-        او با بیش از بیست سال سابقه حرفه‌ای، اکنون تجربه و پیشینه خود را در مسیر مطالعات روان‌شناختی و پژوهشی به کار گرفته و به دنبال شکل‌دادن به رویکردی میان‌رشته‌ای در شناخت انسان و مسائل روان‌شناختی است.
-
-    </p>
-
-
-    <a href="about.html" class="outline-btn">
-        About Me
-    </a>
-
-</div>
-
-
-<!-- =================================================
-     RIGHT — SLIDESHOW
-================================================= -->
-
-<div class="hero-slideshow">
-
-
-    <!-- SLIDE 01 -->
-
-    <div class="slide">
-
-        <img
-            src="images/cover-1.jpeg"
-            alt="Psychology and Visual Culture"
-        >
-
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-
-            <div class="slide-label">
-                Visual Culture × Psychology
-            </div>
-
-            <div class="slide-title">
-                Image, Identity &amp; Psychological Experience
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- SLIDE 02 -->
-
-    <div class="slide">
-
-        <img
-            src="images/cover-2.jpeg"
-            alt="Art and Psychology"
-        >
-
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-
-            <div class="slide-label">
-                Art &amp; Psychology
-            </div>
-
-            <div class="slide-title">
-                Reading Psychological Experience Through Images
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- SLIDE 03 -->
-
-    <div class="slide">
-
-        <img
-            src="images/cover-3.jpeg"
-            alt="Identity and Visual Representation"
-        >
-
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-
-            <div class="slide-label">
-                Research &amp; Writing
-            </div>
-
-            <div class="slide-title">
-                Identity, Representation &amp; The Self
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- SLIDE 04 -->
-
-    <div class="slide">
-
-        <img
-            src="images/cover-4.jpg"
-            alt="Tokyo Compression"
-        >
-
-        <div class="slide-overlay"></div>
-
-        <div class="slide-content">
-
-            <div class="slide-label">
-                Latest Writing
-            </div>
-
-            <div class="slide-title">
-                Michael Wolf &amp; The Psychology of Crowding
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- =================================================
-         PERSONAL PHOTO
-    ================================================= -->
+    <!-- PERSONAL PHOTO -->
 
     <div class="hero-photo">
 
-        <img
-            src="images/BitaNegahdar.jpg"
-            alt="Bita Negahdar"
-        >
+        <img src="images/BitaNegahdar.jpg" alt="Bita Negahdar">
 
     </div>
 
 
-    <!-- =================================================
-         SLIDE DOTS
-    ================================================= -->
 
-    <div class="slide-dots">
+    <!-- SLIDESHOW -->
 
-        <span class="slide-dot active"></span>
-        <span class="slide-dot"></span>
-        <span class="slide-dot"></span>
-        <span class="slide-dot"></span>
+    <div class="hero-slideshow">
+
+
+        <div class="slide active">
+
+            <img src="images/cover-1.jpeg" alt="Writing 1">
+
+            <div class="slide-overlay"></div>
+
+            <div class="slide-content">
+
+                <div class="slide-number">
+                    Writing 01
+                </div>
+
+                <div class="slide-title">
+                    Identity, Objects &amp; the Extended Self
+                </div>
+
+                <div class="slide-description">
+                    Psychological perspectives on identity, objects and the construction of self.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="slide">
+
+            <img src="images/cover-2.jpeg" alt="Writing 2">
+
+            <div class="slide-overlay"></div>
+
+            <div class="slide-content">
+
+                <div class="slide-number">
+                    Writing 02
+                </div>
+
+                <div class="slide-title">
+                    The Body as a Psychological Space
+                </div>
+
+                <div class="slide-description">
+                    Reading bodily movement and visual representation through psychology.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="slide">
+
+            <img src="images/cover-3.jpeg" alt="Writing 3">
+
+            <div class="slide-overlay"></div>
+
+            <div class="slide-content">
+
+                <div class="slide-number">
+                    Writing 03
+                </div>
+
+                <div class="slide-title">
+                    Photography, Memory &amp; Self-Continuity
+                </div>
+
+                <div class="slide-description">
+                    Visual representation and the psychological experience of continuity.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="slide">
+
+            <img src="images/cover-4.jpg" alt="Writing 4">
+
+            <div class="slide-overlay"></div>
+
+            <div class="slide-content">
+
+                <div class="slide-number">
+                    Writing 04
+                </div>
+
+                <div class="slide-title">
+                    Tokyo Compression
+                </div>
+
+                <div class="slide-description">
+                    Crowding, isolation and the psychology of visual proximity.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DOTS -->
+
+        <div class="slider-dots">
+
+            <div class="slider-dot active" onclick="showSlide(0)"></div>
+
+            <div class="slider-dot" onclick="showSlide(1)"></div>
+
+            <div class="slider-dot" onclick="showSlide(2)"></div>
+
+            <div class="slider-dot" onclick="showSlide(3)"></div>
+
+        </div>
+
 
     </div>
 
 
-</div>
+
+    <!-- INTRO -->
+
+    <div class="hero-intro">
+
+        <div class="eyebrow">
+            Psychology
+        </div>
+
+        <h1>
+            Bita<br>
+            Negahdar
+        </h1>
+
+        <p>
+            Psychology trainee exploring the intersection of psychological processes, visual culture, and human experience.
+        </p>
+
+    </div>
+
 
 </section>
+
 
 
 <!-- =====================================================
      LATEST WRITING
 ===================================================== -->
 
-<section class="latest">
+<section class="section writing-section">
 
-<div class="section-title">
-    Latest Writing
-</div>
+    <div class="section-header">
 
+        <div>
 
-<div class="grid">
+            <div class="section-label">
+                Selected Writing
+            </div>
 
-
-    <a href="writing-1.html" class="card">
-
-        <div class="cover">
-
-            <img
-                src="images/cover-1.jpeg"
-                alt="Writing 01"
-            >
+            <h2 class="section-title">
+                Latest Writing
+            </h2>
 
         </div>
 
-    </a>
-
-
-    <a href="writing-2.html" class="card">
-
-        <div class="cover">
-
-            <img
-                src="images/cover-2.jpeg"
-                alt="Writing 02"
-            >
-
+        <div class="section-intro">
+            Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
         </div>
 
-    </a>
+    </div>
 
 
-    <a href="writing-3.html" class="card">
-
-        <div class="cover">
-
-            <img
-                src="images/cover-3.jpeg"
-                alt="Writing 03"
-            >
-
-        </div>
-
-    </a>
+    <div class="writing-grid">
 
 
-    <a href="writing-4.html" class="card">
+        <a href="writing-1.html" class="writing-card">
 
-        <div class="cover">
+            <img src="images/cover-1.jpeg" alt="Writing 1">
 
-            <img
-                src="images/cover-4.jpg"
-                alt="Writing 04"
-            >
+            <div class="writing-card-overlay">
 
-        </div>
+                <div class="writing-card-title">
+                    Identity, Objects &amp; the Extended Self
+                </div>
 
-    </a>
+            </div>
+
+        </a>
 
 
-</div>
+
+        <a href="writing-2.html" class="writing-card">
+
+            <img src="images/cover-2.jpeg" alt="Writing 2">
+
+            <div class="writing-card-overlay">
+
+                <div class="writing-card-title">
+                    The Body as a Psychological Space
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="writing-3.html" class="writing-card">
+
+            <img src="images/cover-3.jpeg" alt="Writing 3">
+
+            <div class="writing-card-overlay">
+
+                <div class="writing-card-title">
+                    Photography, Memory &amp; Self-Continuity
+                </div>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="writing-4.html" class="writing-card">
+
+            <img src="images/cover-4.jpg" alt="Writing 4">
+
+            <div class="writing-card-overlay">
+
+                <div class="writing-card-title">
+                    Tokyo Compression &amp; Psychological Isolation
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </div>
 
 </section>
+
 
 
 <!-- =====================================================
      RESEARCH LIBRARY
 ===================================================== -->
 
-<section class="research-library" id="research">
+<section class="section research-section" id="research">
 
-<div class="section-title">
-    Research Library
-</div>
+    <div class="section-header">
 
+        <div>
 
-<p class="library-intro">
+            <div class="section-label">
+                Research Library
+            </div>
 
-    A curated collection of recent research papers and academic resources exploring psychology, art, visual culture, identity, psychological assessment, and the relationship between image and human experience.
-
-</p>
-
-
-<div class="research-grid">
-
-
-    <!-- RESEARCH 01 -->
-
-    <a href="#" class="research-card">
-
-        <div class="research-cover">
-
-            <img
-                src="images/research-psychology.jpg"
-                alt="Psychology Research"
-            >
-
-            <div class="research-overlay"></div>
+            <h2 class="section-title">
+                Art × Psychology
+            </h2>
 
         </div>
 
-
-        <div class="research-content">
-
-            <div class="research-category">
-                Psychology
-            </div>
-
-            <div class="research-title">
-                Recent Research in Psychology
-            </div>
-
-            <div class="research-meta">
-                Selected recent papers and academic resources covering contemporary psychological research and human experience.
-            </div>
-
-            <span class="research-link">
-                Explore
-            </span>
-
+        <div class="section-intro">
+            A curated library of recent research and academic resources at the intersection of psychology, art, visual culture, and human experience.
         </div>
 
-    </a>
+    </div>
 
 
-    <!-- RESEARCH 02 -->
-
-    <a href="#" class="research-card">
-
-        <div class="research-cover">
-
-            <img
-                src="images/research-art-psychology.jpg"
-                alt="Art and Psychology Research"
-            >
-
-            <div class="research-overlay"></div>
-
-        </div>
+    <div class="research-grid">
 
 
-        <div class="research-content">
+        <a href="research.html" class="research-card">
 
-            <div class="research-category">
-                Art &amp; Psychology
+            <div class="research-image">
+
+                <img src="images/research-psychology.jpg" alt="Psychology Research">
+
             </div>
 
-            <div class="research-title">
-                Art, Image &amp; Psychological Experience
+            <div class="research-content">
+
+                <div class="small-label">
+                    Psychology
+                </div>
+
+                <h3>
+                    Recent Psychology Research
+                </h3>
+
+                <p>
+                    Selected recent papers, studies, and academic resources across contemporary psychological research.
+                </p>
+
             </div>
 
-            <div class="research-meta">
-                Recent studies examining the relationship between artistic expression, images, identity and psychological experience.
+        </a>
+
+
+
+        <a href="research.html" class="research-card">
+
+            <div class="research-image">
+
+                <img src="images/research-art-psychology.jpg" alt="Art and Psychology Research">
+
             </div>
 
-            <span class="research-link">
-                Explore
-            </span>
+            <div class="research-content">
 
-        </div>
+                <div class="small-label">
+                    Art &amp; Psychology
+                </div>
 
-    </a>
+                <h3>
+                    Art &amp; Psychological Research
+                </h3>
 
+                <p>
+                    Research exploring the relationship between visual art, psychological processes, perception, identity, and human experience.
+                </p>
 
-    <!-- RESEARCH 03 -->
-
-    <a href="#" class="research-card">
-
-        <div class="research-cover">
-
-            <img
-                src="images/research-visual-culture.jpg"
-                alt="Visual Culture Research"
-            >
-
-            <div class="research-overlay"></div>
-
-        </div>
-
-
-        <div class="research-content">
-
-            <div class="research-category">
-                Visual Culture
             </div>
 
-            <div class="research-title">
-                Image, Perception &amp; Human Experience
+        </a>
+
+
+
+        <a href="research.html" class="research-card">
+
+            <div class="research-image">
+
+                <img src="images/research-visual-culture.jpg" alt="Visual Culture Research">
+
             </div>
 
-            <div class="research-meta">
-                Selected research on visual representation, perception, identity, photography and the psychological meaning of images.
+            <div class="research-content">
+
+                <div class="small-label">
+                    Visual Culture
+                </div>
+
+                <h3>
+                    Image, Body &amp; Visual Culture
+                </h3>
+
+                <p>
+                    Research on images, bodies, representation, visual culture, and their psychological and social dimensions.
+                </p>
+
             </div>
 
-            <span class="research-link">
-                Explore
-            </span>
-
-        </div>
-
-    </a>
+        </a>
 
 
-</div>
+    </div>
 
 </section>
+
 
 
 <!-- =====================================================
      ART × PSYCHOLOGY
 ===================================================== -->
 
-<section class="art-psychology" id="art-psychology">
+<section class="section art-section" id="art-psychology">
 
-<div class="section-title">
-    Art × Psychology
-</div>
+    <div class="art-block">
 
 
-<div class="art-layout">
+        <div class="art-image">
 
+            <img src="images/art-psychology-cover.jpg" alt="Art and Psychology">
 
-    <div class="art-visual">
-
-        <img
-            src="images/art-psychology-cover.jpg"
-            alt="Art and Psychology"
-        >
-
-        <div class="art-visual-overlay"></div>
-
-        <div class="art-visual-label">
-            Visual Psychology
         </div>
+
+
+        <div class="art-content">
+
+            <div class="section-label">
+                Interdisciplinary Perspective
+            </div>
+
+            <h2>
+                Art ×<br>
+                Psychology
+            </h2>
+
+            <p>
+                An interdisciplinary space for examining psychological concepts through photography, visual representation, contemporary art, and everyday images. Here, visual material is approached not simply as illustration, but as a possible site for understanding psychological experience.
+            </p>
+
+        </div>
+
 
     </div>
-
-
-    <div class="art-content">
-
-        <div class="art-label">
-            Interdisciplinary Perspective
-        </div>
-
-        <div class="art-title">
-            The Image as a Psychological Object
-        </div>
-
-        <p class="art-description">
-
-            تصویر می‌تواند صرفاً یک بازنمایی بصری نباشد؛ بلکه به‌عنوان داده‌ای برای مطالعه تجربه، هویت، ادراک و رابطه فرد با خود و دیگری مورد بررسی قرار گیرد.
-
-        </p>
-
-        <a href="writing.html" class="art-button">
-            Explore Writing
-        </a>
-
-    </div>
-
-</div>
 
 </section>
 
 
+
 <!-- =====================================================
-     CONTACT — BLACK
+     CONTACT
 ===================================================== -->
 
 <section class="contact-section" id="contact">
 
-<div class="section-title">
-    Contact
-</div>
+    <div class="contact-inner">
 
 
-<!-- =================================================
-     PERSONAL CONTACT
-================================================= -->
+        <div class="contact-text">
 
-<div class="social-links">
+            <div class="section-label">
+                Contact
+            </div>
 
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
 
-    <!-- INSTAGRAM -->
+            <p>
+                For academic communication, research collaboration, professional opportunities, or psychology-related inquiries.
+            </p>
 
-    <a
-        href="https://www.instagram.com/bitanegahdar.ir/"
-        target="_blank"
-        rel="noopener"
-        class="social-link"
-        aria-label="Instagram"
-    >
-
-        <img
-            src="images/instagram.png"
-            alt=""
-            class="social-icon"
-        >
-
-    </a>
+        </div>
 
 
-    <!-- LINKEDIN -->
 
-    <a
-        href="https://www.linkedin.com/in/bita-negahdar/"
-        target="_blank"
-        rel="noopener"
-        class="social-link"
-        aria-label="LinkedIn"
-    >
-
-        <img
-            src="images/Linkedin.png"
-            alt=""
-            class="social-icon"
-        >
-
-    </a>
+        <div class="contact-links">
 
 
-    <!-- PHONE -->
+            <a href="mailto:bitanegahdar@gmail.com" class="contact-item">
 
-    <a
-        href="tel:+989119382619"
-        class="social-link"
-        aria-label="Phone"
-    >
+                <img src="images/email.png" alt="Email">
 
-        <img
-            src="images/Phone.png"
-            alt=""
-            class="social-icon"
-        >
+                <span>
+                    Email
+                </span>
 
-    </a>
+            </a>
 
 
-    <!-- EMAIL -->
 
-    <a
-        href="mailto:bitanegahdar@gmail.com"
-        class="social-link"
-        aria-label="Email"
-    >
+            <a href="https://www.instagram.com/bitanegahdar.ir" target="_blank" class="contact-item">
 
-        <img
-            src="images/email.png"
-            alt=""
-            class="social-icon"
-        >
+                <img src="images/instagram.png" alt="Instagram">
 
-    </a>
+                <span>
+                    Instagram
+                </span>
+
+            </a>
 
 
-</div>
+
+            <a href="https://www.linkedin.com/in/bita-negahdar" target="_blank" class="contact-item">
+
+                <img src="images/Linkedin.png" alt="LinkedIn">
+
+                <span>
+                    LinkedIn
+                </span>
+
+            </a>
 
 
-<!-- =================================================
-     PROFESSIONAL / ACADEMIC SITES
-===================================================== -->
 
-<div class="resource-links">
+            <a href="tel:+989119382619" class="contact-item">
 
+                <img src="images/Phone.png" alt="Phone">
 
-    <!-- APA -->
+                <span>
+                    Phone
+                </span>
 
-    <a
-        href="https://www.apa.org/"
-        target="_blank"
-        rel="noopener"
-        class="resource-link"
-        aria-label="American Psychological Association"
-    >
-
-        <img
-            src="images/apa.png"
-            alt=""
-        >
-
-    </a>
+            </a>
 
 
-    <!-- IRANIAN PSYCHOLOGICAL ASSOCIATION -->
-
-    <a
-        href="https://www.iranpa.org/"
-        target="_blank"
-        rel="noopener"
-        class="resource-link"
-        aria-label="Iranian Psychological Association"
-    >
-
-        <img
-            src="images/ipa.png"
-            alt=""
-        >
-
-    </a>
+        </div>
 
 
-    <!-- PUBMED -->
-
-    <a
-        href="https://pubmed.ncbi.nlm.nih.gov/"
-        target="_blank"
-        rel="noopener"
-        class="resource-link"
-        aria-label="PubMed"
-    >
-
-        <img
-            src="images/pubmed.png"
-            alt=""
-        >
-
-    </a>
+    </div>
 
 
-    <!-- GOOGLE SCHOLAR -->
 
-    <a
-        href="https://scholar.google.com/"
-        target="_blank"
-        rel="noopener"
-        class="resource-link"
-        aria-label="Google Scholar"
-    >
+    <!-- PROFESSIONAL LINKS -->
 
-        <img
-            src="images/scholar.png"
-            alt=""
-        >
+    <div class="professional-links">
 
-    </a>
+        <img src="images/apa.png" alt="APA">
 
+        <img src="images/ipa.png" alt="IPA">
 
-    <!-- RESEARCHGATE -->
+        <img src="images/pubmed.png" alt="PubMed">
 
-    <a
-        href="https://www.researchgate.net/"
-        target="_blank"
-        rel="noopener"
-        class="resource-link"
-        aria-label="ResearchGate"
-    >
+        <img src="images/scholar.png" alt="Google Scholar">
 
-        <img
-            src="images/researchgate.png"
-            alt=""
-        >
+        <img src="images/researchgate.png" alt="ResearchGate">
 
-    </a>
+    </div>
 
-
-</div>
 
 </section>
 
 
+
 <!-- =====================================================
-     FOOTER — BLACK
+     FOOTER
 ===================================================== -->
 
 <footer>
 
-<div>
-    BITA NEGAHDAR
-</div>
-
-<div>
-    Psychology
-</div>
+    <p>
+        © 2026 Bita Negahdar. All rights reserved.
+    </p>
 
 </footer>
 
 
+
 <!-- =====================================================
-     SIMPLE SLIDESHOW SCRIPT
+     SLIDESHOW SCRIPT
 ===================================================== -->
 
 <script>
 
-(function(){
+let currentSlide = 0;
 
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".slide-dot");
+const slides = document.querySelectorAll(".slide");
 
-    if(!slides.length){
-        return;
-    }
-
-    let current = 0;
-
-    function showSlide(index){
-
-        slides.forEach(function(slide, i){
-
-            slide.style.opacity = i === index ? "1" : "0";
-
-            slide.style.visibility = i === index ? "visible" : "hidden";
-
-        });
+const dots = document.querySelectorAll(".slider-dot");
 
 
-        dots.forEach(function(dot, i){
+function showSlide(index){
 
-            dot.classList.toggle(
-                "active",
-                i === index
-            );
+    slides.forEach((slide) => {
 
-        });
-
-    }
-
-
-    function nextSlide(){
-
-        current = (current + 1) % slides.length;
-
-        showSlide(current);
-
-    }
-
-
-    setInterval(nextSlide, 5000);
-
-
-    dots.forEach(function(dot, index){
-
-        dot.addEventListener("click", function(){
-
-            current = index;
-
-            showSlide(current);
-
-        });
+        slide.classList.remove("active");
 
     });
 
-})();
+
+    dots.forEach((dot) => {
+
+        dot.classList.remove("active");
+
+    });
+
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add("active");
+
+    dots[currentSlide].classList.add("active");
+
+}
+
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+
+        currentSlide = 0;
+
+    }
+
+    showSlide(currentSlide);
+
+}
+
+
+setInterval(nextSlide, 5000);
 
 </script>
 
