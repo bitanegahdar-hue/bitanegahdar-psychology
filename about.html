@@ -20,10 +20,10 @@
 ===================================================== */
 
 :root{
-    --cyan:#0891B2;
-    --cyan-hover:#06B6D4;
-    --cyan-pale:#CFFAFE;
-    --border:#D9E5E8;
+    --blue:#5A70B5;
+    --blue-hover:#4B61A3;
+    --blue-pale:#EEF1F8;
+    --border:#D9E0EA;
     --text:#252525;
     --muted:#626A6D;
 }
@@ -31,8 +31,6 @@
 
 /* =====================================================
    HEADER
-   SAME ON EVERY PAGE
-   HOME / ABOUT / WRITING / CONTACT
 ===================================================== */
 
 header{
@@ -71,7 +69,7 @@ nav{
     align-items:center !important;
     justify-content:flex-end !important;
 
-    gap:24px !important;
+    gap:20px !important;
 
     flex-shrink:0 !important;
 }
@@ -113,9 +111,9 @@ nav a{
 }
 
 nav a:hover{
-    background:var(--cyan-hover) !important;
+    background:var(--blue) !important;
 
-    border-color:var(--cyan-hover) !important;
+    border-color:var(--blue) !important;
 
     color:#FFFFFF !important;
 }
@@ -128,17 +126,17 @@ nav a:hover{
 .contact-btn{
     padding:9px 17px !important;
 
-    background:var(--cyan-pale) !important;
+    background:var(--blue-pale) !important;
 
-    border:1px solid var(--cyan-pale) !important;
+    border:1px solid var(--blue-pale) !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
 }
 
 .contact-btn:hover{
-    background:var(--cyan-hover) !important;
+    background:var(--blue) !important;
 
-    border-color:var(--cyan-hover) !important;
+    border-color:var(--blue) !important;
 
     color:#FFFFFF !important;
 }
@@ -156,8 +154,14 @@ nav a:hover{
     margin:55px auto !important;
 }
 
+
+/* =====================================================
+   PAGE TITLE
+   CENTERED
+===================================================== */
+
 .eyebrow{
-    margin-bottom:18px !important;
+    margin-bottom:12px !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
@@ -168,7 +172,9 @@ nav a:hover{
 
     text-transform:uppercase !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
+
+    text-align:center !important;
 }
 
 .page h1{
@@ -183,12 +189,20 @@ nav a:hover{
     line-height:1.15 !important;
 
     color:var(--text) !important;
+
+    text-align:center !important;
 }
 
-.intro{
-    max-width:760px !important;
 
-    margin:28px 0 60px !important;
+/* =====================================================
+   INTRO
+   PERSIAN / RIGHT ALIGNED
+===================================================== */
+
+.intro{
+    max-width:920px !important;
+
+    margin:38px 0 60px auto !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
@@ -196,7 +210,7 @@ nav a:hover{
 
     font-weight:400 !important;
 
-    line-height:2 !important;
+    line-height:2.15 !important;
 
     color:#5F6668 !important;
 
@@ -231,7 +245,7 @@ nav a:hover{
 
     text-transform:uppercase !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
 }
 
 
@@ -258,9 +272,9 @@ nav a:hover{
 
     border:1px solid var(--border) !important;
 
-    background:var(--cyan-pale) !important;
+    background:var(--blue-pale) !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
 
     display:flex !important;
 
@@ -278,9 +292,9 @@ nav a:hover{
 }
 
 .education-item:hover{
-    background:var(--cyan-hover) !important;
+    background:var(--blue-hover) !important;
 
-    border-color:var(--cyan-hover) !important;
+    border-color:var(--blue-hover) !important;
 
     color:#FFFFFF !important;
 
@@ -300,7 +314,7 @@ nav a:hover{
 
     line-height:1.4 !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
 
     text-align:left !important;
 
@@ -332,7 +346,6 @@ nav a:hover{
 /* =====================================================
    RELEVANT STUDIES & TRAINING
    ALL BOXES SAME HEIGHT
-   HEIGHT BASED ON LONGEST TEXT
 ===================================================== */
 
 .training{
@@ -345,16 +358,23 @@ nav a:hover{
     width:100% !important;
 }
 
+
+/* =====================================================
+   TRAINING BOX
+===================================================== */
+
 .training span{
     width:100% !important;
 
-    min-height:118px !important;
+    min-height:150px !important;
 
-    height:118px !important;
+    height:150px !important;
 
     padding:18px !important;
 
     display:flex !important;
+
+    flex-direction:column !important;
 
     align-items:center !important;
 
@@ -362,9 +382,9 @@ nav a:hover{
 
     text-align:center !important;
 
-    background:var(--cyan-pale) !important;
+    background:var(--blue-pale) !important;
 
-    color:var(--cyan) !important;
+    color:var(--blue) !important;
 
     border:1px solid var(--border) !important;
 
@@ -385,21 +405,81 @@ nav a:hover{
         border-color .3s ease !important;
 }
 
-.training span:hover{
-    background:var(--cyan-hover) !important;
 
-    border-color:var(--cyan-hover) !important;
+/* =====================================================
+   TRAINING ICON
+===================================================== */
+
+.training-icon{
+    width:42px !important;
+
+    height:42px !important;
+
+    margin-bottom:13px !important;
+
+    border-radius:50% !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    background:#FFFFFF !important;
+
+    border:1px solid rgba(90,112,181,.22) !important;
+
+    color:var(--blue) !important;
+
+    flex-shrink:0 !important;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease !important;
+}
+
+.training-icon svg{
+    width:20px !important;
+
+    height:20px !important;
+
+    stroke:currentColor !important;
+
+    fill:none !important;
+
+    stroke-width:1.8 !important;
+
+    stroke-linecap:round !important;
+
+    stroke-linejoin:round !important;
+}
+
+.training span:hover{
+    background:var(--blue) !important;
+
+    border-color:var(--blue) !important;
 
     color:#FFFFFF !important;
 
     transform:translateY(-3px) !important;
 }
 
+.training span:hover .training-icon{
+    background:#FFFFFF !important;
+
+    border-color:#FFFFFF !important;
+
+    color:var(--blue) !important;
+
+    transform:scale(1.05) !important;
+}
+
 
 /* =====================================================
    PROFESSIONAL / ACADEMIC LINKS
    LOGOS ONLY
-   NO BORDER / NO BOX / CENTERED
 ===================================================== */
 
 .resource-links{
@@ -586,12 +666,26 @@ footer{
 
     .page h1{
         font-size:40px !important;
+
+        text-align:center !important;
+    }
+
+    .eyebrow{
+        text-align:center !important;
     }
 
     .intro{
+        max-width:100% !important;
+
+        margin:32px 0 45px auto !important;
+
         font-size:15px !important;
 
-        margin-bottom:45px !important;
+        line-height:2.1 !important;
+
+        direction:rtl !important;
+
+        text-align:right !important;
     }
 
 
@@ -626,7 +720,6 @@ footer{
 
     /* =================================================
        TRAINING
-       ALL BOXES SAME HEIGHT
     ================================================= */
 
     .training{
@@ -636,13 +729,27 @@ footer{
     }
 
     .training span{
-        height:112px !important;
+        height:145px !important;
 
-        min-height:112px !important;
+        min-height:145px !important;
 
         padding:16px !important;
 
         font-size:13px !important;
+    }
+
+    .training-icon{
+        width:38px !important;
+
+        height:38px !important;
+
+        margin-bottom:11px !important;
+    }
+
+    .training-icon svg{
+        width:18px !important;
+
+        height:18px !important;
     }
 
 
@@ -711,13 +818,27 @@ footer{
     }
 
     .training span{
-        height:108px !important;
+        height:140px !important;
 
-        min-height:108px !important;
+        min-height:140px !important;
 
         padding:14px !important;
 
         font-size:12px !important;
+    }
+
+    .training-icon{
+        width:36px !important;
+
+        height:36px !important;
+
+        margin-bottom:10px !important;
+    }
+
+    .training-icon svg{
+        width:17px !important;
+
+        height:17px !important;
     }
 
     .resource-links{
@@ -743,7 +864,6 @@ footer{
 </head>
 
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -777,7 +897,6 @@ footer{
 
 </header>
 
-
 <!-- =====================================================
      MAIN
 ===================================================== -->
@@ -806,7 +925,6 @@ footer{
 
 </p>
 
-
 <!-- =================================================
      EDUCATION
 ===================================================== -->
@@ -817,54 +935,52 @@ footer{
     Education
 </h2>
 
-
 <div class="education">
 
+```
+<div class="education-item">
 
-    <div class="education-item">
+    <h3>
+        MA — Psychology
+    </h3>
 
-        <h3>
-            MA — Psychology
-        </h3>
+    <p>
+        2024 – 2026
+    </p>
 
-        <p>
-            2024 – 2026
-        </p>
-
-    </div>
-
-
-    <div class="education-item">
-
-        <h3>
-            MA — Photography
-        </h3>
-
-        <p>
-            2014 – 2016<br>
-            Tehran University of Art
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="education-item">
+<div class="education-item">
 
-        <h3>
-            BGD
-        </h3>
+    <h3>
+        MA — Photography
+    </h3>
 
-        <p>
-            2003 – 2007
-        </p>
+    <p>
+        2014 – 2016<br>
+        Tehran University of Art
+    </p>
 
-    </div>
+</div>
 
+
+<div class="education-item">
+
+    <h3>
+        BGD
+    </h3>
+
+    <p>
+        2003 – 2007
+    </p>
+
+</div>
+```
 
 </div>
 
 </section>
-
 
 <!-- =================================================
      RELEVANT STUDIES & TRAINING
@@ -876,43 +992,148 @@ footer{
     Relevant Studies &amp; Training
 </h2>
 
-
 <div class="training">
 
-    <span>
-        MBA — Strategic Management<br>
-        University of Tehran<br>
-        One-Year Professional Program | 2024–2025
-    </span>
+```
+<!-- MBA -->
 
-    <span>
-        Schema Therapy
-    </span>
+<span>
 
-    <span>
-        Cognitive Behavioral Therapy (CBT)
-    </span>
+    <div class="training-icon">
 
-    <span>
-        QEEG Brain Mapping Workshop
-    </span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7.5h16"></path>
+            <path d="M6 7.5v10h12v-10"></path>
+            <path d="M8 7.5V5h8v2.5"></path>
+            <path d="M9 12h6"></path>
+        </svg>
 
-    <span>
-        Acceptance and Commitment Therapy (ACT)
-    </span>
+    </div>
 
-    <span>
-        Suicide Crisis Management
-    </span>
+    MBA — Strategic Management<br>
+    University of Tehran<br>
+    One-Year Professional Program | 2024–2025
 
-    <span>
-        Psychopharmacology
-    </span>
+</span>
+
+
+<!-- SCHEMA THERAPY -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8"></circle>
+            <path d="M8.5 12h7"></path>
+            <path d="M12 8.5v7"></path>
+        </svg>
+
+    </div>
+
+    Schema Therapy
+
+</span>
+
+
+<!-- CBT -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5.5h14v10H9l-4 3v-13z"></path>
+            <path d="M8.5 9.5h7"></path>
+            <path d="M8.5 12.5h5"></path>
+        </svg>
+
+    </div>
+
+    Cognitive Behavioral Therapy (CBT)
+
+</span>
+
+
+<!-- QEEG -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 13c2-6 4 6 6 0s4-6 6 0 3 0 4-2"></path>
+            <path d="M4 18h16"></path>
+            <path d="M4 6h16"></path>
+        </svg>
+
+    </div>
+
+    QEEG Brain Mapping Workshop
+
+</span>
+
+
+<!-- ACT -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v16"></path>
+            <path d="M7 9l5-5 5 5"></path>
+            <path d="M7 15l5 5 5-5"></path>
+        </svg>
+
+    </div>
+
+    Acceptance and Commitment Therapy (ACT)
+
+</span>
+
+
+<!-- SUICIDE CRISIS -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4l8 15H4L12 4z"></path>
+            <path d="M12 9v5"></path>
+            <circle cx="12" cy="17" r=".7" fill="currentColor" stroke="none"></circle>
+        </svg>
+
+    </div>
+
+    Suicide Crisis Management
+
+</span>
+
+
+<!-- PSYCHOPHARMACOLOGY -->
+
+<span>
+
+    <div class="training-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 4h8v16H8z"></path>
+            <path d="M8 8h8"></path>
+            <path d="M12 8v12"></path>
+        </svg>
+
+    </div>
+
+    Psychopharmacology
+
+</span>
+```
 
 </div>
 
 </section>
-
 
 <!-- =================================================
      PROFESSIONAL / ACADEMIC LINKS
@@ -923,88 +1144,87 @@ footer{
 
 <div class="resource-links">
 
+```
+<a
+    href="https://www.apa.org/"
+    class="resource-link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
 
-    <a
-        href="https://www.apa.org/"
-        class="resource-link"
-        target="_blank"
-        rel="noopener noreferrer"
+    <img
+        src="images/apa.png"
+        alt="APA"
     >
 
-        <img
-            src="images/apa.png"
-            alt="APA"
-        >
-
-    </a>
+</a>
 
 
-    <a
-        href="https://www.iranpa.org/"
-        class="resource-link"
-        target="_blank"
-        rel="noopener noreferrer"
+<a
+    href="https://www.iranpa.org/"
+    class="resource-link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <img
+        src="images/ipa.png"
+        alt="Iranian Psychological Association"
     >
 
-        <img
-            src="images/ipa.png"
-            alt="Iranian Psychological Association"
-        >
-
-    </a>
+</a>
 
 
-    <a
-        href="https://pubmed.ncbi.nlm.nih.gov/"
-        class="resource-link"
-        target="_blank"
-        rel="noopener noreferrer"
+<a
+    href="https://pubmed.ncbi.nlm.nih.gov/"
+    class="resource-link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <img
+        src="images/pubmed.png"
+        alt="PubMed"
     >
 
-        <img
-            src="images/pubmed.png"
-            alt="PubMed"
-        >
-
-    </a>
+</a>
 
 
-    <a
-        href="https://scholar.google.com/"
-        class="resource-link"
-        target="_blank"
-        rel="noopener noreferrer"
+<a
+    href="https://scholar.google.com/"
+    class="resource-link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <img
+        src="images/scholar.png"
+        alt="Google Scholar"
     >
 
-        <img
-            src="images/scholar.png"
-            alt="Google Scholar"
-        >
-
-    </a>
+</a>
 
 
-    <a
-        href="https://www.researchgate.net/"
-        class="resource-link"
-        target="_blank"
-        rel="noopener noreferrer"
+<a
+    href="https://www.researchgate.net/"
+    class="resource-link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <img
+        src="images/researchgate.png"
+        alt="ResearchGate"
     >
 
-        <img
-            src="images/researchgate.png"
-            alt="ResearchGate"
-        >
-
-    </a>
-
+</a>
+```
 
 </div>
 
 </section>
 
 </main>
-
 
 <!-- =====================================================
      FOOTER
