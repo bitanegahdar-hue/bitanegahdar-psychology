@@ -216,16 +216,21 @@ nav a:hover{
 
 .education{
     display:grid !important;
-    grid-template-columns:1fr !important;
-    gap:10px !important;
+
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+
+    gap:12px !important;
+
     width:100% !important;
 }
 
 .education-item{
-    width:50% !important;
+    width:100% !important;
 
-    min-height:88px !important;
-    padding:16px 22px !important;
+    min-height:70px !important;
+    height:70px !important;
+
+    padding:12px 18px !important;
 
     border:1px solid var(--border) !important;
     background:var(--blue-pale) !important;
@@ -233,10 +238,10 @@ nav a:hover{
     color:var(--blue) !important;
 
     display:flex !important;
-    flex-direction:column !important;
+    align-items:center !important;
     justify-content:center !important;
 
-    text-align:left !important;
+    text-align:center !important;
 
     transition:
         background-color .3s ease,
@@ -256,36 +261,25 @@ nav a:hover{
 }
 
 .education-item h3{
-    margin:0 0 6px !important;
+    margin:0 !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:18px !important;
+    font-size:15px !important;
     font-weight:700 !important;
     line-height:1.4 !important;
 
     color:var(--blue) !important;
-    text-align:left !important;
+    text-align:center !important;
 
     transition:color .3s ease !important;
 }
 
 .education-item p{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:11px !important;
-    line-height:1.6 !important;
-
-    color:var(--muted) !important;
-    text-align:left !important;
-
-    transition:color .3s ease !important;
+    display:none !important;
 }
 
-.education-item:hover h3,
-.education-item:hover p{
+.education-item:hover h3{
     color:#FFFFFF !important;
 }
 
@@ -585,26 +579,24 @@ footer{
     }
 
     .education{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
         gap:10px !important;
     }
 
     .education-item{
         width:100% !important;
 
-        min-height:82px !important;
+        min-height:64px !important;
+        height:64px !important;
 
-        padding:15px 18px !important;
+        padding:12px 10px !important;
 
-        text-align:left !important;
+        text-align:center !important;
     }
 
     .education-item h3{
-        font-size:17px !important;
-        text-align:left !important;
-    }
-
-    .education-item p{
-        text-align:left !important;
+        font-size:14px !important;
+        text-align:center !important;
     }
 
     .training{
@@ -677,6 +669,16 @@ footer{
 
     .page h1{
         font-size:36px !important;
+    }
+
+    .education{
+        grid-template-columns:1fr !important;
+        gap:8px !important;
+    }
+
+    .education-item{
+        height:58px !important;
+        min-height:58px !important;
     }
 
     .training{
@@ -808,40 +810,15 @@ footer{
 <div class="education">
 
 <div class="education-item">
-
-<h3>
-    MA — Psychology
-</h3>
-
-<p>
-    2024 – 2026
-</p>
-
+    <h3>MA — Psychology</h3>
 </div>
 
 <div class="education-item">
-
-<h3>
-    MA — Photography
-</h3>
-
-<p>
-    2014 – 2016<br>
-    Tehran University of Art
-</p>
-
+    <h3>MA — Photography</h3>
 </div>
 
 <div class="education-item">
-
-<h3>
-    BGD
-</h3>
-
-<p>
-    2003 – 2007
-</p>
-
+    <h3>BGD</h3>
 </div>
 
 </div>
@@ -966,119 +943,5 @@ Suicide Crisis Management
     <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M8 4h8v16H8z"></path>
         <path d="M8 8h8"></path>
-        <path d="M12 8v12"></path>
-    </svg>
-
-</div>
-
-Psychopharmacology
-
-</span>
-
-</div>
-
-</section>
-
-<!-- =================================================
-     PROFESSIONAL / ACADEMIC LINKS
-===================================================== -->
-
-<section class="block">
-
-<div class="resource-links">
-
-<a
-href="https://www.apa.org/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/apa.png"
-    alt="APA"
->
-
-</a>
-
-<a
-href="https://www.iranpa.org/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/ipa.png"
-    alt="Iranian Psychological Association"
->
-
-</a>
-
-<a
-href="https://pubmed.ncbi.nlm.nih.gov/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/pubmed.png"
-    alt="PubMed"
->
-
-</a>
-
-<a
-href="https://scholar.google.com/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/scholar.png"
-    alt="Google Scholar"
->
-
-</a>
-
-<a
-href="https://www.researchgate.net/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/researchgate.png"
-    alt="ResearchGate"
->
-
-</a>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div>
-    BITA NEGAHDAR
-</div>
-
-<div>
-    Psychology
-</div>
-
-</footer>
-
-</body>
-</html>
+        <path d="M1
 ```
