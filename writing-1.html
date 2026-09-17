@@ -27,6 +27,157 @@
     line-height: 2.1;
 }
 
+
+/* =====================================================
+   HEADER
+   SAME MENU AS ABOUT PAGE
+===================================================== */
+
+header{
+    width:100% !important;
+    min-height:76px !important;
+    height:76px !important;
+    padding:0 4vw !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    background:#000000 !important;
+    border-bottom:1px solid #000000 !important;
+}
+
+.logo{
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    letter-spacing:2.4px !important;
+
+    color:#FFFFFF !important;
+
+    white-space:nowrap !important;
+}
+
+nav{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+
+    gap:10px !important;
+
+    flex-shrink:0 !important;
+}
+
+nav a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:38px !important;
+    height:38px !important;
+
+    padding:7px 10px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:11px !important;
+    font-weight:600 !important;
+
+    letter-spacing:1.2px !important;
+    line-height:1 !important;
+
+    text-transform:uppercase !important;
+
+    color:#FFFFFF !important;
+    background:transparent !important;
+
+    border:1px solid transparent !important;
+
+    white-space:nowrap !important;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease !important;
+}
+
+nav a:hover{
+    background:#5A70B5 !important;
+    border-color:#5A70B5 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.contact-btn{
+    padding:9px 16px !important;
+
+    background:#EEF1F8 !important;
+    border:1px solid #EEF1F8 !important;
+
+    color:#5A70B5 !important;
+}
+
+.contact-btn:hover{
+    background:#5A70B5 !important;
+    border-color:#5A70B5 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+@media(max-width:800px){
+
+    header{
+        min-height:72px !important;
+        height:auto !important;
+
+        padding:14px 5vw !important;
+
+        gap:15px !important;
+
+        background:#000000 !important;
+    }
+
+    .logo{
+        font-size:14px !important;
+        letter-spacing:1.8px !important;
+
+        color:#FFFFFF !important;
+    }
+
+    nav{
+        gap:4px !important;
+
+        flex-wrap:wrap !important;
+
+        justify-content:flex-end !important;
+    }
+
+    nav a{
+        min-height:30px !important;
+        height:30px !important;
+
+        padding:5px 5px !important;
+
+        font-size:7px !important;
+        letter-spacing:.8px !important;
+
+        color:#FFFFFF !important;
+    }
+
+    .contact-btn{
+        padding:7px 9px !important;
+    }
+
+}
+
 </style>
 
 </head>
@@ -38,7 +189,6 @@
 <!-- =====================================================
      HEADER
      FINAL MENU
-     HOME / ABOUT / WRITING / CONTACT
 ===================================================== -->
 
 <header>
@@ -50,19 +200,27 @@
 
     <nav>
 
-        <a href="index.html">
+        <a href="https://bitanegahdar.ir/index.html">
             Home
         </a>
 
-        <a href="about.html">
+        <a href="https://bitanegahdar.ir/about.html">
             About
         </a>
 
-        <a href="writing.html">
+        <a href="https://bitanegahdar.ir/writing.html">
             Writing
         </a>
 
-        <a href="index.html#contact" class="contact-btn">
+        <a href="https://bitanegahdar.ir/index.html#research">
+            Research
+        </a>
+
+        <a href="https://bitanegahdar.ir/index.html#art-psychology">
+            Art &amp; Psychology
+        </a>
+
+        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
             Contact
         </a>
 
