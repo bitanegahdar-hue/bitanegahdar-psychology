@@ -1,14 +1,3 @@
-بله. کد را بر اساس همین نسخه اصلاح کردم و **فقط تغییرات مربوط به Hero** را اعمال کردم:
-
-* رنگ آبی اصلی: `#5A70B5`
-* کل فضای آبیِ دو سوم سمت چپ با `images/hero-background.jpg` پر می‌شود.
-* روی عکس یک لایه‌ی آبی `#5A70B5` قرار گرفته تا عکس همچنان دیده شود.
-* عکس کوچک `hero-art.jpg` کاملاً حذف شده.
-* سه دایره سفید و متن‌های زیرشان حفظ شده‌اند.
-* رنگ آیکون‌ها نیز با آبی جدید هماهنگ شده.
-* بخش‌های دیگر کد دست‌نخورده مانده‌اند.
-
-```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -141,7 +130,7 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   FULL HERO BACKGROUND IMAGE + BLUE OVERLAY
+   FULL HERO BACKGROUND IMAGE
 ===================================================== */
 
 .hero-blue::before{
@@ -156,6 +145,11 @@ nav a.contact-link:hover{
 
     z-index:0;
 }
+
+
+/* =====================================================
+   BLUE OVERLAY
+===================================================== */
 
 .hero-blue::after{
     content:"";
@@ -688,34 +682,51 @@ nav a.contact-link:hover{
     margin-top:20px;
 }
 
-.contact-links{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
-}
 
-.contact-item{
-    border:1px solid #333333;
-    padding:20px;
+/* =====================================================
+   CONTACT ICONS
+   NO BOX / NO TEXT
+===================================================== */
+
+.contact-links{
     display:flex;
     align-items:center;
-    gap:15px;
-    transition:0.25s ease;
+    justify-content:center;
+    gap:28px;
 }
 
-.contact-item:hover{
-    border-color:#5A70B5;
+.contact-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
-.contact-item img{
-    width:25px;
-    height:25px;
+.contact-icon img{
+    width:28px;
+    height:28px;
     object-fit:contain;
+
+    opacity:0.78;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
-.contact-item span{
-    font-size:12px;
-    color:#DDDDDD;
+.contact-icon:hover{
+    transform:translateY(-3px);
+}
+
+.contact-icon:hover img{
+    opacity:1;
+    transform:scale(1.08);
 }
 
 
@@ -914,6 +925,11 @@ footer p{
         gap:45px;
     }
 
+    .contact-links{
+        justify-content:flex-start;
+        gap:24px;
+    }
+
 }
 
 
@@ -977,9 +993,24 @@ footer p{
         grid-template-columns:1fr;
     }
 
+
     .contact-links{
-        grid-template-columns:1fr;
+        justify-content:flex-start;
+        gap:20px;
     }
+
+
+    .contact-icon{
+        width:38px;
+        height:38px;
+    }
+
+
+    .contact-icon img{
+        width:26px;
+        height:26px;
+    }
+
 
     .professional-links{
         gap:25px;
@@ -1507,22 +1538,24 @@ footer p{
 
 
 
+        <!-- =================================================
+             CONTACT ICONS
+             NO BOX / NO TEXT
+        ================================================== -->
+
         <div class="contact-links">
 
 
             <a
                 href="mailto:bitanegahdar@gmail.com"
-                class="contact-item"
+                class="contact-icon"
+                aria-label="Email"
             >
 
                 <img
                     src="images/email.png"
                     alt="Email"
                 >
-
-                <span>
-                    Email
-                </span>
 
             </a>
 
@@ -1531,17 +1564,15 @@ footer p{
             <a
                 href="https://www.instagram.com/bitanegahdar.ir"
                 target="_blank"
-                class="contact-item"
+                rel="noopener noreferrer"
+                class="contact-icon"
+                aria-label="Instagram"
             >
 
                 <img
                     src="images/instagram.png"
                     alt="Instagram"
                 >
-
-                <span>
-                    Instagram
-                </span>
 
             </a>
 
@@ -1550,7 +1581,9 @@ footer p{
             <a
                 href="https://www.linkedin.com/in/bita-negahdar"
                 target="_blank"
-                class="contact-item"
+                rel="noopener noreferrer"
+                class="contact-icon"
+                aria-label="LinkedIn"
             >
 
                 <img
@@ -1558,27 +1591,20 @@ footer p{
                     alt="LinkedIn"
                 >
 
-                <span>
-                    LinkedIn
-                </span>
-
             </a>
 
 
 
             <a
                 href="tel:+989119382619"
-                class="contact-item"
+                class="contact-icon"
+                aria-label="Phone"
             >
 
                 <img
                     src="images/Phone.png"
                     alt="Phone"
                 >
-
-                <span>
-                    Phone
-                </span>
 
             </a>
 
@@ -1590,7 +1616,9 @@ footer p{
 
 
 
-    <!-- PROFESSIONAL LINKS -->
+    <!-- =================================================
+         PROFESSIONAL LINKS
+    ================================================== -->
 
     <div class="professional-links">
 
@@ -1642,4 +1670,3 @@ footer p{
 </body>
 
 </html>
-```
