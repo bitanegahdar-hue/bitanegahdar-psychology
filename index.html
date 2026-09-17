@@ -100,7 +100,7 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   HERO / MAIN VISUAL
+   HERO
 ===================================================== */
 
 .hero{
@@ -123,11 +123,13 @@ nav a.contact-link:hover{
     background:#0891B2;
     color:#FFFFFF;
     overflow:hidden;
-    padding:55px 6%;
+    padding:48px 6%;
 }
 
 
-/* subtle graphic circles */
+/* =====================================================
+   DECORATIVE BACKGROUND CIRCLES
+===================================================== */
 
 .hero-blue::before{
     content:"";
@@ -153,123 +155,255 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   HERO INTRO
+   HERO IMAGE INSIDE BLUE AREA
+   Upload:
+   images/hero-art.jpg
 ===================================================== */
 
-.hero-intro{
-    position:relative;
-    z-index:3;
-    max-width:600px;
+.hero-art{
+    position:absolute;
+    top:45px;
+    right:6%;
+    width:180px;
+    height:125px;
+    overflow:hidden;
+    z-index:2;
+    background:#067A96;
 }
 
-.hero-eyebrow{
-    font-size:11px;
-    letter-spacing:2.5px;
-    text-transform:uppercase;
-    color:#CFFAFE;
-    margin-bottom:17px;
-}
-
-.hero-intro h1{
-    font-size:43px;
-    line-height:1.05;
-    font-weight:500;
-    letter-spacing:-1px;
-    margin-bottom:18px;
-}
-
-.hero-intro p{
-    max-width:470px;
-    font-size:14px;
-    line-height:1.8;
-    color:#F0FDFF;
+.hero-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 
 /* =====================================================
-   THREE CIRCLES
+   HERO TOP LABEL
+===================================================== */
+
+.hero-eyebrow{
+    position:relative;
+    z-index:4;
+    font-size:10px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:#CFFAFE;
+    margin-bottom:15px;
+}
+
+
+/* =====================================================
+   HERO NAME
+===================================================== */
+
+.hero-name{
+    position:relative;
+    z-index:4;
+    font-size:39px;
+    line-height:1.03;
+    font-weight:500;
+    letter-spacing:-1px;
+}
+
+
+/* =====================================================
+   THREE ICON COLUMNS
 ===================================================== */
 
 .hero-navigation{
     position:absolute;
     left:6%;
     right:6%;
-    top:52%;
+    top:51%;
     transform:translateY(-50%);
     z-index:5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:55px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:42px;
+
+    align-items:start;
+    text-align:center;
 }
 
 
-/* individual circle link */
+/* =====================================================
+   INDIVIDUAL NAVIGATION ITEM
+===================================================== */
 
 .hero-circle-link{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
-    gap:14px;
-    cursor:pointer;
     color:#FFFFFF;
+    cursor:pointer;
     transition:transform 0.3s ease;
 }
 
 .hero-circle-link:hover{
-    transform:translateY(-7px);
-}
-
-
-/* circle */
-
-.hero-circle{
-    width:116px;
-    height:116px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,0.75);
-    background:rgba(255,255,255,0.08);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.hero-circle-link:hover .hero-circle{
-    background:#FFFFFF;
-    border-color:#FFFFFF;
-    color:#0891B2;
-    transform:scale(1.04);
-}
-
-.hero-circle-number{
-    font-size:11px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.hero-circle-title{
-    font-size:12px;
-    font-weight:500;
-    letter-spacing:0.3px;
-    white-space:nowrap;
+    transform:translateY(-5px);
 }
 
 
 /* =====================================================
-   SMALL SLIDESHOW INDICATOR
+   WHITE ICON CIRCLE
+===================================================== */
+
+.hero-circle{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+
+    background:#FFFFFF;
+    border:2px solid #FFFFFF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#0891B2;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-circle-link:hover .hero-circle{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+
+/* =====================================================
+   ICONS
+===================================================== */
+
+.hero-icon{
+    width:38px;
+    height:38px;
+    position:relative;
+}
+
+
+/* ABOUT ICON */
+
+.icon-about::before{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:13px;
+    border:2px solid #0891B2;
+    border-radius:50%;
+    top:2px;
+    left:11px;
+}
+
+.icon-about::after{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:13px;
+    border:2px solid #0891B2;
+    border-bottom:0;
+    border-radius:18px 18px 0 0;
+    bottom:2px;
+    left:5px;
+}
+
+
+/* CONSULTATION ICON */
+
+.icon-consultation::before{
+    content:"";
+    position:absolute;
+    width:27px;
+    height:21px;
+    border:2px solid #0891B2;
+    border-radius:12px;
+    top:4px;
+    left:5px;
+}
+
+.icon-consultation::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-left:2px solid #0891B2;
+    border-bottom:2px solid #0891B2;
+    transform:skew(-25deg);
+    left:8px;
+    bottom:3px;
+}
+
+
+/* WRITING ICON */
+
+.icon-writing::before{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:31px;
+    border:2px solid #0891B2;
+    border-radius:2px;
+    left:5px;
+    top:2px;
+}
+
+.icon-writing::after{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:2px;
+    background:#0891B2;
+    left:11px;
+    top:12px;
+    box-shadow:
+        0 7px 0 #0891B2,
+        0 14px 0 #0891B2;
+}
+
+
+/* =====================================================
+   CIRCLE TITLES
+===================================================== */
+
+.hero-circle-title{
+    margin-top:15px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    color:#FFFFFF;
+}
+
+
+/* =====================================================
+   FIVE-LINE TEXT UNDER EACH CIRCLE
+===================================================== */
+
+.hero-circle-text{
+    width:145px;
+    margin-top:11px;
+
+    font-size:10.5px;
+    line-height:1.65;
+
+    font-weight:300;
+    color:#E8FCFF;
+}
+
+
+/* =====================================================
+   SLIDE INDICATOR
 ===================================================== */
 
 .hero-slide-info{
     position:absolute;
     left:6%;
-    bottom:35px;
+    bottom:30px;
     z-index:5;
+
     display:flex;
     align-items:center;
     gap:15px;
@@ -646,20 +780,22 @@ footer p{
     }
 
     .hero-navigation{
-        gap:25px;
+        gap:22px;
     }
 
     .hero-circle{
-        width:95px;
-        height:95px;
+        width:90px;
+        height:90px;
     }
 
-    .hero-circle-title{
-        font-size:11px;
+    .hero-circle-text{
+        width:120px;
+        font-size:9.5px;
     }
 
-    .hero-intro h1{
-        font-size:36px;
+    .hero-art{
+        width:145px;
+        height:100px;
     }
 
     .writing-grid{
@@ -700,9 +836,9 @@ footer p{
 
     .hero-blue{
         width:100%;
-        height:570px;
-        min-height:570px;
-        padding:45px 7%;
+        height:620px;
+        min-height:620px;
+        padding:40px 7%;
     }
 
 
@@ -713,34 +849,47 @@ footer p{
     }
 
 
-    .hero-intro{
-        max-width:100%;
+    .hero-art{
+        top:35px;
+        right:7%;
+        width:145px;
+        height:100px;
     }
 
-    .hero-intro h1{
-        font-size:38px;
+
+    .hero-name{
+        font-size:35px;
     }
 
 
     .hero-navigation{
         left:5%;
         right:5%;
-        top:55%;
-        gap:18px;
+        top:54%;
+        gap:15px;
     }
+
 
     .hero-circle{
-        width:92px;
-        height:92px;
+        width:88px;
+        height:88px;
     }
 
+
+    .hero-circle-text{
+        width:115px;
+        font-size:9px;
+        line-height:1.6;
+    }
+
+
     .hero-circle-title{
-        font-size:10px;
+        font-size:11px;
     }
 
 
     .hero-slide-info{
-        bottom:28px;
+        bottom:25px;
     }
 
 
@@ -797,33 +946,51 @@ footer p{
 
 
     .hero-blue{
-        height:600px;
-        min-height:600px;
+        height:650px;
+        min-height:650px;
     }
 
 
-    .hero-intro h1{
-        font-size:34px;
+    .hero-art{
+        position:absolute;
+        top:32px;
+        right:7%;
+        width:120px;
+        height:82px;
+    }
+
+
+    .hero-name{
+        font-size:31px;
     }
 
 
     .hero-navigation{
-        gap:8px;
-        top:56%;
+        top:54%;
+        gap:5px;
     }
 
 
     .hero-circle{
-        width:82px;
-        height:82px;
+        width:76px;
+        height:76px;
     }
 
-    .hero-circle-number{
-        font-size:9px;
+
+    .hero-icon{
+        transform:scale(0.8);
     }
+
 
     .hero-circle-title{
         font-size:9px;
+    }
+
+
+    .hero-circle-text{
+        width:100px;
+        font-size:8.5px;
+        line-height:1.55;
     }
 
 
@@ -844,31 +1011,6 @@ footer p{
         gap:25px;
     }
 
-}
-
-
-/* =====================================================
-   SLIDESHOW ANIMATION
-===================================================== */
-
-@keyframes heroPulse{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.025);
-    }
-
-    100%{
-        transform:scale(1);
-    }
-
-}
-
-.hero-blue{
-    animation:heroPulse 10s ease-in-out infinite;
 }
 
 </style>
@@ -901,7 +1043,9 @@ footer p{
 
         <a href="#art-psychology">Art &amp; Psychology</a>
 
-        <a href="#contact" class="contact-link">Contact</a>
+        <a href="#contact" class="contact-link">
+            Contact
+        </a>
 
     </nav>
 
@@ -923,41 +1067,56 @@ footer p{
     <div class="hero-blue">
 
 
-        <!-- INTRO TEXT -->
+        <!-- YOUR SECOND IMAGE
+             Upload as:
+             images/hero-art.jpg
+        -->
 
-        <div class="hero-intro">
+        <div class="hero-art">
 
-            <div class="hero-eyebrow">
-                Psychology · Visual Culture
-            </div>
-
-            <h1>
-                Bita<br>
-                Negahdar
-            </h1>
-
-            <p>
-                Psychology trainee exploring psychological processes, visual culture, and human experience.
-            </p>
+            <img
+                src="images/hero-art.jpg"
+                alt="Art and Psychology"
+            >
 
         </div>
 
 
 
+        <!-- SMALL LABEL -->
+
+        <div class="hero-eyebrow">
+            Psychology · Visual Culture
+        </div>
+
+
+
+        <!-- NAME -->
+
+        <div class="hero-name">
+            Bita<br>
+            Negahdar
+        </div>
+
+
+
         <!-- =================================================
-             THREE HORIZONTAL CIRCLES
+             THREE ICONIC CIRCLES
         ================================================== -->
 
         <div class="hero-navigation">
 
 
-            <a href="about.html" class="hero-circle-link">
+            <!-- ABOUT -->
+
+            <a
+                href="about.html"
+                class="hero-circle-link"
+            >
 
                 <div class="hero-circle">
 
-                    <span class="hero-circle-number">
-                        01
-                    </span>
+                    <div class="hero-icon icon-about"></div>
 
                 </div>
 
@@ -965,17 +1124,24 @@ footer p{
                     About Me
                 </div>
 
+                <div class="hero-circle-text">
+                    Psychology trainee exploring psychological processes, visual culture, and human experience.
+                </div>
+
             </a>
 
 
 
-            <a href="#contact" class="hero-circle-link">
+            <!-- CONSULTATION -->
+
+            <a
+                href="#contact"
+                class="hero-circle-link"
+            >
 
                 <div class="hero-circle">
 
-                    <span class="hero-circle-number">
-                        02
-                    </span>
+                    <div class="hero-icon icon-consultation"></div>
 
                 </div>
 
@@ -983,22 +1149,33 @@ footer p{
                     Consultation
                 </div>
 
+                <div class="hero-circle-text">
+                    Psychology-oriented consultation focused on understanding experience, behavior, and individual meaning.
+                </div>
+
             </a>
 
 
 
-            <a href="writing-4.html" class="hero-circle-link">
+            <!-- LATEST WRITING -->
+
+            <a
+                href="writing-4.html"
+                class="hero-circle-link"
+            >
 
                 <div class="hero-circle">
 
-                    <span class="hero-circle-number">
-                        03
-                    </span>
+                    <div class="hero-icon icon-writing"></div>
 
                 </div>
 
                 <div class="hero-circle-title">
                     Latest Writing
+                </div>
+
+                <div class="hero-circle-text">
+                    Recent reflections on psychology, images, identity, visual culture, and contemporary human experience.
                 </div>
 
             </a>
@@ -1015,7 +1192,7 @@ footer p{
             <div class="hero-slide-line"></div>
 
             <div class="hero-slide-number">
-                01 / 04
+                Psychology
             </div>
 
         </div>
@@ -1075,7 +1252,10 @@ footer p{
 
         <a href="writing-1.html" class="writing-card">
 
-            <img src="images/cover-1.jpeg" alt="Writing 1">
+            <img
+                src="images/cover-1.jpeg"
+                alt="Writing 1"
+            >
 
             <div class="writing-card-overlay">
 
@@ -1091,7 +1271,10 @@ footer p{
 
         <a href="writing-2.html" class="writing-card">
 
-            <img src="images/cover-2.jpeg" alt="Writing 2">
+            <img
+                src="images/cover-2.jpeg"
+                alt="Writing 2"
+            >
 
             <div class="writing-card-overlay">
 
@@ -1107,7 +1290,10 @@ footer p{
 
         <a href="writing-3.html" class="writing-card">
 
-            <img src="images/cover-3.jpeg" alt="Writing 3">
+            <img
+                src="images/cover-3.jpeg"
+                alt="Writing 3"
+            >
 
             <div class="writing-card-overlay">
 
@@ -1123,7 +1309,10 @@ footer p{
 
         <a href="writing-4.html" class="writing-card">
 
-            <img src="images/cover-4.jpg" alt="Writing 4">
+            <img
+                src="images/cover-4.jpg"
+                alt="Writing 4"
+            >
 
             <div class="writing-card-overlay">
 
@@ -1146,7 +1335,10 @@ footer p{
      RESEARCH LIBRARY
 ===================================================== -->
 
-<section class="section research-section" id="research">
+<section
+    class="section research-section"
+    id="research"
+>
 
     <div class="section-header">
 
@@ -1172,7 +1364,10 @@ footer p{
     <div class="research-grid">
 
 
-        <a href="research.html" class="research-card">
+        <a
+            href="research.html"
+            class="research-card"
+        >
 
             <div class="research-image">
 
@@ -1203,7 +1398,10 @@ footer p{
 
 
 
-        <a href="research.html" class="research-card">
+        <a
+            href="research.html"
+            class="research-card"
+        >
 
             <div class="research-image">
 
@@ -1234,7 +1432,10 @@ footer p{
 
 
 
-        <a href="research.html" class="research-card">
+        <a
+            href="research.html"
+            class="research-card"
+        >
 
             <div class="research-image">
 
@@ -1274,7 +1475,10 @@ footer p{
      ART × PSYCHOLOGY
 ===================================================== -->
 
-<section class="section art-section" id="art-psychology">
+<section
+    class="section art-section"
+    id="art-psychology"
+>
 
     <div class="art-block">
 
@@ -1317,7 +1521,10 @@ footer p{
      CONTACT
 ===================================================== -->
 
-<section class="contact-section" id="contact">
+<section
+    class="contact-section"
+    id="contact"
+>
 
     <div class="contact-inner">
 
@@ -1427,15 +1634,30 @@ footer p{
 
     <div class="professional-links">
 
-        <img src="images/apa.png" alt="APA">
+        <img
+            src="images/apa.png"
+            alt="APA"
+        >
 
-        <img src="images/ipa.png" alt="IPA">
+        <img
+            src="images/ipa.png"
+            alt="IPA"
+        >
 
-        <img src="images/pubmed.png" alt="PubMed">
+        <img
+            src="images/pubmed.png"
+            alt="PubMed"
+        >
 
-        <img src="images/scholar.png" alt="Google Scholar">
+        <img
+            src="images/scholar.png"
+            alt="Google Scholar"
+        >
 
-        <img src="images/researchgate.png" alt="ResearchGate">
+        <img
+            src="images/researchgate.png"
+            alt="ResearchGate"
+        >
 
     </div>
 
