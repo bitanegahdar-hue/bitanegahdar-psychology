@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,7 +9,6 @@
 <title>Research Library | Bita Negahdar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 
 <style>
 
@@ -29,12 +27,11 @@ html{
 }
 
 body{
-    margin:0;
-    padding:0;
     background:#FFFFFF;
     color:#252525;
-    font-family:"DM Sans", Arial, sans-serif;
+    font-family:"DM Sans",Arial,sans-serif;
     font-weight:400;
+    line-height:1.7;
 }
 
 a{
@@ -48,76 +45,74 @@ a{
 ===================================================== */
 
 header{
-    width:100% !important;
-    min-height:76px !important;
-    height:76px !important;
-    padding:0 4vw !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-
-    background:#000000 !important;
-    border-bottom:1px solid #000000 !important;
+    width:100%;
+    min-height:76px;
+    height:76px;
+    padding:0 4vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#000000;
+    border-bottom:1px solid #000000;
 }
 
 .logo{
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:20px !important;
-    font-weight:700 !important;
-    letter-spacing:2.4px !important;
-    color:#FFFFFF !important;
-    white-space:nowrap !important;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2.4px;
+    color:#FFFFFF;
+    white-space:nowrap;
 }
 
 nav{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:flex-end !important;
-    gap:10px !important;
-    flex-shrink:0 !important;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    flex-shrink:0;
 }
 
 nav a{
-    display:inline-flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    min-height:38px !important;
-    height:38px !important;
-    padding:7px 10px !important;
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:11px !important;
-    font-weight:600 !important;
-    letter-spacing:1.2px !important;
-    line-height:1 !important;
-    text-transform:uppercase !important;
-    color:#FFFFFF !important;
-    background:transparent !important;
-    border:1px solid transparent !important;
-    white-space:nowrap !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:38px;
+    height:38px;
+    padding:7px 10px;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.2px;
+    line-height:1;
+    text-transform:uppercase;
+    color:#FFFFFF;
+    background:transparent;
+    border:1px solid transparent;
+    white-space:nowrap;
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease !important;
+        border-color .25s ease;
 }
 
 nav a:hover{
-    background:#5A70B5 !important;
-    border-color:#5A70B5 !important;
-    color:#FFFFFF !important;
+    background:#5A70B5;
+    border-color:#5A70B5;
+    color:#FFFFFF;
 }
 
 .contact-btn{
-    padding:9px 16px !important;
-    background:#EEF1F8 !important;
-    border:1px solid #EEF1F8 !important;
-    color:#5A70B5 !important;
+    padding:9px 16px;
+    background:#EEF1F8;
+    border:1px solid #EEF1F8;
+    color:#5A70B5;
 }
 
 .contact-btn:hover{
-    background:#5A70B5 !important;
-    border-color:#5A70B5 !important;
-    color:#FFFFFF !important;
+    background:#5A70B5;
+    border-color:#5A70B5;
+    color:#FFFFFF;
 }
 
 
@@ -126,249 +121,320 @@ nav a:hover{
 ===================================================== */
 
 .page-intro{
-    padding:105px 7% 75px;
-    background:#FFFFFF;
-}
-
-.page-intro-inner{
     max-width:1180px;
     margin:0 auto;
+    padding:105px 5vw 75px;
 }
 
-.eyebrow{
-    font-size:10px;
-    letter-spacing:2.5px;
-    text-transform:uppercase;
+.intro-label{
+    margin-bottom:22px;
     color:#5A70B5;
-    margin-bottom:15px;
-}
-
-.page-title{
-    font-size:52px;
-    line-height:1.05;
-    font-weight:500;
-    letter-spacing:-1.5px;
-    color:#111111;
-    margin-bottom:25px;
-}
-
-.page-description{
-    max-width:760px;
-    font-size:15px;
-    line-height:1.9;
-    color:#626A6D;
-}
-
-
-/* =====================================================
-   CATEGORY NAVIGATION
-===================================================== */
-
-.category-section{
-    padding:0 7% 85px;
-    background:#FFFFFF;
-}
-
-.category-grid{
-    max-width:1180px;
-    margin:0 auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.category-card{
-    min-height:185px;
-    padding:30px;
-
-    background:#EEF1F8;
-    border:1px solid #D9E0EA;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    transition:
-        transform .25s ease,
-        background-color .25s ease,
-        border-color .25s ease;
-}
-
-.category-card:hover{
-    transform:translateY(-4px);
-    background:#FFFFFF;
-    border-color:#5A70B5;
-}
-
-.category-number{
-    font-size:10px;
-    letter-spacing:2px;
-    color:#5A70B5;
-}
-
-.category-card h2{
-    font-size:21px;
-    line-height:1.25;
-    font-weight:500;
-    color:#171717;
-    margin-top:25px;
-}
-
-.category-card p{
-    font-size:11.5px;
-    line-height:1.7;
-    color:#626A6D;
-    margin-top:10px;
-}
-
-
-/* =====================================================
-   RESEARCH CONTENT
-===================================================== */
-
-.library-section{
-    background:#111111;
-    color:#FFFFFF;
-    padding:90px 7% 100px;
-}
-
-.library-inner{
-    max-width:1180px;
-    margin:0 auto;
-}
-
-.library-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:50px;
-    margin-bottom:45px;
-}
-
-.library-label{
-    font-size:10px;
+    font-size:11px;
+    font-weight:700;
     letter-spacing:2.2px;
     text-transform:uppercase;
-    color:#5A70B5;
-    margin-bottom:12px;
 }
 
-.library-title{
-    font-size:36px;
-    line-height:1.15;
-    font-weight:500;
-    color:#FFFFFF;
+.page-intro h1{
+    margin-bottom:25px;
+    color:#171717;
+    font-size:52px;
+    font-weight:600;
+    letter-spacing:-1.8px;
+    line-height:1.08;
 }
 
-.library-description{
-    max-width:430px;
-    font-size:12.5px;
-    line-height:1.8;
-    color:#AAAAAA;
+.page-intro p{
+    max-width:780px;
+    color:#626A6D;
+    font-size:16px;
+    line-height:1.95;
+    text-align:justify;
 }
 
 
 /* =====================================================
-   EMPTY / FUTURE LIBRARY
+   CATEGORY NAV
 ===================================================== */
 
-.library-placeholder{
-    border:1px solid #292929;
-    background:#181818;
-    padding:65px 50px;
+.category-nav{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 5vw 85px;
+}
 
+.category-nav-inner{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid #D9E0EA;
+    border-bottom:1px solid #D9E0EA;
+}
+
+.category-nav a{
+    min-height:90px;
+    padding:18px 17px;
     display:flex;
-    flex-direction:column;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-}
-
-.placeholder-number{
-    font-size:10px;
-    letter-spacing:2px;
     color:#5A70B5;
-    margin-bottom:20px;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.7px;
+    line-height:1.5;
+    text-transform:uppercase;
+    border-right:1px solid #D9E0EA;
+    transition:
+        background-color .25s ease,
+        color .25s ease;
 }
 
-.library-placeholder h2{
-    font-size:27px;
-    font-weight:500;
-    color:#FFFFFF;
-    margin-bottom:16px;
+.category-nav a:last-child{
+    border-right:none;
 }
 
-.library-placeholder p{
-    max-width:620px;
-    font-size:13px;
-    line-height:1.9;
-    color:#999999;
+.category-nav a:hover{
+    background:#EEF1F8;
+    color:#4B61A3;
 }
 
 
 /* =====================================================
-   RESEARCH ENTRY STRUCTURE
+   MAIN CONTENT
 ===================================================== */
 
-.research-entry{
-    margin-top:22px;
-    padding:30px;
+.library{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 5vw 110px;
+}
 
-    background:#181818;
-    border:1px solid #292929;
+.library-section{
+    margin-bottom:105px;
+    scroll-margin-top:35px;
+}
 
+.section-heading{
     display:grid;
-    grid-template-columns:90px 1fr auto;
-    gap:30px;
-    align-items:center;
-
-    transition:border-color .25s ease;
+    grid-template-columns:260px 1fr;
+    gap:60px;
+    padding-bottom:28px;
+    margin-bottom:34px;
+    border-bottom:1px solid #D9E0EA;
 }
 
-.research-entry:hover{
-    border-color:#5A70B5;
-}
-
-.research-entry-number{
-    font-size:11px;
-    letter-spacing:1.5px;
-    color:#5A70B5;
-}
-
-.research-entry-content h3{
-    font-size:19px;
-    font-weight:500;
-    line-height:1.35;
-    color:#FFFFFF;
-    margin-bottom:8px;
-}
-
-.research-entry-content p{
-    font-size:11.5px;
-    line-height:1.7;
-    color:#999999;
-}
-
-.research-entry-link{
-    padding:10px 15px;
-    border:1px solid #3A3A3A;
-    color:#FFFFFF;
-
-    font-size:9px;
+.section-heading h2{
+    color:#171717;
+    font-size:27px;
     font-weight:600;
-    letter-spacing:1.3px;
-    text-transform:uppercase;
+    letter-spacing:-.6px;
+    line-height:1.2;
+}
 
+.section-heading p{
+    max-width:690px;
+    color:#626A6D;
+    font-size:14px;
+    line-height:1.85;
+    text-align:justify;
+}
+
+
+/* =====================================================
+   RESEARCH GRID
+===================================================== */
+
+.research-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.research-card{
+    position:relative;
+    padding:31px 32px 29px;
+    background:#F7F8FA;
+    border:1px solid #E1E5EC;
     transition:
-        background-color .25s ease,
+        transform .25s ease,
+        border-color .25s ease,
+        background-color .25s ease;
+}
+
+.research-card:hover{
+    transform:translateY(-3px);
+    background:#FFFFFF;
+    border-color:#BFC9DC;
+}
+
+.research-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:3px;
+    height:100%;
+    background:#5A70B5;
+}
+
+.card-type{
+    margin-bottom:13px;
+    color:#5A70B5;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+}
+
+.research-card h3{
+    margin-bottom:14px;
+    color:#202020;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+}
+
+.authors{
+    margin-bottom:15px;
+    color:#626A6D;
+    font-size:12px;
+    line-height:1.65;
+}
+
+.description{
+    margin-bottom:20px;
+    color:#555C60;
+    font-size:13px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.source-link{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    color:#5A70B5;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-bottom:1px solid transparent;
+    transition:
+        color .2s ease,
+        border-color .2s ease;
+}
+
+.source-link:hover{
+    color:#4B61A3;
+    border-color:#4B61A3;
+}
+
+.source-link::after{
+    content:"↗";
+    font-size:12px;
+}
+
+
+/* =====================================================
+   BOOKS
+===================================================== */
+
+.books-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.book-card{
+    padding:32px;
+    background:#FFFFFF;
+    border:1px solid #D9E0EA;
+    min-height:275px;
+    display:flex;
+    flex-direction:column;
+    transition:
+        transform .25s ease,
         border-color .25s ease;
 }
 
-.research-entry-link:hover{
-    background:#5A70B5;
-    border-color:#5A70B5;
+.book-card:hover{
+    transform:translateY(-3px);
+    border-color:#AEBBD4;
+}
+
+.book-card .card-type{
+    margin-bottom:18px;
+}
+
+.book-card h3{
+    margin-bottom:14px;
+    color:#202020;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.45;
+}
+
+.book-author{
+    margin-bottom:17px;
+    color:#5A70B5;
+    font-size:12px;
+    font-weight:600;
+}
+
+.book-description{
+    margin-bottom:24px;
+    color:#626A6D;
+    font-size:12.5px;
+    line-height:1.85;
+    text-align:justify;
+}
+
+.book-card .source-link{
+    margin-top:auto;
+}
+
+
+/* =====================================================
+   THEORY BLOCK
+===================================================== */
+
+.theory-section{
+    padding-top:5px;
+}
+
+.theory-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid #D9E0EA;
+}
+
+.theory-item{
+    padding:34px 36px;
+    min-height:245px;
+    background:#F7F8FA;
+}
+
+.theory-item + .theory-item{
+    border-left:1px solid #D9E0EA;
+}
+
+.theory-item h3{
+    margin-bottom:16px;
+    color:#202020;
+    font-size:20px;
+    font-weight:600;
+}
+
+.theory-item p{
+    color:#626A6D;
+    font-size:13px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.theory-item .source-link{
+    margin-top:20px;
 }
 
 
@@ -377,16 +443,82 @@ nav a:hover{
 ===================================================== */
 
 footer{
-    background:#111111;
-    color:#777777;
-    text-align:center;
-    padding:25px 20px 35px;
-    border-top:1px solid #222222;
+    background:#000000;
+    color:#FFFFFF;
+    padding:70px 5vw 40px;
 }
 
-footer p{
-    font-size:11px;
-    letter-spacing:.5px;
+.footer-inner{
+    max-width:1180px;
+    margin:0 auto;
+}
+
+.footer-top{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:70px;
+    padding-bottom:55px;
+    border-bottom:1px solid #292929;
+}
+
+.footer-brand{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2.3px;
+}
+
+.footer-description{
+    max-width:360px;
+    margin-top:17px;
+    color:#A8A8A8;
+    font-size:12px;
+    line-height:1.85;
+}
+
+.footer-column h4{
+    margin-bottom:17px;
+    color:#FFFFFF;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+}
+
+.footer-column a{
+    display:block;
+    width:max-content;
+    margin-bottom:9px;
+    color:#A8A8A8;
+    font-size:12px;
+    transition:color .2s ease;
+}
+
+.footer-column a:hover{
+    color:#FFFFFF;
+}
+
+.footer-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:28px;
+    color:#777777;
+    font-size:10px;
+    letter-spacing:.4px;
+}
+
+.footer-social{
+    display:flex;
+    gap:20px;
+}
+
+.footer-social a{
+    color:#A8A8A8;
+    transition:color .2s ease;
+}
+
+.footer-social a:hover{
+    color:#FFFFFF;
 }
 
 
@@ -394,149 +526,224 @@ footer p{
    RESPONSIVE
 ===================================================== */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
     .page-intro{
-        padding:85px 6% 60px;
+        padding-top:80px;
     }
 
-    .page-title{
-        font-size:44px;
+    .page-intro h1{
+        font-size:43px;
     }
 
-    .category-section{
-        padding:0 6% 70px;
+    .category-nav-inner{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .category-grid{
+    .category-nav a:nth-child(3){
+        border-right:none;
+    }
+
+    .category-nav a:nth-child(-n+3){
+        border-bottom:1px solid #D9E0EA;
+    }
+
+    .section-heading{
         grid-template-columns:1fr;
+        gap:18px;
     }
 
-    .category-card{
-        min-height:155px;
+    .books-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .library-section{
-        padding:75px 6% 85px;
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+        gap:45px;
     }
 
-    .library-header{
-        display:block;
+    .footer-brand-area{
+        grid-column:1 / -1;
     }
-
-    .library-description{
-        margin-top:20px;
-    }
-
-    .research-entry{
-        grid-template-columns:65px 1fr;
-    }
-
-    .research-entry-link{
-        grid-column:2;
-        width:max-content;
-    }
-
 }
 
 
-@media(max-width:800px){
+@media(max-width:700px){
 
     header{
-        min-height:72px !important;
-        height:auto !important;
-        padding:14px 5vw !important;
-        gap:15px !important;
-        background:#000000 !important;
+        min-height:72px;
+        height:auto;
+        padding:14px 5vw;
+        gap:15px;
+        background:#000000;
     }
 
     .logo{
-        font-size:14px !important;
-        letter-spacing:1.8px !important;
-        color:#FFFFFF !important;
+        font-size:14px;
+        letter-spacing:1.8px;
     }
 
     nav{
-        gap:4px !important;
-        flex-wrap:wrap !important;
-        justify-content:flex-end !important;
+        gap:4px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
     }
 
     nav a{
-        min-height:30px !important;
-        height:30px !important;
-        padding:5px 5px !important;
-        font-size:7px !important;
-        letter-spacing:.8px !important;
-        color:#FFFFFF !important;
+        min-height:30px;
+        height:30px;
+        padding:5px 5px;
+        font-size:7px;
+        letter-spacing:.8px;
     }
 
     .contact-btn{
-        padding:7px 9px !important;
+        padding:7px 9px;
     }
-
-}
-
-
-@media(max-width:600px){
 
     .page-intro{
-        padding:70px 6% 50px;
+        padding:65px 6vw 55px;
     }
 
-    .page-title{
-        font-size:37px;
+    .intro-label{
+        margin-bottom:16px;
+        font-size:9px;
+    }
+
+    .page-intro h1{
+        margin-bottom:20px;
+        font-size:36px;
         letter-spacing:-1px;
     }
 
-    .page-description{
+    .page-intro p{
         font-size:13px;
         line-height:1.85;
+        text-align:right;
     }
 
-    .category-section{
-        padding:0 6% 60px;
+    .category-nav{
+        padding:0 6vw 60px;
     }
 
-    .category-card{
-        padding:25px;
-        min-height:145px;
+    .category-nav-inner{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .category-card h2{
-        font-size:19px;
+    .category-nav a{
+        min-height:75px;
+        font-size:9px;
+        padding:14px 9px;
+    }
+
+    .category-nav a:nth-child(2n){
+        border-right:none;
+    }
+
+    .category-nav a:nth-child(-n+4){
+        border-bottom:1px solid #D9E0EA;
+    }
+
+    .library{
+        padding:0 6vw 75px;
     }
 
     .library-section{
-        padding:65px 6% 75px;
+        margin-bottom:75px;
     }
 
-    .library-title{
-        font-size:30px;
+    .section-heading{
+        gap:12px;
+        margin-bottom:25px;
+        padding-bottom:22px;
     }
 
-    .library-placeholder{
-        padding:45px 25px;
-    }
-
-    .library-placeholder h2{
+    .section-heading h2{
         font-size:23px;
     }
 
-    .library-placeholder p{
+    .section-heading p{
         font-size:12px;
+        line-height:1.8;
+        text-align:right;
     }
 
-    .research-entry{
+    .research-grid{
         grid-template-columns:1fr;
-        gap:18px;
-        padding:25px;
+        gap:14px;
     }
 
-    .research-entry-link{
+    .research-card{
+        padding:26px 25px 25px;
+    }
+
+    .research-card h3{
+        font-size:16px;
+    }
+
+    .description{
+        font-size:12px;
+        line-height:1.85;
+        text-align:right;
+    }
+
+    .books-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .book-card{
+        min-height:auto;
+        padding:27px 25px;
+    }
+
+    .book-card h3{
+        font-size:16px;
+    }
+
+    .book-description{
+        font-size:12px;
+        text-align:right;
+    }
+
+    .theory-box{
+        grid-template-columns:1fr;
+    }
+
+    .theory-item{
+        min-height:auto;
+        padding:28px 25px;
+    }
+
+    .theory-item + .theory-item{
+        border-left:none;
+        border-top:1px solid #D9E0EA;
+    }
+
+    .theory-item p{
+        font-size:12px;
+        text-align:right;
+    }
+
+    footer{
+        padding:55px 6vw 32px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .footer-brand-area{
         grid-column:auto;
     }
 
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:17px;
+        line-height:1.7;
+    }
 }
 
 </style>
@@ -553,34 +760,31 @@ footer p{
 
 <header>
 
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
-
+    <div class="logo">BITA NEGAHDAR</div>
 
     <nav>
 
-        <a href="index.html">
+        <a href="https://bitanegahdar.ir/index.html">
             Home
         </a>
 
-        <a href="about.html">
+        <a href="https://bitanegahdar.ir/about.html">
             About
         </a>
 
-        <a href="writing.html">
+        <a href="https://bitanegahdar.ir/writing.html">
             Writing
         </a>
 
-        <a href="index.html#research">
+        <a href="https://bitanegahdar.ir/index.html#research">
             Research
         </a>
 
-        <a href="index.html#art-psychology">
+        <a href="https://bitanegahdar.ir/index.html#art-psychology">
             Art &amp; Psychology
         </a>
 
-        <a href="index.html#contact" class="contact-btn">
+        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
             Contact
         </a>
 
@@ -591,158 +795,319 @@ footer p{
 
 
 <!-- =====================================================
-     PAGE INTRO
+     INTRO
 ===================================================== -->
 
 <section class="page-intro">
 
-    <div class="page-intro-inner">
+    <div class="intro-label">
+        Research Library
+    </div>
 
-        <div class="eyebrow">
-            Research
-        </div>
+    <h1>
+        Research Library
+    </h1>
 
-        <h1 class="page-title">
-            Research Library
-        </h1>
+    <p>
+        A curated collection of research articles, books, and theoretical
+        sources exploring psychology through drawing, the body, visual
+        representation, identity, development, clinical practice, and
+        cultural experience.
+    </p>
 
-        <p class="page-description">
-            A curated library of contemporary psychological research and academic resources across psychology, art, visual culture, and human experience.
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORY NAVIGATION
+===================================================== -->
+
+<section class="category-nav">
+
+    <div class="category-nav-inner">
+
+        <a href="#children-drawing">
+            Children’s Drawings
+        </a>
+
+        <a href="#body-image">
+            Body, Image &amp; Identity
+        </a>
+
+        <a href="#clinical">
+            Clinical Perspectives
+        </a>
+
+        <a href="#art-image">
+            Art, Image &amp; Psychology
+        </a>
+
+        <a href="#theory">
+            Theory &amp; Critical Perspectives
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIBRARY
+===================================================== -->
+
+<main class="library">
+
+
+
+<!-- =====================================================
+     CHILDREN'S DRAWINGS
+===================================================== -->
+
+<section class="library-section" id="children-drawing">
+
+    <div class="section-heading">
+
+        <h2>
+            Children’s Drawings
+        </h2>
+
+        <p>
+            Research examining children’s drawings as developmental,
+            communicative, representational, educational, and potentially
+            clinical material. The emphasis here is on interpretation within
+            context rather than treating isolated visual features as
+            diagnostic signs.
         </p>
 
     </div>
 
-</section>
+
+    <div class="research-grid">
 
 
+        <article class="research-card">
 
-<!-- =====================================================
-     RESEARCH CATEGORIES
-===================================================== -->
-
-<section class="category-section">
-
-    <div class="category-grid">
-
-
-        <a href="#psychology" class="category-card">
-
-            <div class="category-number">
-                01
+            <div class="card-type">
+                Research Article
             </div>
 
-            <div>
+            <h3>
+                Children’s Drawings
+            </h3>
 
-                <h2>
-                    Psychology
-                </h2>
-
-                <p>
-                    Contemporary psychological research, theories, methods, and empirical studies.
-                </p>
-
+            <div class="authors">
+                Ann W. Burgess &amp; Carol R. Hartman · 1993
             </div>
 
-        </a>
-
-
-
-        <a href="#art-psychology" class="category-card">
-
-            <div class="category-number">
-                02
-            </div>
-
-            <div>
-
-                <h2>
-                    Art &amp; Psychology
-                </h2>
-
-                <p>
-                    Research at the intersection of visual art, psychological processes, perception, identity, and experience.
-                </p>
-
-            </div>
-
-        </a>
-
-
-
-        <a href="#visual-culture" class="category-card">
-
-            <div class="category-number">
-                03
-            </div>
-
-            <div>
-
-                <h2>
-                    Visual Culture
-                </h2>
-
-                <p>
-                    Research concerning images, bodies, representation, visual experience, and their psychological dimensions.
-                </p>
-
-            </div>
-
-        </a>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PSYCHOLOGY
-===================================================== -->
-
-<section
-    class="library-section"
-    id="psychology"
->
-
-    <div class="library-inner">
-
-        <div class="library-header">
-
-            <div>
-
-                <div class="library-label">
-                    01 · Psychology
-                </div>
-
-                <h2 class="library-title">
-                    Psychology Research
-                </h2>
-
-            </div>
-
-            <div class="library-description">
-                Selected empirical studies, theoretical papers, reviews, and academic resources in contemporary psychology.
-            </div>
-
-        </div>
-
-
-        <div class="library-placeholder">
-
-            <div class="placeholder-number">
-                RESEARCH COLLECTION
-            </div>
-
-            <h2>
-                Research entries will be added here.
-            </h2>
-
-            <p>
-                This section will contain selected academic papers and research resources, organized by topic and accompanied by publication details, brief notes, and links to the original sources.
+            <p class="description">
+                An early clinical discussion of children’s drawings as an
+                associative tool in interviews concerning traumatic memories,
+                with attention to visual, motoric, auditory, interpersonal,
+                and verbal dimensions.
             </p>
 
-        </div>
+            <a class="source-link"
+               href="https://doi.org/10.1016/0145-2134(93)90015-W"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Research Article
+            </div>
+
+            <h3>
+                Developing Drawing Skill: Exploring the Role of Parental Support and Cultural Learning
+            </h3>
+
+            <div class="authors">
+                Larissa Mendoza Straffon, Brenda de Groot, Naike D. Gorr,
+                Yung-Ting Tsou &amp; Mariska E. Kret · 2024
+            </div>
+
+            <p class="description">
+                A developmental study of drawing skill in 68 parent–child
+                dyads aged approximately 3–7 years. The study distinguishes
+                different forms of parental support and examines their
+                relationship with children’s visuomotor drawing skill.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.cogdev.2024.101444"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Research Article
+            </div>
+
+            <h3>
+                Signs, Symbols and Schemas: Understanding Meaning in a Child’s Drawings
+            </h3>
+
+            <div class="authors">
+                Jo Deguara &amp; Cathy Nutbrown · 2018
+            </div>
+
+            <p class="description">
+                An examination of schematic forms, signs, symbols, and
+                meaning-making through the drawings of a four-year-old child,
+                situated within research on graphic representation.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1080/09669760.2017.1369398"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Recent Research
+            </div>
+
+            <h3>
+                Indicators in Children’s Drawings as a Tool for Identifying Sexual Abuse
+            </h3>
+
+            <div class="authors">
+                Azam Pilevari, Mobina Zandieh, Maede Baniamerian &amp;
+                Zahra Taghipour · 2026
+            </div>
+
+            <p class="description">
+                A study of family drawings by 28 children with confirmed
+                histories of sexual abuse in Iran. The authors examine recurring
+                visual and emotional indicators while emphasizing that such
+                features are not diagnostic markers and must be interpreted
+                alongside narrative and case context.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.actpsy.2026.107524"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Developmental Research
+            </div>
+
+            <h3>
+                What’s in the Body? Children’s Annotated Drawings
+            </h3>
+
+            <div class="authors">
+                Johanna Andersson, Ragnhild Löfgren &amp; Lena A. E. Tibell · 2019
+            </div>
+
+            <p class="description">
+                A study of children’s representations of internal body
+                structures using drawings and explanations, examining how
+                ideas about the body differ across childhood.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1080/00219266.2019.1569082"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Computational Research
+            </div>
+
+            <h3>
+                Using Deep Learning Predictions to Study the Development of Drawing Behaviour in Children
+            </h3>
+
+            <div class="authors">
+                Benjamin Beltzung, Marie Pelé, Lison Martinet, Elliot Maitre,
+                Jimmy Falck &amp; Cédric Sueur · 2025
+            </div>
+
+            <p class="description">
+                A computational approach using convolutional neural networks
+                to classify children’s drawings across age groups and examine
+                drawing development through machine-learning methods.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.displa.2025.103166"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Clinical Research
+            </div>
+
+            <h3>
+                AI-Assisted Drawing Therapy for Children with ADHD: A Randomised Controlled Trial
+            </h3>
+
+            <div class="authors">
+                Jing Xu et al. · 2025
+            </div>
+
+            <p class="description">
+                A randomized controlled trial comparing AI-assisted drawing
+                therapy with traditional drawing therapy in 41 children aged
+                7–10 years with ADHD.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.ctim.2025.103262"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
 
     </div>
 
@@ -751,52 +1116,306 @@ footer p{
 
 
 <!-- =====================================================
-     ART & PSYCHOLOGY
+     BODY IMAGE & IDENTITY
 ===================================================== -->
 
-<section
-    class="library-section"
-    id="art-psychology"
->
+<section class="library-section" id="body-image">
 
-    <div class="library-inner">
+    <div class="section-heading">
 
-        <div class="library-header">
+        <h2>
+            Body, Image &amp; Identity
+        </h2>
 
-            <div>
+        <p>
+            Research on body modification, piercing, body image, self-
+            objectification, appearance concerns, social acceptance, and the
+            psychological meanings attached to the modified body.
+        </p>
 
-                <div class="library-label">
-                    02 · Art &amp; Psychology
-                </div>
+    </div>
 
-                <h2 class="library-title">
-                    Art &amp; Psychological Research
-                </h2>
 
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Body Modification
             </div>
 
-            <div class="library-description">
-                Research examining relationships between visual art, perception, identity, emotion, representation, and psychological experience.
+            <h3>
+                Modified Body – Symbol of Risk or Resources?
+            </h3>
+
+            <div class="authors">
+                Mateusz J. Lammek · 2022
             </div>
 
-        </div>
-
-
-        <div class="library-placeholder">
-
-            <div class="placeholder-number">
-                RESEARCH COLLECTION
-            </div>
-
-            <h2>
-                Research entries will be added here.
-            </h2>
-
-            <p>
-                This collection will bring together relevant academic literature on the psychological dimensions of visual art and image-based experience.
+            <p class="description">
+                A psychological examination of people with tattoos and/or
+                piercings, considering self-esteem, life satisfaction, and
+                subjective experiences of mental health.
             </p>
 
-        </div>
+            <a class="source-link"
+               href="https://doi.org/10.12740/PP/131686"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Body Modification
+            </div>
+
+            <h3>
+                Body Modification and Self-Destructive Behavior in Adolescents: Psychological Manifestations
+            </h3>
+
+            <div class="authors">
+                Natalia Maksimova et al. · 2019
+            </div>
+
+            <p class="description">
+                A study of 86 adolescents aged 14–18 examining psychological
+                manifestations associated with body modification and
+                self-destructive behaviour.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.2991/icpcs-19.2019.92"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Piercing &amp; Motivation
+            </div>
+
+            <h3>
+                Body Piercing Trends and Motivations Among Students at the University of Cape Coast, Ghana
+            </h3>
+
+            <div class="authors">
+                Cosmos Amankwah &amp; Osei Akoto Kwarteng · 2024
+            </div>
+
+            <p class="description">
+                Research examining piercing practices and motivations among
+                university students in Ghana within a broader cultural and
+                social context.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.31248/IJAH2024.174"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Adolescent Research
+            </div>
+
+            <h3>
+                Body Piercing and Adolescent Risk-Taking: Association or Expression?
+            </h3>
+
+            <div class="authors">
+                Meltem Ileri et al. · 2026
+            </div>
+
+            <p class="description">
+                A cross-sectional study of 141 adolescents examining piercing,
+                risk-taking behaviours, mental health, and knowledge of piercing
+                practices and complications.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1007/s00431-026-07115-x"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Clinical Research
+            </div>
+
+            <h3>
+                Clinical and Psychological Aspects of Piercing
+            </h3>
+
+            <div class="authors">
+                Justyna Putek &amp; Jacek C. Szepietowski · 2024
+            </div>
+
+            <p class="description">
+                A cross-sectional study examining body image perception,
+                appearance anxiety, self-esteem, and symptoms related to body
+                dysmorphic disorder among people with piercings.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.3390/cosmetics11060207"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Body &amp; Social Context
+            </div>
+
+            <h3>
+                Social Acceptance of Body Piercing
+            </h3>
+
+            <div class="authors">
+                Elżbieta Rębiś &amp; Daria Rębiś · 2025
+            </div>
+
+            <p class="description">
+                Research focused on social acceptance of body piercing and the
+                role of social attitudes in decisions surrounding visible body
+                modification.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.5114/ms.2025.154757"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Body Image
+            </div>
+
+            <h3>
+                Self-Objectification, Body Uneasiness, and Body Investment in Individuals Undergoing Body Modification and Plastic Surgery
+            </h3>
+
+            <div class="authors">
+                Marzieh Abdoli, Fabio Carraturo, Dua Fatima Afzaal,
+                Paolo Cotrufo &amp; Stefania Cella · 2025
+            </div>
+
+            <p class="description">
+                Research examining self-objectification, body uneasiness,
+                body investment, and depersonalization among adults who had
+                altered their bodies.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1007/s40519-025-01795-4"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Health &amp; Body Art
+            </div>
+
+            <h3>
+                Body Piercing and Tattoos: A Survey on Young Adults’ Knowledge of the Risks and Practices in Body Art
+            </h3>
+
+            <div class="authors">
+                Alessia Quaranta et al. · 2011
+            </div>
+
+            <p class="description">
+                A survey of young adults examining knowledge, practices, and
+                perceived risks associated with tattooing and body piercing.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1186/1471-2458-11-774"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Review
+            </div>
+
+            <h3>
+                Deviance as an Historical Artefact: A Scoping Review of Psychological Studies of Body Modification
+            </h3>
+
+            <div class="authors">
+                Rebecca Owens, Steven J. Filoromo, Lauren A. Landgraf,
+                Christopher D. Lynn &amp; Michael R. A. Smetana · 2023
+            </div>
+
+            <p class="description">
+                A scoping review examining how psychological research has
+                historically framed body modification through concepts such
+                as deviance, risk, identity, and normalisation.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1057/s41599-023-01511-6"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
 
     </div>
 
@@ -805,56 +1424,335 @@ footer p{
 
 
 <!-- =====================================================
-     VISUAL CULTURE
+     CLINICAL PERSPECTIVES
 ===================================================== -->
 
-<section
-    class="library-section"
-    id="visual-culture"
->
+<section class="library-section" id="clinical">
 
-    <div class="library-inner">
+    <div class="section-heading">
 
-        <div class="library-header">
+        <h2>
+            Clinical Perspectives
+        </h2>
 
-            <div>
+        <p>
+            Sources connecting visual or bodily practices with clinical
+            psychology, therapy, trauma, psychological assessment, and the
+            therapeutic relationship.
+        </p>
 
-                <div class="library-label">
-                    03 · Visual Culture
-                </div>
+    </div>
 
-                <h2 class="library-title">
-                    Image, Body &amp; Visual Culture
-                </h2>
 
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Art Therapy
             </div>
 
-            <div class="library-description">
-                Research on images, bodies, representation, visual culture, identity, and the psychological and social dimensions of looking.
+            <h3>
+                Metaphor in Art Therapy: Its Use with Vulnerable Children
+            </h3>
+
+            <div class="authors">
+                Marián López Fernández Cao &amp; Ana Serrano Navarro · 2025
             </div>
 
-        </div>
-
-
-        <div class="library-placeholder">
-
-            <div class="placeholder-number">
-                RESEARCH COLLECTION
-            </div>
-
-            <h2>
-                Research entries will be added here.
-            </h2>
-
-            <p>
-                This collection will focus on research concerning visual representation, the body, identity, perception, and contemporary visual experience.
+            <p class="description">
+                Examines metaphorical expression in art therapy and its role
+                in helping vulnerable children articulate experiences that may
+                be difficult to express verbally.
             </p>
 
-        </div>
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.aip.2025.102376"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Psychology Profession
+            </div>
+
+            <h3>
+                The Darker Side: Personality and Motivations of Clinical and Counselling Psychologists
+            </h3>
+
+            <div class="authors">
+                Greta Darmanin Kissaun &amp; Gottfried Catania · 2024
+            </div>
+
+            <p class="description">
+                An exploratory study examining personality traits and
+                motivations of Maltese clinical and counselling psychologists
+                from the perspectives of colleagues, using the repertory grid
+                technique.
+            </p>
+
+            <a class="source-link"
+               href="https://www.um.edu.mt/library/oar/handle/123456789/136208"
+               target="_blank"
+               rel="noopener">
+                University Repository
+            </a>
+
+        </article>
 
     </div>
 
 </section>
+
+
+
+<!-- =====================================================
+     ART IMAGE & PSYCHOLOGY
+===================================================== -->
+
+<section class="library-section" id="art-image">
+
+    <div class="section-heading">
+
+        <h2>
+            Art, Image &amp; Psychology
+        </h2>
+
+        <p>
+            Research situated at the intersection of visual representation,
+            body image, digital image-making, art practice, and psychological
+            experience.
+        </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Systematic Review
+            </div>
+
+            <h3>
+                The Associations Between Photo-Editing and Body Concerns Among Females
+            </h3>
+
+            <div class="authors">
+                Orla McGovern, Rebecca Collins &amp; Simon Dunne · 2022
+            </div>
+
+            <p class="description">
+                A systematic review of 22 empirical studies examining
+                associations between photo-editing and body image, body
+                dissatisfaction, and body modification among female social
+                media users.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.bodyim.2022.10.013"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Development &amp; Visual Representation
+            </div>
+
+            <h3>
+                Interpreting Children’s Drawings
+            </h3>
+
+            <div class="authors">
+                Joseph H. Di Leo · 1983
+            </div>
+
+            <p class="description">
+                A foundational volume addressing interpretation, formal and
+                stylistic features, cognition, affect, body parts, personality,
+                and the limitations involved in interpreting children’s art.
+            </p>
+
+            <a class="source-link"
+               href="https://www.routledge.com/Interpreting-Childrens-Drawings/DiLeo/p/book/9780876303313"
+               target="_blank"
+               rel="noopener">
+                Publisher
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Visual Development
+            </div>
+
+            <h3>
+                Making Sense of Children’s Drawings
+            </h3>
+
+            <div class="authors">
+                John Willats · 2005
+            </div>
+
+            <p class="description">
+                A cognitive and representational approach to children’s
+                drawing, focusing on drawing systems, perception, visual
+                representation, and the development of increasingly complex
+                drawing rules.
+            </p>
+
+            <a class="source-link"
+               href="https://www.routledge.com/Making-Sense-of-Childrens-Drawings/Willats/p/book/9780805845389"
+               target="_blank"
+               rel="noopener">
+                Publisher
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                Clinical Art Practice
+            </div>
+
+            <h3>
+                Understanding Children’s Drawings
+            </h3>
+
+            <div class="authors">
+                Cathy A. Malchiodi · 1998
+            </div>
+
+            <p class="description">
+                A clinical resource presenting children’s drawings and
+                art-making as a means of communication and therapeutic work,
+                while cautioning against simplistic interpretations.
+            </p>
+
+            <a class="source-link"
+               href="https://www.guilford.com/books/Understanding-Childrens-Drawings/Cathy-Malchiodi/9781572303720"
+               target="_blank"
+               rel="noopener">
+                Publisher
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     THEORY
+===================================================== -->
+
+<section class="library-section theory-section" id="theory">
+
+    <div class="section-heading">
+
+        <h2>
+            Theory &amp; Critical Perspectives
+        </h2>
+
+        <p>
+            Foundational theoretical texts that can support a broader
+            conceptual reading of the body, visual practices, subjectivity,
+            power, interpretation, and social norms.
+        </p>
+
+    </div>
+
+
+    <div class="theory-box">
+
+
+        <article class="theory-item">
+
+            <div class="card-type">
+                Theoretical Framework
+            </div>
+
+            <h3>
+                Michel Foucault: Beyond Structuralism and Hermeneutics
+            </h3>
+
+            <p>
+                Hubert L. Dreyfus and Paul Rabinow’s influential study of
+                Foucault’s work, useful for approaching questions of
+                subjectivity, discourse, interpretation, and the relationship
+                between knowledge and power.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.7208/chicago/9780226154534.001.0001"
+               target="_blank"
+               rel="noopener">
+                Publisher
+            </a>
+
+        </article>
+
+
+
+        <article class="theory-item">
+
+            <div class="card-type">
+                Michel Foucault
+            </div>
+
+            <h3>
+                Discipline and Punish
+            </h3>
+
+            <p>
+                Foucault’s historical analysis of punishment, discipline,
+                surveillance, normalization, and the production of disciplined
+                bodies. A foundational text for examining the body within
+                systems of power and social regulation.
+            </p>
+
+            <a class="source-link"
+               href="https://books.google.com/books?id=6a3pAAAAMAAJ"
+               target="_blank"
+               rel="noopener">
+                Book
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+</main>
 
 
 
@@ -862,11 +1760,107 @@ footer p{
      FOOTER
 ===================================================== -->
 
-<footer>
+<footer id="contact">
 
-    <p>
-        © 2026 Bita Negahdar. All rights reserved.
-    </p>
+    <div class="footer-inner">
+
+        <div class="footer-top">
+
+            <div class="footer-brand-area">
+
+                <div class="footer-brand">
+                    BITA NEGAHDAR
+                </div>
+
+                <p class="footer-description">
+                    Psychology, visual culture, research, and the study of
+                    human experience through image, body, and representation.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="https://bitanegahdar.ir/index.html">
+                    Home
+                </a>
+
+                <a href="https://bitanegahdar.ir/about.html">
+                    About
+                </a>
+
+                <a href="https://bitanegahdar.ir/writing.html">
+                    Writing
+                </a>
+
+                <a href="https://bitanegahdar.ir/research.html">
+                    Research
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a href="mailto:bitanegahdar@gmail.com">
+                    Email
+                </a>
+
+                <a href="https://www.instagram.com/bitanegahdar.ir/"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+
+                <a href="https://www.linkedin.com/in/bita-negahdar/"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 Bita Negahdar. All rights reserved.
+            </div>
+
+            <div class="footer-social">
+
+                <a href="mailto:bitanegahdar@gmail.com">
+                    Email
+                </a>
+
+                <a href="https://www.instagram.com/bitanegahdar.ir/"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+
+                <a href="https://www.linkedin.com/in/bita-negahdar/"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
 
