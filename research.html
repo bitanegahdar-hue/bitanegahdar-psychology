@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Research Library | Bita Negahdar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#FFFFFF;
+    color:#252525;
+    font-family:"DM Sans", Arial, sans-serif;
+    font-weight:400;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    width:100% !important;
+    min-height:76px !important;
+    height:76px !important;
+    padding:0 4vw !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    background:#000000 !important;
+    border-bottom:1px solid #000000 !important;
+}
+
+.logo{
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    letter-spacing:2.4px !important;
+    color:#FFFFFF !important;
+    white-space:nowrap !important;
+}
+
+nav{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:10px !important;
+    flex-shrink:0 !important;
+}
+
+nav a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-height:38px !important;
+    height:38px !important;
+    padding:7px 10px !important;
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:11px !important;
+    font-weight:600 !important;
+    letter-spacing:1.2px !important;
+    line-height:1 !important;
+    text-transform:uppercase !important;
+    color:#FFFFFF !important;
+    background:transparent !important;
+    border:1px solid transparent !important;
+    white-space:nowrap !important;
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease !important;
+}
+
+nav a:hover{
+    background:#5A70B5 !important;
+    border-color:#5A70B5 !important;
+    color:#FFFFFF !important;
+}
+
+.contact-btn{
+    padding:9px 16px !important;
+    background:#EEF1F8 !important;
+    border:1px solid #EEF1F8 !important;
+    color:#5A70B5 !important;
+}
+
+.contact-btn:hover{
+    background:#5A70B5 !important;
+    border-color:#5A70B5 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   PAGE INTRO
+===================================================== */
+
+.page-intro{
+    padding:105px 7% 75px;
+    background:#FFFFFF;
+}
+
+.page-intro-inner{
+    max-width:1180px;
+    margin:0 auto;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:#5A70B5;
+    margin-bottom:15px;
+}
+
+.page-title{
+    font-size:52px;
+    line-height:1.05;
+    font-weight:500;
+    letter-spacing:-1.5px;
+    color:#111111;
+    margin-bottom:25px;
+}
+
+.page-description{
+    max-width:760px;
+    font-size:15px;
+    line-height:1.9;
+    color:#626A6D;
+}
+
+
+/* =====================================================
+   CATEGORY NAVIGATION
+===================================================== */
+
+.category-section{
+    padding:0 7% 85px;
+    background:#FFFFFF;
+}
+
+.category-grid{
+    max-width:1180px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.category-card{
+    min-height:185px;
+    padding:30px;
+
+    background:#EEF1F8;
+    border:1px solid #D9E0EA;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        border-color .25s ease;
+}
+
+.category-card:hover{
+    transform:translateY(-4px);
+    background:#FFFFFF;
+    border-color:#5A70B5;
+}
+
+.category-number{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#5A70B5;
+}
+
+.category-card h2{
+    font-size:21px;
+    line-height:1.25;
+    font-weight:500;
+    color:#171717;
+    margin-top:25px;
+}
+
+.category-card p{
+    font-size:11.5px;
+    line-height:1.7;
+    color:#626A6D;
+    margin-top:10px;
+}
+
+
+/* =====================================================
+   RESEARCH CONTENT
+===================================================== */
+
+.library-section{
+    background:#111111;
+    color:#FFFFFF;
+    padding:90px 7% 100px;
+}
+
+.library-inner{
+    max-width:1180px;
+    margin:0 auto;
+}
+
+.library-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:50px;
+    margin-bottom:45px;
+}
+
+.library-label{
+    font-size:10px;
+    letter-spacing:2.2px;
+    text-transform:uppercase;
+    color:#5A70B5;
+    margin-bottom:12px;
+}
+
+.library-title{
+    font-size:36px;
+    line-height:1.15;
+    font-weight:500;
+    color:#FFFFFF;
+}
+
+.library-description{
+    max-width:430px;
+    font-size:12.5px;
+    line-height:1.8;
+    color:#AAAAAA;
+}
+
+
+/* =====================================================
+   EMPTY / FUTURE LIBRARY
+===================================================== */
+
+.library-placeholder{
+    border:1px solid #292929;
+    background:#181818;
+    padding:65px 50px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.placeholder-number{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#5A70B5;
+    margin-bottom:20px;
+}
+
+.library-placeholder h2{
+    font-size:27px;
+    font-weight:500;
+    color:#FFFFFF;
+    margin-bottom:16px;
+}
+
+.library-placeholder p{
+    max-width:620px;
+    font-size:13px;
+    line-height:1.9;
+    color:#999999;
+}
+
+
+/* =====================================================
+   RESEARCH ENTRY STRUCTURE
+===================================================== */
+
+.research-entry{
+    margin-top:22px;
+    padding:30px;
+
+    background:#181818;
+    border:1px solid #292929;
+
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    gap:30px;
+    align-items:center;
+
+    transition:border-color .25s ease;
+}
+
+.research-entry:hover{
+    border-color:#5A70B5;
+}
+
+.research-entry-number{
+    font-size:11px;
+    letter-spacing:1.5px;
+    color:#5A70B5;
+}
+
+.research-entry-content h3{
+    font-size:19px;
+    font-weight:500;
+    line-height:1.35;
+    color:#FFFFFF;
+    margin-bottom:8px;
+}
+
+.research-entry-content p{
+    font-size:11.5px;
+    line-height:1.7;
+    color:#999999;
+}
+
+.research-entry-link{
+    padding:10px 15px;
+    border:1px solid #3A3A3A;
+    color:#FFFFFF;
+
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.3px;
+    text-transform:uppercase;
+
+    transition:
+        background-color .25s ease,
+        border-color .25s ease;
+}
+
+.research-entry-link:hover{
+    background:#5A70B5;
+    border-color:#5A70B5;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#111111;
+    color:#777777;
+    text-align:center;
+    padding:25px 20px 35px;
+    border-top:1px solid #222222;
+}
+
+footer p{
+    font-size:11px;
+    letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .page-intro{
+        padding:85px 6% 60px;
+    }
+
+    .page-title{
+        font-size:44px;
+    }
+
+    .category-section{
+        padding:0 6% 70px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-card{
+        min-height:155px;
+    }
+
+    .library-section{
+        padding:75px 6% 85px;
+    }
+
+    .library-header{
+        display:block;
+    }
+
+    .library-description{
+        margin-top:20px;
+    }
+
+    .research-entry{
+        grid-template-columns:65px 1fr;
+    }
+
+    .research-entry-link{
+        grid-column:2;
+        width:max-content;
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    header{
+        min-height:72px !important;
+        height:auto !important;
+        padding:14px 5vw !important;
+        gap:15px !important;
+        background:#000000 !important;
+    }
+
+    .logo{
+        font-size:14px !important;
+        letter-spacing:1.8px !important;
+        color:#FFFFFF !important;
+    }
+
+    nav{
+        gap:4px !important;
+        flex-wrap:wrap !important;
+        justify-content:flex-end !important;
+    }
+
+    nav a{
+        min-height:30px !important;
+        height:30px !important;
+        padding:5px 5px !important;
+        font-size:7px !important;
+        letter-spacing:.8px !important;
+        color:#FFFFFF !important;
+    }
+
+    .contact-btn{
+        padding:7px 9px !important;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .page-intro{
+        padding:70px 6% 50px;
+    }
+
+    .page-title{
+        font-size:37px;
+        letter-spacing:-1px;
+    }
+
+    .page-description{
+        font-size:13px;
+        line-height:1.85;
+    }
+
+    .category-section{
+        padding:0 6% 60px;
+    }
+
+    .category-card{
+        padding:25px;
+        min-height:145px;
+    }
+
+    .category-card h2{
+        font-size:19px;
+    }
+
+    .library-section{
+        padding:65px 6% 75px;
+    }
+
+    .library-title{
+        font-size:30px;
+    }
+
+    .library-placeholder{
+        padding:45px 25px;
+    }
+
+    .library-placeholder h2{
+        font-size:23px;
+    }
+
+    .library-placeholder p{
+        font-size:12px;
+    }
+
+    .research-entry{
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:25px;
+    }
+
+    .research-entry-link{
+        grid-column:auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="writing.html">
+            Writing
+        </a>
+
+        <a href="index.html#research">
+            Research
+        </a>
+
+        <a href="index.html#art-psychology">
+            Art &amp; Psychology
+        </a>
+
+        <a href="index.html#contact" class="contact-btn">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE INTRO
+===================================================== -->
+
+<section class="page-intro">
+
+    <div class="page-intro-inner">
+
+        <div class="eyebrow">
+            Research
+        </div>
+
+        <h1 class="page-title">
+            Research Library
+        </h1>
+
+        <p class="page-description">
+            A curated library of contemporary psychological research and academic resources across psychology, art, visual culture, and human experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH CATEGORIES
+===================================================== -->
+
+<section class="category-section">
+
+    <div class="category-grid">
+
+
+        <a href="#psychology" class="category-card">
+
+            <div class="category-number">
+                01
+            </div>
+
+            <div>
+
+                <h2>
+                    Psychology
+                </h2>
+
+                <p>
+                    Contemporary psychological research, theories, methods, and empirical studies.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="#art-psychology" class="category-card">
+
+            <div class="category-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    Art &amp; Psychology
+                </h2>
+
+                <p>
+                    Research at the intersection of visual art, psychological processes, perception, identity, and experience.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="#visual-culture" class="category-card">
+
+            <div class="category-number">
+                03
+            </div>
+
+            <div>
+
+                <h2>
+                    Visual Culture
+                </h2>
+
+                <p>
+                    Research concerning images, bodies, representation, visual experience, and their psychological dimensions.
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PSYCHOLOGY
+===================================================== -->
+
+<section
+    class="library-section"
+    id="psychology"
+>
+
+    <div class="library-inner">
+
+        <div class="library-header">
+
+            <div>
+
+                <div class="library-label">
+                    01 · Psychology
+                </div>
+
+                <h2 class="library-title">
+                    Psychology Research
+                </h2>
+
+            </div>
+
+            <div class="library-description">
+                Selected empirical studies, theoretical papers, reviews, and academic resources in contemporary psychology.
+            </div>
+
+        </div>
+
+
+        <div class="library-placeholder">
+
+            <div class="placeholder-number">
+                RESEARCH COLLECTION
+            </div>
+
+            <h2>
+                Research entries will be added here.
+            </h2>
+
+            <p>
+                This section will contain selected academic papers and research resources, organized by topic and accompanied by publication details, brief notes, and links to the original sources.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ART & PSYCHOLOGY
+===================================================== -->
+
+<section
+    class="library-section"
+    id="art-psychology"
+>
+
+    <div class="library-inner">
+
+        <div class="library-header">
+
+            <div>
+
+                <div class="library-label">
+                    02 · Art &amp; Psychology
+                </div>
+
+                <h2 class="library-title">
+                    Art &amp; Psychological Research
+                </h2>
+
+            </div>
+
+            <div class="library-description">
+                Research examining relationships between visual art, perception, identity, emotion, representation, and psychological experience.
+            </div>
+
+        </div>
+
+
+        <div class="library-placeholder">
+
+            <div class="placeholder-number">
+                RESEARCH COLLECTION
+            </div>
+
+            <h2>
+                Research entries will be added here.
+            </h2>
+
+            <p>
+                This collection will bring together relevant academic literature on the psychological dimensions of visual art and image-based experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VISUAL CULTURE
+===================================================== -->
+
+<section
+    class="library-section"
+    id="visual-culture"
+>
+
+    <div class="library-inner">
+
+        <div class="library-header">
+
+            <div>
+
+                <div class="library-label">
+                    03 · Visual Culture
+                </div>
+
+                <h2 class="library-title">
+                    Image, Body &amp; Visual Culture
+                </h2>
+
+            </div>
+
+            <div class="library-description">
+                Research on images, bodies, representation, visual culture, identity, and the psychological and social dimensions of looking.
+            </div>
+
+        </div>
+
+
+        <div class="library-placeholder">
+
+            <div class="placeholder-number">
+                RESEARCH COLLECTION
+            </div>
+
+            <h2>
+                Research entries will be added here.
+            </h2>
+
+            <p>
+                This collection will focus on research concerning visual representation, the body, identity, perception, and contemporary visual experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Bita Negahdar. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
