@@ -30,21 +30,6 @@
    TITLE
 ===================================================== */
 
-.eyebrow{
-    margin-bottom:18px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:11px !important;
-    font-weight:700 !important;
-
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
-
-    color:#0891B2 !important;
-}
-
 .page h1{
     margin-bottom:45px !important;
 
@@ -56,6 +41,8 @@
     line-height:1.15 !important;
 
     color:#252525 !important;
+
+    text-align:center !important;
 }
 
 
@@ -208,7 +195,6 @@
 
 /* =====================================================
    HEADER
-   SAME ON EVERY PAGE
 ===================================================== */
 
 header{
@@ -223,9 +209,9 @@ header{
     align-items:center !important;
     justify-content:space-between !important;
 
-    background:#FFFFFF !important;
+    background:#000000 !important;
 
-    border-bottom:1px solid #D9E5E8 !important;
+    border-bottom:1px solid #000000 !important;
 }
 
 .logo{
@@ -236,7 +222,7 @@ header{
 
     letter-spacing:2.4px !important;
 
-    color:#252525 !important;
+    color:#FFFFFF !important;
 
     white-space:nowrap !important;
 }
@@ -247,11 +233,9 @@ nav{
     align-items:center !important;
     justify-content:flex-end !important;
 
-    gap:24px !important;
+    gap:10px !important;
 
     flex-shrink:0 !important;
-
-    white-space:nowrap !important;
 }
 
 nav a{
@@ -263,20 +247,20 @@ nav a{
     min-height:38px !important;
     height:38px !important;
 
-    padding:7px 11px !important;
+    padding:7px 10px !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
-    font-size:12px !important;
+    font-size:11px !important;
     font-weight:600 !important;
 
-    letter-spacing:1.4px !important;
+    letter-spacing:1.2px !important;
 
     line-height:1 !important;
 
     text-transform:uppercase !important;
 
-    color:#252525 !important;
+    color:#FFFFFF !important;
 
     background:transparent !important;
 
@@ -296,9 +280,9 @@ nav a{
 ===================================================== */
 
 nav a:hover{
-    background:#06B6D4 !important;
+    background:#5A70B5 !important;
 
-    border-color:#06B6D4 !important;
+    border-color:#5A70B5 !important;
 
     color:#FFFFFF !important;
 }
@@ -309,19 +293,19 @@ nav a:hover{
 ===================================================== */
 
 .contact-btn{
-    padding:9px 17px !important;
+    padding:9px 16px !important;
 
-    background:#CFFAFE !important;
+    background:#EEF1F8 !important;
 
-    border:1px solid #CFFAFE !important;
+    border:1px solid #EEF1F8 !important;
 
-    color:#0891B2 !important;
+    color:#5A70B5 !important;
 }
 
 .contact-btn:hover{
-    background:#06B6D4 !important;
+    background:#5A70B5 !important;
 
-    border-color:#06B6D4 !important;
+    border-color:#5A70B5 !important;
 
     color:#FFFFFF !important;
 }
@@ -373,16 +357,20 @@ footer{
         padding:14px 5vw !important;
 
         gap:15px !important;
+
+        background:#000000 !important;
     }
 
     .logo{
         font-size:14px !important;
 
         letter-spacing:1.8px !important;
+
+        color:#FFFFFF !important;
     }
 
     nav{
-        gap:6px !important;
+        gap:4px !important;
 
         flex-wrap:wrap !important;
 
@@ -393,15 +381,17 @@ footer{
         min-height:30px !important;
         height:30px !important;
 
-        padding:5px 6px !important;
+        padding:5px 5px !important;
 
-        font-size:8px !important;
+        font-size:7px !important;
 
-        letter-spacing:1px !important;
+        letter-spacing:.8px !important;
+
+        color:#FFFFFF !important;
     }
 
     .contact-btn{
-        padding:7px 10px !important;
+        padding:7px 9px !important;
     }
 
 
@@ -475,46 +465,46 @@ footer{
 
 <header>
 
-```
 <div class="logo">
     BITA NEGAHDAR
 </div>
 
-
 <nav>
 
-    <a href="index.html">
+    <a href="https://bitanegahdar.ir/index.html">
         Home
     </a>
 
-    <a href="about.html">
+    <a href="https://bitanegahdar.ir/about.html">
         About
     </a>
 
-    <a href="writing.html">
+    <a href="https://bitanegahdar.ir/writing.html">
         Writing
     </a>
 
-    <a href="index.html#contact" class="contact-btn">
+    <a href="https://bitanegahdar.ir/index.html#research">
+        Research
+    </a>
+
+    <a href="https://bitanegahdar.ir/index.html#art-psychology">
+        Art &amp; Psychology
+    </a>
+
+    <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
         Contact
     </a>
 
 </nav>
-```
 
 </header>
+
 
 <!-- =====================================================
      WRITING PAGE
 ===================================================== -->
 
 <main class="page">
-
-```
-<div class="eyebrow">
-    Writing
-</div>
-
 
 <h1>
     Selected Writing
@@ -597,9 +587,9 @@ footer{
 
 
 </div>
-```
 
 </main>
+
 
 <!-- =====================================================
      FOOTER
@@ -607,16 +597,13 @@ footer{
 
 <footer>
 
-```
 <div>
     BITA NEGAHDAR
 </div>
 
-
 <div>
     Psychology
 </div>
-```
 
 </footer>
 
