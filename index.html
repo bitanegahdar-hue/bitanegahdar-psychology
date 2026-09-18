@@ -116,8 +116,6 @@ nav a.contact-link:hover{
 
 /* =====================================================
    BLUE AREA
-   FULL BACKGROUND IMAGE:
-   images/hero-background.jpg
 ===================================================== */
 
 .hero-blue{
@@ -365,7 +363,7 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   FIVE-LINE TEXT UNDER EACH CIRCLE
+   TEXT UNDER EACH CIRCLE
 ===================================================== */
 
 .hero-circle-text{
@@ -474,33 +472,25 @@ nav a.contact-link:hover{
 }
 
 .writing-section .section-header{
-    justify-content:flex-start;
+    display:block;
+    margin-bottom:40px;
 }
 
-.writing-section .section-label{
-    display:none;
-}
-
-.writing-section .section-title{
-    display:none;
-}
-
-.writing-section .section-intro{
-    max-width:100%;
+.writing-heading{
     width:100%;
     text-align:right;
-    font-size:16px;
-    line-height:1.8;
-    font-weight:600;
-    color:#252525;
     direction:rtl;
-    margin:0;
 }
 
-.writing-section .section-intro::after{
-    content:"Psychological readings of images, bodies, identity, memory, and contemporary visual experience.";
-    display:block;
-    margin-top:5px;
+.writing-heading-fa{
+    font-size:19px;
+    line-height:1.7;
+    font-weight:600;
+    color:#252525;
+}
+
+.writing-heading-en{
+    margin-top:4px;
     font-size:10px;
     line-height:1.6;
     font-weight:400;
@@ -573,27 +563,24 @@ nav a.contact-link:hover{
 }
 
 .research-section .section-header{
-    justify-content:flex-start;
-}
-
-.research-section .section-label{
-    display:none;
-}
-
-.research-section .section-title{
     display:block;
+    margin-bottom:40px;
+}
+
+.research-heading{
     width:100%;
     text-align:right;
     direction:rtl;
-    font-size:22px;
-    line-height:1.4;
-    font-weight:600;
-    margin:0;
 }
 
-.research-section .section-title::after{
-    content:"Research Library";
-    display:block;
+.research-heading-fa{
+    font-size:25px;
+    line-height:1.5;
+    font-weight:600;
+    color:#FFFFFF;
+}
+
+.research-heading-en{
     margin-top:4px;
     font-size:10px;
     line-height:1.5;
@@ -772,7 +759,6 @@ nav a.contact-link:hover{
 
 /* =====================================================
    CONTACT ICONS
-   NO BOX / NO TEXT
 ===================================================== */
 
 .contact-links{
@@ -986,21 +972,27 @@ footer p{
         margin-top:20px;
     }
 
-    .writing-section .section-intro{
-        margin-top:0;
-        font-size:15px;
-        line-height:1.8;
+    .writing-section .section-header{
+        margin-bottom:35px;
     }
 
-    .writing-section .section-intro::after{
+    .writing-heading-fa{
+        font-size:18px;
+    }
+
+    .writing-heading-en{
         font-size:9px;
     }
 
-    .research-section .section-title{
-        font-size:20px;
+    .research-section .section-header{
+        margin-bottom:35px;
     }
 
-    .research-section .section-title::after{
+    .research-heading-fa{
+        font-size:23px;
+    }
+
+    .research-heading-en{
         font-size:9px;
     }
 
@@ -1094,19 +1086,19 @@ footer p{
     }
 
 
-    .writing-section .section-intro{
-        font-size:14px;
+    .writing-heading-fa{
+        font-size:17px;
     }
 
-    .writing-section .section-intro::after{
+    .writing-heading-en{
         font-size:8.5px;
     }
 
-    .research-section .section-title{
-        font-size:18px;
+    .research-heading-fa{
+        font-size:21px;
     }
 
-    .research-section .section-title::after{
+    .research-heading-en{
         font-size:8.5px;
     }
 
@@ -1301,20 +1293,16 @@ footer p{
 
     <div class="section-header">
 
-        <div>
+        <div class="writing-heading">
 
-            <div class="section-label">
-                Selected Writing
+            <div class="writing-heading-fa">
+                خوانش‌های روان‌شناختی از تصاویر، بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
             </div>
 
-            <h2 class="section-title">
-                Latest Writing
-            </h2>
+            <div class="writing-heading-en">
+                Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
+            </div>
 
-        </div>
-
-        <div class="section-intro">
-            خوانش‌های روان‌شناختی از تصاویر، بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
         </div>
 
     </div>
@@ -1412,15 +1400,15 @@ footer p{
 
     <div class="section-header">
 
-        <div>
+        <div class="research-heading">
 
-            <div class="section-label">
-                Research Library
+            <div class="research-heading-fa">
+                کتابخانه پژوهشی
             </div>
 
-            <h2 class="section-title">
-                کتابخانه پژوهشی
-            </h2>
+            <div class="research-heading-en">
+                Research Library
+            </div>
 
         </div>
 
