@@ -309,6 +309,19 @@ nav a:hover{
     text-align:justify;
 }
 
+.persian-description{
+    direction:rtl;
+    margin-top:-7px;
+    margin-bottom:20px;
+    padding-top:16px;
+    border-top:1px solid #E1E5EC;
+    color:#4F5558;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:13px;
+    line-height:2.05;
+    text-align:justify;
+}
+
 .source-link{
     display:inline-flex;
     align-items:center;
@@ -332,6 +345,10 @@ nav a:hover{
 .source-link::after{
     content:"↗";
     font-size:12px;
+}
+
+.pdf-link{
+    margin-left:18px;
 }
 
 
@@ -687,6 +704,20 @@ footer{
         text-align:right;
     }
 
+    .persian-description{
+        font-size:12px;
+        line-height:2;
+        text-align:right;
+    }
+
+    .source-link{
+        font-size:9px;
+    }
+
+    .pdf-link{
+        margin-left:12px;
+    }
+
     .books-grid{
         grid-template-columns:1fr;
         gap:14px;
@@ -887,6 +918,10 @@ footer{
     <div class="research-grid">
 
 
+        <!-- =================================================
+             CHILDREN'S DRAWINGS — BURGESS & HARTMAN
+        ================================================== -->
+
         <article class="research-card">
 
             <div class="card-type">
@@ -908,23 +943,30 @@ footer{
                 and verbal dimensions.
             </p>
 
-            <div style="display:flex; gap:22px; flex-wrap:wrap;">
+            <p class="persian-description" lang="fa" dir="rtl">
+                این مقاله به کاربرد نقاشی کودکان در مصاحبه‌های بالینی،
+                ارزیابی تجربه‌های آسیب‌زا و دسترسی به خاطرات می‌پردازد.
+                نویسندگان نقاشی را نه صرفاً به‌عنوان ابزاری فرافکن برای
+                تشخیص، بلکه به‌عنوان وسیله‌ای ارتباطی و تداعی‌گر در نظر
+                می‌گیرند که می‌تواند به بیان ابعاد هیجانی، حسی، ادراکی و
+                شناختی تجربه کودک کمک کند. مقاله همچنین محدودیت‌های
+                تفسیر تشخیصی نقاشی‌های کودکان را مطرح می‌کند و بر اهمیت
+                توجه به اعتبار و پایایی روش‌های تحلیل نقاشی تأکید دارد.
+            </p>
 
-                <a class="source-link"
-                   href="https://doi.org/10.1016/0145-2134(93)90015-W"
-                   target="_blank"
-                   rel="noopener">
-                    DOI
-                </a>
+            <a class="source-link"
+               href="https://doi.org/10.1016/0145-2134(93)90015-W"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
 
-                <a class="source-link"
-                   href="childrens-drawings-burgess-hartman-1993.pdf"
-                   target="_blank"
-                   rel="noopener">
-                    Read PDF
-                </a>
-
-            </div>
+            <a class="source-link pdf-link"
+               href="Children's%20drawings.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
         </article>
 
