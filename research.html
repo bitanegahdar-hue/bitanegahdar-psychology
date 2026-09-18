@@ -11,833 +11,164 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =====================================================
-   GLOBAL RESET
-===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#FFFFFF;
-    color:#252525;
-    font-family:"DM Sans",Arial,sans-serif;
-    font-weight:400;
-    line-height:1.7;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header{
-    width:100%;
-    min-height:76px;
-    height:76px;
-    padding:0 4vw;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:#000000;
-    border-bottom:1px solid #000000;
-}
-
-.logo{
-    font-family:"DM Sans",Arial,sans-serif;
-    font-size:20px;
-    font-weight:700;
-    letter-spacing:2.4px;
-    color:#FFFFFF;
-    white-space:nowrap;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    gap:10px;
-    flex-shrink:0;
-}
-
-nav a{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:38px;
-    height:38px;
-    padding:7px 10px;
-    font-family:"DM Sans",Arial,sans-serif;
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:1.2px;
-    line-height:1;
-    text-transform:uppercase;
-    color:#FFFFFF;
-    background:transparent;
-    border:1px solid transparent;
-    white-space:nowrap;
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
-}
-
-nav a:hover{
-    background:#5A70B5;
-    border-color:#5A70B5;
-    color:#FFFFFF;
-}
-
-.contact-btn{
-    padding:9px 16px;
-    background:#EEF1F8;
-    border:1px solid #EEF1F8;
-    color:#5A70B5;
-}
-
-.contact-btn:hover{
-    background:#5A70B5;
-    border-color:#5A70B5;
-    color:#FFFFFF;
-}
-
-
-/* =====================================================
-   PAGE INTRO
-===================================================== */
-
-.page-intro{
-    max-width:1180px;
-    margin:0 auto;
-    padding:105px 5vw 75px;
-}
-
-.intro-label{
-    margin-bottom:22px;
-    color:#5A70B5;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:2.2px;
-    text-transform:uppercase;
-}
-
-.page-intro h1{
-    margin-bottom:25px;
-    color:#171717;
-    font-size:52px;
-    font-weight:600;
-    letter-spacing:-1.8px;
-    line-height:1.08;
-}
-
-.page-intro p{
-    max-width:780px;
-    color:#626A6D;
-    font-size:16px;
-    line-height:1.95;
-    text-align:justify;
-}
-
-
-/* =====================================================
-   CATEGORY NAV
-===================================================== */
-
-.category-nav{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 5vw 85px;
-}
-
-.category-nav-inner{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    border-top:1px solid #D9E0EA;
-    border-bottom:1px solid #D9E0EA;
-}
-
-.category-nav a{
-    min-height:90px;
-    padding:18px 17px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#5A70B5;
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:.7px;
-    line-height:1.5;
-    text-transform:uppercase;
-    border-right:1px solid #D9E0EA;
-    transition:
-        background-color .25s ease,
-        color .25s ease;
-}
-
-.category-nav a:last-child{
-    border-right:none;
-}
-
-.category-nav a:hover{
-    background:#EEF1F8;
-    color:#4B61A3;
-}
-
-
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
-
-.library{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 5vw 110px;
-}
-
-.library-section{
-    margin-bottom:105px;
-    scroll-margin-top:35px;
-}
-
-.section-heading{
-    display:grid;
-    grid-template-columns:260px 1fr;
-    gap:60px;
-    padding-bottom:28px;
-    margin-bottom:34px;
-    border-bottom:1px solid #D9E0EA;
-}
-
-.section-heading h2{
-    color:#171717;
-    font-size:27px;
-    font-weight:600;
-    letter-spacing:-.6px;
-    line-height:1.2;
-}
-
-.section-heading p{
-    max-width:690px;
-    color:#626A6D;
-    font-size:14px;
-    line-height:1.85;
-    text-align:justify;
-}
-
-
-/* =====================================================
-   RESEARCH GRID
-===================================================== */
-
-.research-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.research-card{
-    position:relative;
-    padding:31px 32px 29px;
-    background:#F7F8FA;
-    border:1px solid #E1E5EC;
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background-color .25s ease;
-}
-
-.research-card:hover{
-    transform:translateY(-3px);
-    background:#FFFFFF;
-    border-color:#BFC9DC;
-}
-
-.research-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:3px;
-    height:100%;
-    background:#5A70B5;
-}
-
-.card-type{
-    margin-bottom:13px;
-    color:#5A70B5;
-    font-size:9px;
-    font-weight:700;
-    letter-spacing:1.7px;
-    text-transform:uppercase;
-}
-
-.research-card h3{
-    margin-bottom:14px;
-    color:#202020;
-    font-size:18px;
-    font-weight:600;
-    line-height:1.4;
-}
-
-.authors{
-    margin-bottom:15px;
-    color:#626A6D;
-    font-size:12px;
-    line-height:1.65;
-}
-
-.description{
-    margin-bottom:20px;
-    color:#555C60;
-    font-size:13px;
-    line-height:1.9;
-    text-align:justify;
-}
-
-.persian-description{
-    direction:rtl;
-    margin-top:-7px;
-    margin-bottom:20px;
-    padding-top:16px;
-    border-top:1px solid #E1E5EC;
-    color:#4F5558;
-    font-family:Tahoma,Arial,sans-serif;
-    font-size:13px;
-    line-height:2.05;
-    text-align:justify;
-}
-
-.source-link{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    color:#5A70B5;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    border-bottom:1px solid transparent;
-    transition:
-        color .2s ease,
-        border-color .2s ease;
-}
-
-.source-link:hover{
-    color:#4B61A3;
-    border-color:#4B61A3;
-}
-
-.source-link::after{
-    content:"↗";
-    font-size:12px;
-}
-
-.pdf-link{
-    margin-left:18px;
-}
-
-
-/* =====================================================
-   BOOKS
-===================================================== */
-
-.books-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.book-card{
-    padding:32px;
-    background:#FFFFFF;
-    border:1px solid #D9E0EA;
-    min-height:275px;
-    display:flex;
-    flex-direction:column;
-    transition:
-        transform .25s ease,
-        border-color .25s ease;
-}
-
-.book-card:hover{
-    transform:translateY(-3px);
-    border-color:#AEBBD4;
-}
-
-.book-card .card-type{
-    margin-bottom:18px;
-}
-
-.book-card h3{
-    margin-bottom:14px;
-    color:#202020;
-    font-size:18px;
-    font-weight:600;
-    line-height:1.45;
-}
-
-.book-author{
-    margin-bottom:17px;
-    color:#5A70B5;
-    font-size:12px;
-    font-weight:600;
-}
-
-.book-description{
-    margin-bottom:24px;
-    color:#626A6D;
-    font-size:12.5px;
-    line-height:1.85;
-    text-align:justify;
-}
-
-.book-card .source-link{
-    margin-top:auto;
-}
-
-
-/* =====================================================
-   THEORY BLOCK
-===================================================== */
-
-.theory-section{
-    padding-top:5px;
-}
-
-.theory-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    border:1px solid #D9E0EA;
-}
-
-.theory-item{
-    padding:34px 36px;
-    min-height:245px;
-    background:#F7F8FA;
-}
-
-.theory-item + .theory-item{
-    border-left:1px solid #D9E0EA;
-}
-
-.theory-item h3{
-    margin-bottom:16px;
-    color:#202020;
-    font-size:20px;
-    font-weight:600;
-}
-
-.theory-item p{
-    color:#626A6D;
-    font-size:13px;
-    line-height:1.9;
-    text-align:justify;
-}
-
-.theory-item .source-link{
-    margin-top:20px;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-    background:#000000;
-    color:#FFFFFF;
-    padding:70px 5vw 40px;
-}
-
-.footer-inner{
-    max-width:1180px;
-    margin:0 auto;
-}
-
-.footer-top{
-    display:grid;
-    grid-template-columns:1.2fr 1fr 1fr;
-    gap:70px;
-    padding-bottom:55px;
-    border-bottom:1px solid #292929;
-}
-
-.footer-brand{
-    font-size:20px;
-    font-weight:700;
-    letter-spacing:2.3px;
-}
-
-.footer-description{
-    max-width:360px;
-    margin-top:17px;
-    color:#A8A8A8;
-    font-size:12px;
-    line-height:1.85;
-}
-
-.footer-column h4{
-    margin-bottom:17px;
-    color:#FFFFFF;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-}
-
-.footer-column a{
-    display:block;
-    width:max-content;
-    margin-bottom:9px;
-    color:#A8A8A8;
-    font-size:12px;
-    transition:color .2s ease;
-}
-
-.footer-column a:hover{
-    color:#FFFFFF;
-}
-
-.footer-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:28px;
-    color:#777777;
-    font-size:10px;
-    letter-spacing:.4px;
-}
-
-.footer-social{
-    display:flex;
-    gap:20px;
-}
-
-.footer-social a{
-    color:#A8A8A8;
-    transition:color .2s ease;
-}
-
-.footer-social a:hover{
-    color:#FFFFFF;
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
+/* GLOBAL RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#FFFFFF;color:#252525;font-family:"DM Sans",Arial,sans-serif;font-weight:400;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
+
+/* HEADER */
+header{width:100%;min-height:76px;height:76px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#000000;border-bottom:1px solid #000000;}
+.logo{font-family:"DM Sans",Arial,sans-serif;font-size:20px;font-weight:700;letter-spacing:2.4px;color:#FFFFFF;white-space:nowrap;}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-shrink:0;}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;height:38px;padding:7px 10px;font-family:"DM Sans",Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:1.2px;line-height:1;text-transform:uppercase;color:#FFFFFF;background:transparent;border:1px solid transparent;white-space:nowrap;transition:background-color .25s ease,color .25s ease,border-color .25s ease;}
+nav a:hover{background:#5A70B5;border-color:#5A70B5;color:#FFFFFF;}
+.contact-btn{padding:9px 16px;background:#EEF1F8;border:1px solid #EEF1F8;color:#5A70B5;}
+.contact-btn:hover{background:#5A70B5;border-color:#5A70B5;color:#FFFFFF;}
+
+/* PAGE INTRO */
+.page-intro{max-width:1180px;margin:0 auto;padding:105px 5vw 75px;}
+.intro-label{margin-bottom:22px;color:#5A70B5;font-size:11px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;}
+.page-intro h1{margin-bottom:25px;color:#171717;font-size:52px;font-weight:600;letter-spacing:-1.8px;line-height:1.08;}
+.page-intro p{max-width:780px;color:#626A6D;font-size:16px;line-height:1.95;text-align:justify;}
+
+/* CATEGORY NAV */
+.category-nav{max-width:1180px;margin:0 auto;padding:0 5vw 85px;}
+.category-nav-inner{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #D9E0EA;border-bottom:1px solid #D9E0EA;}
+.category-nav a{min-height:90px;padding:18px 17px;display:flex;align-items:center;justify-content:center;text-align:center;color:#5A70B5;font-size:11px;font-weight:600;letter-spacing:.7px;line-height:1.5;text-transform:uppercase;border-right:1px solid #D9E0EA;transition:background-color .25s ease,color .25s ease;}
+.category-nav a:last-child{border-right:none;}
+.category-nav a:hover{background:#EEF1F8;color:#4B61A3;}
+
+/* MAIN CONTENT */
+.library{max-width:1180px;margin:0 auto;padding:0 5vw 110px;}
+.library-section{margin-bottom:105px;scroll-margin-top:35px;}
+.section-heading{display:grid;grid-template-columns:260px 1fr;gap:60px;padding-bottom:28px;margin-bottom:34px;border-bottom:1px solid #D9E0EA;}
+.section-heading h2{color:#171717;font-size:27px;font-weight:600;letter-spacing:-.6px;line-height:1.2;}
+.section-heading p{max-width:690px;color:#626A6D;font-size:14px;line-height:1.85;text-align:justify;}
+
+/* RESEARCH GRID */
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.research-card{position:relative;padding:31px 32px 29px;background:#F7F8FA;border:1px solid #E1E5EC;transition:transform .25s ease,border-color .25s ease,background-color .25s ease;}
+.research-card:hover{transform:translateY(-3px);background:#FFFFFF;border-color:#BFC9DC;}
+.research-card::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:#5A70B5;}
+.card-type{margin-bottom:13px;color:#5A70B5;font-size:9px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;}
+.research-card h3{margin-bottom:14px;color:#202020;font-size:18px;font-weight:600;line-height:1.4;}
+.authors{margin-bottom:15px;color:#626A6D;font-size:12px;line-height:1.65;}
+.description{margin-bottom:20px;color:#555C60;font-size:13px;line-height:1.9;text-align:justify;}
+.persian-description{direction:rtl;margin-top:-7px;margin-bottom:20px;padding-top:16px;border-top:1px solid #E1E5EC;color:#4F5558;font-family:Tahoma,Arial,sans-serif;font-size:13px;line-height:2.05;text-align:justify;}
+.source-link{display:inline-flex;align-items:center;gap:7px;color:#5A70B5;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease;}
+.source-link:hover{color:#4B61A3;border-color:#4B61A3;}
+.source-link::after{content:"↗";font-size:12px;}
+.pdf-link{margin-left:18px;}
+
+/* BOOKS */
+.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.book-card{padding:32px;background:#FFFFFF;border:1px solid #D9E0EA;min-height:275px;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease;}
+.book-card:hover{transform:translateY(-3px);border-color:#AEBBD4;}
+.book-card .card-type{margin-bottom:18px;}
+.book-card h3{margin-bottom:14px;color:#202020;font-size:18px;font-weight:600;line-height:1.45;}
+.book-author{margin-bottom:17px;color:#5A70B5;font-size:12px;font-weight:600;}
+.book-description{margin-bottom:24px;color:#626A6D;font-size:12.5px;line-height:1.85;text-align:justify;}
+.book-card .source-link{margin-top:auto;}
+
+/* THEORY BLOCK */
+.theory-section{padding-top:5px;}
+.theory-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #D9E0EA;}
+.theory-item{padding:34px 36px;min-height:245px;background:#F7F8FA;}
+.theory-item + .theory-item{border-left:1px solid #D9E0EA;}
+.theory-item h3{margin-bottom:16px;color:#202020;font-size:20px;font-weight:600;}
+.theory-item p{color:#626A6D;font-size:13px;line-height:1.9;text-align:justify;}
+.theory-item .source-link{margin-top:20px;}
+
+/* FOOTER */
+footer{background:#000000;color:#FFFFFF;padding:70px 5vw 40px;}
+.footer-inner{max-width:1180px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:70px;padding-bottom:55px;border-bottom:1px solid #292929;}
+.footer-brand{font-size:20px;font-weight:700;letter-spacing:2.3px;}
+.footer-description{max-width:360px;margin-top:17px;color:#A8A8A8;font-size:12px;line-height:1.85;}
+.footer-column h4{margin-bottom:17px;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;}
+.footer-column a{display:block;width:max-content;margin-bottom:9px;color:#A8A8A8;font-size:12px;transition:color .2s ease;}
+.footer-column a:hover{color:#FFFFFF;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;color:#777777;font-size:10px;letter-spacing:.4px;}
+.footer-social{display:flex;gap:20px;}
+.footer-social a{color:#A8A8A8;transition:color .2s ease;}
+.footer-social a:hover{color:#FFFFFF;}
+
+/* RESPONSIVE */
 @media(max-width:950px){
-
-    .page-intro{
-        padding-top:80px;
-    }
-
-    .page-intro h1{
-        font-size:43px;
-    }
-
-    .category-nav-inner{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .category-nav a:nth-child(3){
-        border-right:none;
-    }
-
-    .category-nav a:nth-child(-n+3){
-        border-bottom:1px solid #D9E0EA;
-    }
-
-    .section-heading{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .books-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-top{
-        grid-template-columns:1fr 1fr;
-        gap:45px;
-    }
-
-    .footer-brand-area{
-        grid-column:1 / -1;
-    }
+    .page-intro{padding-top:80px;}
+    .page-intro h1{font-size:43px;}
+    .category-nav-inner{grid-template-columns:repeat(3,1fr);}
+    .category-nav a:nth-child(3){border-right:none;}
+    .category-nav a:nth-child(-n+3){border-bottom:1px solid #D9E0EA;}
+    .section-heading{grid-template-columns:1fr;gap:18px;}
+    .books-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-top{grid-template-columns:1fr 1fr;gap:45px;}
+    .footer-brand-area{grid-column:1 / -1;}
 }
-
-
 @media(max-width:700px){
-
-    header{
-        min-height:72px;
-        height:auto;
-        padding:14px 5vw;
-        gap:15px;
-        background:#000000;
-    }
-
-    .logo{
-        font-size:14px;
-        letter-spacing:1.8px;
-    }
-
-    nav{
-        gap:4px;
-        flex-wrap:wrap;
-        justify-content:flex-end;
-    }
-
-    nav a{
-        min-height:30px;
-        height:30px;
-        padding:5px 5px;
-        font-size:7px;
-        letter-spacing:.8px;
-    }
-
-    .contact-btn{
-        padding:7px 9px;
-    }
-
-    .page-intro{
-        padding:65px 6vw 55px;
-    }
-
-    .intro-label{
-        margin-bottom:16px;
-        font-size:9px;
-    }
-
-    .page-intro h1{
-        margin-bottom:20px;
-        font-size:36px;
-        letter-spacing:-1px;
-    }
-
-    .page-intro p{
-        font-size:13px;
-        line-height:1.85;
-        text-align:right;
-    }
-
-    .category-nav{
-        padding:0 6vw 60px;
-    }
-
-    .category-nav-inner{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .category-nav a{
-        min-height:75px;
-        font-size:9px;
-        padding:14px 9px;
-    }
-
-    .category-nav a:nth-child(2n){
-        border-right:none;
-    }
-
-    .category-nav a:nth-child(-n+4){
-        border-bottom:1px solid #D9E0EA;
-    }
-
-    .library{
-        padding:0 6vw 75px;
-    }
-
-    .library-section{
-        margin-bottom:75px;
-    }
-
-    .section-heading{
-        gap:12px;
-        margin-bottom:25px;
-        padding-bottom:22px;
-    }
-
-    .section-heading h2{
-        font-size:23px;
-    }
-
-    .section-heading p{
-        font-size:12px;
-        line-height:1.8;
-        text-align:right;
-    }
-
-    .research-grid{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
-
-    .research-card{
-        padding:26px 25px 25px;
-    }
-
-    .research-card h3{
-        font-size:16px;
-    }
-
-    .description{
-        font-size:12px;
-        line-height:1.85;
-        text-align:right;
-    }
-
-    .persian-description{
-        font-size:12px;
-        line-height:2;
-        text-align:right;
-    }
-
-    .source-link{
-        font-size:9px;
-    }
-
-    .pdf-link{
-        margin-left:12px;
-    }
-
-    .books-grid{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
-
-    .book-card{
-        min-height:auto;
-        padding:27px 25px;
-    }
-
-    .book-card h3{
-        font-size:16px;
-    }
-
-    .book-description{
-        font-size:12px;
-        text-align:right;
-    }
-
-    .theory-box{
-        grid-template-columns:1fr;
-    }
-
-    .theory-item{
-        min-height:auto;
-        padding:28px 25px;
-    }
-
-    .theory-item + .theory-item{
-        border-left:none;
-        border-top:1px solid #D9E0EA;
-    }
-
-    .theory-item p{
-        font-size:12px;
-        text-align:right;
-    }
-
-    footer{
-        padding:55px 6vw 32px;
-    }
-
-    .footer-top{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .footer-brand-area{
-        grid-column:auto;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:17px;
-        line-height:1.7;
-    }
+    header{min-height:72px;height:auto;padding:14px 5vw;gap:15px;background:#000000;}
+    .logo{font-size:14px;letter-spacing:1.8px;}
+    nav{gap:4px;flex-wrap:wrap;justify-content:flex-end;}
+    nav a{min-height:30px;height:30px;padding:5px 5px;font-size:7px;letter-spacing:.8px;}
+    .contact-btn{padding:7px 9px;}
+    .page-intro{padding:65px 6vw 55px;}
+    .intro-label{margin-bottom:16px;font-size:9px;}
+    .page-intro h1{margin-bottom:20px;font-size:36px;letter-spacing:-1px;}
+    .page-intro p{font-size:13px;line-height:1.85;text-align:right;}
+    .category-nav{padding:0 6vw 60px;}
+    .category-nav-inner{grid-template-columns:repeat(2,1fr);}
+    .category-nav a{min-height:75px;font-size:9px;padding:14px 9px;}
+    .category-nav a:nth-child(2n){border-right:none;}
+    .category-nav a:nth-child(-n+4){border-bottom:1px solid #D9E0EA;}
+    .library{padding:0 6vw 75px;}
+    .library-section{margin-bottom:75px;}
+    .section-heading{gap:12px;margin-bottom:25px;padding-bottom:22px;}
+    .section-heading h2{font-size:23px;}
+    .section-heading p{font-size:12px;line-height:1.8;text-align:right;}
+    .research-grid{grid-template-columns:1fr;gap:14px;}
+    .research-card{padding:26px 25px 25px;}
+    .research-card h3{font-size:16px;}
+    .description{font-size:12px;line-height:1.85;text-align:right;}
+    .persian-description{font-size:12px;line-height:2;text-align:right;}
+    .source-link{font-size:9px;}
+    .pdf-link{margin-left:12px;}
+    .books-grid{grid-template-columns:1fr;gap:14px;}
+    .book-card{min-height:auto;padding:27px 25px;}
+    .book-card h3{font-size:16px;}
+    .book-description{font-size:12px;text-align:right;}
+    .theory-box{grid-template-columns:1fr;}
+    .theory-item{min-height:auto;padding:28px 25px;}
+    .theory-item + .theory-item{border-left:none;border-top:1px solid #D9E0EA;}
+    .theory-item p{font-size:12px;text-align:right;}
+    footer{padding:55px 6vw 32px;}
+    .footer-top{grid-template-columns:1fr;gap:35px;}
+    .footer-brand-area{grid-column:auto;}
+    .footer-bottom{flex-direction:column;align-items:flex-start;gap:17px;line-height:1.7;}
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
-
     <div class="logo">BITA NEGAHDAR</div>
 
     <nav>
-
-        <a href="https://bitanegahdar.ir/index.html">
-            Home
-        </a>
-
-        <a href="https://bitanegahdar.ir/about.html">
-            About
-        </a>
-
-        <a href="https://bitanegahdar.ir/writing.html">
-            Writing
-        </a>
-
-        <a href="https://bitanegahdar.ir/index.html#research">
-            Research
-        </a>
-
-        <a href="art-psychology.html">
-            Art &amp; Psychology
-        </a>
-
-        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
-            Contact
-        </a>
-
+        <a href="https://bitanegahdar.ir/index.html">Home</a>
+        <a href="https://bitanegahdar.ir/about.html">About</a>
+        <a href="https://bitanegahdar.ir/writing.html">Writing</a>
+        <a href="https://bitanegahdar.ir/index.html#research">Research</a>
+        <a href="art-psychology.html">Art &amp; Psychology</a>
+        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">Contact</a>
     </nav>
-
 </header>
-
-
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
 
 <section class="page-intro">
 
-    <div class="intro-label">
-        Research Library
-    </div>
+    <div class="intro-label">Research Library</div>
 
-    <h1>
-        Research Library
-    </h1>
+    <h1>Research Library</h1>
 
     <p>
         A curated collection of research articles, books, and theoretical
@@ -848,61 +179,27 @@ footer{
 
 </section>
 
-
-
-<!-- =====================================================
-     CATEGORY NAVIGATION
-===================================================== -->
-
 <section class="category-nav">
 
     <div class="category-nav-inner">
 
-        <a href="#children-drawing">
-            Children’s Drawings
-        </a>
-
-        <a href="#body-image">
-            Body, Image &amp; Identity
-        </a>
-
-        <a href="#clinical">
-            Clinical Perspectives
-        </a>
-
-        <a href="#art-image">
-            Art, Image &amp; Psychology
-        </a>
-
-        <a href="#theory">
-            Theory &amp; Critical Perspectives
-        </a>
+        <a href="#children-drawing">Children’s Drawings</a>
+        <a href="#body-image">Body, Image &amp; Identity</a>
+        <a href="#clinical">Clinical Perspectives</a>
+        <a href="#art-image">Art, Image &amp; Psychology</a>
+        <a href="#theory">Theory &amp; Critical Perspectives</a>
 
     </div>
 
 </section>
 
-
-
-<!-- =====================================================
-     LIBRARY
-===================================================== -->
-
 <main class="library">
-
-
-
-<!-- =====================================================
-     CHILDREN'S DRAWINGS
-===================================================== -->
 
 <section class="library-section" id="children-drawing">
 
     <div class="section-heading">
 
-        <h2>
-            Children’s Drawings
-        </h2>
+        <h2>Children’s Drawings</h2>
 
         <p>
             Research examining children’s drawings as developmental,
@@ -914,23 +211,13 @@ footer{
 
     </div>
 
-
     <div class="research-grid">
-
-
-        <!-- =================================================
-             ARTICLE 1
-        ================================================== -->
 
         <article class="research-card">
 
-            <div class="card-type">
-                Research Article
-            </div>
+            <div class="card-type">Research Article</div>
 
-            <h3>
-                Children’s Drawings
-            </h3>
+            <h3>Children’s Drawings</h3>
 
             <div class="authors">
                 Ann W. Burgess &amp; Carol R. Hartman · 1993
@@ -964,16 +251,9 @@ footer{
         </article>
 
 
-
-        <!-- =================================================
-             ARTICLE 2
-        ================================================== -->
-
         <article class="research-card">
 
-            <div class="card-type">
-                Research Article
-            </div>
+            <div class="card-type">Research Article</div>
 
             <h3>
                 Developing Drawing Skill: Exploring the Role of Parental Support and Cultural Learning
@@ -1015,16 +295,9 @@ footer{
         </article>
 
 
-
-        <!-- =================================================
-             ARTICLE 3 — SIGNS, SYMBOLS AND SCHEMAS
-        ================================================== -->
-
         <article class="research-card">
 
-            <div class="card-type">
-                Research Article
-            </div>
+            <div class="card-type">Research Article</div>
 
             <h3>
                 Signs, Symbols and Schemas: Understanding Meaning in a Child’s Drawings
@@ -1077,16 +350,9 @@ footer{
         </article>
 
 
-
-        <!-- =================================================
-             ARTICLE 4
-        ================================================== -->
-
         <article class="research-card">
 
-            <div class="card-type">
-                Recent Research
-            </div>
+            <div class="card-type">Recent Research</div>
 
             <h3>
                 Indicators in Children’s Drawings as a Tool for Identifying Sexual Abuse
@@ -1097,12 +363,34 @@ footer{
                 Zahra Taghipour · 2026
             </div>
 
-            <p class="description">
-                A study of family drawings by 28 children with confirmed
-                histories of sexual abuse in Iran. The authors examine recurring
-                visual and emotional indicators while emphasizing that such
-                features are not diagnostic markers and must be interpreted
-                alongside narrative and case context.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این پژوهش به بررسی شاخص‌های هیجانی و رفتاری در نقاشی‌های
+                ۲۸ کودک شامل ۱۳ دختر و ۱۵ پسر با سابقه تأییدشده سوءاستفاده
+                جنسی در ایران می‌پردازد. بیشتر شرکت‌کنندگان، معادل ۸۵ درصد،
+                کودکان مهاجر افغانستانی بودند. پژوهشگران با استفاده از
+                تحلیل محتوای جهت‌دار، نقاشی‌های خانوادگی کودکان و توضیحات
+                آنان درباره نقاشی را بررسی کردند. سه پژوهشگر به‌طور مستقل
+                نقاشی‌ها را بر اساس چارچوبی برگرفته از مطالعات پیشین
+                کدگذاری کردند و اختلاف‌نظرها به‌صورت مشارکتی حل شد.
+
+                از جمله شاخص‌های بصری مشاهده‌شده می‌توان به اشیای شناور،
+                فشار زیاد مداد، بازوهای نامتقارن، فرم‌های یک‌بعدی،
+                پیکره‌های شبیه قورباغه یا هیولایی، پاهای ناپایدار و
+                بازوهای قرارگرفته در وضعیت افقی اشاره کرد. این ویژگی‌ها
+                در نقاشی کودکانی که سوءاستفاده از سوی پدر، شریک عاطفی مادر
+                یا یکی از آشنایان مرد خانواده را تجربه کرده بودند، بیشتر
+                مشاهده شد.
+
+                بااین‌حال، نویسندگان تأکید می‌کنند که این عناصر بصری
+                <strong>شاخص‌های تشخیصی سوءاستفاده جنسی از کودک نیستند</strong>.
+                یافته‌ها نشان می‌دهند که سرنخ‌های حاصل از نقاشی می‌توانند
+                در کنار سایر اطلاعات، برای متخصصان بالینی در شناخت برخی
+                وضعیت‌های هیجانی کودک، از جمله ترس، اضطراب، ناامنی،
+                پرخاشگری یا تصویر منفی از خود، اطلاعات تکمیلی فراهم کنند؛
+                به‌ویژه زمانی که بیان کلامی تجربه برای کودک دشوار است.
+                با توجه به نبود گروه کنترل و ویژگی فرهنگی خاص نمونه،
+                نتایج باید با احتیاط تفسیر شوند و تعمیم آنها به سایر
+                جمعیت‌ها نیازمند شواهد پژوهشی بیشتر است.
             </p>
 
             <a class="source-link"
@@ -1112,19 +400,21 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="Indicators%20in%20children's%20drawings%20as%20a%20tool%20for%20identifying%20sexual%20abuse.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
 
-            <div class="card-type">
-                Developmental Research
-            </div>
+            <div class="card-type">Developmental Research</div>
 
-            <h3>
-                What’s in the Body? Children’s Annotated Drawings
-            </h3>
+            <h3>What’s in the Body? Children’s Annotated Drawings</h3>
 
             <div class="authors">
                 Johanna Andersson, Ragnhild Löfgren &amp; Lena A. E. Tibell · 2019
@@ -1146,12 +436,9 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Computational Research
-            </div>
+            <div class="card-type">Computational Research</div>
 
             <h3>
                 Using Deep Learning Predictions to Study the Development of Drawing Behaviour in Children
@@ -1178,12 +465,9 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Clinical Research
-            </div>
+            <div class="card-type">Clinical Research</div>
 
             <h3>
                 AI-Assisted Drawing Therapy for Children with ADHD: A Randomised Controlled Trial
@@ -1213,40 +497,27 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     BODY IMAGE & IDENTITY
-===================================================== -->
-
 <section class="library-section" id="body-image">
 
     <div class="section-heading">
 
-        <h2>
-            Body, Image &amp; Identity
-        </h2>
+        <h2>Body, Image &amp; Identity</h2>
 
         <p>
-            Research on body modification, piercing, body image, self-
-            objectification, appearance concerns, social acceptance, and the
-            psychological meanings attached to the modified body.
+            Research on body modification, piercing, body image,
+            self-objectification, appearance concerns, social acceptance,
+            and the psychological meanings attached to the modified body.
         </p>
 
     </div>
 
-
     <div class="research-grid">
-
 
         <article class="research-card">
 
-            <div class="card-type">
-                Body Modification
-            </div>
+            <div class="card-type">Body Modification</div>
 
-            <h3>
-                Modified Body – Symbol of Risk or Resources?
-            </h3>
+            <h3>Modified Body – Symbol of Risk or Resources?</h3>
 
             <div class="authors">
                 Mateusz J. Lammek · 2022
@@ -1268,15 +539,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Body Modification
-            </div>
+            <div class="card-type">Body Modification</div>
 
             <h3>
-                Body Modification and Self-Destructive Behavior in Adolescents: Psychological Manifestations
+                Body Modification and Self-Destructive Behavior in Adolescents:
+                Psychological Manifestations
             </h3>
 
             <div class="authors">
@@ -1299,15 +568,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Piercing &amp; Motivation
-            </div>
+            <div class="card-type">Piercing &amp; Motivation</div>
 
             <h3>
-                Body Piercing Trends and Motivations Among Students at the University of Cape Coast, Ghana
+                Body Piercing Trends and Motivations Among Students at the
+                University of Cape Coast, Ghana
             </h3>
 
             <div class="authors">
@@ -1330,15 +597,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Adolescent Research
-            </div>
+            <div class="card-type">Adolescent Research</div>
 
             <h3>
-                Body Piercing and Adolescent Risk-Taking: Association or Expression?
+                Body Piercing and Adolescent Risk-Taking:
+                Association or Expression?
             </h3>
 
             <div class="authors">
@@ -1361,16 +626,11 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Clinical Research
-            </div>
+            <div class="card-type">Clinical Research</div>
 
-            <h3>
-                Clinical and Psychological Aspects of Piercing
-            </h3>
+            <h3>Clinical and Psychological Aspects of Piercing</h3>
 
             <div class="authors">
                 Justyna Putek &amp; Jacek C. Szepietowski · 2024
@@ -1392,16 +652,11 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Body &amp; Social Context
-            </div>
+            <div class="card-type">Body &amp; Social Context</div>
 
-            <h3>
-                Social Acceptance of Body Piercing
-            </h3>
+            <h3>Social Acceptance of Body Piercing</h3>
 
             <div class="authors">
                 Elżbieta Rębiś &amp; Daria Rębiś · 2025
@@ -1423,15 +678,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Body Image
-            </div>
+            <div class="card-type">Body Image</div>
 
             <h3>
-                Self-Objectification, Body Uneasiness, and Body Investment in Individuals Undergoing Body Modification and Plastic Surgery
+                Self-Objectification, Body Uneasiness, and Body Investment in
+                Individuals Undergoing Body Modification and Plastic Surgery
             </h3>
 
             <div class="authors">
@@ -1455,15 +708,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Health &amp; Body Art
-            </div>
+            <div class="card-type">Health &amp; Body Art</div>
 
             <h3>
-                Body Piercing and Tattoos: A Survey on Young Adults’ Knowledge of the Risks and Practices in Body Art
+                Body Piercing and Tattoos: A Survey on Young Adults’
+                Knowledge of the Risks and Practices in Body Art
             </h3>
 
             <div class="authors">
@@ -1485,15 +736,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Review
-            </div>
+            <div class="card-type">Review</div>
 
             <h3>
-                Deviance as an Historical Artefact: A Scoping Review of Psychological Studies of Body Modification
+                Deviance as an Historical Artefact: A Scoping Review of
+                Psychological Studies of Body Modification
             </h3>
 
             <div class="authors">
@@ -1521,18 +770,11 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     CLINICAL PERSPECTIVES
-===================================================== -->
-
 <section class="library-section" id="clinical">
 
     <div class="section-heading">
 
-        <h2>
-            Clinical Perspectives
-        </h2>
+        <h2>Clinical Perspectives</h2>
 
         <p>
             Sources connecting visual or bodily practices with clinical
@@ -1542,15 +784,11 @@ footer{
 
     </div>
 
-
     <div class="research-grid">
-
 
         <article class="research-card">
 
-            <div class="card-type">
-                Art Therapy
-            </div>
+            <div class="card-type">Art Therapy</div>
 
             <h3>
                 Metaphor in Art Therapy: Its Use with Vulnerable Children
@@ -1576,15 +814,13 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Psychology Profession
-            </div>
+            <div class="card-type">Psychology Profession</div>
 
             <h3>
-                The Darker Side: Personality and Motivations of Clinical and Counselling Psychologists
+                The Darker Side: Personality and Motivations of Clinical and
+                Counselling Psychologists
             </h3>
 
             <div class="authors">
@@ -1612,18 +848,11 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     ART IMAGE & PSYCHOLOGY
-===================================================== -->
-
 <section class="library-section" id="art-image">
 
     <div class="section-heading">
 
-        <h2>
-            Art, Image &amp; Psychology
-        </h2>
+        <h2>Art, Image &amp; Psychology</h2>
 
         <p>
             Research situated at the intersection of visual representation,
@@ -1633,15 +862,11 @@ footer{
 
     </div>
 
-
     <div class="research-grid">
-
 
         <article class="research-card">
 
-            <div class="card-type">
-                Systematic Review
-            </div>
+            <div class="card-type">Systematic Review</div>
 
             <h3>
                 The Associations Between Photo-Editing and Body Concerns Among Females
@@ -1668,16 +893,11 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Development &amp; Visual Representation
-            </div>
+            <div class="card-type">Development &amp; Visual Representation</div>
 
-            <h3>
-                Interpreting Children’s Drawings
-            </h3>
+            <h3>Interpreting Children’s Drawings</h3>
 
             <div class="authors">
                 Joseph H. Di Leo · 1983
@@ -1699,16 +919,11 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Visual Development
-            </div>
+            <div class="card-type">Visual Development</div>
 
-            <h3>
-                Making Sense of Children’s Drawings
-            </h3>
+            <h3>Making Sense of Children’s Drawings</h3>
 
             <div class="authors">
                 John Willats · 2005
@@ -1731,16 +946,11 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
-            <div class="card-type">
-                Clinical Art Practice
-            </div>
+            <div class="card-type">Clinical Art Practice</div>
 
-            <h3>
-                Understanding Children’s Drawings
-            </h3>
+            <h3>Understanding Children’s Drawings</h3>
 
             <div class="authors">
                 Cathy A. Malchiodi · 1998
@@ -1766,18 +976,11 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     THEORY
-===================================================== -->
-
 <section class="library-section theory-section" id="theory">
 
     <div class="section-heading">
 
-        <h2>
-            Theory &amp; Critical Perspectives
-        </h2>
+        <h2>Theory &amp; Critical Perspectives</h2>
 
         <p>
             Foundational theoretical texts that can support a broader
@@ -1787,15 +990,11 @@ footer{
 
     </div>
 
-
     <div class="theory-box">
-
 
         <article class="theory-item">
 
-            <div class="card-type">
-                Theoretical Framework
-            </div>
+            <div class="card-type">Theoretical Framework</div>
 
             <h3>
                 Michel Foucault: Beyond Structuralism and Hermeneutics
@@ -1818,16 +1017,11 @@ footer{
         </article>
 
 
-
         <article class="theory-item">
 
-            <div class="card-type">
-                Michel Foucault
-            </div>
+            <div class="card-type">Michel Foucault</div>
 
-            <h3>
-                Discipline and Punish
-            </h3>
+            <h3>Discipline and Punish</h3>
 
             <p>
                 Foucault’s historical analysis of punishment, discipline,
@@ -1849,15 +1043,8 @@ footer{
 
 </section>
 
-
-
 </main>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer id="contact">
 
@@ -1881,9 +1068,7 @@ footer{
 
             <div class="footer-column">
 
-                <h4>
-                    Explore
-                </h4>
+                <h4>Explore</h4>
 
                 <a href="https://bitanegahdar.ir/index.html">
                     Home
@@ -1906,9 +1091,7 @@ footer{
 
             <div class="footer-column">
 
-                <h4>
-                    Contact
-                </h4>
+                <h4>Contact</h4>
 
                 <a href="mailto:bitanegahdar@gmail.com">
                     Email
@@ -1963,7 +1146,5 @@ footer{
 
 </footer>
 
-
 </body>
-
 </html>
