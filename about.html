@@ -163,13 +163,35 @@ nav a:hover{
 
 
 /* =====================================================
-   INTRO
+   ABOUT INTRO + PHOTO
+===================================================== */
+
+.about-intro{
+    width:100% !important;
+
+    margin:38px 0 60px 0 !important;
+
+    display:grid !important;
+
+    grid-template-columns:minmax(0,1fr) 360px !important;
+
+    gap:55px !important;
+
+    align-items:start !important;
+
+    direction:ltr !important;
+}
+
+
+/* =====================================================
+   ABOUT TEXT
 ===================================================== */
 
 .intro{
-    max-width:920px !important;
+    width:100% !important;
+    max-width:none !important;
 
-    margin:38px 0 60px auto !important;
+    margin:0 !important;
 
     font-family:"DM Sans",Arial,sans-serif !important;
 
@@ -182,6 +204,36 @@ nav a:hover{
     direction:rtl !important;
     text-align:justify !important;
     text-align-last:right !important;
+}
+
+
+/* =====================================================
+   ABOUT PHOTO
+===================================================== */
+
+.about-photo{
+    width:100% !important;
+
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:flex-end !important;
+
+    direction:ltr !important;
+}
+
+.about-photo img{
+    width:100% !important;
+    max-width:360px !important;
+
+    aspect-ratio:4 / 5 !important;
+
+    display:block !important;
+
+    object-fit:cover !important;
+
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
 }
 
 
@@ -566,10 +618,45 @@ footer{
         text-align:center !important;
     }
 
+
+    /* =================================================
+       MOBILE ABOUT LAYOUT
+    ================================================= */
+
+    .about-intro{
+        margin:32px 0 45px 0 !important;
+
+        display:flex !important;
+
+        flex-direction:column !important;
+
+        gap:32px !important;
+
+        direction:ltr !important;
+    }
+
+    .about-photo{
+        width:100% !important;
+
+        order:1 !important;
+
+        justify-content:center !important;
+    }
+
+    .about-photo img{
+        width:100% !important;
+
+        max-width:360px !important;
+
+        aspect-ratio:4 / 5 !important;
+    }
+
     .intro{
+        order:2 !important;
+
         max-width:100% !important;
 
-        margin:32px 0 45px auto !important;
+        margin:0 !important;
 
         font-size:15px !important;
         line-height:2.1 !important;
@@ -577,6 +664,7 @@ footer{
         direction:rtl !important;
         text-align:right !important;
     }
+
 
     .education{
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
@@ -669,6 +757,10 @@ footer{
 
     .page h1{
         font-size:36px !important;
+    }
+
+    .about-photo img{
+        max-width:100% !important;
     }
 
     .education{
@@ -769,6 +861,7 @@ footer{
 
 </header>
 
+
 <!-- =====================================================
      MAIN
 ===================================================== -->
@@ -783,7 +876,15 @@ footer{
     Bita Negahdar
 </h1>
 
-<p class="intro">
+
+<!-- =================================================
+     ABOUT INTRO + PHOTO
+===================================================== -->
+
+<div class="about-intro">
+
+
+<div class="intro">
 
 بیتا نگاهدار متولد 1365 است و فعالیت حرفه‌ای خود را از 1382 در حوزه هنرهای تجسمی و ارتباطات بصری آغاز کرده است. بیش از بیست سال تجربه حرفه‌ای در زمینه برندینگ، طراحی و هنرهای تجسمی، او را به‌تدریج به سوی مطالعه انسان و حوزه روان‌شناسی سوق داده است؛ مسیری که در ادامه، به شکل‌گیری علاقه‌ای جدی به شناخت انسان، هویت و تجربه زیسته او انجامیده است.
 
@@ -795,7 +896,20 @@ footer{
 
 وي در حال توسعه مسیر حرفه‌ای و علمی خود در حوزه روان‌شناسی است و تلاش می‌کند پیشینه خود در هنر، عکاسی و برندینگ را در کنار مطالعات روان‌شناختی قرار دهد.
 
-</p>
+</div>
+
+
+<div class="about-photo">
+
+<img
+    src="images/BitaNegahdar.jpg"
+    alt="Bita Negahdar"
+>
+
+</div>
+
+</div>
+
 
 <!-- =================================================
      EDUCATION
@@ -824,6 +938,7 @@ footer{
 </div>
 
 </section>
+
 
 <!-- =================================================
      RELEVANT STUDIES & TRAINING
@@ -856,6 +971,7 @@ One-Year Professional Program | 2024–2025
 
 </span>
 
+
 <span>
 
 <div class="training-icon">
@@ -871,6 +987,7 @@ One-Year Professional Program | 2024–2025
 Schema Therapy
 
 </span>
+
 
 <span>
 
@@ -888,6 +1005,7 @@ Cognitive Behavioral Therapy (CBT)
 
 </span>
 
+
 <span>
 
 <div class="training-icon">
@@ -903,6 +1021,7 @@ Cognitive Behavioral Therapy (CBT)
 QEEG Brain Mapping Workshop
 
 </span>
+
 
 <span>
 
@@ -920,6 +1039,7 @@ Acceptance and Commitment Therapy (ACT)
 
 </span>
 
+
 <span>
 
 <div class="training-icon">
@@ -935,6 +1055,7 @@ Acceptance and Commitment Therapy (ACT)
 Suicide Crisis Management
 
 </span>
+
 
 <span>
 
@@ -955,6 +1076,7 @@ Psychopharmacology
 </div>
 
 </section>
+
 
 <!-- =================================================
      PROFESSIONAL / ACADEMIC LINKS
@@ -978,6 +1100,7 @@ rel="noopener noreferrer"
 
 </a>
 
+
 <a
 href="https://www.iranpa.org/"
 class="resource-link"
@@ -991,6 +1114,7 @@ rel="noopener noreferrer"
 >
 
 </a>
+
 
 <a
 href="https://pubmed.ncbi.nlm.nih.gov/"
@@ -1006,6 +1130,7 @@ rel="noopener noreferrer"
 
 </a>
 
+
 <a
 href="https://scholar.google.com/"
 class="resource-link"
@@ -1019,6 +1144,7 @@ rel="noopener noreferrer"
 >
 
 </a>
+
 
 <a
 href="https://www.researchgate.net/"
@@ -1039,6 +1165,7 @@ rel="noopener noreferrer"
 </section>
 
 </main>
+
 
 <!-- =====================================================
      FOOTER
