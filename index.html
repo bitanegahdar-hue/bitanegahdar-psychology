@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -182,12 +183,7 @@ nav a.contact-link:hover{
 ===================================================== */
 
 .hero-name{
-    position:relative;
-    z-index:4;
-    font-size:39px;
-    line-height:1.03;
-    font-weight:500;
-    letter-spacing:-1px;
+    display:none;
 }
 
 
@@ -477,6 +473,43 @@ nav a.contact-link:hover{
     background:#FFFFFF;
 }
 
+.writing-section .section-header{
+    justify-content:flex-start;
+}
+
+.writing-section .section-label{
+    display:none;
+}
+
+.writing-section .section-title{
+    display:none;
+}
+
+.writing-section .section-intro{
+    max-width:100%;
+    width:100%;
+    text-align:right;
+    font-size:16px;
+    line-height:1.8;
+    font-weight:600;
+    color:#252525;
+    direction:rtl;
+    margin:0;
+}
+
+.writing-section .section-intro::after{
+    content:"Psychological readings of images, bodies, identity, memory, and contemporary visual experience.";
+    display:block;
+    margin-top:5px;
+    font-size:10px;
+    line-height:1.6;
+    font-weight:400;
+    color:#777777;
+    direction:ltr;
+    text-align:right;
+}
+
+
 .writing-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -537,6 +570,37 @@ nav a.contact-link:hover{
 
 .research-section .section-intro{
     color:#AAAAAA;
+}
+
+.research-section .section-header{
+    justify-content:flex-start;
+}
+
+.research-section .section-label{
+    display:none;
+}
+
+.research-section .section-title{
+    display:block;
+    width:100%;
+    text-align:right;
+    direction:rtl;
+    font-size:22px;
+    line-height:1.4;
+    font-weight:600;
+    margin:0;
+}
+
+.research-section .section-title::after{
+    content:"Research Library";
+    display:block;
+    margin-top:4px;
+    font-size:10px;
+    line-height:1.5;
+    font-weight:400;
+    color:#AAAAAA;
+    direction:ltr;
+    text-align:right;
 }
 
 .research-grid{
@@ -875,7 +939,7 @@ footer p{
 
 
     .hero-name{
-        font-size:35px;
+        display:none;
     }
 
 
@@ -920,6 +984,24 @@ footer p{
 
     .section-intro{
         margin-top:20px;
+    }
+
+    .writing-section .section-intro{
+        margin-top:0;
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .writing-section .section-intro::after{
+        font-size:9px;
+    }
+
+    .research-section .section-title{
+        font-size:20px;
+    }
+
+    .research-section .section-title::after{
+        font-size:9px;
     }
 
     .writing-grid{
@@ -974,7 +1056,7 @@ footer p{
 
 
     .hero-name{
-        font-size:31px;
+        display:none;
     }
 
 
@@ -1009,6 +1091,23 @@ footer p{
 
     .hero-photo{
         height:390px;
+    }
+
+
+    .writing-section .section-intro{
+        font-size:14px;
+    }
+
+    .writing-section .section-intro::after{
+        font-size:8.5px;
+    }
+
+    .research-section .section-title{
+        font-size:18px;
+    }
+
+    .research-section .section-title::after{
+        font-size:8.5px;
     }
 
 
@@ -1098,12 +1197,6 @@ footer p{
         </div>
 
 
-        <div class="hero-name">
-            Bita<br>
-            Negahdar
-        </div>
-
-
         <div class="hero-navigation">
 
 
@@ -1163,7 +1256,7 @@ footer p{
                 </div>
 
                 <div class="hero-circle-text">
-                   بعضي از تنهاترين لحظه هاي زندگي در شلوغترين نقطه هاي شهر اتفاق مي افتد
+                    بعضی از تنهاترین لحظه‌های زندگی در شلوغ‌ترین نقطه‌های شهر اتفاق می‌افتد
                 </div>
 
             </a>
@@ -1221,7 +1314,7 @@ footer p{
         </div>
 
         <div class="section-intro">
-            Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
+            خوانش‌های روان‌شناختی از تصاویر، بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
         </div>
 
     </div>
@@ -1326,7 +1419,7 @@ footer p{
             </div>
 
             <h2 class="section-title">
-                Research Library
+                کتابخانه پژوهشی
             </h2>
 
         </div>
@@ -1643,3 +1736,4 @@ footer p{
 </body>
 
 </html>
+```
