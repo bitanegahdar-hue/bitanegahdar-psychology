@@ -164,6 +164,7 @@ nav a.contact-link:hover{
 }
 
 
+
 /* =====================================================
    HERO TOP LABEL
 ===================================================== */
@@ -850,7 +851,7 @@ footer p{
 
     /* =================================================
        MOBILE HERO
-       مستقل از نسخه دسکتاپ
+       ارتفاع دقیق بر اساس نسبت 1080 × 1818
     ================================================= */
 
     .hero{
@@ -864,17 +865,16 @@ footer p{
 
 
 
-    /*
-       در موبایل بخش عکس دسکتاپ حذف می‌شود.
-       فقط hero-blue به عنوان کل Hero نمایش داده می‌شود.
-    */
-
     .hero-blue{
         width:100%;
-        height:auto;
-        min-height:0;
 
-        aspect-ratio:1080 / 1818;
+        /*
+           ارتفاع دقیق تصویر موبایل:
+           1080 × 1818
+        */
+        height:calc(100vw * 1818 / 1080);
+
+        min-height:0;
 
         padding:40px 7%;
 
@@ -886,10 +886,9 @@ footer p{
 
 
 
-    /*
-       تصویر مستقل موبایل
-       فایل: images/hero-background2.jpg
-    */
+    /* =================================================
+       MOBILE HERO BACKGROUND
+    ================================================= */
 
     .hero-blue::before{
         content:"";
@@ -897,7 +896,12 @@ footer p{
         inset:0;
 
         background-image:url("images/hero-background2.jpg");
-        background-size:cover;
+
+        /*
+           تصویر دقیقاً کل فضای Hero را پر می‌کند
+           و نوار مشکی پایین باقی نمی‌ماند.
+        */
+        background-size:100% 100%;
         background-position:center center;
         background-repeat:no-repeat;
 
@@ -918,9 +922,9 @@ footer p{
 
 
 
-    /*
-       عکس شخصی دسکتاپ در موبایل کاملاً حذف می‌شود
-    */
+    /* =================================================
+       DESKTOP PHOTO HIDDEN ON MOBILE
+    ================================================= */
 
     .hero-photo{
         display:none;
@@ -940,6 +944,10 @@ footer p{
     }
 
 
+
+    /* =================================================
+       MOBILE NAVIGATION
+    ================================================= */
 
     .hero-navigation{
         position:absolute;
@@ -1074,14 +1082,15 @@ footer p{
 
 
     /*
-       نسبت تصویر موبایل همچنان 1080 × 1818
-       باقی می‌ماند و در تمام موبایل‌ها حفظ می‌شود.
+       نکته مهم:
+       دیگر aspect-ratio برای Hero موبایل تعریف نمی‌شود.
+       ارتفاع اصلی در max-width:760px تعیین شده
+       و در تمام موبایل‌ها حفظ می‌شود.
     */
 
     .hero-blue{
-        height:auto;
+        height:calc(100vw * 1818 / 1080);
         min-height:0;
-        aspect-ratio:1080 / 1818;
     }
 
 
@@ -1123,13 +1132,6 @@ footer p{
         font-size:8.5px;
         line-height:1.55;
     }
-
-
-
-    /*
-       دیگر hero-photo وجود ندارد
-       بنابراین عکس BitaNeg.jpg در موبایل نمایش داده نمی‌شود.
-    */
 
 
 
@@ -1196,7 +1198,6 @@ footer p{
 
 <header>
 
-```
 <div class="logo">
     BITA NEGAHDAR
 </div>
@@ -1220,9 +1221,10 @@ footer p{
     </a>
 
 </nav>
-```
 
 </header>
+
+
 
 <!-- =====================================================
      HERO
@@ -1230,10 +1232,7 @@ footer p{
 
 <section class="hero">
 
-```
 <div class="hero-blue">
-
-
 
     <div class="hero-eyebrow">
         Psychology · Visual Culture
@@ -1242,8 +1241,6 @@ footer p{
 
 
     <div class="hero-navigation">
-
-
 
         <a
             href="about.html"
@@ -1317,8 +1314,6 @@ footer p{
 
         </a>
 
-
-
     </div>
 
 
@@ -1333,8 +1328,6 @@ footer p{
 
     </div>
 
-
-
 </div>
 
 
@@ -1347,9 +1340,10 @@ footer p{
     >
 
 </div>
-```
 
 </section>
+
+
 
 <!-- =====================================================
      LATEST WRITING
@@ -1357,30 +1351,29 @@ footer p{
 
 <section class="section writing-section">
 
-```
 <div class="section-header">
 
-   <div class="writing-heading">
+    <div class="writing-heading">
 
-<div class="writing-heading-main">
-    خوانش‌های روان‌شناختی از تصاویر
+        <div class="writing-heading-main">
+            خوانش‌های روان‌شناختی از تصاویر
+        </div>
+
+        <div class="writing-heading-sub">
+            بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
+        </div>
+
+        <div class="writing-heading-en">
+            Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
+        </div>
+
+    </div>
+
 </div>
 
-<div class="writing-heading-sub">
-    بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
-</div>
 
-<div class="writing-heading-en">
-    Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
-</div>
-```
 
-</div>
-
-```
 <div class="writing-grid">
-
-
 
     <a href="writing-1.html" class="writing-card">
 
@@ -1456,12 +1449,11 @@ footer p{
 
     </a>
 
-
-
 </div>
-```
 
 </section>
+
+
 
 <!-- =====================================================
      RESEARCH LIBRARY
@@ -1472,7 +1464,6 @@ footer p{
     id="research"
 >
 
-```
 <div class="section-header">
 
     <div class="research-heading">
@@ -1492,8 +1483,6 @@ footer p{
 
 
 <div class="research-grid">
-
-
 
     <a
         href="research.html#children-drawing"
@@ -1595,12 +1584,11 @@ footer p{
 
     </a>
 
-
-
 </div>
-```
 
 </section>
+
+
 
 <!-- =====================================================
      ART & PSYCHOLOGY
@@ -1611,10 +1599,7 @@ footer p{
     id="art-psychology"
 >
 
-```
 <div class="art-block">
-
-
 
     <div class="art-image">
 
@@ -1651,12 +1636,11 @@ footer p{
 
     </div>
 
-
-
 </div>
-```
 
 </section>
+
+
 
 <!-- =====================================================
      CONTACT
@@ -1667,10 +1651,7 @@ footer p{
     id="contact"
 >
 
-```
 <div class="contact-inner">
-
-
 
     <div class="contact-text">
 
@@ -1691,8 +1672,6 @@ footer p{
 
 
     <div class="contact-links">
-
-
 
         <a
             href="mailto:bitanegahdar@gmail.com"
@@ -1756,11 +1735,7 @@ footer p{
 
         </a>
 
-
-
     </div>
-
-
 
 </div>
 
@@ -1794,9 +1769,10 @@ footer p{
     >
 
 </div>
-```
 
 </section>
+
+
 
 <!-- =====================================================
      FOOTER
@@ -1804,11 +1780,9 @@ footer p{
 
 <footer>
 
-```
 <p>
     © 2026 Bita Negahdar. All rights reserved.
 </p>
-```
 
 </footer>
 
