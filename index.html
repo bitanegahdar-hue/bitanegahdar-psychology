@@ -131,7 +131,7 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   FULL HERO BACKGROUND IMAGE
+   FULL HERO BACKGROUND IMAGE - DESKTOP
 ===================================================== */
 
 .hero-blue::before{
@@ -328,7 +328,7 @@ nav a.contact-link:hover{
 
 
 /* =====================================================
-   RIGHT PHOTO
+   RIGHT PHOTO - DESKTOP ONLY
 ===================================================== */
 
 .hero-photo{
@@ -848,27 +848,89 @@ footer p{
 
 
 
+    /* =================================================
+       MOBILE HERO
+       مستقل از نسخه دسکتاپ
+    ================================================= */
+
     .hero{
+        width:100%;
         height:auto;
-        display:flex;
-        flex-direction:column;
+        min-height:0;
+        display:block;
+        background:#111111;
+        overflow:hidden;
     }
 
 
+
+    /*
+       در موبایل بخش عکس دسکتاپ حذف می‌شود.
+       فقط hero-blue به عنوان کل Hero نمایش داده می‌شود.
+    */
 
     .hero-blue{
         width:100%;
-        height:620px;
-        min-height:620px;
+        height:auto;
+        min-height:0;
+
+        aspect-ratio:1080 / 1818;
+
         padding:40px 7%;
+
+        background:#CAA2A2;
+
+        position:relative;
+        overflow:hidden;
     }
 
 
 
+    /*
+       تصویر مستقل موبایل
+       فایل: images/hero-background2.jpg
+    */
+
+    .hero-blue::before{
+        content:"";
+        position:absolute;
+        inset:0;
+
+        background-image:url("images/hero-background2.jpg");
+        background-size:cover;
+        background-position:center center;
+        background-repeat:no-repeat;
+
+        z-index:0;
+    }
+
+
+
+    .hero-blue::after{
+        content:"";
+        position:absolute;
+        inset:0;
+
+        background:transparent;
+
+        z-index:1;
+    }
+
+
+
+    /*
+       عکس شخصی دسکتاپ در موبایل کاملاً حذف می‌شود
+    */
+
     .hero-photo{
-        width:100%;
-        height:450px;
-        order:2;
+        display:none;
+    }
+
+
+
+    .hero-eyebrow{
+        position:relative;
+        z-index:4;
     }
 
 
@@ -880,11 +942,17 @@ footer p{
 
 
     .hero-navigation{
+        position:absolute;
+
         left:50%;
         right:auto;
         top:54%;
+
         gap:20px;
+
         transform:translate(-50%,-50%);
+
+        z-index:5;
     }
 
 
@@ -1005,9 +1073,15 @@ footer p{
 
 
 
+    /*
+       نسبت تصویر موبایل همچنان 1080 × 1818
+       باقی می‌ماند و در تمام موبایل‌ها حفظ می‌شود.
+    */
+
     .hero-blue{
-        height:650px;
-        min-height:650px;
+        height:auto;
+        min-height:0;
+        aspect-ratio:1080 / 1818;
     }
 
 
@@ -1052,9 +1126,10 @@ footer p{
 
 
 
-    .hero-photo{
-        height:390px;
-    }
+    /*
+       دیگر hero-photo وجود ندارد
+       بنابراین عکس BitaNeg.jpg در موبایل نمایش داده نمی‌شود.
+    */
 
 
 
@@ -1113,11 +1188,7 @@ footer p{
 
 </head>
 
-
-
 <body>
-
-
 
 <!-- =====================================================
      HEADER
@@ -1125,35 +1196,33 @@ footer p{
 
 <header>
 
-    <div class="logo">
-        BITA NEGAHDAR
-    </div>
+```
+<div class="logo">
+    BITA NEGAHDAR
+</div>
 
-    <nav>
+<nav>
 
-        <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
 
-        <a href="about.html">About</a>
+    <a href="about.html">About</a>
 
-        <a href="writing.html">Writing</a>
+    <a href="writing.html">Writing</a>
 
-        <a href="research.html">Research</a>
+    <a href="research.html">Research</a>
 
-        <a href="art-psychology.html">
-            Art &amp; Psychology
-        </a>
+    <a href="art-psychology.html">
+        Art &amp; Psychology
+    </a>
 
-        <a href="#contact" class="contact-link">
-            Contact
-        </a>
+    <a href="#contact" class="contact-link">
+        Contact
+    </a>
 
-    </nav>
+</nav>
+```
 
 </header>
-
-
-
-
 
 <!-- =====================================================
      HERO
@@ -1161,132 +1230,126 @@ footer p{
 
 <section class="hero">
 
-
-
-    <div class="hero-blue">
-
-
-
-        <div class="hero-eyebrow">
-            Psychology · Visual Culture
-        </div>
+```
+<div class="hero-blue">
 
 
 
-        <div class="hero-navigation">
-
-
-
-            <a
-                href="about.html"
-                class="hero-circle-link"
-            >
-
-                <div class="hero-circle">
-
-                    <img
-                        src="images/hero-circle-about.png"
-                        alt="About Bita Negahdar"
-                    >
-
-                </div>
-
-                <div class="hero-circle-title">
-                    بیتا نگاهدار
-                </div>
-
-            </a>
-
-
-
-            <a
-                href="#contact"
-                class="hero-circle-link"
-            >
-
-                <div class="hero-circle">
-
-                    <img
-                        src="images/hero-circle-consultation.png"
-                        alt="Consultation"
-                    >
-
-                </div>
-
-                <div class="hero-circle-title">
-                    مشاوره
-                </div>
-
-                <div class="hero-circle-text">
-                    تمرکز بر درک تجربه، رفتار و معنای فردی از منظر روان‌شناختی
-                </div>
-
-            </a>
-
-
-
-            <a
-                href="writing-4.html"
-                class="hero-circle-link"
-            >
-
-                <div class="hero-circle">
-
-                    <img
-                        src="images/hero-circle-writing.png"
-                        alt="Latest Writing"
-                    >
-
-                </div>
-
-                <div class="hero-circle-title">
-                    آخرین نوشته‌ها
-                </div>
-
-                <div class="hero-circle-text">
-                    بعضی از تنهاترین لحظه‌های زندگی در شلوغ‌ترین نقطه‌های شهر اتفاق می‌افتد
-                </div>
-
-            </a>
-
-
-
-        </div>
-
-
-
-        <div class="hero-slide-info">
-
-            <div class="hero-slide-line"></div>
-
-            <div class="hero-slide-number">
-                Psychology
-            </div>
-
-        </div>
-
-
-
+    <div class="hero-eyebrow">
+        Psychology · Visual Culture
     </div>
 
 
 
-    <div class="hero-photo">
+    <div class="hero-navigation">
 
-        <img
-            src="images/BitaNeg.jpg"
-            alt="Bita Negahdar"
+
+
+        <a
+            href="about.html"
+            class="hero-circle-link"
         >
 
+            <div class="hero-circle">
+
+                <img
+                    src="images/hero-circle-about.png"
+                    alt="About Bita Negahdar"
+                >
+
+            </div>
+
+            <div class="hero-circle-title">
+                بیتا نگاهدار
+            </div>
+
+        </a>
+
+
+
+        <a
+            href="#contact"
+            class="hero-circle-link"
+        >
+
+            <div class="hero-circle">
+
+                <img
+                    src="images/hero-circle-consultation.png"
+                    alt="Consultation"
+                >
+
+            </div>
+
+            <div class="hero-circle-title">
+                مشاوره
+            </div>
+
+            <div class="hero-circle-text">
+                تمرکز بر درک تجربه، رفتار و معنای فردی از منظر روان‌شناختی
+            </div>
+
+        </a>
+
+
+
+        <a
+            href="writing-4.html"
+            class="hero-circle-link"
+        >
+
+            <div class="hero-circle">
+
+                <img
+                    src="images/hero-circle-writing.png"
+                    alt="Latest Writing"
+                >
+
+            </div>
+
+            <div class="hero-circle-title">
+                آخرین نوشته‌ها
+            </div>
+
+            <div class="hero-circle-text">
+                بعضی از تنهاترین لحظه‌های زندگی در شلوغ‌ترین نقطه‌های شهر اتفاق می‌افتد
+            </div>
+
+        </a>
+
+
+
     </div>
 
 
 
+    <div class="hero-slide-info">
+
+        <div class="hero-slide-line"></div>
+
+        <div class="hero-slide-number">
+            Psychology
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<div class="hero-photo">
+
+    <img
+        src="images/BitaNeg.jpg"
+        alt="Bita Negahdar"
+    >
+
+</div>
+```
+
 </section>
-
-
-
-
 
 <!-- =====================================================
      LATEST WRITING
@@ -1294,113 +1357,111 @@ footer p{
 
 <section class="section writing-section">
 
-    <div class="section-header">
+```
+<div class="section-header">
 
-       <div class="writing-heading">
+   <div class="writing-heading">
 
-    <div class="writing-heading-main">
-        خوانش‌های روان‌شناختی از تصاویر
-    </div>
+<div class="writing-heading-main">
+    خوانش‌های روان‌شناختی از تصاویر
+</div>
 
-    <div class="writing-heading-sub">
-        بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
-    </div>
+<div class="writing-heading-sub">
+    بدن‌ها، هویت، حافظه و تجربه بصری معاصر.
+</div>
 
-    <div class="writing-heading-en">
-        Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
-    </div>
+<div class="writing-heading-en">
+    Psychological readings of images, bodies, identity, memory, and contemporary visual experience.
+</div>
+```
 
 </div>
 
+```
+<div class="writing-grid">
 
 
-    <div class="writing-grid">
 
+    <a href="writing-1.html" class="writing-card">
 
+        <img
+            src="images/cover-1.jpeg"
+            alt="Writing 1"
+        >
 
-        <a href="writing-1.html" class="writing-card">
+        <div class="writing-card-overlay">
 
-            <img
-                src="images/cover-1.jpeg"
-                alt="Writing 1"
-            >
-
-            <div class="writing-card-overlay">
-
-                <div class="writing-card-title">
-                    Identity, Objects &amp; the Extended Self
-                </div>
-
+            <div class="writing-card-title">
+                Identity, Objects &amp; the Extended Self
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
 
-        <a href="writing-2.html" class="writing-card">
+    <a href="writing-2.html" class="writing-card">
 
-            <img
-                src="images/cover-2.jpeg"
-                alt="Writing 2"
-            >
+        <img
+            src="images/cover-2.jpeg"
+            alt="Writing 2"
+        >
 
-            <div class="writing-card-overlay">
+        <div class="writing-card-overlay">
 
-                <div class="writing-card-title">
-                    The Body as a Psychological Space
-                </div>
-
+            <div class="writing-card-title">
+                The Body as a Psychological Space
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
 
-        <a href="writing-3.html" class="writing-card">
+    <a href="writing-3.html" class="writing-card">
 
-            <img
-                src="images/cover-3.jpeg"
-                alt="Writing 3"
-            >
+        <img
+            src="images/cover-3.jpeg"
+            alt="Writing 3"
+        >
 
-            <div class="writing-card-overlay">
+        <div class="writing-card-overlay">
 
-                <div class="writing-card-title">
-                    Photography, Memory &amp; Self-Continuity
-                </div>
-
+            <div class="writing-card-title">
+                Photography, Memory &amp; Self-Continuity
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
 
-        <a href="writing-4.html" class="writing-card">
+    <a href="writing-4.html" class="writing-card">
 
-            <img
-                src="images/cover-4.jpg"
-                alt="Writing 4"
-            >
+        <img
+            src="images/cover-4.jpg"
+            alt="Writing 4"
+        >
 
-            <div class="writing-card-overlay">
+        <div class="writing-card-overlay">
 
-                <div class="writing-card-title">
-                    Tokyo Compression &amp; Psychological Isolation
-                </div>
-
+            <div class="writing-card-title">
+                Tokyo Compression &amp; Psychological Isolation
             </div>
 
-        </a>
+        </div>
+
+    </a>
 
 
 
-    </div>
+</div>
+```
 
 </section>
-
-
-
-
 
 <!-- =====================================================
      RESEARCH LIBRARY
@@ -1411,137 +1472,135 @@ footer p{
     id="research"
 >
 
-    <div class="section-header">
+```
+<div class="section-header">
 
-        <div class="research-heading">
+    <div class="research-heading">
 
-            <div class="research-heading-fa">
-                کتابخانه پژوهشی
-            </div>
+        <div class="research-heading-fa">
+            کتابخانه پژوهشی
+        </div>
 
-            <div class="research-heading-en">
-                Research Library
-            </div>
-
+        <div class="research-heading-en">
+            Research Library
         </div>
 
     </div>
 
-
-
-    <div class="research-grid">
+</div>
 
 
 
-        <a
-            href="research.html#children-drawing"
-            class="research-card"
-        >
+<div class="research-grid">
 
-            <div class="research-image">
 
-                <img
-                    src="images/research-psychology.jpg"
-                    alt="Children's Drawings Research"
-                >
 
+    <a
+        href="research.html#children-drawing"
+        class="research-card"
+    >
+
+        <div class="research-image">
+
+            <img
+                src="images/research-psychology.jpg"
+                alt="Children's Drawings Research"
+            >
+
+        </div>
+
+        <div class="research-content">
+
+            <div class="small-label">
+                روان‌شناسی
             </div>
 
-            <div class="research-content">
+            <h3>
+                نقاشی کودکان
+            </h3>
 
-                <div class="small-label">
-                    روان‌شناسی
-                </div>
+            <p>
+                پژوهش‌هایی درباره نقاشی کودکان، رشد مهارت‌های ترسیمی، شکل‌گیری معنا، بیان تصویری و کاربرد آن در زمینه‌های روان‌شناختی و بالینی.
+            </p>
 
-                <h3>
-                    نقاشی کودکان
-                </h3>
+        </div>
 
-                <p>
-                    پژوهش‌هایی درباره نقاشی کودکان، رشد مهارت‌های ترسیمی، شکل‌گیری معنا، بیان تصویری و کاربرد آن در زمینه‌های روان‌شناختی و بالینی.
-                </p>
+    </a>
 
+
+
+    <a
+        href="research.html#art-image"
+        class="research-card"
+    >
+
+        <div class="research-image">
+
+            <img
+                src="images/research-art-psychology.jpg"
+                alt="Art, Image and Psychology Research"
+            >
+
+        </div>
+
+        <div class="research-content">
+
+            <div class="small-label">
+                هنر و روان‌شناسی
             </div>
 
-        </a>
+            <h3>
+                هنر، تصویر و روان‌شناسی
+            </h3>
+
+            <p>
+                پژوهش‌هایی درباره هنرهای تجسمی، عکاسی، فرایندهای روان‌شناختی، ادراک، هویت، تصویر بدن و تجربه انسانی.
+            </p>
+
+        </div>
+
+    </a>
 
 
 
-        <a
-            href="research.html#art-image"
-            class="research-card"
-        >
+    <a
+        href="research.html#body-image"
+        class="research-card"
+    >
 
-            <div class="research-image">
+        <div class="research-image">
 
-                <img
-                    src="images/research-art-psychology.jpg"
-                    alt="Art, Image and Psychology Research"
-                >
+            <img
+                src="images/research-visual-culture.jpg"
+                alt="Body, Image and Identity Research"
+            >
 
+        </div>
+
+        <div class="research-content">
+
+            <div class="small-label">
+                فرهنگ بصری
             </div>
 
-            <div class="research-content">
+            <h3>
+                بدن، تصویر و هویت
+            </h3>
 
-                <div class="small-label">
-                    هنر و روان‌شناسی
-                </div>
+            <p>
+                پژوهش‌هایی درباره تغییرات بدن، تصویر بدن، هویت، بازنمایی، فرهنگ بصری و ابعاد روان‌شناختی و اجتماعی بدن.
+            </p>
 
-                <h3>
-                    هنر، تصویر و روان‌شناسی
-                </h3>
+        </div>
 
-                <p>
-                    پژوهش‌هایی درباره هنرهای تجسمی، عکاسی، فرایندهای روان‌شناختی، ادراک، هویت، تصویر بدن و تجربه انسانی.
-                </p>
-
-            </div>
-
-        </a>
+    </a>
 
 
 
-        <a
-            href="research.html#body-image"
-            class="research-card"
-        >
-
-            <div class="research-image">
-
-                <img
-                    src="images/research-visual-culture.jpg"
-                    alt="Body, Image and Identity Research"
-                >
-
-            </div>
-
-            <div class="research-content">
-
-                <div class="small-label">
-                    فرهنگ بصری
-                </div>
-
-                <h3>
-                    بدن، تصویر و هویت
-                </h3>
-
-                <p>
-                    پژوهش‌هایی درباره تغییرات بدن، تصویر بدن، هویت، بازنمایی، فرهنگ بصری و ابعاد روان‌شناختی و اجتماعی بدن.
-                </p>
-
-            </div>
-
-        </a>
-
-
-
-    </div>
+</div>
+```
 
 </section>
-
-
-
-
 
 <!-- =====================================================
      ART & PSYCHOLOGY
@@ -1552,54 +1611,52 @@ footer p{
     id="art-psychology"
 >
 
-    <div class="art-block">
+```
+<div class="art-block">
 
 
 
-        <div class="art-image">
+    <div class="art-image">
 
-            <img
-                src="images/art-psychology-cover.jpg"
-                alt="هنر و روان‌شناسی"
-            >
-
-        </div>
-
-
-
-        <div class="art-content">
-
-            <div class="section-label">
-                رویکرد میان‌رشته‌ای
-            </div>
-
-            <h2>
-                هنر و<br>
-                روان‌شناسی
-            </h2>
-
-            <p>
-                فضایی میان‌رشته‌ای برای بررسی مفاهیم روان‌شناختی از طریق عکاسی، بازنمایی تصویری، هنر معاصر و تصاویر روزمره. در اینجا، تصویر صرفاً به‌عنوان یک عنصر توضیحی یا تزئینی در نظر گرفته نمی‌شود، بلکه می‌تواند بستری برای فهم تجربه روان‌شناختی باشد.
-            </p>
-
-            <a
-                href="art-psychology.html"
-                class="art-explore-link"
-            >
-                مشاهده هنر و روان‌شناسی
-            </a>
-
-        </div>
-
-
+        <img
+            src="images/art-psychology-cover.jpg"
+            alt="هنر و روان‌شناسی"
+        >
 
     </div>
 
+
+
+    <div class="art-content">
+
+        <div class="section-label">
+            رویکرد میان‌رشته‌ای
+        </div>
+
+        <h2>
+            هنر و<br>
+            روان‌شناسی
+        </h2>
+
+        <p>
+            فضایی میان‌رشته‌ای برای بررسی مفاهیم روان‌شناختی از طریق عکاسی، بازنمایی تصویری، هنر معاصر و تصاویر روزمره. در اینجا، تصویر صرفاً به‌عنوان یک عنصر توضیحی یا تزئینی در نظر گرفته نمی‌شود، بلکه می‌تواند بستری برای فهم تجربه روان‌شناختی باشد.
+        </p>
+
+        <a
+            href="art-psychology.html"
+            class="art-explore-link"
+        >
+            مشاهده هنر و روان‌شناسی
+        </a>
+
+    </div>
+
+
+
+</div>
+```
+
 </section>
-
-
-
-
 
 <!-- =====================================================
      CONTACT
@@ -1610,97 +1667,94 @@ footer p{
     id="contact"
 >
 
-    <div class="contact-inner">
+```
+<div class="contact-inner">
 
 
 
-        <div class="contact-text">
+    <div class="contact-text">
 
-            <div class="section-label">
-                Contact
-            </div>
-
-            <h2 class="section-title">
-                ارتباط با من
-            </h2>
-
-            <p>
-                برای ارتباطات دانشگاهی، همکاری‌های پژوهشی، فرصت‌های حرفه‌ای یا پرسش‌ها و موضوعات مرتبط با روان‌شناسی.
-            </p>
-
+        <div class="section-label">
+            Contact
         </div>
 
+        <h2 class="section-title">
+            ارتباط با من
+        </h2>
+
+        <p>
+            برای ارتباطات دانشگاهی، همکاری‌های پژوهشی، فرصت‌های حرفه‌ای یا پرسش‌ها و موضوعات مرتبط با روان‌شناسی.
+        </p>
+
+    </div>
 
 
-        <div class="contact-links">
+
+    <div class="contact-links">
 
 
 
-            <a
-                href="mailto:bitanegahdar@gmail.com"
-                class="contact-icon"
-                aria-label="Email"
+        <a
+            href="mailto:bitanegahdar@gmail.com"
+            class="contact-icon"
+            aria-label="Email"
+        >
+
+            <img
+                src="images/email.png"
+                alt="Email"
             >
 
-                <img
-                    src="images/email.png"
-                    alt="Email"
-                >
-
-            </a>
+        </a>
 
 
 
-            <a
-                href="https://www.instagram.com/bitanegahdar.ir"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-icon"
-                aria-label="Instagram"
+        <a
+            href="https://www.instagram.com/bitanegahdar.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-icon"
+            aria-label="Instagram"
+        >
+
+            <img
+                src="images/instagram.png"
+                alt="Instagram"
             >
 
-                <img
-                    src="images/instagram.png"
-                    alt="Instagram"
-                >
-
-            </a>
+        </a>
 
 
 
-            <a
-                href="https://www.linkedin.com/in/bita-negahdar"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-icon"
-                aria-label="LinkedIn"
+        <a
+            href="https://www.linkedin.com/in/bita-negahdar"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-icon"
+            aria-label="LinkedIn"
+        >
+
+            <img
+                src="images/Linkedin.png"
+                alt="LinkedIn"
             >
 
-                <img
-                    src="images/Linkedin.png"
-                    alt="LinkedIn"
-                >
-
-            </a>
+        </a>
 
 
 
-            <a
-                href="tel:+989119382619"
-                class="contact-icon"
-                aria-label="Phone"
+        <a
+            href="tel:+989119382619"
+            class="contact-icon"
+            aria-label="Phone"
+        >
+
+            <img
+                src="images/Phone.png"
+                alt="Phone"
             >
 
-                <img
-                    src="images/Phone.png"
-                    alt="Phone"
-                >
-
-            </a>
-
-
-
-        </div>
+        </a>
 
 
 
@@ -1708,42 +1762,41 @@ footer p{
 
 
 
-    <div class="professional-links">
-
-        <img
-            src="images/apa.png"
-            alt="APA"
-        >
-
-        <img
-            src="images/ipa.png"
-            alt="IPA"
-        >
-
-        <img
-            src="images/pubmed.png"
-            alt="PubMed"
-        >
-
-        <img
-            src="images/scholar.png"
-            alt="Google Scholar"
-        >
-
-        <img
-            src="images/researchgate.png"
-            alt="ResearchGate"
-        >
-
-    </div>
+</div>
 
 
+
+<div class="professional-links">
+
+    <img
+        src="images/apa.png"
+        alt="APA"
+    >
+
+    <img
+        src="images/ipa.png"
+        alt="IPA"
+    >
+
+    <img
+        src="images/pubmed.png"
+        alt="PubMed"
+    >
+
+    <img
+        src="images/scholar.png"
+        alt="Google Scholar"
+    >
+
+    <img
+        src="images/researchgate.png"
+        alt="ResearchGate"
+    >
+
+</div>
+```
 
 </section>
-
-
-
-
 
 <!-- =====================================================
      FOOTER
@@ -1751,13 +1804,13 @@ footer p{
 
 <footer>
 
-    <p>
-        © 2026 Bita Negahdar. All rights reserved.
-    </p>
+```
+<p>
+    © 2026 Bita Negahdar. All rights reserved.
+</p>
+```
 
 </footer>
-
-
 
 </body>
 
