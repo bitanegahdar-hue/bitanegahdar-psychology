@@ -1,0 +1,491 @@
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>An Occupation of Loss | Bita Negahdar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================================
+   WRITING 05 — PERSIAN ARTICLE
+===================================================== */
+
+.article-text {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: plaintext;
+}
+
+
+/* =====================================================
+   PERSIAN PARAGRAPHS
+===================================================== */
+
+.article-text p {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: plaintext;
+
+    line-height: 2.1;
+}
+
+
+/* =====================================================
+   ENGLISH TERMS INSIDE PERSIAN TEXT
+===================================================== */
+
+.article-text em {
+    unicode-bidi: isolate;
+}
+
+
+/* =====================================================
+   WRITING 05 GALLERY
+   NATURAL IMAGE PROPORTIONS
+   NO CROPPING
+===================================================== */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 70px;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   HEADER
+   SAME MENU AS ABOUT PAGE
+===================================================== */
+
+header{
+    width:100% !important;
+    min-height:76px !important;
+    height:76px !important;
+    padding:0 4vw !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+
+    background:#000000 !important;
+    border-bottom:1px solid #000000 !important;
+}
+
+.logo{
+    font-family:"DM Sans",Arial,sans-serif !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    letter-spacing:2.4px !important;
+
+    color:#FFFFFF !important;
+
+    white-space:nowrap !important;
+}
+
+nav{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+
+    gap:10px !important;
+
+    flex-shrink:0 !important;
+}
+
+nav a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    min-height:38px !important;
+    height:38px !important;
+
+    padding:7px 10px !important;
+
+    font-family:"DM Sans",Arial,sans-serif !important;
+
+    font-size:11px !important;
+    font-weight:600 !important;
+
+    letter-spacing:1.2px !important;
+    line-height:1 !important;
+
+    text-transform:uppercase !important;
+
+    color:#FFFFFF !important;
+    background:transparent !important;
+
+    border:1px solid transparent !important;
+
+    white-space:nowrap !important;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease !important;
+}
+
+nav a:hover{
+    background:#CAA2A2 !important;
+    border-color:#CAA2A2 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.contact-btn{
+    padding:9px 16px !important;
+
+    background:#F5EDED !important;
+    border:1px solid #F5EDED !important;
+
+    color:#CAA2A2 !important;
+}
+
+.contact-btn:hover{
+    background:#CAA2A2 !important;
+    border-color:#CAA2A2 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   BACK TO WRITING BUTTON
+===================================================== */
+
+.back{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    padding:10px 18px !important;
+
+    background:#F5EDED !important;
+    border:1px solid #F5EDED !important;
+
+    color:#CAA2A2 !important;
+
+    text-decoration:none !important;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease !important;
+}
+
+.back:hover{
+    background:#CAA2A2 !important;
+    border-color:#CAA2A2 !important;
+    color:#FFFFFF !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    header{
+        min-height:72px !important;
+        height:auto !important;
+
+        padding:14px 5vw !important;
+
+        gap:15px !important;
+
+        background:#000000 !important;
+    }
+
+    .logo{
+        font-size:14px !important;
+        letter-spacing:1.8px !important;
+
+        color:#FFFFFF !important;
+    }
+
+    nav{
+        gap:4px !important;
+
+        flex-wrap:wrap !important;
+
+        justify-content:flex-end !important;
+    }
+
+    nav a{
+        min-height:30px !important;
+        height:30px !important;
+
+        padding:5px 5px !important;
+
+        font-size:7px !important;
+        letter-spacing:.8px !important;
+
+        color:#FFFFFF !important;
+    }
+
+    .contact-btn{
+        padding:7px 9px !important;
+    }
+
+    .article-text {
+        line-height:2;
+    }
+
+    .gallery {
+        gap:25px;
+        margin-top:50px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
+
+
+    <nav>
+
+        <a href="https://bitanegahdar.ir/index.html">
+            Home
+        </a>
+
+        <a href="https://bitanegahdar.ir/about.html">
+            About
+        </a>
+
+        <a href="https://bitanegahdar.ir/writing.html">
+            Writing
+        </a>
+
+        <a href="https://bitanegahdar.ir/index.html#research">
+            Research
+        </a>
+
+        <a href="art-psychology.html">
+            Art &amp; Psychology
+        </a>
+
+        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<article class="article">
+
+
+    <div class="meta">
+        Writing 05
+    </div>
+
+
+    <h1>
+        An Occupation of Loss
+    </h1>
+
+
+    <!-- =================================================
+         ARTICLE TEXT
+    ================================================= -->
+
+    <div class="article-text">
+
+
+        <p>
+            این گزاره که هر رویارویی تازگیِ خود را دارد، نقطه ثقلِ پدیدارشناختیِ تحلیلِ ماست. در روان‌شناسی، سوگ را نباید یک فرآیند ایستا و کلیشه‌ای دانست. تضاد میان دیدگاهِ نیویورکر، سوگ به مثابه حواس‌پرتی، و نیویورک مگ، سوگ به مثابه التیام، دقیقاً در همین مفهومِ تازگی حل می‌شود.
+        </p>
+
+
+        <p>
+            هر کنشگر در پروژه سایمون، در هر تکرارِ آوا، در حال بازتعریفِ یک تجربه منحصر‌به‌فرد است که از ساختارِ بیولوژیکِ تروما عبور می‌کند.
+        </p>
+
+
+        <p>
+            مجموعه <em>An Occupation of Loss</em> اثر تارین سایمون، سوگواران حرفه‌ای از پانزده کشور را در برج‌های بتنیِ پارک اونیو آرموری گرد هم آورد.
+        </p>
+
+
+        <p>
+            آن برج‌های بتنی که می‌بینید، در واقع شبیه به یک سیستمِ انتقالِ صدا طراحی شده‌اند. هدف سایمون این بوده که صدا، ضجه‌ها و آوازهای سوگ، را در یک فضای بتنی محبوس و سپس هدایت کند. به عنوان یک روان‌شناس، می‌توان توجه کرد که چگونه این فضای محبوس‌کننده، در کنار حرکت بدن، امکان خوانشی مشابه با محیط‌های کنترل‌شده در آزمایش‌های رفتاردرمانی را فراهم می‌کند.
+        </p>
+
+
+        <p>
+            منتقد نیویورکر در مشاهدات خود می‌گوید سوگ، حواس‌پرتی از فقدان است، چرا که پس از دفن پیکرها و پایان آیین‌ها، تنها سکوتی سنگین و بی‌وقفه باقی می‌ماند. اما در مقابل، نیویورک مگ معتقد است گوش دادن عمیق در تاریکی، گره‌های درونی را می‌گشاید و زخم‌ها را التیام می‌بخشد.
+        </p>
+
+
+        <p>
+            اما واقعیت چیست؟ پارادوکسِ اصلی در این است که هر رویارویی، تازگیِ خود را دارد.
+        </p>
+
+
+        <p>
+            ما نباید سوگ را یک فرآیندِ خطی و ایستا بدانیم. این پروژه به ما نشان می‌دهد که تفاوتِ میانِ سوگ به مثابه مکانیزم دفاعی و سوگ به مثابه آیینِ التیام‌بخش، در کیفیتِ حضورِ سوگوار در لحظه نهفته است. سوگوار حرفه‌ای در هر آواخوانی، با یک سابجکتیویتی، یا ذهنیت، تازه مواجه است که اجازه می‌دهد تروما از یک بن‌بستِ روانی، به یک تجربه بدنمند و زنده تبدیل شود.
+        </p>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         WRITING 05 GALLERY
+         12 IMAGES
+         NATURAL PROPORTIONS — NO CROPPING
+    ===================================================== -->
+
+    <div class="gallery">
+
+
+        <img
+            src="images/post5 (1).jpg"
+            alt="Writing 05 — Image 1"
+        >
+
+
+        <img
+            src="images/post5 (2).jpg"
+            alt="Writing 05 — Image 2"
+        >
+
+
+        <img
+            src="images/post5 (3).jpg"
+            alt="Writing 05 — Image 3"
+        >
+
+
+        <img
+            src="images/post5 (4).jpg"
+            alt="Writing 05 — Image 4"
+        >
+
+
+        <img
+            src="images/post5 (5).jpg"
+            alt="Writing 05 — Image 5"
+        >
+
+
+        <img
+            src="images/post5 (6).jpg"
+            alt="Writing 05 — Image 6"
+        >
+
+
+        <img
+            src="images/post5 (7).jpg"
+            alt="Writing 05 — Image 7"
+        >
+
+
+        <img
+            src="images/post5 (8).jpg"
+            alt="Writing 05 — Image 8"
+        >
+
+
+        <img
+            src="images/post5 (9).jpg"
+            alt="Writing 05 — Image 9"
+        >
+
+
+        <img
+            src="images/post5 (10).jpg"
+            alt="Writing 05 — Image 10"
+        >
+
+
+        <img
+            src="images/post5 (11).jpg"
+            alt="Writing 05 — Image 11"
+        >
+
+
+        <img
+            src="images/post5 (12).jpg"
+            alt="Writing 05 — Image 12"
+        >
+
+
+    </div>
+
+
+    <!-- =====================================================
+         BACK BUTTON
+    ===================================================== -->
+
+    <a href="writing.html" class="back">
+        Back to Writing
+    </a>
+
+
+</article>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div>
+        BITA NEGAHDAR
+    </div>
+
+    <div>
+        Psychology
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+```
