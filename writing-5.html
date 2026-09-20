@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -35,7 +34,6 @@
     direction: rtl;
     text-align: right;
     unicode-bidi: plaintext;
-
     line-height: 2.1;
 }
 
@@ -51,8 +49,7 @@
 
 /* =====================================================
    WRITING 05 GALLERY
-   NATURAL IMAGE PROPORTIONS
-   NO CROPPING
+   ALL IMAGES — SAME SIZE / SAME FRAME
 ===================================================== */
 
 .gallery {
@@ -60,14 +57,23 @@
     flex-direction: column;
     gap: 40px;
     margin-top: 70px;
+    width: 100%;
 }
 
 .gallery img {
     display: block;
+
     width: 100%;
+    aspect-ratio: 4 / 5;
+
     height: auto;
+
+    object-fit: cover;
+    object-position: center;
+
     max-width: 100%;
-    object-fit: contain;
+
+    background: #F5EDED;
 }
 
 
@@ -259,6 +265,14 @@ nav a:hover{
         margin-top:50px;
     }
 
+    .gallery img {
+        width:100%;
+        aspect-ratio:4 / 5;
+        height:auto;
+        object-fit:cover;
+        object-position:center;
+    }
+
 }
 
 </style>
@@ -374,8 +388,7 @@ nav a:hover{
 
     <!-- =====================================================
          WRITING 05 GALLERY
-         12 IMAGES
-         NATURAL PROPORTIONS — NO CROPPING
+         12 IMAGES — SAME FRAME
     ===================================================== -->
 
     <div class="gallery">
@@ -488,4 +501,3 @@ nav a:hover{
 </body>
 
 </html>
-```
