@@ -1,1389 +1,1515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Art & Psychology | Bita Negahdar</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        /* =====================================================
-           GLOBAL RESET
-        ===================================================== */
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        html{
-            scroll-behavior:smooth;
-        }
-
-        body{
-            background:#FFFFFF;
-            color:#252525;
-            font-family:"DM Sans", Arial, sans-serif;
-            font-weight:400;
-        }
-
-        a{
-            color:inherit;
-            text-decoration:none;
-        }
-
-
-        /* =====================================================
-           HEADER
-        ===================================================== */
-
-        header{
-            height:76px;
-            background:#111111;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            padding:0 6%;
-        }
-
-        .logo{
-            color:#FFFFFF;
-            font-size:16px;
-            font-weight:600;
-            letter-spacing:1px;
-        }
-
-        nav{
-            display:flex;
-            align-items:center;
-            gap:30px;
-        }
-
-        nav a{
-            color:#FFFFFF;
-            font-size:11px;
-            font-weight:500;
-            letter-spacing:.8px;
-            transition:.25s ease;
-        }
-
-        nav a:hover{
-            color:#5A70B5;
-        }
-
-        nav .contact-link{
-            border:1px solid #5A70B5;
-            padding:10px 17px;
-            color:#FFFFFF;
-        }
-
-        nav .contact-link:hover{
-            background:#5A70B5;
-            color:#FFFFFF;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .hero{
-            width:100%;
-            min-height:430px;
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            background:#F4F4F4;
-        }
-
-        .hero-image{
-            min-height:430px;
-            background-image:
-                linear-gradient(
-                    rgba(17,17,17,.18),
-                    rgba(17,17,17,.18)
-                ),
-                url("images/art-psychology-cover.jpg");
-            background-size:cover;
-            background-position:center;
-        }
-
-        .hero-content{
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            padding:70px 9%;
-            background:#F4F4F4;
-        }
-
-        .hero-label{
-            font-size:10px;
-            font-weight:600;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            color:#5A70B5;
-            margin-bottom:22px;
-        }
-
-        h1{
-            font-size:48px;
-            line-height:1.1;
-            font-weight:500;
-            letter-spacing:-1.5px;
-            margin-bottom:22px;
-            color:#111111;
-        }
-
-        .hero-subtitle{
-            font-size:15px;
-            line-height:1.8;
-            font-weight:400;
-            color:#555555;
-            max-width:430px;
-        }
-
-
-        /* =====================================================
-           INTRO
-        ===================================================== */
-
-        .intro{
-            max-width:900px;
-            margin:0 auto;
-            padding:85px 30px 65px;
-            text-align:center;
-        }
-
-        .intro-label{
-            font-size:10px;
-            font-weight:600;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            color:#5A70B5;
-            margin-bottom:18px;
-        }
-
-        .intro h2{
-            font-size:28px;
-            font-weight:500;
-            color:#111111;
-            margin-bottom:25px;
-        }
-
-        .intro p{
-            font-size:14px;
-            line-height:2;
-            color:#666666;
-        }
-
-
-        /* =====================================================
-           MAIN CONTENT
-        ===================================================== */
-
-        .content{
-            max-width:1100px;
-            margin:0 auto;
-            padding:0 30px 100px;
-        }
-
-        .content-section{
-            padding:75px 0;
-            border-top:1px solid #E5E5E5;
-        }
-
-        .content-section:first-child{
-            border-top:none;
-            padding-top:20px;
-        }
-
-        .section-number{
-            font-size:10px;
-            font-weight:600;
-            letter-spacing:2px;
-            color:#5A70B5;
-            margin-bottom:13px;
-        }
-
-        .content-section h2{
-            font-size:27px;
-            line-height:1.3;
-            font-weight:500;
-            color:#111111;
-            margin-bottom:22px;
-        }
-
-        .content-section h3{
-            font-size:18px;
-            line-height:1.5;
-            font-weight:500;
-            color:#111111;
-            margin:30px 0 15px;
-        }
-
-        .content-section p{
-            font-size:14px;
-            line-height:2.05;
-            color:#5F5F5F;
-            margin-bottom:18px;
-        }
-
-        .content-section strong{
-            color:#252525;
-            font-weight:600;
-        }
-
-
-        /* =====================================================
-           FEATURE QUOTE
-        ===================================================== */
-
-        .feature-statement{
-            margin:38px 0;
-            padding:28px 32px;
-            border-left:3px solid #5A70B5;
-            background:#F7F7F7;
-        }
-
-        .feature-statement p{
-            margin:0;
-            font-size:18px;
-            line-height:1.8;
-            color:#333333;
-            font-weight:400;
-        }
-
-
-        /* =====================================================
-           TWO COLUMN CONTENT
-        ===================================================== */
-
-        .two-column{
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:55px;
-            margin-top:35px;
-        }
-
-        .column-block{
-            padding-top:5px;
-        }
-
-        .column-block h3{
-            margin-top:0;
-        }
-
-
-        /* =====================================================
-           RESEARCH NOTE
-        ===================================================== */
-
-        .research-note{
-            margin-top:35px;
-            padding:28px 30px;
-            background:#F4F4F4;
-        }
-
-        .research-note-title{
-            font-size:10px;
-            font-weight:600;
-            letter-spacing:1.8px;
-            text-transform:uppercase;
-            color:#5A70B5;
-            margin-bottom:14px;
-        }
-
-        .research-note p{
-            margin:0;
-            font-size:12px;
-            line-height:1.9;
-            color:#666666;
-        }
-
-
-        /* =====================================================
-           REFERENCES
-        ===================================================== */
-
-        .references{
-            background:#111111;
-            color:#FFFFFF;
-            padding:70px 0;
-        }
-
-        .references-inner{
-            max-width:1100px;
-            margin:0 auto;
-            padding:0 30px;
-        }
-
-        .references-label{
-            font-size:10px;
-            font-weight:600;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            color:#8D9DD0;
-            margin-bottom:15px;
-        }
-
-        .references h2{
-            font-size:28px;
-            font-weight:500;
-            margin-bottom:35px;
-        }
-
-        .reference-item{
-            border-top:1px solid #333333;
-            padding:22px 0;
-        }
-
-        .reference-item:last-child{
-            border-bottom:1px solid #333333;
-        }
-
-        .reference-item p{
-            font-size:12px;
-            line-height:1.8;
-            color:#C8C8C8;
-            margin:0;
-        }
-
-        .reference-item a{
-            color:#FFFFFF;
-            transition:.25s ease;
-        }
-
-        .reference-item a:hover{
-            color:#8D9DD0;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer{
-            background:#111111;
-            color:#FFFFFF;
-            text-align:center;
-            padding:35px 20px;
-            border-top:1px solid #252525;
-        }
-
-        footer p{
-            font-size:10px;
-            letter-spacing:1px;
-            color:#AAAAAA;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
-
-        @media(max-width:800px){
-
-            header{
-                height:auto;
-                min-height:76px;
-                padding:20px 6%;
-                flex-direction:column;
-                gap:20px;
-            }
-
-            nav{
-                gap:17px;
-                flex-wrap:wrap;
-                justify-content:center;
-            }
-
-            nav a{
-                font-size:10px;
-            }
-
-            .hero{
-                grid-template-columns:1fr;
-            }
-
-            .hero-image{
-                min-height:320px;
-            }
-
-            .hero-content{
-                padding:55px 8%;
-            }
-
-            h1{
-                font-size:38px;
-            }
-
-            .intro{
-                padding-top:65px;
-            }
-
-            .content{
-                padding-left:25px;
-                padding-right:25px;
-            }
-
-            .content-section{
-                padding:55px 0;
-            }
-
-            .content-section h2{
-                font-size:24px;
-            }
-
-            .two-column{
-                grid-template-columns:1fr;
-                gap:10px;
-            }
-
-            .feature-statement{
-                padding:22px 22px;
-            }
-
-            .feature-statement p{
-                font-size:16px;
-            }
-
-            .references-inner{
-                padding-left:25px;
-                padding-right:25px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Art & Psychology | Bita Negahdar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FFFFFF;
+    color:#252525;
+    font-family:"DM Sans", Arial, sans-serif;
+    font-weight:400;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    height:76px;
+    background:#111111;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    direction:ltr;
+}
+
+.logo{
+    color:#FFFFFF;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.8px;
+    transition:.25s ease;
+    direction:ltr;
+}
+
+nav a:hover{
+    color:#5A70B5;
+}
+
+nav .contact-link{
+    border:1px solid #5A70B5;
+    padding:10px 17px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    width:100%;
+    min-height:430px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#F4F4F4;
+    direction:ltr;
+}
+
+.hero-image{
+    min-height:430px;
+    background-image:
+        linear-gradient(
+            rgba(17,17,17,.18),
+            rgba(17,17,17,.18)
+        ),
+        url("images/art-psychology-cover.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:70px 9%;
+    background:#F4F4F4;
+    direction:rtl;
+    text-align:right;
+}
+
+.hero-label{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#5A70B5;
+    margin-bottom:22px;
+    direction:ltr;
+    text-align:right;
+}
+
+h1{
+    font-size:48px;
+    line-height:1.25;
+    font-weight:500;
+    letter-spacing:-1px;
+    margin-bottom:22px;
+    color:#111111;
+}
+
+.hero-subtitle{
+    font-size:15px;
+    line-height:2;
+    color:#555555;
+    max-width:500px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro{
+    max-width:900px;
+    margin:0 auto;
+    padding:85px 30px 65px;
+    text-align:right;
+    direction:rtl;
+}
+
+.intro-label{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#5A70B5;
+    margin-bottom:18px;
+    direction:ltr;
+}
+
+.intro h2{
+    font-size:28px;
+    font-weight:500;
+    color:#111111;
+    margin-bottom:25px;
+}
+
+.intro p{
+    font-size:14px;
+    line-height:2.2;
+    color:#666666;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 30px 100px;
+}
+
+.content-section{
+    padding:75px 0;
+    border-top:1px solid #E5E5E5;
+    direction:rtl;
+    text-align:right;
+}
+
+.content-section:first-child{
+    border-top:none;
+    padding-top:20px;
+}
+
+.section-number{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    color:#5A70B5;
+    margin-bottom:13px;
+    direction:ltr;
+    text-align:right;
+}
+
+.content-section h2{
+    font-size:27px;
+    line-height:1.5;
+    font-weight:500;
+    color:#111111;
+    margin-bottom:22px;
+}
+
+.content-section p{
+    font-size:14px;
+    line-height:2.15;
+    color:#5F5F5F;
+    margin-bottom:18px;
+}
+
+.content-section strong{
+    color:#252525;
+    font-weight:600;
+}
+
+
+/* ================= STATEMENT ================= */
+
+.feature-statement{
+    margin:38px 0;
+    padding:28px 32px;
+    border-right:3px solid #5A70B5;
+    background:#F7F7F7;
+}
+
+.feature-statement p{
+    margin:0;
+    font-size:18px;
+    line-height:1.9;
+    color:#333333;
+}
+
+
+/* ================= SOURCE ================= */
+
+.source{
+    margin-top:30px;
+    padding:18px 22px;
+    background:#F4F4F4;
+    border-right:2px solid #D8D8D8;
+    direction:rtl;
+    text-align:right;
+}
+
+.source-label{
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    color:#5A70B5;
+    text-transform:uppercase;
+    margin-bottom:8px;
+    direction:ltr;
+    text-align:right;
+}
+
+.source a{
+    font-size:12px;
+    line-height:1.8;
+    color:#555555;
+}
+
+.source a:hover{
+    color:#5A70B5;
+}
+
+
+/* ================= RESEARCH NOTE ================= */
+
+.research-note{
+    margin-top:35px;
+    padding:28px 30px;
+    background:#F4F4F4;
+}
+
+.research-note-title{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    color:#5A70B5;
+    margin-bottom:14px;
+    direction:ltr;
+    text-align:right;
+}
+
+.research-note p{
+    margin:0;
+    font-size:12px;
+    line-height:2;
+    color:#666666;
+}
+
+
+/* ================= REFERENCES ================= */
+
+.references{
+    background:#111111;
+    color:#FFFFFF;
+    padding:70px 0;
+    direction:rtl;
+    text-align:right;
+}
+
+.references-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+.references-label{
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#8D9DD0;
+    margin-bottom:15px;
+    direction:ltr;
+}
+
+.references h2{
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:35px;
+}
+
+.reference-item{
+    border-top:1px solid #333333;
+    padding:22px 0;
+}
+
+.reference-item:last-child{
+    border-bottom:1px solid #333333;
+}
+
+.reference-item p{
+    font-size:12px;
+    line-height:1.9;
+    color:#C8C8C8;
+    margin:0;
+}
+
+.reference-item a{
+    color:#FFFFFF;
+}
+
+.reference-item a:hover{
+    color:#8D9DD0;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111111;
+    color:#FFFFFF;
+    text-align:center;
+    padding:35px 20px;
+    border-top:1px solid #252525;
+    direction:ltr;
+}
+
+footer p{
+    font-size:10px;
+    letter-spacing:1px;
+    color:#AAAAAA;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    header{
+        height:auto;
+        min-height:76px;
+        padding:20px 6%;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        gap:17px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:10px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        min-height:320px;
+    }
+
+    .hero-content{
+        padding:55px 8%;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+    .intro{
+        padding-top:65px;
+    }
+
+    .content{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+    .content-section{
+        padding:55px 0;
+    }
+
+    .content-section h2{
+        font-size:24px;
+    }
+
+    .feature-statement{
+        padding:22px;
+    }
+
+    .feature-statement p{
+        font-size:16px;
+    }
+
+    .references-inner{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ===================================================== -->
+<!-- ================= HEADER ================= -->
 
-    <header>
+<header>
 
-        <a href="index.html" class="logo">
-            Bita Negahdar
-        </a>
+<a href="index.html" class="logo">
+Bita Negahdar
+</a>
 
-        <nav>
+<nav>
 
-            <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-            <a href="about.html">About</a>
+<a href="about.html">About</a>
 
-            <a href="writing.html">Writing</a>
+<a href="writing.html">Writing</a>
 
-            <a href="research.html">Research</a>
+<a href="research.html">Research</a>
 
-            <a href="art-psychology.html">
-                Art &amp; Psychology
-            </a>
+<a href="art-psychology.html">
+Art &amp; Psychology
+</a>
 
-            <a href="index.html#contact" class="contact-link">
-                Contact
-            </a>
+<a href="index.html#contact" class="contact-link">
+Contact
+</a>
 
-        </nav>
+</nav>
 
-    </header>
+</header>
 
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+<!-- ================= HERO ================= -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-image"></div>
+<div class="hero-image"></div>
 
-        <div class="hero-content">
+<div class="hero-content">
 
-            <div class="hero-label">
-                Art &amp; Psychology
-            </div>
+<div class="hero-label">
+Art &amp; Psychology
+</div>
 
-            <h1>
-                Visual Experience<br>
-                and Psychological Meaning
-            </h1>
+<h1>
+تجربه بصری و<br>
+معنای روان‌شناختی
+</h1>
 
-            <p class="hero-subtitle">
-                Exploring images, visual experience, identity, memory,
-                embodiment, and the psychological meanings that emerge
-                between people and their visual worlds.
-            </p>
+<p class="hero-subtitle">
+بررسی رابطه میان تصویر، تجربه بصری، هویت، حافظه،
+بدن و محیط از منظر روان‌شناختی و پژوهش‌های معاصر.
+</p>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
 
 
-    <!-- =====================================================
-         INTRODUCTION
-    ===================================================== -->
+<!-- ================= INTRO ================= -->
 
-    <section class="intro">
+<section class="intro">
 
-        <div class="intro-label">
-            Psychology · Visual Culture
-        </div>
+<div class="intro-label">
+Psychology · Visual Culture
+</div>
 
-        <h2>
-            هنر، تصویر و تجربه روان‌شناختی
-        </h2>
+<h2>
+هنر، تصویر و تجربه روان‌شناختی
+</h2>
 
-        <p>
-            این بخش به مطالعه رابطه میان تجربه بصری و فرایندهای روان‌شناختی
-            می‌پردازد؛ از ادراک، هیجان و حافظه تا بدن، هویت، خودپنداره،
-            تجربه مکان و روابط اجتماعی. در این رویکرد، تصویر صرفاً یک
-            موضوع دیداری نیست، بلکه می‌تواند بخشی از فرایندهایی باشد که
-            فرد از طریق آنها تجربه خود و جهان پیرامونش را درک و معنا می‌کند.
-        </p>
+<p>
+این بخش به مطالعه رابطه میان تجربه بصری و فرایندهای روان‌شناختی
+می‌پردازد؛ از ادراک، هیجان و حافظه تا بدن، هویت، تجربه مکان
+و روابط اجتماعی. در این رویکرد، تصویر صرفاً یک موضوع دیداری
+نیست، بلکه می‌تواند بخشی از فرایندهایی باشد که فرد از طریق
+آنها تجربه خود و جهان پیرامونش را درک و معنا می‌کند.
+</p>
 
-    </section>
+<div class="source">
 
+<div class="source-label">
+Source
+</div>
 
+<a href="https://doi.org/10.3389/fpsyg.2024.1328449"
+target="_blank" rel="noopener">
 
-    <!-- =====================================================
-         SECTION 01
-         VISUAL EXPERIENCE
-    ===================================================== -->
+Pizzolante et al. (2024) —
+Aesthetic experiences and their transformative power:
+a systematic review.
 
-    <main class="content">
+</a>
 
-        <section class="content-section">
+</div>
 
-            <div class="section-number">
-                01 · VISUAL EXPERIENCE
-            </div>
-
-            <h2>
-                تجربه بصری و معنای روان‌شناختی
-            </h2>
-
-            <p>
-                تصویر پیش از آنکه به یک موضوع برای تماشا تبدیل شود،
-                بخشی از فرایند ادراک است. مواجهه با یک تصویر می‌تواند
-                توجه، هیجان، یادآوری، تفسیر و نسبت فرد با تجربه شخصی
-                خود را درگیر کند.
-            </p>
-
-            <p>
-                از این منظر، تجربه بصری را نمی‌توان فقط به ویژگی‌های
-                خود تصویر محدود کرد. آنچه فرد می‌بیند، با زمینه،
-                انتظار، تجربه‌های پیشین و شیوه پردازش اطلاعات نیز
-                ارتباط دارد.
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    تصویر فقط چیزی نیست که دیده می‌شود؛
-                    می‌تواند موقعیتی برای ادراک، احساس، یادآوری و ساختن معنا ایجاد کند.
-                </p>
-
-            </div>
-
-            <p>
-                پژوهش‌های معاصر در روان‌شناسی زیبایی‌شناختی نیز
-                تجربه هنری را در ارتباط با فرایندهای شناختی و هیجانی
-                بررسی می‌کنند. با این حال، واکنش افراد به آثار هنری
-                یکسان نیست و ویژگی‌های فردی، زمینه و نوع مواجهه با اثر
-                در تجربه نهایی اهمیت دارند.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 02
-             IMAGE AND MEMORY
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                02 · IMAGE &amp; MEMORY
-            </div>
-
-            <h2>
-                تصویر، عکاسی و حافظه خودزندگی‌نامه‌ای
-            </h2>
-
-            <p>
-                عکس‌ها تنها ثبت‌کننده گذشته نیستند؛ می‌توانند بر
-                شیوه‌ای که گذشته را به یاد می‌آوریم نیز اثر بگذارند.
-                حافظه خودزندگی‌نامه‌ای فرایندی بازسازی‌شونده است و
-                تصویر می‌تواند بخشی از زمینه‌ای باشد که در آن تجربه
-                گذشته دوباره قابل دسترسی و تفسیر می‌شود.
-            </p>
-
-            <p>
-                پژوهش‌های اخیر نشان داده‌اند که داشتن یا مشاهده
-                تصاویر مرتبط با یک رویداد می‌تواند بر محتوای یادآوری
-                و زاویه دید فرد هنگام بازسازی خاطره اثر بگذارد.
-                این یافته‌ها عکس را از یک ثبت‌کننده منفعل خاطره
-                فراتر می‌برند و آن را در ارتباط با فرایند یادآوری
-                قرار می‌دهند.
-            </p>
-
-            <p>
-                بنابراین، رابطه میان عکاسی و حافظه را می‌توان در
-                نقطه تلاقی ثبت بصری، توجه، بازخوانی و بازسازی تجربه
-                بررسی کرد.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 03
-             ART AND WELL-BEING
-        ================================================= -->
-
-        <section class="content-section">
+</section>
 
-            <div class="section-number">
-                03 · ART &amp; PSYCHOLOGICAL WELL-BEING
-            </div>
-
-            <h2>
-                هنر و بهزیستی روان‌شناختی
-            </h2>
 
-            <p>
-                مواجهه با هنر می‌تواند تجربه‌ای هیجانی، شناختی و
-                اجتماعی باشد. پژوهش‌های جدید درباره هنرهای تجسمی
-                نشان داده‌اند که برخی مداخلات مبتنی بر هنر می‌توانند
-                با کاهش برخی نشانه‌های روان‌شناختی همراه باشند؛
-                با این حال، نوع مداخله، جمعیت مورد مطالعه و کیفیت
-                روش‌شناختی پژوهش‌ها در تفسیر این نتایج اهمیت دارد.
-            </p>
 
-            <p>
-                برای مثال، یک مرور نظام‌مند و فراتحلیل در سال ۲۰۲۴
-                بر اساس کارآزمایی‌های تصادفی‌شده، برای هنر‌درمانی
-                تجسمی در بزرگسالان مبتلا به نشانه‌های افسردگی اثر
-                آماری معناداری گزارش کرد، اما کیفیت شواهد پایین
-                ارزیابی شد.
-            </p>
-
-            <p>
-                همچنین مرور و فراتحلیل‌های جدیدتر درباره هنر‌درمانی
-                تجسمی و اضطراب، نتایج امیدوارکننده‌ای گزارش کرده‌اند،
-                اما ناهمگونی میان مداخلات و محدودیت‌های مطالعات باید
-                در نتیجه‌گیری لحاظ شود.
-            </p>
-
-            <div class="research-note">
-
-                <div class="research-note-title">
-                    Research Note
-                </div>
-
-                <p>
-                    در این صفحه، «هنر»، «خلق اثر هنری» و «هنر‌درمانی»
-                    به جای یکدیگر استفاده نمی‌شوند. هنر‌درمانی یک
-                    مداخله حرفه‌ای و ساختاریافته است و شواهد مربوط
-                    به آن را نباید مستقیماً به هر نوع تجربه هنری
-                    یا مشاهده یک اثر هنری تعمیم داد.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 04
-             IMAGE IN PSYCHOLOGICAL CONTEXT
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                04 · IMAGE IN PSYCHOLOGICAL CONTEXT
-            </div>
-
-            <h2>
-                تصویر در زمینه روان‌شناختی
-            </h2>
-
-            <p>
-                نقاشی، عکاسی و دیگر مواد بصری می‌توانند در برخی
-                زمینه‌های روان‌شناختی به عنوان وسیله‌ای برای بیان،
-                ارتباط، مشاهده و کاوش تجربه مورد استفاده قرار گیرند.
-            </p>
-
-            <p>
-                با این حال، معنای یک تصویر را نمی‌توان مستقل از
-                زمینه زندگی فرد، رابطه حرفه‌ای، شرایط تولید تصویر
-                و روایت خود فرد تعیین کرد.
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    تصویر به‌تنهایی نباید به عنوان ابزار تشخیص
-                    روان‌شناختی تفسیر شود.
-                </p>
-
-            </div>
-
-            <p>
-                از این منظر، ارزش روان‌شناختی تصویر لزوماً در وجود
-                یک «معنای پنهان» نیست؛ بلکه می‌تواند در فرایندی باشد
-                که تصویر امکان مشاهده، گفت‌وگو، یادآوری یا بیان
-                تجربه را فراهم می‌کند.
-            </p>
-
-        </section>
+<!-- ================= CONTENT ================= -->
 
-
+<main class="content">
 
-        <!-- =================================================
-             SECTION 05
-             BODY IMAGE IDENTITY
-        ================================================= -->
 
-        <section class="content-section">
-
-            <div class="section-number">
-                05 · BODY, IMAGE &amp; IDENTITY
-            </div>
-
-            <h2>
-                بدن، تصویر و تجربه هویت
-            </h2>
-
-            <p>
-                بدن فقط چیزی نیست که دیده می‌شود؛ بخشی از تجربه فرد
-                از «خود» است. تصویر بدن شامل برداشت‌ها، احساسات و
-                ارزیابی‌هایی است که فرد نسبت به بدن خود دارد و این
-                تجربه می‌تواند در تعامل با نگاه دیگران، مقایسه
-                اجتماعی و بازنمایی‌های فرهنگی تغییر کند.
-            </p>
-
-            <p>
-                در فرهنگ تصویری معاصر، فرد نه تنها بدن خود را مشاهده
-                می‌کند، بلکه می‌تواند به طور مداوم خود را از منظر
-                یک مشاهده‌گر بیرونی نیز ارزیابی کند. در روان‌شناسی،
-                این فرایند در ارتباط با مفهوم خودشیء‌انگاری
-                (Self-Objectification) مطالعه شده است.
-            </p>
-
-            <p>
-                پژوهش‌های جدید درباره رسانه‌های اجتماعی نیز رابطه
-                میان محتوای ظاهرمحور، مقایسه اجتماعی و نگرانی‌های
-                مربوط به تصویر بدن را بررسی کرده‌اند. این روابط
-                پیچیده‌اند و نمی‌توان استفاده از رسانه‌های اجتماعی
-                را به تنهایی علت مشکلات تصویر بدن دانست.
-            </p>
-
-        </section>
+<!-- 01 -->
 
+<section class="content-section">
 
-
-        <!-- =================================================
-             SECTION 06
-             SELF REPRESENTATION
-        ================================================= -->
-
-        <section class="content-section">
+<div class="section-number">
+01 · VISUAL EXPERIENCE
+</div>
 
-            <div class="section-number">
-                06 · SELF-REPRESENTATION
-            </div>
-
-            <h2>
-                خود در برابر تصویر خود
-            </h2>
-
-            <p>
-                هر تصویری از خود، صرفاً بازنمایی ظاهری فرد نیست.
-                عکس می‌تواند به ابزاری برای مشاهده، مقایسه،
-                ارزیابی و بازسازی تصور فرد از خویشتن تبدیل شود.
-            </p>
-
-            <p>
-                در محیط‌های دیجیتال، فرد امکان انتخاب، ویرایش و
-                ارائه بخش‌هایی از زندگی و هویت خود را دارد. با این
-                حال، خودارائه‌گری دیجیتال را نمی‌توان صرفاً به عنوان
-                ساختن یک «هویت جعلی» در نظر گرفت.
-            </p>
-
-            <p>
-                پژوهش‌های جدید درباره رشد هویت نشان می‌دهند که
-                نوع مشارکت در شبکه‌های اجتماعی، اصالت در خودارائه‌گری
-                و مقایسه اجتماعی می‌توانند با جنبه‌های متفاوت
-                فرایندهای هویتی ارتباط داشته باشند.
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    مسئله فقط این نیست که فرد چقدر خود را نشان می‌دهد؛
-                    بلکه این است که چگونه، با چه هدفی و در چه رابطه‌ای
-                    با دیگران خود را بازنمایی می‌کند.
-                </p>
+<h2>
+تجربه بصری و معنای روان‌شناختی
+</h2>
 
-            </div>
-
-        </section>
+<p>
+تصویر پیش از آنکه به یک موضوع برای تماشا تبدیل شود،
+بخشی از فرایند ادراک است. مواجهه با یک تصویر می‌تواند
+توجه، هیجان، یادآوری، تفسیر و نسبت فرد با تجربه شخصی
+خود را درگیر کند.
+</p>
 
-
-
-        <!-- =================================================
-             SECTION 07
-             EMBODIMENT
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                07 · EMBODIMENT
-            </div>
-
-            <h2>
-                بدنِ زیسته و بدنِ دیده‌شده
-            </h2>
-
-            <p>
-                بدن هم چیزی است که فرد می‌تواند از بیرون مشاهده کند
-                و هم چیزی است که از درون زندگی می‌کند. این دو جنبه
-                در تجربه روزمره از بدن همواره از یکدیگر جدا نیستند.
-            </p>
-
-            <p>
-                مفهوم Embodiment در روان‌شناسی و علوم مرتبط، بر نقش
-                تجربه بدنی در شکل‌گیری تجربه خود تأکید دارد. در این
-                رویکرد، بدن صرفاً یک موضوع فیزیکی نیست، بلکه بخشی
-                از شیوه حضور فرد در جهان و ارتباط او با محیط است.
-            </p>
-
-            <p>
-                هنگامی که فرد خود را در آینه، عکس یا صفحه نمایش
-                مشاهده می‌کند، بدن می‌تواند از یک «بدن زیسته» به
-                یک موضوع قابل مشاهده و ارزیابی نیز تبدیل شود.
-                این تغییر در همه شرایط آسیب‌زا نیست، اما در شرایطی
-                که ارزیابی ظاهری و مقایسه اجتماعی دائماً تکرار شود،
-                می‌تواند بر تجربه فرد از بدن اثر بگذارد.
-            </p>
+<p>
+از این منظر، تجربه بصری را نمی‌توان فقط به ویژگی‌های
+خود تصویر محدود کرد. آنچه فرد می‌بیند، با زمینه،
+انتظار، تجربه‌های پیشین و شیوه پردازش اطلاعات نیز
+ارتباط دارد.
+</p>
 
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 08
-             EXTENDED SELF
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                08 · EXTENDED SELF
-            </div>
-
-            <h2>
-                اشیا، تصویر و خودِ گسترش‌یافته
-            </h2>
-
-            <p>
-                تجربه فرد از خود همیشه در مرز بدن پایان نمی‌یابد.
-                اشیا، مکان‌ها، لباس‌ها، تصاویر، ابزارها و حتی بعضی
-                روابط می‌توانند برای فرد معنای شخصی پیدا کنند و
-                بخشی از شیوه‌ای شوند که خود را تعریف می‌کند.
-            </p>
-
-            <p>
-                مفهوم Extended Self در ادبیات روان‌شناختی و میان‌رشته‌ای
-                به رابطه میان خود و دارایی‌ها و اشیای معنادار اشاره دارد.
-                با این حال، نمی‌توان هر شیء متعلق به فرد را به طور
-                خودکار بخشی از هویت او دانست.
-            </p>
-
-            <p>
-                معنای روان‌شناختی یک شیء در رابطه میان فرد، شیء،
-                خاطره، زمینه اجتماعی و تجربه شخصی شکل می‌گیرد.
-                از این منظر، تصویر نیز می‌تواند مانند یک شیء فرهنگی
-                و شخصی در فرایند تعریف و بازخوانی خود نقش پیدا کند.
-            </p>
+<div class="feature-statement">
+<p>
+تصویر فقط چیزی نیست که دیده می‌شود؛
+می‌تواند موقعیتی برای ادراک، احساس، یادآوری و ساختن معنا ایجاد کند.
+</p>
+</div>
+
+<p>
+پژوهش‌های معاصر در روان‌شناسی زیبایی‌شناختی نیز
+تجربه هنری را در ارتباط با فرایندهای شناختی و هیجانی
+بررسی می‌کنند. با این حال، واکنش افراد به آثار هنری
+یکسان نیست و ویژگی‌های فردی، زمینه و نوع مواجهه با اثر
+در تجربه نهایی اهمیت دارند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.3389/fpsyg.2024.1328449"
+target="_blank" rel="noopener">
+Pizzolante, M., et al. (2024). Aesthetic experiences and their transformative power: a systematic review.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 02 -->
+
+<section class="content-section">
+
+<div class="section-number">
+02 · IMAGE &amp; MEMORY
+</div>
 
-        </section>
+<h2>
+تصویر، عکاسی و حافظه خودزندگی‌نامه‌ای
+</h2>
 
+<p>
+عکس‌ها تنها ثبت‌کننده گذشته نیستند؛ می‌توانند بر
+شیوه‌ای که گذشته را به یاد می‌آوریم نیز اثر بگذارند.
+حافظه خودزندگی‌نامه‌ای فرایندی بازسازی‌شونده است و
+تصویر می‌تواند بخشی از زمینه‌ای باشد که در آن تجربه
+گذشته دوباره قابل دسترسی و تفسیر می‌شود.
+</p>
 
+<p>
+در پژوهش‌های جدید درباره عکس و حافظه، تصاویر شخصی
+به عنوان بخشی از فرایند یادآوری مورد بررسی قرار گرفته‌اند.
+این رویکرد عکس را از یک ثبت‌کننده منفعل خاطره فراتر
+می‌برد و آن را در ارتباط با فرایند بازسازی تجربه قرار می‌دهد.
+</p>
 
-        <!-- =================================================
-             SECTION 09
-             MEMORY AND SELF-CONTINUITY
-        ================================================= -->
+<p>
+بنابراین، رابطه میان عکاسی و حافظه را می‌توان در نقطه
+تلاقی ثبت بصری، توجه، بازخوانی و بازسازی تجربه بررسی کرد.
+</p>
 
-        <section class="content-section">
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.1002/acp.4150"
+target="_blank" rel="noopener">
+2024 research on photographs and autobiographical memory.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 03 -->
+
+<section class="content-section">
+
+<div class="section-number">
+03 · ART &amp; PSYCHOLOGICAL WELL-BEING
+</div>
+
+<h2>
+هنر و بهزیستی روان‌شناختی
+</h2>
 
-            <div class="section-number">
-                09 · MEMORY &amp; SELF-CONTINUITY
-            </div>
-
-            <h2>
-                عکس، حافظه و تداوم خود
-            </h2>
-
-            <p>
-                یکی از مسائل مهم در تجربه هویت این است که فرد چگونه
-                احساس می‌کند همان شخصی است که در گذشته بوده، حتی اگر
-                بدن، روابط، باورها و شرایط زندگی او تغییر کرده باشند.
-            </p>
-
-            <p>
-                خاطرات خودزندگی‌نامه‌ای در این فرایند نقش مهمی دارند.
-                عکس‌ها نیز می‌توانند به عنوان نشانه‌هایی بیرونی برای
-                دسترسی دوباره به تجربه‌های گذشته عمل کنند.
-            </p>
-
-            <p>
-                پژوهش‌های اخیر نشان داده‌اند که مشاهده تصاویر مرتبط
-                با تجربه‌های روزمره می‌تواند اطلاعاتی را در فرایند
-                یادآوری فعال کند که در یادآوری اولیه حضور نداشته‌اند.
-                از این منظر، عکس فقط سند گذشته نیست؛ می‌تواند بخشی
-                از محیطی باشد که در آن گذشته دوباره قابل دسترسی و
-                تفسیر می‌شود.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 10
-             CITY AND PSYCHOLOGICAL EXPERIENCE
-        ================================================= -->
+<p>
+مواجهه با هنر می‌تواند تجربه‌ای هیجانی، شناختی و
+اجتماعی باشد. مرورهای جدید درباره مشاهده هنر نشان
+داده‌اند که برخی پیامدهای مرتبط با بهزیستی می‌توانند
+با تجربه مشاهده آثار هنری ارتباط داشته باشند؛ با این
+حال، نتایج به زمینه، نوع فعالیت و کیفیت پژوهش وابسته‌اند.
+</p>
 
-        <section class="content-section">
-
-            <div class="section-number">
-                10 · CITY, CROWDING &amp; PSYCHOLOGICAL EXPERIENCE
-            </div>
-
-            <h2>
-                شهر، ازدحام و تجربه روان‌شناختی
-            </h2>
-
-            <p>
-                شهر مدرن با حضور هم‌زمان تعداد زیادی از افراد،
-                صداها، تصاویر، حرکت‌ها و محرک‌های دیداری تعریف می‌شود.
-                با این حال، حضور در میان دیگران لزوماً به معنای
-                تجربه ارتباط اجتماعی نیست.
-            </p>
-
-            <p>
-                از منظر روان‌شناختی، تنهایی یک وضعیت عینیِ تنها بودن
-                نیست، بلکه تجربه‌ای ذهنی از ناکافی بودن ارتباطات
-                اجتماعی مورد انتظار است. بنابراین ممکن است فرد در
-                فضایی شلوغ احساس انزوا کند و در فضایی خلوت احساس
-                آرامش یا تعلق داشته باشد.
-            </p>
-
-            <p>
-                پژوهش‌های روان‌شناسی محیطی نیز میان تراکم فیزیکی،
-                ازدحام ادراک‌شده و زمینه اجتماعی تمایز می‌گذارند.
-                تجربه فضا به ویژگی‌های محیط، احساس کنترل، امکان
-                تعامل و نحوه ادراک فرد از مکان وابسته است.
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    مسئله فقط این نیست که چند نفر در یک فضا حضور دارند؛
-                    بلکه این است که فرد آن فضا را چگونه تجربه می‌کند.
-                </p>
+<p>
+یک مرور نظام‌مند در سال ۲۰۲۵، ۳۸ مطالعه با مجموع
+۶۸۰۵ شرکت‌کننده را درباره تأثیر مشاهده هنر بر بهزیستی
+بررسی کرد. نویسندگان شواهد نسبتاً همگرایی برای
+بهزیستی یودایمونیک گزارش کردند، اما برای بسیاری از
+پیامدهای دیگر شواهد قوی وجود نداشت.
+</p>
 
-            </div>
+<p>
+بنابراین، نمی‌توان از مفهوم کلی «هنر» مستقیماً به
+نتیجه‌گیری درباره درمان یا سلامت روان رسید. نوع تجربه
+هنری و کیفیت شواهد اهمیت دارد.
+</p>
 
-        </section>
+<div class="research-note">
+
+<div class="research-note-title">
+Research Note
+</div>
+
+<p>
+در این صفحه، «هنر»، «مشاهده اثر هنری» و «هنر‌درمانی»
+به جای یکدیگر استفاده نمی‌شوند. هنر‌درمانی یک مداخله
+حرفه‌ای و ساختاریافته است و شواهد مربوط به آن را نباید
+مستقیماً به هر نوع تجربه هنری تعمیم داد.
+</p>
+
+</div>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.1080/17439760.2025.2481041"
+target="_blank" rel="noopener">
+Trupp et al. (2025). The impact of viewing art on well-being—a systematic review of the evidence base and suggested mechanisms.
+</a>
+</div>
+
+</section>
+
 
 
+<!-- 04 -->
 
-        <!-- =================================================
-             SECTION 11
-             URBAN IMAGE AND LONELINESS
-        ================================================= -->
+<section class="content-section">
 
-        <section class="content-section">
+<div class="section-number">
+04 · IMAGE IN PSYCHOLOGICAL CONTEXT
+</div>
 
-            <div class="section-number">
-                11 · URBAN IMAGE &amp; LONELINESS
-            </div>
+<h2>
+تصویر در زمینه روان‌شناختی
+</h2>
 
-            <h2>
-                تصویر شهر و تنهایی
-            </h2>
-
-            <p>
-                در عکاسی شهری، بدن‌های انسانی اغلب در کنار یکدیگر
-                ظاهر می‌شوند، اما لزوماً با یکدیگر رابطه ندارند.
-                این وضعیت می‌تواند پرسشی روان‌شناختی ایجاد کند:
-                چگونه ممکن است فرد در میان جمع حضور داشته باشد و
-                در عین حال تجربه‌ای از فاصله یا انزوای ذهنی داشته باشد؟
-            </p>
-
-            <p>
-                پژوهش‌های کیفی جدید با استفاده از روش‌هایی مانند
-                Photo-Elicitation نشان داده‌اند که افراد می‌توانند
-                از تصاویر محیط خود برای بیان تجربه‌هایی مانند تعلق،
-                خلوت و تنهایی استفاده کنند. در این روش، ارزش تصویر
-                الزاماً در وجود یک معنای پنهان نیست، بلکه در توانایی
-                آن برای ایجاد زمینه‌ای جهت روایت تجربه توسط خود فرد است.
-            </p>
-
-            <p>
-                بنابراین، عکس شهری نباید به عنوان مدرکی برای تشخیص
-                وضعیت روانی افرادی که در آن دیده می‌شوند تفسیر شود.
-                تصویر می‌تواند یک موقعیت روان‌شناختی را به موضوع
-                مشاهده و پرسش تبدیل کند.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 12
-             PLACE IDENTITY
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                12 · PLACE, BELONGING &amp; IDENTITY
-            </div>
-
-            <h2>
-                مکان، تعلق و هویت
-            </h2>
-
-            <p>
-                خانه، محله، خیابان و شهر فقط فضاهای فیزیکی نیستند.
-                تجربه‌های شخصی، روابط و خاطراتی که در یک مکان شکل
-                می‌گیرند، می‌توانند آن مکان را به بخشی از تجربه فرد
-                از خود تبدیل کنند.
-            </p>
-
-            <p>
-                در روان‌شناسی محیطی، این رابطه با مفاهیمی مانند
-                Place Identity و Place Attachment مطالعه می‌شود.
-                هویت مکانی به بخشی از تعریف فرد از خود اشاره دارد
-                که با مکان‌های معنادار مرتبط است، در حالی که دلبستگی
-                به مکان بیشتر بر پیوند عاطفی با یک مکان تمرکز دارد.
-            </p>
-
-            <p>
-                بنابراین، یک مکان ممکن است به بخشی از پاسخ فرد به
-                این پرسش تبدیل شود:
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    «من کیستم و از کجا آمده‌ام؟»
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 13
-             PHOTOGRAPHY AND PLACE
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                13 · PHOTOGRAPHY &amp; PLACE
-            </div>
-
-            <h2>
-                عکاسی از مکان
-            </h2>
-
-            <p>
-                عکاسی می‌تواند شیوه مواجهه فرد با محیط را تغییر دهد.
-                زمانی که فرد از یک مکان عکس می‌گیرد، دیگر فقط در آن
-                حضور ندارد؛ انتخاب می‌کند چه چیزی دیده شود، چه چیزی
-                در قاب قرار گیرد و چه چیزی بیرون بماند.
-            </p>
-
-            <p>
-                در نتیجه، عکس همیشه بازنمایی کامل یک مکان نیست.
-                بلکه می‌تواند تفسیری دیداری از تجربه فرد در آن مکان
-                باشد.
-            </p>
-
-            <p>
-                روش‌هایی مانند Photo-Elicitation نیز از تصویر برای
-                برانگیختن روایت، یادآوری و گفت‌وگو درباره تجربه فرد
-                استفاده می‌کنند. در این رویکرد، معنای تصویر از پیش
-                تعیین نشده است؛ فرد درباره رابطه خود با تصویر و
-                تجربه‌ای که تصویر برای او فعال می‌کند صحبت می‌کند.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 14
-             ART AND EMOTION
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                14 · ART, CREATIVITY &amp; EMOTION
-            </div>
-
-            <h2>
-                هنر، خلاقیت و تنظیم هیجان
-            </h2>
-
-            <p>
-                خلق یک تصویر یا اثر هنری می‌تواند با توجه به تجربه
-                هیجانی، خودبیانگری و سازمان‌دهی تجربه همراه باشد.
-                با این حال، خلق هنر و هنر‌درمانی دو مفهوم یکسان نیستند.
-            </p>
-
-            <p>
-                در هنر‌درمانی، فعالیت خلاقانه در چارچوب یک مداخله
-                حرفه‌ای و با هدف‌های مشخص روان‌شناختی انجام می‌شود.
-                بنابراین نمی‌توان نتایج مطالعات هنر‌درمانی را مستقیماً
-                به هر نوع نقاشی، عکاسی یا فعالیت خلاقانه تعمیم داد.
-            </p>
-
-            <p>
-                مرورهای جدید نشان داده‌اند که برخی مداخلات هنر‌درمانی
-                تجسمی می‌توانند با بهبود برخی پیامدهای روان‌شناختی
-                همراه باشند؛ اما ناهمگونی مداخلات، تفاوت جمعیت‌ها و
-                کیفیت متفاوت مطالعات باعث می‌شود نتیجه‌گیری‌ها با
-                احتیاط انجام شوند.
-            </p>
-
-            <div class="research-note">
-
-                <div class="research-note-title">
-                    Clinical Distinction
-                </div>
-
-                <p>
-                    استفاده از هنر برای بیان یا تجربه شخصی، هنر‌درمانی
-                    به معنای بالینی آن نیست. هنر‌درمانی یک مداخله حرفه‌ای
-                    است که باید در چارچوب آموزش، رابطه درمانی و اصول
-                    اخلاقی و بالینی مربوط به آن انجام شود.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             SECTION 15
-             INTERDISCIPLINARY APPROACH
-        ================================================= -->
-
-        <section class="content-section">
-
-            <div class="section-number">
-                15 · INTERDISCIPLINARY APPROACH
-            </div>
-
-            <h2>
-                رویکرد میان‌رشته‌ای
-            </h2>
-
-            <p>
-                مطالعه روان‌شناختی تصویر در مرز یک رشته واحد باقی
-                نمی‌ماند. روان‌شناسی، مطالعات بصری، عکاسی، هنر،
-                روان‌شناسی محیطی و علوم شناختی می‌توانند از زاویه‌های
-                متفاوت به یک مسئله مشترک نگاه کنند.
-            </p>
-
-            <p>
-                در این رویکرد، هدف تبدیل هنر به یک ابزار ساده برای
-                توضیح روان‌شناسی نیست؛ بلکه بررسی رابطه دوسویه میان
-                انسان و جهان بصری است: چگونه تصاویر تجربه ما را
-                سازمان می‌دهند و چگونه تجربه، حافظه، بدن و فرهنگ
-                شیوه دیدن ما را شکل می‌دهند.
-            </p>
-
-            <div class="feature-statement">
-
-                <p>
-                    تصویر در اینجا نه فقط موضوع مشاهده،
-                    بلکه بخشی از رابطه انسان با خود و جهان است.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =====================================================
-         REFERENCES
-    ===================================================== -->
-
-    <section class="references">
-
-        <div class="references-inner">
-
-            <div class="references-label">
-                Selected Recent Research
-            </div>
-
-            <h2>
-                References
-            </h2>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Maddox, G. A., Bodner, G. E., Christian, M. W., &amp;
-                    Williamson, P. (2024).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/39120099/" target="_blank" rel="noopener">
-                        On the Effectiveness of Visual Arts Therapy for Traumatic Experiences:
-                        A Systematic Review and Meta-Analysis.
-                    </a>
-                    Clinical Psychology &amp; Psychotherapy.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Huang, W., et al. (2024).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/38606659/" target="_blank" rel="noopener">
-                        The Effects of Visual Art Therapy on Adults with Depressive Symptoms:
-                        A Systematic Review and Meta-Analysis.
-                    </a>
-                    International Journal of Mental Health Nursing.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Huang, W., et al. (2025).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/40704973/" target="_blank" rel="noopener">
-                        The Effects of Visual Art Therapy on Improving Anxiety Symptoms
-                        in Adults: A Systematic Review and Meta-Analysis.
-                    </a>
-                    Journal of Psychiatric and Mental Health Nursing.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Zhang, B., Yang, L., Sun, W., Xu, P., Ma, H., &amp;
-                    Abdullah, A. B. (2025).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/40367574/" target="_blank" rel="noopener">
-                        The Effect of Art Therapy Interventions to Alleviate Depression
-                        Symptoms among Children and Adolescents:
-                        A Systematic Review and Meta-Analysis.
-                    </a>
-                    Clinics.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Versitano, S., Tesson, S., Lee, C.-W., Linnell, S., &amp;
-                    Perkes, I. (2025).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/40916845/" target="_blank" rel="noopener">
-                        Art Therapy with Children and Adolescents Experiencing Acute
-                        or Severe Mental Health Conditions: A Systematic Review.
-                    </a>
-                    Australian &amp; New Zealand Journal of Psychiatry.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Yue, W., Chen, Y., &amp; Ma, X. (2025).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/40554229/" target="_blank" rel="noopener">
-                        Effects of Different Art Therapy Interventions on Cognitive
-                        Functions in Older Adults: A Systematic Review and Network Meta-Analysis.
-                    </a>
-                    Geriatric Nursing.
-                </p>
-
-            </div>
-
-
-            <div class="reference-item">
-
-                <p>
-                    Haeyen, S. (2024).
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/38840744/" target="_blank" rel="noopener">
-                        A Theoretical Exploration of Polyvagal Theory in Creative Arts
-                        and Psychomotor Therapies for Emotion Regulation in Stress and Trauma.
-                    </a>
-                    Frontiers in Psychology.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Bita Negahdar. All rights reserved.
-        </p>
-
-    </footer>
+<p>
+نقاشی، عکاسی و دیگر مواد بصری می‌توانند در برخی
+زمینه‌های روان‌شناختی به عنوان وسیله‌ای برای بیان،
+ارتباط، مشاهده و کاوش تجربه مورد استفاده قرار گیرند.
+</p>
+
+<p>
+با این حال، معنای یک تصویر را نمی‌توان مستقل از
+زمینه زندگی فرد، رابطه حرفه‌ای، شرایط تولید تصویر
+و روایت خود فرد تعیین کرد.
+</p>
+
+<div class="feature-statement">
+<p>
+تصویر به‌تنهایی نباید به عنوان ابزار تشخیص روان‌شناختی تفسیر شود.
+</p>
+</div>
+
+<p>
+از این منظر، ارزش روان‌شناختی تصویر لزوماً در وجود
+یک «معنای پنهان» نیست؛ بلکه می‌تواند در فرایندی باشد
+که تصویر امکان مشاهده، گفت‌وگو، یادآوری یا بیان
+تجربه را فراهم می‌کند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.3389/fpsyg.2024.1328449"
+target="_blank" rel="noopener">
+Pizzolante et al. (2024). Aesthetic experiences and their transformative power: a systematic review.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 05 -->
+
+<section class="content-section">
+
+<div class="section-number">
+05 · BODY, IMAGE &amp; IDENTITY
+</div>
+
+<h2>
+بدن، تصویر و تجربه هویت
+</h2>
+
+<p>
+بدن فقط چیزی نیست که دیده می‌شود؛ بخشی از تجربه فرد
+از «خود» است. تصویر بدن شامل برداشت‌ها، احساسات و
+ارزیابی‌هایی است که فرد نسبت به بدن خود دارد و این
+تجربه می‌تواند در تعامل با نگاه دیگران، مقایسه اجتماعی
+و بازنمایی‌های فرهنگی تغییر کند.
+</p>
+
+<p>
+در فرهنگ تصویری معاصر، فرد نه تنها بدن خود را مشاهده
+می‌کند، بلکه می‌تواند خود را از منظر یک مشاهده‌گر بیرونی
+نیز ارزیابی کند. در روان‌شناسی، این فرایند در ارتباط
+با مفهوم خودشیء‌انگاری (Self-Objectification) مطالعه شده است.
+</p>
+
+<p>
+فراتحلیل سال ۲۰۲۵ که ۶۸ مقاله و ۲۱۸ اندازه اثر را
+ترکیب کرد، رابطه مثبت میان استفاده از رسانه‌های اجتماعی
+و خودشیء‌انگاری را گزارش کرد؛ البته شدت این رابطه با
+سن و نوع محتوای رسانه‌ای تفاوت داشت.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40311165/"
+target="_blank" rel="noopener">
+Wang, H., Alivi, M. A. B., &amp; Mustafa, S. E. B. (2025).
+Unveiling the relationship between social media and self-objectification.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 06 -->
+
+<section class="content-section">
+
+<div class="section-number">
+06 · SELF-REPRESENTATION
+</div>
+
+<h2>
+خود در برابر تصویر خود
+</h2>
+
+<p>
+هر تصویری از خود، صرفاً بازنمایی ظاهری فرد نیست.
+عکس می‌تواند به ابزاری برای مشاهده، مقایسه،
+ارزیابی و بازسازی تصور فرد از خویشتن تبدیل شود.
+</p>
+
+<p>
+در محیط‌های دیجیتال، فرد امکان انتخاب، ویرایش و
+ارائه بخش‌هایی از زندگی و هویت خود را دارد. با این
+حال، خودارائه‌گری دیجیتال را نمی‌توان صرفاً به عنوان
+ساختن یک «هویت جعلی» در نظر گرفت.
+</p>
+
+<p>
+یک مرور نظام‌مند در سال ۲۰۲۵ درباره رسانه‌های اجتماعی
+و رشد هویت نشان داد که کیفیت مشارکت در رسانه اجتماعی،
+اصالت در خودارائه‌گری و مقایسه اجتماعی می‌توانند با
+ابعاد مختلف رشد هویت ارتباط داشته باشند.
+</p>
+
+<div class="feature-statement">
+<p>
+مسئله فقط این نیست که فرد چقدر خود را نشان می‌دهد؛
+بلکه این است که چگونه، با چه هدفی و در چه رابطه‌ای با دیگران
+خود را بازنمایی می‌کند.
+</p>
+</div>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40385471/"
+target="_blank" rel="noopener">
+Avci, H., Baams, L., &amp; Kretschmer, T. (2025).
+A Systematic Review of Social Media Use and Adolescent Identity Development.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 07 -->
+
+<section class="content-section">
+
+<div class="section-number">
+07 · EMBODIMENT
+</div>
+
+<h2>
+بدنِ زیسته و بدنِ دیده‌شده
+</h2>
+
+<p>
+بدن هم چیزی است که فرد می‌تواند از بیرون مشاهده کند
+و هم چیزی است که از درون زندگی می‌کند. این دو جنبه
+در تجربه روزمره از بدن همواره از یکدیگر جدا نیستند.
+</p>
+
+<p>
+مفهوم Embodiment در روان‌شناسی بر نقش تجربه بدنی
+در شکل‌گیری تجربه خود تأکید دارد. در این رویکرد،
+بدن صرفاً یک موضوع فیزیکی نیست، بلکه بخشی از شیوه
+حضور فرد در جهان و ارتباط او با محیط است.
+</p>
+
+<p>
+یک مقاله نظری مهم در سال ۲۰۲۴، Embodiment را به عنوان
+ترکیبی از «داشتن بدن» به عنوان یک موضوع و «بودن بدن»
+به عنوان تجربه‌ای از درون بررسی کرده و ارتباط آن را
+با تجربه هویت و سلامت روان مورد بحث قرار داده است.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.1016/j.newideapsych.2024.101083"
+target="_blank" rel="noopener">
+Lundh, L.-G., &amp; Foster, L. (2024).
+Embodiment as a synthesis of having a body and being a body,
+and its role in self-identity and mental health.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 08 -->
+
+<section class="content-section">
+
+<div class="section-number">
+08 · EXTENDED SELF
+</div>
+
+<h2>
+اشیا، تصویر و خودِ گسترش‌یافته
+</h2>
+
+<p>
+تجربه فرد از خود همیشه در مرز بدن پایان نمی‌یابد.
+اشیا، مکان‌ها، لباس‌ها، تصاویر، ابزارها و حتی بعضی
+روابط می‌توانند برای فرد معنای شخصی پیدا کنند و
+بخشی از شیوه‌ای شوند که خود را تعریف می‌کند.
+</p>
+
+<p>
+مفهوم Extended Self در ادبیات روان‌شناختی و میان‌رشته‌ای
+به رابطه میان خود و دارایی‌ها و اشیای معنادار اشاره دارد.
+با این حال، نمی‌توان هر شیء متعلق به فرد را به طور
+خودکار بخشی از هویت او دانست.
+</p>
+
+<p>
+معنای روان‌شناختی یک شیء در رابطه میان فرد، شیء،
+خاطره، زمینه اجتماعی و تجربه شخصی شکل می‌گیرد.
+از این منظر، تصویر نیز می‌تواند مانند یک شیء فرهنگی
+و شخصی در فرایند تعریف و بازخوانی خود نقش پیدا کند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S2352250X15003000"
+target="_blank" rel="noopener">
+Belk, R. (2013). Extended Self in a Digital World.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 09 -->
+
+<section class="content-section">
+
+<div class="section-number">
+09 · MEMORY &amp; SELF-CONTINUITY
+</div>
+
+<h2>
+عکس، حافظه و تداوم خود
+</h2>
+
+<p>
+یکی از مسائل مهم در تجربه هویت این است که فرد چگونه
+احساس می‌کند همان شخصی است که در گذشته بوده، حتی اگر
+بدن، روابط، باورها و شرایط زندگی او تغییر کرده باشند.
+</p>
+
+<p>
+خاطرات خودزندگی‌نامه‌ای در این فرایند نقش مهمی دارند.
+عکس‌ها نیز می‌توانند به عنوان نشانه‌هایی بیرونی برای
+دسترسی دوباره به تجربه‌های گذشته عمل کنند.
+</p>
+
+<p>
+در این نگاه، عکس فقط سند گذشته نیست؛ می‌تواند بخشی
+از محیطی باشد که در آن گذشته دوباره قابل دسترسی و
+تفسیر می‌شود.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.1002/acp.4150"
+target="_blank" rel="noopener">
+2024 research on photographs and autobiographical memory.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="content-section">
+
+<div class="section-number">
+10 · CITY, CROWDING &amp; PSYCHOLOGICAL EXPERIENCE
+</div>
+
+<h2>
+شهر، ازدحام و تجربه روان‌شناختی
+</h2>
+
+<p>
+شهر مدرن با حضور هم‌زمان تعداد زیادی از افراد،
+صداها، تصاویر، حرکت‌ها و محرک‌های دیداری تعریف می‌شود.
+با این حال، حضور در میان دیگران لزوماً به معنای
+تجربه ارتباط اجتماعی نیست.
+</p>
+
+<p>
+از منظر روان‌شناختی، تنهایی یک وضعیت عینیِ تنها بودن
+نیست، بلکه تجربه‌ای ذهنی از ناکافی بودن ارتباطات
+اجتماعی مورد انتظار است. بنابراین ممکن است فرد در
+فضایی شلوغ احساس انزوا کند و در فضایی خلوت احساس
+آرامش یا تعلق داشته باشد.
+</p>
+
+<p>
+مرور نظام‌مند سال ۲۰۲۶ درباره محدودیت فضای فیزیکی،
+۹۷ مطالعه را بررسی کرد و نشان داد تجربه فشردگی و
+کمبود فضا می‌تواند با پیامدهای عاطفی، رفتاری،
+شناختی و اجتماعی ارتباط داشته باشد؛ البته زمینه
+و ویژگی‌های فردی در این رابطه نقش تعدیل‌کننده دارند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.1016/j.jenvp.2025.102888"
+target="_blank" rel="noopener">
+The psychological effects of lacking physical space:
+A systematic literature review (2026).
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="content-section">
+
+<div class="section-number">
+11 · URBAN IMAGE &amp; LONELINESS
+</div>
+
+<h2>
+تصویر شهر و تنهایی
+</h2>
+
+<p>
+در عکاسی شهری، بدن‌های انسانی اغلب در کنار یکدیگر
+ظاهر می‌شوند، اما لزوماً با یکدیگر رابطه ندارند.
+این وضعیت می‌تواند پرسشی روان‌شناختی ایجاد کند:
+چگونه ممکن است فرد در میان جمع حضور داشته باشد و
+در عین حال تجربه‌ای از فاصله یا انزوای ذهنی داشته باشد؟
+</p>
+
+<p>
+پژوهش‌های جدید با استفاده از Photo-Elicitation نشان
+داده‌اند که افراد می‌توانند از تصاویر محیط خود برای
+بیان تجربه‌هایی مانند تعلق، خلوت و تنهایی استفاده کنند.
+در این روش، ارزش تصویر الزاماً در وجود یک معنای پنهان
+نیست، بلکه در توانایی آن برای ایجاد زمینه‌ای جهت
+روایت تجربه توسط خود فرد است.
+</p>
+
+<p>
+بنابراین، عکس شهری نباید به عنوان مدرکی برای تشخیص
+وضعیت روانی افرادی که در آن دیده می‌شوند تفسیر شود.
+تصویر می‌تواند یک موقعیت روان‌شناختی را به موضوع
+مشاهده و پرسش تبدیل کند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41319478/"
+target="_blank" rel="noopener">
+How the neighbourhood-built environment shapes loneliness:
+A photo-elicitation study (2025).
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="content-section">
+
+<div class="section-number">
+12 · PLACE, BELONGING &amp; IDENTITY
+</div>
+
+<h2>
+مکان، تعلق و هویت
+</h2>
+
+<p>
+خانه، محله، خیابان و شهر فقط فضاهای فیزیکی نیستند.
+تجربه‌های شخصی، روابط و خاطراتی که در یک مکان شکل
+می‌گیرند، می‌توانند آن مکان را به بخشی از تجربه فرد
+از خود تبدیل کنند.
+</p>
+
+<p>
+در روان‌شناسی محیطی، این رابطه با مفاهیمی مانند
+Place Identity و Place Attachment مطالعه می‌شود.
+هویت مکانی به بخشی از تعریف فرد از خود اشاره دارد
+که با مکان‌های معنادار مرتبط است، در حالی که دلبستگی
+به مکان بیشتر بر پیوند فرد با یک مکان تمرکز دارد.
+</p>
+
+<p>
+پژوهش سال ۲۰۲۴ درباره Place Identity Orientation
+نشان داد که رابطه فرد با محیط‌های معنادار می‌تواند
+بخشی از فرایند تعریف خود باشد.
+</p>
+
+<div class="feature-statement">
+<p>
+«من کیستم و از کجا آمده‌ام؟»
+</p>
+</div>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.3389/fpsyg.2024.1424381"
+target="_blank" rel="noopener">
+Berze, I. Z., &amp; Dúll, A. (2024).
+Place identity in a personality psychological context.
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="content-section">
+
+<div class="section-number">
+13 · PHOTOGRAPHY &amp; PLACE
+</div>
+
+<h2>
+عکاسی از مکان
+</h2>
+
+<p>
+عکاسی می‌تواند شیوه مواجهه فرد با محیط را تغییر دهد.
+زمانی که فرد از یک مکان عکس می‌گیرد، دیگر فقط در آن
+حضور ندارد؛ انتخاب می‌کند چه چیزی دیده شود، چه چیزی
+در قاب قرار گیرد و چه چیزی بیرون بماند.
+</p>
+
+<p>
+در نتیجه، عکس همیشه بازنمایی کامل یک مکان نیست،
+بلکه می‌تواند تفسیری دیداری از تجربه فرد در آن مکان
+باشد.
+</p>
+
+<p>
+روش‌هایی مانند Photo-Elicitation نیز از تصویر برای
+برانگیختن روایت، یادآوری و گفت‌وگو درباره تجربه فرد
+استفاده می‌کنند. در این رویکرد، معنای تصویر از پیش
+تعیین نشده است؛ فرد درباره رابطه خود با تصویر و
+تجربه‌ای که تصویر برای او فعال می‌کند صحبت می‌کند.
+</p>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41319478/"
+target="_blank" rel="noopener">
+How the neighbourhood-built environment shapes loneliness:
+A photo-elicitation study (2025).
+</a>
+</div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="content-section">
+
+<div class="section-number">
+14 · ART, CREATIVITY &amp; EMOTION
+</div>
+
+<h2>
+هنر، خلاقیت و تنظیم هیجان
+</h2>
+
+<p>
+خلق یک تصویر یا اثر هنری می‌تواند با توجه به تجربه
+هیجانی، خودبیانگری و سازمان‌دهی تجربه همراه باشد.
+با این حال، خلق هنر و هنر‌درمانی دو مفهوم یکسان نیستند.
+</p>
+
+<p>
+در هنر‌درمانی، فعالیت خلاقانه در چارچوب یک مداخله
+حرفه‌ای و با هدف‌های مشخص روان‌شناختی انجام می‌شود.
+بنابراین نمی‌توان نتایج مطالعات هنر‌درمانی را مستقیماً
+به هر نوع نقاشی، عکاسی یا فعالیت خلاقانه تعمیم داد.
+</p>
+
+<p>
+مرورهای نظام‌مند جدید درباره هنر‌درمانی تجسمی
+نتایج امیدوارکننده‌ای برای برخی پیامدهای روان‌شناختی
+گزارش کرده‌اند، اما ناهمگونی مداخلات، تفاوت جمعیت‌ها
+و کیفیت متفاوت مطالعات باعث می‌شود نتیجه‌گیری‌ها
+با احتیاط انجام شوند.
+</p>
+
+<div class="research-note">
+
+<div class="research-note-title">
+Clinical Distinction
+</div>
+
+<p>
+استفاده از هنر برای بیان یا تجربه شخصی، هنر‌درمانی
+به معنای بالینی آن نیست. هنر‌درمانی یک مداخله حرفه‌ای
+است که باید در چارچوب آموزش، رابطه درمانی و اصول
+اخلاقی و بالینی مربوط به آن انجام شود.
+</p>
+
+</div>
+
+<div class="source">
+<div class="source-label">Sources</div>
+
+<a href="https://pubmed.ncbi.nlm.nih.gov/38606659/"
+target="_blank" rel="noopener">
+Huang et al. (2024). The effects of visual art therapy
+on adults with depressive symptoms.
+</a>
+
+<br><br>
+
+<a href="https://pubmed.ncbi.nlm.nih.gov/40704973/"
+target="_blank" rel="noopener">
+Huang et al. (2025). The effects of visual art therapy
+on improving anxiety symptoms in adults.
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="content-section">
+
+<div class="section-number">
+15 · INTERDISCIPLINARY APPROACH
+</div>
+
+<h2>
+رویکرد میان‌رشته‌ای
+</h2>
+
+<p>
+مطالعه روان‌شناختی تصویر در مرز یک رشته واحد باقی
+نمی‌ماند. روان‌شناسی، مطالعات بصری، عکاسی، هنر،
+روان‌شناسی محیطی و علوم شناختی می‌توانند از زاویه‌های
+متفاوت به یک مسئله مشترک نگاه کنند.
+</p>
+
+<p>
+در این رویکرد، هدف تبدیل هنر به یک ابزار ساده برای
+توضیح روان‌شناسی نیست؛ بلکه بررسی رابطه دوسویه میان
+انسان و جهان بصری است: چگونه تصاویر تجربه ما را
+سازمان می‌دهند و چگونه تجربه، حافظه، بدن و فرهنگ
+شیوه دیدن ما را شکل می‌دهند.
+</p>
+
+<div class="feature-statement">
+<p>
+تصویر در اینجا نه فقط موضوع مشاهده،
+بلکه بخشی از رابطه انسان با خود و جهان است.
+</p>
+</div>
+
+<div class="source">
+<div class="source-label">Source</div>
+<a href="https://doi.org/10.3389/fpsyg.2024.1328449"
+target="_blank" rel="noopener">
+Pizzolante et al. (2024). Aesthetic experiences and their transformative power:
+a systematic review.
+</a>
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= REFERENCES ================= -->
+
+<section class="references">
+
+<div class="references-inner">
+
+<div class="references-label">
+Selected Research
+</div>
+
+<h2>
+منابع پژوهشی
+</h2>
+
+
+<div class="reference-item">
+<p>
+Pizzolante, M., Pelowski, M., Demmer, T. R., et al. (2024).
+Aesthetic experiences and their transformative power:
+a systematic review.
+<br>
+<a href="https://doi.org/10.3389/fpsyg.2024.1328449"
+target="_blank" rel="noopener">
+Frontiers in Psychology · DOI 10.3389/fpsyg.2024.1328449
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Trupp, M. D., Howlin, C., Fekete, A., Kutsche, J.,
+Fingerhut, J., &amp; Pelowski, M. (2025).
+The impact of viewing art on well-being.
+<br>
+<a href="https://doi.org/10.1080/17439760.2025.2481041"
+target="_blank" rel="noopener">
+The Journal of Positive Psychology · DOI 10.1080/17439760.2025.2481041
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Wang, H., Alivi, M. A. B., &amp; Mustafa, S. E. B. (2025).
+Unveiling the relationship between social media and self-objectification:
+A three-level meta-analysis.
+<br>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40311165/"
+target="_blank" rel="noopener">
+PubMed · PMID 40311165
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Avci, H., Baams, L., &amp; Kretschmer, T. (2025).
+A Systematic Review of Social Media Use and Adolescent Identity Development.
+<br>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40385471/"
+target="_blank" rel="noopener">
+PubMed · PMID 40385471
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Lundh, L.-G., &amp; Foster, L. (2024).
+Embodiment as a synthesis of having a body and being a body,
+and its role in self-identity and mental health.
+<br>
+<a href="https://doi.org/10.1016/j.newideapsych.2024.101083"
+target="_blank" rel="noopener">
+New Ideas in Psychology · DOI 10.1016/j.newideapsych.2024.101083
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Berze, I. Z., &amp; Dúll, A. (2024).
+Place identity in a personality psychological context:
+place identity orientation and its validating associations.
+<br>
+<a href="https://doi.org/10.3389/fpsyg.2024.1424381"
+target="_blank" rel="noopener">
+Frontiers in Psychology · DOI 10.3389/fpsyg.2024.1424381
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+The psychological effects of lacking physical space:
+A systematic literature review (2026).
+<br>
+<a href="https://doi.org/10.1016/j.jenvp.2025.102888"
+target="_blank" rel="noopener">
+Journal of Environmental Psychology · DOI 10.1016/j.jenvp.2025.102888
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+The relation between physical and social neighbourhood
+characteristics and loneliness: A systematic review (2025).
+<br>
+<a href="https://doi.org/10.1016/j.healthplace.2025.103491"
+target="_blank" rel="noopener">
+Health &amp; Place · DOI 10.1016/j.healthplace.2025.103491
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+How the neighbourhood-built environment shapes loneliness:
+A photo-elicitation study (2025).
+<br>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41319478/"
+target="_blank" rel="noopener">
+PubMed · Photo-Elicitation Study
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Bonfanti, R. C., Melchiori, F., Teti, A., et al. (2025).
+The association between social comparison in social media,
+body image concerns and eating disorder symptoms:
+A systematic review and meta-analysis.
+<br>
+<a href="https://doi.org/10.1016/j.bodyim.2024.101841"
+target="_blank" rel="noopener">
+Body Image · DOI 10.1016/j.bodyim.2024.101841
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Huang, W., et al. (2024).
+The effects of visual art therapy on adults with depressive symptoms:
+A systematic review and meta-analysis.
+<br>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38606659/"
+target="_blank" rel="noopener">
+PubMed · PMID 38606659
+</a>
+</p>
+</div>
+
+
+<div class="reference-item">
+<p>
+Huang, W., et al. (2025).
+The effects of visual art therapy on improving anxiety symptoms
+in adults: A systematic review and meta-analysis.
+<br>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40704973/"
+target="_blank" rel="noopener">
+PubMed · PMID 40704973
+</a>
+</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 Bita Negahdar. All rights reserved.
+</p>
+
+</footer>
 
 
 </body>
