@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About | Bita Negahdar</title>
+<title>Research Library | Bita Negahdar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
 <style>
 
-:root{
-    --pink:#CAA2A2;
-    --pink-hover:#B88F8F;
-    --pink-pale:#F6EEEE;
-    --border:#E5D8D8;
-    --text:#252525;
-    --muted:#626A6D;
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FFFFFF;
+    color:#252525;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-weight:400;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 
@@ -30,500 +45,408 @@
 ===================================================== */
 
 header{
-    width:100% !important;
-    min-height:76px !important;
-    height:76px !important;
-    padding:0 4vw !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-
-    background:#000000 !important;
-    border-bottom:1px solid #000000 !important;
+    width:100%;
+    min-height:76px;
+    height:76px;
+    padding:0 4vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#000000;
+    border-bottom:1px solid #000000;
+    direction:ltr;
 }
 
 .logo{
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:20px !important;
-    font-weight:700 !important;
-    letter-spacing:2.4px !important;
-    color:#FFFFFF !important;
-    white-space:nowrap !important;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2.4px;
+    color:#FFFFFF;
+    white-space:nowrap;
 }
 
 nav{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:flex-end !important;
-    gap:10px !important;
-    flex-shrink:0 !important;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    flex-shrink:0;
+    direction:ltr;
 }
 
 nav a{
-    display:inline-flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    min-height:38px !important;
-    height:38px !important;
-
-    padding:7px 10px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:11px !important;
-    font-weight:600 !important;
-    letter-spacing:1.2px !important;
-    line-height:1 !important;
-    text-transform:uppercase !important;
-
-    color:#FFFFFF !important;
-    background:transparent !important;
-
-    border:1px solid transparent !important;
-
-    white-space:nowrap !important;
-
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:38px;
+    height:38px;
+    padding:7px 10px;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.2px;
+    line-height:1;
+    text-transform:uppercase;
+    color:#FFFFFF;
+    background:transparent;
+    border:1px solid transparent;
+    white-space:nowrap;
     transition:
         background-color .25s ease,
         color .25s ease,
-        border-color .25s ease !important;
+        border-color .25s ease;
 }
 
 nav a:hover{
-    background:var(--pink) !important;
-    border-color:var(--pink) !important;
-    color:#FFFFFF !important;
+    background:#5A70B5;
+    border-color:#5A70B5;
+    color:#FFFFFF;
 }
 
-
-/* =====================================================
-   CONTACT BUTTON
-===================================================== */
-
 .contact-btn{
-    padding:9px 16px !important;
-
-    background:var(--pink-pale) !important;
-    border:1px solid var(--pink-pale) !important;
-
-    color:var(--pink) !important;
+    padding:9px 16px;
+    background:#EEF1F8;
+    border:1px solid #EEF1F8;
+    color:#5A70B5;
 }
 
 .contact-btn:hover{
-    background:var(--pink) !important;
-    border-color:var(--pink) !important;
-    color:#FFFFFF !important;
+    background:#5A70B5;
+    border-color:#5A70B5;
+    color:#FFFFFF;
 }
 
 
 /* =====================================================
-   PAGE
+   PAGE INTRO
 ===================================================== */
 
-.page{
-    width:92% !important;
-    max-width:1250px !important;
-    margin:55px auto !important;
+.page-intro{
+    max-width:1180px;
+    margin:0 auto;
+    padding:105px 5vw 75px;
+}
+
+.intro-label{
+    margin-bottom:22px;
+    color:#5A70B5;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.2px;
+    text-transform:uppercase;
+    direction:rtl;
+}
+
+.page-intro h1{
+    margin-bottom:25px;
+    color:#171717;
+    font-size:52px;
+    font-weight:600;
+    letter-spacing:-1.8px;
+    line-height:1.2;
+    direction:rtl;
+}
+
+.page-intro p{
+    max-width:780px;
+    color:#626A6D;
+    font-size:16px;
+    line-height:2;
+    text-align:justify;
+    direction:rtl;
 }
 
 
 /* =====================================================
-   TITLE
+   CATEGORY NAV
 ===================================================== */
 
-.eyebrow{
-    margin-bottom:12px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-    font-size:11px !important;
-    font-weight:700 !important;
-    letter-spacing:2px !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--pink) !important;
-    text-align:center !important;
+.category-nav{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 5vw 85px;
 }
 
-.page h1{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:52px !important;
-    font-weight:700 !important;
-    line-height:1.15 !important;
-
-    color:var(--text) !important;
-
-    text-align:center !important;
+.category-nav-inner{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid #D9E0EA;
+    border-bottom:1px solid #D9E0EA;
 }
 
-
-/* =====================================================
-   ABOUT INTRO + PHOTO
-===================================================== */
-
-.about-intro{
-    width:100% !important;
-
-    margin:38px 0 60px 0 !important;
-
-    display:grid !important;
-
-    grid-template-columns:minmax(0,1fr) 360px !important;
-
-    gap:55px !important;
-
-    align-items:start !important;
-
-    direction:ltr !important;
-}
-
-
-/* =====================================================
-   ABOUT TEXT
-===================================================== */
-
-.intro{
-    width:100% !important;
-    max-width:none !important;
-
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:16px !important;
-    font-weight:400 !important;
-    line-height:2.15 !important;
-
-    color:#5F6668 !important;
-
-    direction:rtl !important;
-    text-align:justify !important;
-    text-align-last:right !important;
-}
-
-
-/* =====================================================
-   ABOUT PHOTO
-===================================================== */
-
-.about-photo{
-    width:100% !important;
-
-    display:flex !important;
-    align-items:flex-start !important;
-    justify-content:flex-end !important;
-
-    direction:ltr !important;
-}
-
-.about-photo img{
-    width:100% !important;
-    max-width:360px !important;
-
-    aspect-ratio:4 / 5 !important;
-
-    display:block !important;
-
-    object-fit:cover !important;
-
-    border:none !important;
-    outline:none !important;
-    box-shadow:none !important;
-}
-
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-
-.block{
-    padding:30px 0 !important;
-    border-top:1px solid var(--border) !important;
-}
-
-.block h2{
-    margin-bottom:22px !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:15px !important;
-    font-weight:700 !important;
-    letter-spacing:1.8px !important;
-    line-height:1.4 !important;
-
-    text-transform:uppercase !important;
-
-    color:var(--pink) !important;
-}
-
-
-/* =====================================================
-   EDUCATION
-===================================================== */
-
-.education{
-    display:grid !important;
-
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-
-    gap:12px !important;
-
-    width:100% !important;
-}
-
-.education-item{
-    width:100% !important;
-
-    min-height:70px !important;
-    height:70px !important;
-
-    padding:12px 18px !important;
-
-    border:1px solid var(--border) !important;
-    background:var(--pink-pale) !important;
-
-    color:var(--pink) !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    text-align:center !important;
-
+.category-nav a{
+    min-height:90px;
+    padding:18px 17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#5A70B5;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.7px;
+    line-height:1.7;
+    border-right:1px solid #D9E0EA;
     transition:
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .3s ease !important;
+        background-color .25s ease,
+        color .25s ease;
 }
 
-.education-item:hover{
-    background:var(--pink-hover) !important;
-    border-color:var(--pink-hover) !important;
-    color:#FFFFFF !important;
-
-    transform:translateY(-3px) !important;
-
-    cursor:pointer !important;
+.category-nav a:last-child{
+    border-right:none;
 }
 
-.education-item h3{
-    margin:0 !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:15px !important;
-    font-weight:700 !important;
-    line-height:1.4 !important;
-
-    color:var(--pink) !important;
-    text-align:center !important;
-
-    transition:color .3s ease !important;
-}
-
-.education-item p{
-    display:none !important;
-}
-
-.education-item:hover h3{
-    color:#FFFFFF !important;
+.category-nav a:hover{
+    background:#EEF1F8;
+    color:#4B61A3;
 }
 
 
 /* =====================================================
-   TRAINING
+   MAIN CONTENT
 ===================================================== */
 
-.training{
-    display:grid !important;
-
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-
-    gap:12px !important;
-
-    width:100% !important;
+.library{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 5vw 110px;
 }
 
-.training span{
-    width:100% !important;
+.library-section{
+    margin-bottom:105px;
+    scroll-margin-top:35px;
+}
 
-    min-height:150px !important;
-    height:150px !important;
+.section-heading{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:60px;
+    padding-bottom:28px;
+    margin-bottom:34px;
+    border-bottom:1px solid #D9E0EA;
+}
 
-    padding:18px !important;
+.section-heading h2{
+    color:#171717;
+    font-size:27px;
+    font-weight:600;
+    letter-spacing:-.6px;
+    line-height:1.4;
+    direction:rtl;
+}
 
-    display:flex !important;
-    flex-direction:column !important;
-
-    align-items:center !important;
-    justify-content:center !important;
-
-    text-align:center !important;
-
-    background:var(--pink-pale) !important;
-
-    color:var(--pink) !important;
-
-    border:1px solid var(--border) !important;
-
-    font-family:"DM Sans",Arial,sans-serif !important;
-
-    font-size:14px !important;
-    font-weight:700 !important;
-    line-height:1.5 !important;
-
-    cursor:pointer !important;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        transform .3s ease,
-        border-color .3s ease !important;
+.section-heading p{
+    max-width:690px;
+    color:#626A6D;
+    font-size:14px;
+    line-height:2;
+    text-align:justify;
+    direction:rtl;
 }
 
 
 /* =====================================================
-   TRAINING ICON
+   RESEARCH GRID
 ===================================================== */
 
-.training-icon{
-    width:42px !important;
-    height:42px !important;
-
-    margin-bottom:13px !important;
-
-    border-radius:50% !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    background:#FFFFFF !important;
-
-    border:1px solid rgba(202,162,162,.40) !important;
-
-    color:var(--pink) !important;
-
-    flex-shrink:0 !important;
-
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .3s ease !important;
+.research-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
-.training-icon svg{
-    width:20px !important;
-    height:20px !important;
-
-    stroke:currentColor !important;
-    fill:none !important;
-
-    stroke-width:1.8 !important;
-
-    stroke-linecap:round !important;
-    stroke-linejoin:round !important;
-}
-
-.training span:hover{
-    background:var(--pink) !important;
-    border-color:var(--pink) !important;
-
-    color:#FFFFFF !important;
-
-    transform:translateY(-3px) !important;
-}
-
-.training span:hover .training-icon{
-    background:#FFFFFF !important;
-    border-color:#FFFFFF !important;
-
-    color:var(--pink) !important;
-
-    transform:scale(1.05) !important;
-}
-
-
-/* =====================================================
-   PROFESSIONAL / ACADEMIC LINKS
-===================================================== */
-
-.resource-links{
-    width:100% !important;
-
-    margin-top:5px !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    flex-wrap:wrap !important;
-
-    gap:34px !important;
-}
-
-.resource-link{
-    width:auto !important;
-    height:auto !important;
-
-    padding:6px !important;
-
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    background:transparent !important;
-
-    border:none !important;
-    outline:none !important;
-    box-shadow:none !important;
-
+.research-card{
+    position:relative;
+    padding:31px 32px 29px;
+    background:#F7F8FA;
+    border:1px solid #E1E5EC;
     transition:
         transform .25s ease,
-        opacity .25s ease !important;
+        border-color .25s ease,
+        background-color .25s ease;
+    direction:rtl;
 }
 
-.resource-link:hover{
-    transform:translateY(-4px) scale(1.04) !important;
-
-    background:transparent !important;
-
-    border:none !important;
-
-    box-shadow:none !important;
+.research-card:hover{
+    transform:translateY(-3px);
+    background:#FFFFFF;
+    border-color:#BFC9DC;
 }
 
-.resource-link img{
-    width:auto !important;
-    height:auto !important;
-
-    max-width:110px !important;
-    max-height:48px !important;
-
-    display:block !important;
-
-    object-fit:contain !important;
-
-    border:none !important;
-    outline:none !important;
-    box-shadow:none !important;
-
-    transition:opacity .25s ease !important;
+.research-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:3px;
+    height:100%;
+    background:#5A70B5;
 }
 
-.resource-link:hover img{
-    opacity:.82 !important;
+.card-type{
+    margin-bottom:13px;
+    color:#5A70B5;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.8px;
+    line-height:1.7;
 }
 
-.resource-link img[alt="ResearchGate"]{
-    max-width:170px !important;
-    max-height:70px !important;
+.research-card h3{
+    margin-bottom:14px;
+    color:#202020;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.65;
+    direction:rtl;
+}
+
+.authors{
+    margin-bottom:15px;
+    color:#626A6D;
+    font-size:12px;
+    line-height:1.8;
+    direction:rtl;
+}
+
+.description{
+    margin-bottom:20px;
+    color:#555C60;
+    font-size:13px;
+    line-height:2;
+    text-align:justify;
+    direction:rtl;
+}
+
+.source-link{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    color:#5A70B5;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-bottom:1px solid transparent;
+    transition:
+        color .2s ease,
+        border-color .2s ease;
+    direction:ltr;
+}
+
+.source-link:hover{
+    color:#4B61A3;
+    border-color:#4B61A3;
+}
+
+.source-link::after{
+    content:"↗";
+    font-size:12px;
+}
+
+
+/* =====================================================
+   BOOKS
+===================================================== */
+
+.books-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.book-card{
+    padding:32px;
+    background:#FFFFFF;
+    border:1px solid #D9E0EA;
+    min-height:275px;
+    display:flex;
+    flex-direction:column;
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.book-card:hover{
+    transform:translateY(-3px);
+    border-color:#AEBBD4;
+}
+
+.book-card .card-type{
+    margin-bottom:18px;
+}
+
+.book-card h3{
+    margin-bottom:14px;
+    color:#202020;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.5;
+}
+
+.book-author{
+    margin-bottom:17px;
+    color:#5A70B5;
+    font-size:12px;
+    font-weight:600;
+}
+
+.book-description{
+    margin-bottom:24px;
+    color:#626A6D;
+    font-size:12.5px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.book-card .source-link{
+    margin-top:auto;
+}
+
+
+/* =====================================================
+   THEORY BLOCK
+===================================================== */
+
+.theory-section{
+    padding-top:5px;
+}
+
+.theory-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid #D9E0EA;
+}
+
+.theory-item{
+    padding:34px 36px;
+    min-height:245px;
+    background:#F7F8FA;
+    direction:rtl;
+}
+
+.theory-item + .theory-item{
+    border-right:1px solid #D9E0EA;
+}
+
+.theory-item h3{
+    margin-bottom:16px;
+    color:#202020;
+    font-size:20px;
+    font-weight:600;
+    line-height:1.5;
+}
+
+.theory-item p{
+    color:#626A6D;
+    font-size:13px;
+    line-height:2;
+    text-align:justify;
+}
+
+.theory-item .source-link{
+    margin-top:20px;
 }
 
 
@@ -532,293 +455,319 @@ nav a:hover{
 ===================================================== */
 
 footer{
-    margin-top:55px !important;
+    background:#000000;
+    color:#FFFFFF;
+    padding:70px 5vw 40px;
+    direction:rtl;
+}
 
-    padding:24px 4vw !important;
+.footer-inner{
+    max-width:1180px;
+    margin:0 auto;
+}
 
-    background:#FFFFFF !important;
+.footer-top{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:70px;
+    padding-bottom:55px;
+    border-bottom:1px solid #292929;
+}
 
-    border-top:1px solid var(--border) !important;
+.footer-brand{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2.3px;
+    direction:ltr;
+    text-align:right;
+}
 
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
+.footer-description{
+    max-width:360px;
+    margin-top:17px;
+    color:#A8A8A8;
+    font-size:12px;
+    line-height:1.9;
+}
 
-    font-family:"DM Sans",Arial,sans-serif !important;
+.footer-column h4{
+    margin-bottom:17px;
+    color:#FFFFFF;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.8px;
+}
 
-    font-size:9px !important;
-    font-weight:600 !important;
-    letter-spacing:1.8px !important;
-    line-height:1.4 !important;
+.footer-column a{
+    display:block;
+    width:max-content;
+    margin-bottom:9px;
+    color:#A8A8A8;
+    font-size:12px;
+    transition:color .2s ease;
+}
 
-    text-transform:uppercase !important;
+.footer-column a:hover{
+    color:#FFFFFF;
+}
 
-    color:var(--muted) !important;
+.footer-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:28px;
+    color:#777777;
+    font-size:10px;
+    letter-spacing:.4px;
+}
+
+.footer-social{
+    display:flex;
+    gap:20px;
+    direction:ltr;
+}
+
+.footer-social a{
+    color:#A8A8A8;
+    transition:color .2s ease;
+}
+
+.footer-social a:hover{
+    color:#FFFFFF;
 }
 
 
 /* =====================================================
-   MOBILE
+   RESPONSIVE
 ===================================================== */
 
-@media(max-width:800px){
+@media(max-width:950px){
+
+    .page-intro{
+        padding-top:80px;
+    }
+
+    .page-intro h1{
+        font-size:43px;
+    }
+
+    .category-nav-inner{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .category-nav a:nth-child(3){
+        border-right:none;
+    }
+
+    .category-nav a:nth-child(-n+3){
+        border-bottom:1px solid #D9E0EA;
+    }
+
+    .section-heading{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .books-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+        gap:45px;
+    }
+
+    .footer-brand-area{
+        grid-column:1 / -1;
+    }
+}
+
+
+@media(max-width:700px){
 
     header{
-        min-height:72px !important;
-        height:auto !important;
-
-        padding:14px 5vw !important;
-
-        gap:15px !important;
-
-        background:#000000 !important;
+        min-height:72px;
+        height:auto;
+        padding:14px 5vw;
+        gap:15px;
+        background:#000000;
     }
 
     .logo{
-        font-size:14px !important;
-        letter-spacing:1.8px !important;
-
-        color:#FFFFFF !important;
+        font-size:14px;
+        letter-spacing:1.8px;
     }
 
     nav{
-        gap:4px !important;
-        flex-wrap:wrap !important;
-        justify-content:flex-end !important;
+        gap:4px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
     }
 
     nav a{
-        min-height:30px !important;
-        height:30px !important;
-
-        padding:5px 5px !important;
-
-        font-size:7px !important;
-        letter-spacing:.8px !important;
-
-        color:#FFFFFF !important;
+        min-height:30px;
+        height:30px;
+        padding:5px 5px;
+        font-size:7px;
+        letter-spacing:.8px;
     }
 
     .contact-btn{
-        padding:7px 9px !important;
+        padding:7px 9px;
     }
 
-    .page{
-        width:90% !important;
-        margin:45px auto !important;
+    .page-intro{
+        padding:65px 6vw 55px;
     }
 
-    .page h1{
-        font-size:40px !important;
-        text-align:center !important;
+    .intro-label{
+        margin-bottom:16px;
+        font-size:9px;
     }
 
-    .eyebrow{
-        text-align:center !important;
+    .page-intro h1{
+        margin-bottom:20px;
+        font-size:36px;
+        letter-spacing:-1px;
     }
 
-
-    /* =================================================
-       MOBILE ABOUT LAYOUT
-    ================================================= */
-
-    .about-intro{
-        margin:32px 0 45px 0 !important;
-
-        display:flex !important;
-
-        flex-direction:column !important;
-
-        gap:32px !important;
-
-        direction:ltr !important;
+    .page-intro p{
+        font-size:13px;
+        line-height:1.9;
+        text-align:right;
     }
 
-    .about-photo{
-        width:100% !important;
-
-        order:1 !important;
-
-        justify-content:center !important;
+    .category-nav{
+        padding:0 6vw 60px;
     }
 
-    .about-photo img{
-        width:100% !important;
-
-        max-width:360px !important;
-
-        aspect-ratio:4 / 5 !important;
+    .category-nav-inner{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .intro{
-        order:2 !important;
-
-        max-width:100% !important;
-
-        margin:0 !important;
-
-        font-size:15px !important;
-        line-height:2.1 !important;
-
-        direction:rtl !important;
-        text-align:right !important;
+    .category-nav a{
+        min-height:75px;
+        font-size:9px;
+        padding:14px 9px;
     }
 
-
-    .education{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-        gap:10px !important;
+    .category-nav a:nth-child(2n){
+        border-right:none;
     }
 
-    .education-item{
-        width:100% !important;
-
-        min-height:64px !important;
-        height:64px !important;
-
-        padding:12px 10px !important;
-
-        text-align:center !important;
+    .category-nav a:nth-child(-n+4){
+        border-bottom:1px solid #D9E0EA;
     }
 
-    .education-item h3{
-        font-size:14px !important;
-        text-align:center !important;
+    .library{
+        padding:0 6vw 75px;
     }
 
-    .training{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-        gap:12px !important;
+    .library-section{
+        margin-bottom:75px;
     }
 
-    .training span{
-        height:145px !important;
-        min-height:145px !important;
-
-        padding:16px !important;
-
-        font-size:13px !important;
+    .section-heading{
+        gap:12px;
+        margin-bottom:25px;
+        padding-bottom:22px;
     }
 
-    .training-icon{
-        width:38px !important;
-        height:38px !important;
-
-        margin-bottom:11px !important;
+    .section-heading h2{
+        font-size:23px;
     }
 
-    .training-icon svg{
-        width:18px !important;
-        height:18px !important;
+    .section-heading p{
+        font-size:12px;
+        line-height:1.9;
+        text-align:right;
     }
 
-    .resource-links{
-        justify-content:center !important;
-
-        gap:22px !important;
-
-        padding:5px 0 !important;
+    .research-grid{
+        grid-template-columns:1fr;
+        gap:14px;
     }
 
-    .resource-link{
-        width:auto !important;
-        height:auto !important;
-
-        padding:4px !important;
+    .research-card{
+        padding:26px 25px 25px;
     }
 
-    .resource-link img{
-        max-width:78px !important;
-        max-height:34px !important;
+    .research-card h3{
+        font-size:16px;
     }
 
-    .resource-link img[alt="ResearchGate"]{
-        max-width:110px !important;
-        max-height:50px !important;
+    .description{
+        font-size:12px;
+        line-height:1.9;
+        text-align:right;
+    }
+
+    .books-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .book-card{
+        min-height:auto;
+        padding:27px 25px;
+    }
+
+    .book-card h3{
+        font-size:16px;
+    }
+
+    .book-description{
+        font-size:12px;
+        text-align:right;
+    }
+
+    .theory-box{
+        grid-template-columns:1fr;
+    }
+
+    .theory-item{
+        min-height:auto;
+        padding:28px 25px;
+    }
+
+    .theory-item + .theory-item{
+        border-right:none;
+        border-top:1px solid #D9E0EA;
+    }
+
+    .theory-item p{
+        font-size:12px;
+        text-align:right;
     }
 
     footer{
-        flex-direction:column !important;
-
-        text-align:center !important;
-
-        gap:10px !important;
+        padding:55px 6vw 32px;
     }
 
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:480px){
-
-    .page h1{
-        font-size:36px !important;
+    .footer-top{
+        grid-template-columns:1fr;
+        gap:35px;
     }
 
-    .about-photo img{
-        max-width:100% !important;
+    .footer-brand-area{
+        grid-column:auto;
     }
 
-    .education{
-        grid-template-columns:1fr !important;
-        gap:8px !important;
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:17px;
+        line-height:1.7;
     }
-
-    .education-item{
-        height:58px !important;
-        min-height:58px !important;
-    }
-
-    .training{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-        gap:10px !important;
-    }
-
-    .training span{
-        height:140px !important;
-        min-height:140px !important;
-
-        padding:14px !important;
-
-        font-size:12px !important;
-    }
-
-    .training-icon{
-        width:36px !important;
-        height:36px !important;
-
-        margin-bottom:10px !important;
-    }
-
-    .training-icon svg{
-        width:17px !important;
-        height:17px !important;
-    }
-
-    .resource-links{
-        gap:16px !important;
-    }
-
-    .resource-link img{
-        max-width:65px !important;
-        max-height:30px !important;
-    }
-
-    .resource-link img[alt="ResearchGate"]{
-        max-width:90px !important;
-        max-height:36px !important;
-    }
-
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -826,361 +775,1111 @@ footer{
 
 <header>
 
-<div class="logo">
-    BITA NEGAHDAR
-</div>
+    <div class="logo">BITA NEGAHDAR</div>
 
-<nav>
+    <nav>
 
-<a href="https://bitanegahdar.ir/index.html">
-    Home
-</a>
+        <a href="https://bitanegahdar.ir/index.html">
+            Home
+        </a>
 
-<a href="https://bitanegahdar.ir/about.html">
-    About
-</a>
+        <a href="https://bitanegahdar.ir/about.html">
+            About
+        </a>
 
-<a href="https://bitanegahdar.ir/writing.html">
-    Writing
-</a>
+        <a href="https://bitanegahdar.ir/writing.html">
+            Writing
+        </a>
 
-<a href="https://bitanegahdar.ir/index.html#research">
-    Research
-</a>
+        <a href="https://bitanegahdar.ir/index.html#research">
+            Research
+        </a>
 
-<a href="art-psychology.html">
-    Art &amp; Psychology
-</a>
+        <a href="art-psychology.html">
+            Art &amp; Psychology
+        </a>
 
-<a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
-    Contact
-</a>
+        <a href="https://bitanegahdar.ir/index.html#contact" class="contact-btn">
+            Contact
+        </a>
 
-</nav>
+    </nav>
 
 </header>
 
 
+
 <!-- =====================================================
-     MAIN
+     INTRO
 ===================================================== -->
 
-<main class="page">
+<section class="page-intro">
 
-<div class="eyebrow">
-    About
-</div>
+    <div class="intro-label">
+        Research Library
+    </div>
 
-<h1>
-    Bita Negahdar
-</h1>
+    <h1>
+        کتابخانه پژوهشی
+    </h1>
 
-
-<!-- =================================================
-     ABOUT INTRO + PHOTO
-===================================================== -->
-
-<div class="about-intro">
-
-
-<div class="intro">
-
-بیتا نگاهدار متولد 1365 است و فعالیت حرفه‌ای خود را از 1382 در حوزه هنرهای تجسمی و ارتباطات بصری آغاز کرده است. بیش از بیست سال تجربه حرفه‌ای در زمینه برندینگ، طراحی و هنرهای تجسمی، او را به‌تدریج به سوی مطالعه انسان و حوزه روان‌شناسی سوق داده است؛ مسیری که در ادامه، به شکل‌گیری علاقه‌ای جدی به شناخت انسان، هویت و تجربه زیسته او انجامیده است.
-
-او دارای پیشینه‌ای میان‌رشته‌ای در طراحی گرافیک، عکاسی، هنرهای تجسمی و برندینگ است و در طول سال‌های فعالیت حرفه‌ای خود، در پروژه‌های مختلف طراحی، هویت بصری و مشاوره برند فعالیت داشته است. تجربه کار با تصویر و مواجهه مستمر با شیوه شکل‌گیری و بازنمایی هویت، نگاه او را به رابطه میان انسان، تصویر و معنا عمیق‌تر کرده است.
-
-تحصیل در رشته عکاسی در مقطع کارشناسی ارشد، نقطه دیگری در این مسیر بود؛ جایی که تصویر دیگر صرفاً یک ابزار بصری نبود و به وسیله‌ای برای مشاهده، پرسش و مواجهه با تجربه انسانی تبدیل شد. ادامه این مسیر در حوزه روان‌شناسی، امکان مطالعه علمی‌تر پرسش‌هایی را برای او فراهم کرده است که پیش‌تر از دریچه هنر و تصویر با آن‌ها مواجه شده بود.
-
-علاقه او در حوزه روان‌شناسی بیش از هر چیز بر مطالعه هویت، تجربه فردی، رابطه انسان با خود و بدن، و پیوند میان روان و فرهنگ بصری متمرکز است. برای او، روان‌شناسی ادامه همان مسیر مشاهده و پرسشگری است؛ با این تفاوت که اکنون این پرسش‌ها در چارچوبی علمی و پژوهشی دنبال می‌شوند.
-
-وي در حال توسعه مسیر حرفه‌ای و علمی خود در حوزه روان‌شناسی است و تلاش می‌کند پیشینه خود در هنر، عکاسی و برندینگ را در کنار مطالعات روان‌شناختی قرار دهد.
-
-</div>
-
-
-<div class="about-photo">
-
-<img
-    src="images/BitaNegahdar.jpg"
-    alt="Bita Negahdar"
->
-
-</div>
-
-</div>
-
-
-<!-- =================================================
-     EDUCATION
-===================================================== -->
-
-<section class="block">
-
-<h2>
-    Education
-</h2>
-
-<div class="education">
-
-<div class="education-item">
-    <h3>MA — Psychology</h3>
-</div>
-
-<div class="education-item">
-    <h3>MA — Photography</h3>
-</div>
-
-<div class="education-item">
-    <h3>BGD</h3>
-</div>
-
-</div>
+    <p>
+        مجموعه‌ای منتخب از مقالات پژوهشی، کتاب‌ها و منابع نظری
+        درباره روان‌شناسی از منظر نقاشی، بدن، بازنمایی تصویری،
+        هویت، رشد، تجربه بالینی و فرهنگ بصری.
+    </p>
 
 </section>
 
 
-<!-- =================================================
-     RELEVANT STUDIES & TRAINING
+
+<!-- =====================================================
+     CATEGORY NAVIGATION
 ===================================================== -->
 
-<section class="block">
+<section class="category-nav">
 
-<h2>
-    Relevant Studies &amp; Training
-</h2>
+    <div class="category-nav-inner">
 
-<div class="training">
+        <a href="#children-drawing">
+            نقاشی کودکان
+        </a>
 
-<span>
+        <a href="#body-image">
+            بدن، تصویر و هویت
+        </a>
 
-<div class="training-icon">
+        <a href="#clinical">
+            دیدگاه‌های بالینی
+        </a>
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 7.5h16"></path>
-        <path d="M6 7.5v10h12v-10"></path>
-        <path d="M8 7.5V5h8v2.5"></path>
-        <path d="M9 12h6"></path>
-    </svg>
+        <a href="#art-image">
+            هنر، تصویر و روان‌شناسی
+        </a>
 
-</div>
+        <a href="#theory">
+            نظریه و دیدگاه‌های انتقادی
+        </a>
 
-MBA — Strategic Management<br>
-University of Tehran<br>
-One-Year Professional Program | 2024–2025
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8"></circle>
-        <path d="M8.5 12h7"></path>
-        <path d="M12 8.5v7"></path>
-    </svg>
-
-</div>
-
-Schema Therapy
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M5 5.5h14v10H9l-4 3v-13z"></path>
-        <path d="M8.5 9.5h7"></path>
-        <path d="M8.5 12.5h5"></path>
-    </svg>
-
-</div>
-
-Cognitive Behavioral Therapy (CBT)
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 13c2-6 4 6 6 0s4-6 6 0 3 0 4-2"></path>
-        <path d="M4 18h16"></path>
-        <path d="M4 6h16"></path>
-    </svg>
-
-</div>
-
-QEEG Brain Mapping Workshop
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 4v16"></path>
-        <path d="M7 9l5-5 5 5"></path>
-        <path d="M7 15l5 5 5-5"></path>
-    </svg>
-
-</div>
-
-Acceptance and Commitment Therapy (ACT)
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 4l8 15H4L12 4z"></path>
-        <path d="M12 9v5"></path>
-        <circle cx="12" cy="17" r=".7" fill="currentColor" stroke="none"></circle>
-    </svg>
-
-</div>
-
-Suicide Crisis Management
-
-</span>
-
-
-<span>
-
-<div class="training-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M8 4h8v16H8z"></path>
-        <path d="M8 8h8"></path>
-        <path d="M12 8v12"></path>
-    </svg>
-
-</div>
-
-Psychopharmacology
-
-</span>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =================================================
-     PROFESSIONAL / ACADEMIC LINKS
+
+<!-- =====================================================
+     LIBRARY
 ===================================================== -->
 
-<section class="block">
-
-<div class="resource-links">
-
-<a
-href="https://www.apa.org/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/apa.png"
-    alt="APA"
->
-
-</a>
+<main class="library">
 
 
-<a
-href="https://www.iranpa.org/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
 
-<img
-    src="images/ipa.png"
-    alt="Iranian Psychological Association"
->
+<!-- =====================================================
+     CHILDREN'S DRAWINGS
+===================================================== -->
 
-</a>
+<section class="library-section" id="children-drawing">
 
+    <div class="section-heading">
 
-<a
-href="https://pubmed.ncbi.nlm.nih.gov/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
+        <h2>
+            نقاشی کودکان
+        </h2>
 
-<img
-    src="images/pubmed.png"
-    alt="PubMed"
->
+        <p>
+            پژوهش‌هایی درباره نقاشی کودکان به‌عنوان ماده‌ای
+            رشدی، ارتباطی، بازنمایانه، آموزشی و در برخی زمینه‌ها
+            بالینی. تأکید این بخش بر تفسیر نقاشی در بافت و زمینه
+            است، نه در نظر گرفتن ویژگی‌های منفرد تصویری به‌عنوان
+            نشانه‌های تشخیصی.
+        </p>
 
-</a>
+    </div>
 
 
-<a
-href="https://scholar.google.com/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
-
-<img
-    src="images/scholar.png"
-    alt="Google Scholar"
->
-
-</a>
+    <div class="research-grid">
 
 
-<a
-href="https://www.researchgate.net/"
-class="resource-link"
-target="_blank"
-rel="noopener noreferrer"
->
+        <article class="research-card">
 
-<img
-    src="images/researchgate.png"
-    alt="ResearchGate"
->
+            <div class="card-type">
+                مقاله پژوهشی
+            </div>
 
-</a>
+            <h3>
+                نقاشی کودکان
+            </h3>
 
-</div>
+            <div class="authors">
+                Ann W. Burgess &amp; Carol R. Hartman · 1993
+            </div>
+
+            <p class="description">
+                مقاله‌ای بالینی درباره استفاده از نقاشی کودکان
+                به‌عنوان ابزاری ارتباطی و تداعی‌گر در گفت‌وگو درباره
+                خاطرات و تجربه‌های آسیب‌زا، با توجه به ابعاد دیداری،
+                حرکتی، شنیداری، بین‌فردی و کلامی.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/0145-2134(93)90015-W"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                مقاله پژوهشی
+            </div>
+
+            <h3>
+                رشد مهارت نقاشی: بررسی نقش حمایت والدین و یادگیری فرهنگی
+            </h3>
+
+            <div class="authors">
+                Larissa Mendoza Straffon, Brenda de Groot, Naike D. Gorr,
+                Yung-Ting Tsou &amp; Mariska E. Kret · 2024
+            </div>
+
+            <p class="description">
+                مطالعه‌ای رشدی درباره مهارت نقاشی در ۶۸ زوج والد ـ کودک
+                در حدود سنین ۳ تا ۷ سال که انواع حمایت والدین و ارتباط
+                آن‌ها با مهارت ترسیمی و دیداری ـ حرکتی کودکان را بررسی می‌کند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.cogdev.2024.101444"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                مقاله پژوهشی
+            </div>
+
+            <h3>
+                نشانه‌ها، نمادها و طرحواره‌ها: فهم معنا در نقاشی کودک
+            </h3>
+
+            <div class="authors">
+                Jo Deguara &amp; Cathy Nutbrown · 2018
+            </div>
+
+            <p class="description">
+                بررسی شکل‌های طرحواره‌ای، نشانه‌ها، نمادها و فرایند
+                معنا‌سازی در نقاشی یک کودک چهار ساله، در چارچوب پژوهش‌های
+                مربوط به بازنمایی گرافیکی و شکل‌گیری معنا در کودکان.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1080/09669760.2017.1369398"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش جدید
+            </div>
+
+            <h3>
+                شاخص‌های نقاشی کودکان به‌عنوان ابزاری برای شناسایی سوءاستفاده جنسی
+            </h3>
+
+            <div class="authors">
+                Azam Pilevari, Mobina Zandieh, Maede Baniamerian &amp;
+                Zahra Taghipour · 2026
+            </div>
+
+            <p class="description">
+                مطالعه‌ای درباره نقاشی‌های خانوادگی ۲۸ کودک با سابقه تأییدشده
+                سوءاستفاده جنسی در ایران. پژوهش به بررسی برخی الگوهای دیداری
+                و هیجانی می‌پردازد و تأکید دارد که این ویژگی‌ها به‌تنهایی
+                شاخص تشخیصی محسوب نمی‌شوند و باید در کنار روایت و زمینه
+                مورد بررسی قرار گیرند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.actpsy.2026.107524"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش رشدی
+            </div>
+
+            <h3>
+                درون بدن چیست؟ نقاشی‌های حاشیه‌نویسی‌شده کودکان
+            </h3>
+
+            <div class="authors">
+                Johanna Andersson, Ragnhild Löfgren &amp; Lena A. E. Tibell · 2019
+            </div>
+
+            <p class="description">
+                مطالعه‌ای درباره بازنمایی ساختارهای درونی بدن توسط کودکان
+                از طریق نقاشی و توضیح درباره نقاشی‌ها و بررسی تفاوت‌های
+                شناختی در شکل‌گیری ایده‌های مربوط به بدن در دوره کودکی.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1080/00219266.2019.1569082"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش محاسباتی
+            </div>
+
+            <h3>
+                استفاده از پیش‌بینی‌های یادگیری عمیق برای مطالعه رشد رفتار نقاشی در کودکان
+            </h3>
+
+            <div class="authors">
+                Benjamin Beltzung, Marie Pelé, Lison Martinet, Elliot Maitre,
+                Jimmy Falck &amp; Cédric Sueur · 2025
+            </div>
+
+            <p class="description">
+                رویکردی محاسباتی که با استفاده از شبکه‌های عصبی کانولوشنی،
+                نقاشی‌های کودکان را در گروه‌های سنی مختلف طبقه‌بندی می‌کند
+                و رشد رفتار ترسیمی را با روش‌های یادگیری ماشین بررسی می‌کند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.displa.2025.103166"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش بالینی
+            </div>
+
+            <h3>
+                نقاشی‌درمانی با کمک هوش مصنوعی برای کودکان مبتلا به ADHD:
+                یک کارآزمایی تصادفی کنترل‌شده
+            </h3>
+
+            <div class="authors">
+                Jing Xu et al. · 2025
+            </div>
+
+            <p class="description">
+                یک کارآزمایی تصادفی کنترل‌شده که نقاشی‌درمانی با کمک
+                هوش مصنوعی را با نقاشی‌درمانی سنتی در ۴۱ کودک ۷ تا ۱۰ ساله
+                مبتلا به ADHD مقایسه می‌کند. نتایج نشان‌دهنده اثرات
+                حوزه‌ای و نسبتاً محدود بود و پژوهش‌های بزرگ‌تر برای
+                بررسی اثربخشی آن مورد نیاز دانسته شده‌اند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.ctim.2025.103262"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+    </div>
 
 </section>
+
+
+
+<!-- =====================================================
+     BODY IMAGE & IDENTITY
+===================================================== -->
+
+<section class="library-section" id="body-image">
+
+    <div class="section-heading">
+
+        <h2>
+            بدن، تصویر و هویت
+        </h2>
+
+        <p>
+            پژوهش‌هایی درباره تغییرات بدن، پیرسینگ، تصویر بدن،
+            خودشیء‌انگاری، نگرانی‌های ظاهری، پذیرش اجتماعی و
+            معناهای روان‌شناختی مرتبط با بدن تغییر‌یافته.
+        </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                تغییرات بدن
+            </div>
+
+            <h3>
+                بدن تغییر‌یافته ـ نماد خطر یا منابع؟
+            </h3>
+
+            <div class="authors">
+                Mateusz J. Lammek · 2022
+            </div>
+
+            <p class="description">
+                بررسی روان‌شناختی افرادی دارای خالکوبی و یا پیرسینگ
+                با توجه به عزت‌نفس، رضایت از زندگی و تجربه ذهنی آنان
+                از سلامت روان.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.12740/PP/131686"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                تغییرات بدن
+            </div>
+
+            <h3>
+                تغییرات بدن و رفتار خودتخریب‌گرانه در نوجوانان:
+                تظاهرات روان‌شناختی
+            </h3>
+
+            <div class="authors">
+                Natalia Maksimova et al. · 2019
+            </div>
+
+            <p class="description">
+                مطالعه‌ای روی ۸۶ نوجوان ۱۴ تا ۱۸ ساله که تظاهرات
+                روان‌شناختی مرتبط با تغییرات بدن و رفتارهای خودتخریب‌گرانه
+                را بررسی می‌کند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.2991/icpcs-19.2019.92"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پیرسینگ و انگیزه
+            </div>
+
+            <h3>
+                روندها و انگیزه‌های پیرسینگ بدن در میان دانشجویان دانشگاه
+                کیپ‌کوست، غنا
+            </h3>
+
+            <div class="authors">
+                Cosmos Amankwah &amp; Osei Akoto Kwarteng · 2024
+            </div>
+
+            <p class="description">
+                پژوهشی درباره شیوه‌ها و انگیزه‌های مرتبط با پیرسینگ بدن
+                در میان دانشجویان دانشگاهی در غنا و بررسی آن در زمینه
+                فرهنگی و اجتماعی.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.31248/IJAH2024.174"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش نوجوانان
+            </div>
+
+            <h3>
+                پیرسینگ بدن و ریسک‌پذیری نوجوانان:
+                ارتباط یا بیان؟
+            </h3>
+
+            <div class="authors">
+                Meltem Ileri et al. · 2026
+            </div>
+
+            <p class="description">
+                مطالعه‌ای مقطعی روی ۱۴۱ نوجوان درباره پیرسینگ،
+                رفتارهای پرخطر، سلامت روان و آگاهی از شیوه‌ها و
+                عوارض پیرسینگ.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1007/s00431-026-07115-x"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                پژوهش بالینی
+            </div>
+
+            <h3>
+                جنبه‌های بالینی و روان‌شناختی پیرسینگ
+            </h3>
+
+            <div class="authors">
+                Justyna Putek &amp; Jacek C. Szepietowski · 2024
+            </div>
+
+            <p class="description">
+                پژوهشی درباره ادراک تصویر بدن، اضطراب مربوط به ظاهر،
+                عزت‌نفس و نشانه‌های مرتبط با اختلال بدشکلی بدن در
+                افراد دارای پیرسینگ.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.3390/cosmetics11060207"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                بدن و زمینه اجتماعی
+            </div>
+
+            <h3>
+                پذیرش اجتماعی پیرسینگ بدن
+            </h3>
+
+            <div class="authors">
+                Elżbieta Rębiś &amp; Daria Rębiś · 2025
+            </div>
+
+            <p class="description">
+                پژوهشی درباره پذیرش اجتماعی پیرسینگ بدن و نقش نگرش‌های
+                اجتماعی در تصمیم‌های مرتبط با تغییرات قابل مشاهده بدن.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.5114/ms.2025.154757"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                تصویر بدن
+            </div>
+
+            <h3>
+                خودشیء‌انگاری، ناآرامی بدنی و سرمایه‌گذاری بر بدن
+                در افراد دارای تغییرات بدن و جراحی زیبایی
+            </h3>
+
+            <div class="authors">
+                Marzieh Abdoli, Fabio Carraturo, Dua Fatima Afzaal,
+                Paolo Cotrufo &amp; Stefania Cella · 2025
+            </div>
+
+            <p class="description">
+                پژوهشی درباره خودشیء‌انگاری، ناآرامی بدنی،
+                سرمایه‌گذاری بر بدن و گسست از بدن در بزرگسالانی
+                که تغییراتی در بدن خود ایجاد کرده‌اند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1007/s40519-025-01795-4"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                سلامت و هنر بدن
+            </div>
+
+            <h3>
+                پیرسینگ و خالکوبی بدن: بررسی دانش و آگاهی جوانان
+                از خطرات و شیوه‌های هنر بدن
+            </h3>
+
+            <div class="authors">
+                Alessia Quaranta et al. · 2011
+            </div>
+
+            <p class="description">
+                مطالعه‌ای درباره میزان آگاهی جوانان، شیوه‌های رایج
+                و خطرات ادراک‌شده مرتبط با خالکوبی و پیرسینگ بدن.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1186/1471-2458-11-774"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                مرور پژوهشی
+            </div>
+
+            <h3>
+                انحراف به‌عنوان یک برساخته تاریخی:
+                مرور دامنه‌ای مطالعات روان‌شناختی تغییرات بدن
+            </h3>
+
+            <div class="authors">
+                Rebecca Owens, Steven J. Filoromo, Lauren A. Landgraf,
+                Christopher D. Lynn &amp; Michael R. A. Smetana · 2023
+            </div>
+
+            <p class="description">
+                مرور دامنه‌ای درباره نحوه صورت‌بندی تاریخی تغییرات بدن
+                در پژوهش‌های روان‌شناختی با مفاهیمی مانند انحراف،
+                خطر، هویت و عادی‌سازی.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1057/s41599-023-01511-6"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLINICAL PERSPECTIVES
+===================================================== -->
+
+<section class="library-section" id="clinical">
+
+    <div class="section-heading">
+
+        <h2>
+            دیدگاه‌های بالینی
+        </h2>
+
+        <p>
+            منابعی در پیوند میان شیوه‌های تصویری یا بدنی با
+            روان‌شناسی بالینی، درمان، تروما، ارزیابی روان‌شناختی
+            و رابطه درمانی.
+        </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                هنر‌درمانی
+            </div>
+
+            <h3>
+                استعاره در هنر‌درمانی: کاربرد آن در کار با کودکان آسیب‌پذیر
+            </h3>
+
+            <div class="authors">
+                Marián López Fernández Cao &amp; Ana Serrano Navarro · 2025
+            </div>
+
+            <p class="description">
+                بررسی بیان استعاری در هنر‌درمانی و نقش آن در کمک به
+                کودکان آسیب‌پذیر برای بیان تجربه‌هایی که ممکن است
+                به‌سادگی از طریق زبان قابل بیان نباشند.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.aip.2025.102376"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                حرفه روان‌شناسی
+            </div>
+
+            <h3>
+                سویه کمتر دیده‌شده: شخصیت و انگیزه‌های روان‌شناسان
+                بالینی و مشاوره‌ای
+            </h3>
+
+            <div class="authors">
+                Greta Darmanin Kissaun &amp; Gottfried Catania · 2024
+            </div>
+
+            <p class="description">
+                مطالعه‌ای اکتشافی درباره ویژگی‌های شخصیتی و انگیزه‌های
+                روان‌شناسان بالینی و مشاوره‌ای مالت از دیدگاه همکاران،
+                با استفاده از روش شبکه سازه‌ای.
+            </p>
+
+            <a class="source-link"
+               href="https://www.um.edu.mt/library/oar/handle/123456789/136208"
+               target="_blank"
+               rel="noopener">
+                منبع دانشگاهی
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ART IMAGE & PSYCHOLOGY
+===================================================== -->
+
+<section class="library-section" id="art-image">
+
+    <div class="section-heading">
+
+        <h2>
+            هنر، تصویر و روان‌شناسی
+        </h2>
+
+        <p>
+            پژوهش‌هایی در نقطه تلاقی بازنمایی تصویری، تصویر بدن،
+            تولید تصویر دیجیتال، فعالیت هنری و تجربه روان‌شناختی.
+        </p>
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                مرور نظام‌مند
+            </div>
+
+            <h3>
+                ارتباط میان ویرایش عکس و نگرانی‌های مربوط به بدن در زنان
+            </h3>
+
+            <div class="authors">
+                Orla McGovern, Rebecca Collins &amp; Simon Dunne · 2022
+            </div>
+
+            <p class="description">
+                مرور نظام‌مند ۲۲ مطالعه تجربی درباره ارتباط میان
+                ویرایش عکس و تصویر بدن، نارضایتی از بدن و تغییرات
+                بدنی در میان زنان استفاده‌کننده از شبکه‌های اجتماعی.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.1016/j.bodyim.2022.10.013"
+               target="_blank"
+               rel="noopener">
+                DOI
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                رشد و بازنمایی تصویری
+            </div>
+
+            <h3>
+                تفسیر نقاشی‌های کودکان
+            </h3>
+
+            <div class="authors">
+                Joseph H. Di Leo · 1983
+            </div>
+
+            <p class="description">
+                کتابی کلاسیک درباره تفسیر نقاشی کودکان، ویژگی‌های
+                شکلی و سبکی، شناخت، عاطفه، بخش‌های بدن، شخصیت و
+                محدودیت‌های موجود در تفسیر آثار کودکان.
+            </p>
+
+            <a class="source-link"
+               href="https://www.routledge.com/Interpreting-Childrens-Drawings/DiLeo/p/book/9780876303313"
+               target="_blank"
+               rel="noopener">
+                ناشر
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                رشد دیداری
+            </div>
+
+            <h3>
+                فهم نقاشی‌های کودکان
+            </h3>
+
+            <div class="authors">
+                John Willats · 2005
+            </div>
+
+            <p class="description">
+                رویکردی شناختی و بازنمایانه به نقاشی کودکان که بر
+                نظام‌های ترسیمی، ادراک، بازنمایی دیداری و رشد
+                تدریجی قواعد پیچیده‌تر نقاشی تمرکز دارد.
+            </p>
+
+            <a class="source-link"
+               href="https://www.routledge.com/Making-Sense-of-Childrens-Drawings/Willats/p/book/9780805845389"
+               target="_blank"
+               rel="noopener">
+                ناشر
+            </a>
+
+        </article>
+
+
+
+        <article class="research-card">
+
+            <div class="card-type">
+                هنر‌درمانی بالینی
+            </div>
+
+            <h3>
+                فهم نقاشی‌های کودکان
+            </h3>
+
+            <div class="authors">
+                Cathy A. Malchiodi · 1998
+            </div>
+
+            <p class="description">
+                منبعی بالینی که نقاشی و فرایند هنری کودکان را به‌عنوان
+                وسیله‌ای برای ارتباط و کار درمانی بررسی می‌کند و
+                هم‌زمان نسبت به تفسیرهای ساده‌انگارانه هشدار می‌دهد.
+            </p>
+
+            <a class="source-link"
+               href="https://www.guilford.com/books/Understanding-Childrens-Drawings/Cathy-Malchiodi/9781572303720"
+               target="_blank"
+               rel="noopener">
+                ناشر
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     THEORY
+===================================================== -->
+
+<section class="library-section theory-section" id="theory">
+
+    <div class="section-heading">
+
+        <h2>
+            نظریه و دیدگاه‌های انتقادی
+        </h2>
+
+        <p>
+            متون نظری بنیادی برای خوانش مفهومی بدن، شیوه‌های
+            تصویری، سوژه‌مندی، قدرت، تفسیر و هنجارهای اجتماعی.
+        </p>
+
+    </div>
+
+
+    <div class="theory-box">
+
+
+        <article class="theory-item">
+
+            <div class="card-type">
+                چارچوب نظری
+            </div>
+
+            <h3>
+                میشل فوکو: فراتر از ساختارگرایی و هرمنوتیک
+            </h3>
+
+            <p>
+                مطالعه تأثیرگذار Hubert L. Dreyfus و Paul Rabinow
+                درباره اندیشه فوکو، با کاربرد در بررسی سوژه‌مندی،
+                گفتمان، تفسیر و رابطه میان دانش و قدرت.
+            </p>
+
+            <a class="source-link"
+               href="https://doi.org/10.7208/chicago/9780226154534.001.0001"
+               target="_blank"
+               rel="noopener">
+                ناشر
+            </a>
+
+        </article>
+
+
+
+        <article class="theory-item">
+
+            <div class="card-type">
+                Michel Foucault
+            </div>
+
+            <h3>
+                مراقبت و تنبیه
+            </h3>
+
+            <p>
+                تحلیل تاریخی فوکو از مجازات، انضباط، نظارت،
+                عادی‌سازی و تولید بدن‌های منضبط؛ متنی بنیادی برای
+                بررسی بدن درون نظام‌های قدرت و تنظیم اجتماعی.
+            </p>
+
+            <a class="source-link"
+               href="https://books.google.com/books?id=6a3pAAAAMAAJ"
+               target="_blank"
+               rel="noopener">
+                کتاب
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
 
 </main>
+
 
 
 <!-- =====================================================
      FOOTER
 ===================================================== -->
 
-<footer>
+<footer id="contact">
 
-<div>
-    BITA NEGAHDAR
-</div>
+    <div class="footer-inner">
 
-<div>
-    Psychology
-</div>
+        <div class="footer-top">
+
+            <div class="footer-brand-area">
+
+                <div class="footer-brand">
+                    BITA NEGAHDAR
+                </div>
+
+                <p class="footer-description">
+                    روان‌شناسی، فرهنگ بصری، پژوهش و مطالعه تجربه انسانی
+                    از مسیر تصویر، بدن و بازنمایی.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    بخش‌ها
+                </h4>
+
+                <a href="https://bitanegahdar.ir/index.html">
+                    خانه
+                </a>
+
+                <a href="https://bitanegahdar.ir/about.html">
+                    درباره من
+                </a>
+
+                <a href="https://bitanegahdar.ir/writing.html">
+                    نوشته‌ها
+                </a>
+
+                <a href="https://bitanegahdar.ir/research.html">
+                    پژوهش
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    ارتباط
+                </h4>
+
+                <a href="mailto:bitanegahdar@gmail.com">
+                    ایمیل
+                </a>
+
+                <a href="https://www.instagram.com/bitanegahdar.ir/"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+
+                <a href="https://www.linkedin.com/in/bita-negahdar/"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 Bita Negahdar. All rights reserved.
+            </div>
+
+            <div class="footer-social">
+
+                <a href="mailto:bitanegahdar@gmail.com">
+                    Email
+                </a>
+
+                <a href="https://www.instagram.com/bitanegahdar.ir/"
+                   target="_blank"
+                   rel="noopener">
+                    Instagram
+                </a>
+
+                <a href="https://www.linkedin.com/in/bita-negahdar/"
+                   target="_blank"
+                   rel="noopener">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
 
+
 </body>
+
 </html>
