@@ -12,20 +12,9 @@
 
 <style>
 
-/* =====================================================
-   GLOBAL RESET
-===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+/* GLOBAL RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
     background:#FFFFFF;
     color:#252525;
@@ -33,17 +22,9 @@ body{
     font-weight:400;
     line-height:1.7;
 }
+a{color:inherit;text-decoration:none;}
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
+/* HEADER */
 header{
     width:100%;
     min-height:76px;
@@ -90,10 +71,7 @@ nav a{
     background:transparent;
     border:1px solid transparent;
     white-space:nowrap;
-    transition:
-        background-color .25s ease,
-        color .25s ease,
-        border-color .25s ease;
+    transition:background-color .25s ease,color .25s ease,border-color .25s ease;
 }
 
 nav a:hover{
@@ -115,11 +93,7 @@ nav a:hover{
     color:#FFFFFF;
 }
 
-
-/* =====================================================
-   PAGE INTRO
-===================================================== */
-
+/* PAGE INTRO */
 .page-intro{
     max-width:1180px;
     margin:0 auto;
@@ -152,11 +126,7 @@ nav a:hover{
     text-align:justify;
 }
 
-
-/* =====================================================
-   CATEGORY NAV
-===================================================== */
-
+/* CATEGORY NAV */
 .category-nav{
     max-width:1180px;
     margin:0 auto;
@@ -184,9 +154,7 @@ nav a:hover{
     line-height:1.5;
     text-transform:uppercase;
     border-right:1px solid #D9E0EA;
-    transition:
-        background-color .25s ease,
-        color .25s ease;
+    transition:background-color .25s ease,color .25s ease;
 }
 
 .category-nav a:last-child{
@@ -198,11 +166,7 @@ nav a:hover{
     color:#4B61A3;
 }
 
-
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
-
+/* MAIN CONTENT */
 .library{
     max-width:1180px;
     margin:0 auto;
@@ -239,11 +203,7 @@ nav a:hover{
     text-align:justify;
 }
 
-
-/* =====================================================
-   RESEARCH GRID
-===================================================== */
-
+/* RESEARCH GRID */
 .research-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -255,10 +215,7 @@ nav a:hover{
     padding:31px 32px 29px;
     background:#F7F8FA;
     border:1px solid #E1E5EC;
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background-color .25s ease;
+    transition:transform .25s ease,border-color .25s ease,background-color .25s ease;
 }
 
 .research-card:hover{
@@ -309,6 +266,19 @@ nav a:hover{
     text-align:justify;
 }
 
+.persian-description{
+    direction:rtl;
+    margin-top:-7px;
+    margin-bottom:20px;
+    padding-top:16px;
+    border-top:1px solid #E1E5EC;
+    color:#4F5558;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:13px;
+    line-height:2.05;
+    text-align:justify;
+}
+
 .source-link{
     display:inline-flex;
     align-items:center;
@@ -319,9 +289,7 @@ nav a:hover{
     letter-spacing:1px;
     text-transform:uppercase;
     border-bottom:1px solid transparent;
-    transition:
-        color .2s ease,
-        border-color .2s ease;
+    transition:color .2s ease,border-color .2s ease;
 }
 
 .source-link:hover{
@@ -334,11 +302,11 @@ nav a:hover{
     font-size:12px;
 }
 
+.pdf-link{
+    margin-left:18px;
+}
 
-/* =====================================================
-   BOOKS
-===================================================== */
-
+/* BOOKS */
 .books-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -352,9 +320,7 @@ nav a:hover{
     min-height:275px;
     display:flex;
     flex-direction:column;
-    transition:
-        transform .25s ease,
-        border-color .25s ease;
+    transition:transform .25s ease,border-color .25s ease;
 }
 
 .book-card:hover{
@@ -393,11 +359,7 @@ nav a:hover{
     margin-top:auto;
 }
 
-
-/* =====================================================
-   THEORY BLOCK
-===================================================== */
-
+/* THEORY BLOCK */
 .theory-section{
     padding-top:5px;
 }
@@ -437,11 +399,7 @@ nav a:hover{
     margin-top:20px;
 }
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
+/* FOOTER */
 footer{
     background:#000000;
     color:#FFFFFF;
@@ -521,11 +479,7 @@ footer{
     color:#FFFFFF;
 }
 
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
+/* RESPONSIVE */
 @media(max-width:950px){
 
     .page-intro{
@@ -566,7 +520,6 @@ footer{
         grid-column:1 / -1;
     }
 }
-
 
 @media(max-width:700px){
 
@@ -687,6 +640,20 @@ footer{
         text-align:right;
     }
 
+    .persian-description{
+        font-size:12px;
+        line-height:2;
+        text-align:right;
+    }
+
+    .source-link{
+        font-size:9px;
+    }
+
+    .pdf-link{
+        margin-left:12px;
+    }
+
     .books-grid{
         grid-template-columns:1fr;
         gap:14px;
@@ -744,8 +711,8 @@ footer{
         gap:17px;
         line-height:1.7;
     }
-}
 
+}
 </style>
 
 </head>
@@ -754,13 +721,11 @@ footer{
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
-    <div class="logo">BITA NEGAHDAR</div>
+    <div class="logo">
+        BITA NEGAHDAR
+    </div>
 
     <nav>
 
@@ -780,7 +745,7 @@ footer{
             Research
         </a>
 
-        <a href="https://bitanegahdar.ir/index.html#art-psychology">
+        <a href="art-psychology.html">
             Art &amp; Psychology
         </a>
 
@@ -792,11 +757,6 @@ footer{
 
 </header>
 
-
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
 
 <section class="page-intro">
 
@@ -817,11 +777,6 @@ footer{
 
 </section>
 
-
-
-<!-- =====================================================
-     CATEGORY NAVIGATION
-===================================================== -->
 
 <section class="category-nav">
 
@@ -852,18 +807,8 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     LIBRARY
-===================================================== -->
-
 <main class="library">
 
-
-
-<!-- =====================================================
-     CHILDREN'S DRAWINGS
-===================================================== -->
 
 <section class="library-section" id="children-drawing">
 
@@ -901,11 +846,15 @@ footer{
                 Ann W. Burgess &amp; Carol R. Hartman · 1993
             </div>
 
-            <p class="description">
-                An early clinical discussion of children’s drawings as an
-                associative tool in interviews concerning traumatic memories,
-                with attention to visual, motoric, auditory, interpersonal,
-                and verbal dimensions.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این مقاله به کاربرد نقاشی کودکان در مصاحبه‌های بالینی،
+                ارزیابی تجربه‌های آسیب‌زا و دسترسی به خاطرات می‌پردازد.
+                نویسندگان نقاشی را نه صرفاً به‌عنوان ابزاری فرافکن برای
+                تشخیص، بلکه به‌عنوان وسیله‌ای ارتباطی و تداعی‌گر در نظر
+                می‌گیرند که می‌تواند به بیان ابعاد هیجانی، حسی، ادراکی و
+                شناختی تجربه کودک کمک کند. مقاله همچنین محدودیت‌های
+                تفسیر تشخیصی نقاشی‌های کودکان را مطرح می‌کند و بر اهمیت
+                توجه به اعتبار و پایایی روش‌های تحلیل نقاشی تأکید دارد.
             </p>
 
             <a class="source-link"
@@ -915,8 +864,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="Children's%20drawings.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -934,11 +889,18 @@ footer{
                 Yung-Ting Tsou &amp; Mariska E. Kret · 2024
             </div>
 
-            <p class="description">
-                A developmental study of drawing skill in 68 parent–child
-                dyads aged approximately 3–7 years. The study distinguishes
-                different forms of parental support and examines their
-                relationship with children’s visuomotor drawing skill.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این پژوهش به بررسی نقش حمایت والدین در رشد مهارت نقاشی کودکان
+                و ارتباط آن با یادگیری فرهنگی می‌پردازد. نمونه پژوهش شامل
+                ۶۸ زوج والد ـ کودک با کودکان ۳ تا ۶٫۹ ساله بود. والدین درباره
+                اقداماتی که برای تقویت توانایی نقاشی کودک انجام می‌دادند
+                گزارش ارائه کردند و مهارت نقاشی کودکان با استفاده از آزمون
+                یکپارچگی دیداری ـ حرکتی بیری ـ بوک‌نیتسا ارزیابی شد.
+                یافته‌ها نشان داد که حمایت والدین به‌طور کلی ارتباط معناداری
+                با مهارت نقاشی کودکان نداشت؛ بااین‌حال، مؤلفه «داربست‌سازی»
+                (Scaffolding) با مهارت بالاتر نقاشی ارتباط مثبت داشت.
+                نتایج بر اهمیت بررسی رشد مهارت‌های نقاشی در چارچوب یادگیری
+                فرهنگی و توجه به شکل‌های مشخص حمایت والدین تأکید می‌کند.
             </p>
 
             <a class="source-link"
@@ -948,8 +910,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="developing%20drawing%20skill.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -966,10 +934,30 @@ footer{
                 Jo Deguara &amp; Cathy Nutbrown · 2018
             </div>
 
-            <p class="description">
-                An examination of schematic forms, signs, symbols, and
-                meaning-making through the drawings of a four-year-old child,
-                situated within research on graphic representation.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این مقاله به بررسی ساختارهای شماتیک و شیوه شکل‌گیری معنا در
+                نقاشی‌های یک دختر چهار ساله به نام تیا می‌پردازد. پژوهش ابتدا
+                مروری بر ادبیات مربوط به بازنمایی‌های گرافیکی، نشانه‌ها و
+                فرایند معنا‌سازی ارائه می‌کند و سپس با تمرکز بر فرم‌های
+                شماتیک در نقاشی کودکان، چارچوب نظری مطالعه را شکل می‌دهد.
+                داده‌های پژوهش شامل نقاشی‌هایی بود که کودک در خانه و مدرسه
+                ترسیم کرده بود، گفت‌وگوهای ضبط‌شده او درباره نقاشی‌ها و
+                ویدئوهای ثبت‌شده از جلسات نقاشی طی یک دوره چهارماهه. این
+                داده‌ها به‌صورت دستی و با استفاده از نرم‌افزار NVivo
+                کدگذاری شدند تا الگوهای شماتیک شناسایی شوند. مقاله به‌طور
+                مشخص نمونه‌هایی از کاوش کودک در دو فرم شماتیکِ «محصورسازی»
+                (Enclosure) و «مسیر یا حرکت» (Trajectory) را بررسی می‌کند؛
+                فرم‌هایی که محتوای غنی خود را از تجربه‌ها و تخیل کودک
+                دریافت می‌کنند. یافته‌ها نشان می‌دهد که نقاشی‌های تیا
+                حاوی نشانه‌های شماتیک متعددی هستند و شواهدی از تفکر پیچیده
+                او درباره محصورسازی‌ها و مسیرهای عمودی و افقی ارائه
+                می‌کنند. مقاله همچنین بر اهمیت گوش دادن به گفت‌وگوی کودک
+                هنگام نقاشی تأکید دارد؛ زیرا برای درک کامل‌تر معناهایی که
+                کودک در فرایند ترسیم ایجاد می‌کند، خودِ توضیحات و روایت‌های
+                او اهمیت اساسی دارند. در این چارچوب، نقاشی از طریق نشانه‌ها،
+                نمادها و روایت‌های شخصی به یک فضای نشانه‌شناختی معنادار
+                تبدیل می‌شود که در آن دغدغه‌های شماتیک پایدار کودک آشکار
+                می‌شوند.
             </p>
 
             <a class="source-link"
@@ -979,8 +967,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="Signs%20symbols%20and%20schemas%20understanding%20meaning%20in%20a%20child%20s%20drawings.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -998,12 +992,34 @@ footer{
                 Zahra Taghipour · 2026
             </div>
 
-            <p class="description">
-                A study of family drawings by 28 children with confirmed
-                histories of sexual abuse in Iran. The authors examine recurring
-                visual and emotional indicators while emphasizing that such
-                features are not diagnostic markers and must be interpreted
-                alongside narrative and case context.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این پژوهش به بررسی شاخص‌های هیجانی و رفتاری در نقاشی‌های
+                ۲۸ کودک شامل ۱۳ دختر و ۱۵ پسر با سابقه تأییدشده سوءاستفاده
+                جنسی در ایران می‌پردازد. بیشتر شرکت‌کنندگان، معادل ۸۵ درصد،
+                کودکان مهاجر افغانستانی بودند. پژوهشگران با استفاده از
+                تحلیل محتوای جهت‌دار، نقاشی‌های خانوادگی کودکان و توضیحات
+                آنان درباره نقاشی را بررسی کردند. سه پژوهشگر به‌طور مستقل
+                نقاشی‌ها را بر اساس چارچوبی برگرفته از مطالعات پیشین
+                کدگذاری کردند و اختلاف‌نظرها به‌صورت مشارکتی حل شد.
+
+                از جمله شاخص‌های بصری مشاهده‌شده می‌توان به اشیای شناور،
+                فشار زیاد مداد، بازوهای نامتقارن، فرم‌های یک‌بعدی،
+                پیکره‌های شبیه قورباغه یا هیولایی، پاهای ناپایدار و
+                بازوهای قرارگرفته در وضعیت افقی اشاره کرد. این ویژگی‌ها
+                در نقاشی کودکانی که سوءاستفاده از سوی پدر، شریک عاطفی مادر
+                یا یکی از آشنایان مرد خانواده را تجربه کرده بودند، بیشتر
+                مشاهده شد.
+
+                بااین‌حال، نویسندگان تأکید می‌کنند که این عناصر بصری
+                <strong>شاخص‌های تشخیصی سوءاستفاده جنسی از کودک نیستند</strong>.
+                یافته‌ها نشان می‌دهند که سرنخ‌های حاصل از نقاشی می‌توانند
+                در کنار سایر اطلاعات، برای متخصصان بالینی در شناخت برخی
+                وضعیت‌های هیجانی کودک، از جمله ترس، اضطراب، ناامنی،
+                پرخاشگری یا تصویر منفی از خود، اطلاعات تکمیلی فراهم کنند؛
+                به‌ویژه زمانی که بیان کلامی تجربه برای کودک دشوار است.
+                با توجه به نبود گروه کنترل و ویژگی فرهنگی خاص نمونه،
+                نتایج باید با احتیاط تفسیر شوند و تعمیم آنها به سایر
+                جمعیت‌ها نیازمند شواهد پژوهشی بیشتر است.
             </p>
 
             <a class="source-link"
@@ -1013,8 +1029,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="Indicators%20in%20children's%20drawings%20as%20a%20tool%20for%20identifying%20sexual%20abuse.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -1031,10 +1053,30 @@ footer{
                 Johanna Andersson, Ragnhild Löfgren &amp; Lena A. E. Tibell · 2019
             </div>
 
-            <p class="description">
-                A study of children’s representations of internal body
-                structures using drawings and explanations, examining how
-                ideas about the body differ across childhood.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این پژوهش به بررسی تصورات کودکان از ساختار درونی بدن می‌پردازد.
+                ۱۷۰ کودک چهار تا ۱۳ ساله به‌صورت فردی نقاشی‌هایی از ساختار
+                داخلی بدن ترسیم کردند و در جریان هر جلسه، درباره نقاشی خود
+                برای تسهیل‌گر توضیح دادند و نام اندام‌ها را نیز به‌صورت
+                نوشتاری مشخص کردند؛ کودکانی که توانایی نوشتن نداشتند با کمک
+                تسهیل‌گر این کار را انجام دادند. یافته‌ها تصویری به‌روز و
+                جامع از چگونگی تصور کودکان در گروه‌های سنی مختلف درباره
+                ساختار درونی بدن ارائه می‌دهد. نوع و تعداد اندام‌های
+                ترسیم‌شده تا حد زیادی با یافته‌های پژوهش‌های پیشین مشابه بود؛
+                بااین‌حال، کودکان در مقایسه با برخی مطالعات جدیدتر اندام‌های
+                بیشتری را ترسیم کردند، مغز تقریباً به اندازه قلب مورد اشاره
+                قرار گرفت و استفاده از شکل نمادین قلب ولنتاین نیز به‌طور
+                مکرر مشاهده شد. برخلاف برخی پژوهش‌های پیشین، کودکان میان
+                اندام‌های مختلف ارتباط‌هایی نیز ترسیم کردند. این یافته بر
+                ضرورت احتیاط در تفسیر پاسخ‌های کودکان بر اساس پرسش‌های
+                جداشده از زمینه تأکید می‌کند. پژوهشگران همچنین بر اهمیت
+                فراهم‌کردن امکان توضیح نقاشی برای کودک تأکید دارند؛ زیرا
+                بدون این توضیحات، معنای نقاشی تا حد زیادی به تفسیر پژوهشگر
+                وابسته خواهد شد. ارتباط‌هایی که کودکان میان اندام‌ها
+                ترسیم می‌کنند و توضیحاتی که درباره نقاشی‌های خود ارائه
+                می‌دهند، اطلاعات مهمی درباره تصورات آنان از ساختار بدن
+                فراهم می‌کند و می‌تواند برای آموزش، یادگیری و پژوهش در
+                حوزه آموزش علوم نیز اهمیت داشته باشد.
             </p>
 
             <a class="source-link"
@@ -1044,8 +1086,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="What%20s%20in%20the%20body%20%20Children%20s%20annotated%20drawings.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -1063,10 +1111,22 @@ footer{
                 Jimmy Falck &amp; Cédric Sueur · 2025
             </div>
 
-            <p class="description">
-                A computational approach using convolutional neural networks
-                to classify children’s drawings across age groups and examine
-                drawing development through machine-learning methods.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این پژوهش به بررسی رفتار نقاشی کودکان به‌عنوان دریچه‌ای برای
+                مطالعه رشد شناختی می‌پردازد و از شبکه‌های عصبی کانولوشنی (CNN)
+                برای تحلیل روند رشد در نقاشی‌های کودکان استفاده می‌کند.
+                داده‌های پژوهش شامل ۳۸۶ نقاشی از ۱۹۳ شرکت‌کننده بود که
+                ۱۵۰ کودک ۲ تا ۱۰ ساله و ۴۳ بزرگسال از فرانسه را دربرمی‌گرفت.
+                مدل‌های CNN با استفاده از بهینه‌سازی بیزی آموزش داده شدند
+                تا نقاشی‌ها را در ۱۰ گروه سنی طبقه‌بندی کنند و تفاوت میان
+                نقاشی‌های کودکان و بزرگسالان را بررسی کنند. نتایج نشان داد
+                که دقت مدل با افزایش سن کودک بیشتر می‌شود که با بهبود
+                مهارت‌های نقاشی در روند رشد مطابقت دارد. همچنین، روش‌هایی
+                مانند Grad-CAM و Captum امکان بررسی ویژگی‌های بصری مؤثر
+                در تصمیم‌گیری مدل‌های CNN را فراهم کردند. یافته‌ها نشان
+                می‌دهد که یادگیری عمیق می‌تواند ظرفیت بالقوه‌ای برای
+                ارزیابی برخی نقاط عطف رشدی در نقاشی کودکان داشته باشد و
+                کاربردهایی برای روان‌شناسی تربیتی و ارزیابی‌های رشدی مطرح کند.
             </p>
 
             <a class="source-link"
@@ -1076,8 +1136,14 @@ footer{
                 DOI
             </a>
 
-        </article>
+            <a class="source-link pdf-link"
+               href="Using%20deep%20learning%20predictions%20to%20study%20the%20development%20of%20drawing%20behaviour%20in%20children.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
 
+        </article>
 
 
         <article class="research-card">
@@ -1087,17 +1153,59 @@ footer{
             </div>
 
             <h3>
-                AI-Assisted Drawing Therapy for Children with ADHD: A Randomised Controlled Trial
+                AI-Assisted Drawing Therapy for Children with ADHD:
+                A Randomised Controlled Trial
             </h3>
 
             <div class="authors">
                 Jing Xu et al. · 2025
             </div>
 
-            <p class="description">
-                A randomized controlled trial comparing AI-assisted drawing
-                therapy with traditional drawing therapy in 41 children aged
-                7–10 years with ADHD.
+            <p class="persian-description" lang="fa" dir="rtl">
+                این کارآزمایی تصادفی‌شده به بررسی اثربخشی هنر‌درمانی مبتنی
+                بر نقاشی با کمک هوش مصنوعی برای کودکان مبتلا به ADHD می‌پردازد
+                و تأثیر آن را بر علائم اصلی ADHD، اختلالات عملکردی، میزان
+                مشارکت و پیامدهای درمانی با مداخلات سنتی نقاشی مقایسه می‌کند.
+
+                در این پژوهش، ۴۱ کودک ۷ تا ۱۰ ساله مبتلا به ADHD به‌صورت
+                تصادفی در دو گروه قرار گرفتند: گروه نقاشی با کمک هوش مصنوعی
+                شامل ۱۹ کودک و گروه نقاشی سنتی شامل ۲۲ کودک. در مداخله مبتنی
+                بر هوش مصنوعی، نقاشی‌های کودکان ثبت و به مجموعه‌ای از
+                کلیدواژه‌ها تبدیل می‌شدند؛ سپس سیستم بر اساس این کلیدواژه‌ها
+                پاسخ‌هایی تولید می‌کرد و بازخورد مربوط به نقاشی را در اختیار
+                کودک قرار می‌داد. در گروه کنترل، بازخورد کلامی توسط درمانگر
+                ارائه می‌شد. علائم ADHD و اختلالات عملکردی با استفاده از
+                مقیاس SNAP-IV-26 و مقیاس اختلال عملکرد Weiss برای والدین
+                (WFIRS-P) در دو زمان، پیش از مداخله (T1) و پس از مداخله (T2)،
+                با فاصله ۲۴ هفته ارزیابی شدند.
+
+                نتایج نشان داد که هر دو نوع مداخله به کاهش معنادار علائم
+                اصلی ADHD منجر شدند. در مقایسه پیش و پس از مداخله در هر
+                گروه، گروه دریافت‌کننده درمان با کمک هوش مصنوعی بهبود
+                معناداری در توجه (p = 0.039) و رفتار مقابله‌ای ـ نافرمانی
+                (p = 0.025) نشان داد، درحالی‌که درمان سنتی نقاشی کاهش
+                گسترده‌تری را در تمامی حوزه‌های علائم ایجاد کرد (p < 0.05).
+                در مقایسه بین دو گروه، گروه هوش مصنوعی بهبود بیشتری در
+                بی‌توجهی نشان داد (Δ = −1.09، p = 0.035)، درحالی‌که گروه
+                نقاشی سنتی در کاهش رفتار مقابله‌ای ـ نافرمانی
+                (Δ = +1.706، p = 0.010) و نمره کلی SNAP-IV
+                (Δ = +4.777، p = 0.041) عملکرد بهتری داشت.
+
+                در مقیاس WFIRS-P نیز گروه هوش مصنوعی در حوزه خانواده
+                (p = 0.041) و نمره کل (p = 0.047) نتایج بهتری نشان داد،
+                درحالی‌که در حوزه خودپنداره، گروه نقاشی سنتی بهبود بیشتری
+                داشت (p = 0.036).
+
+                در مجموع، هنر‌درمانی مبتنی بر نقاشی با کمک هوش مصنوعی در
+                پیامد اولیه از پیش تعیین‌شده، یعنی بی‌توجهی در مقیاس SNAP-IV،
+                و همچنین در برخی حوزه‌های اختلال عملکردی مانند حوزه خانواده
+                و نمره کل WFIRS-P، بهبود بیشتری ایجاد کرد. در مقابل،
+                نقاشی‌درمانی سنتی کاهش گسترده‌تری در علائم مقابله‌ای ـ
+                نافرمانی و شدت کلی علائم SNAP-IV ایجاد کرد. با توجه به
+                اندازه محدود اثرها و اختصاصی‌بودن آنها در حوزه‌های مختلف،
+                انجام کارآزمایی‌های بزرگ‌تر و چندمرکزی برای تأیید اثربخشی
+                این روش و شناسایی کودکانی که احتمالاً بیشترین سود را از آن
+                می‌برند ضروری است.
             </p>
 
             <a class="source-link"
@@ -1107,17 +1215,19 @@ footer{
                 DOI
             </a>
 
+            <a class="source-link pdf-link"
+               href="AI%20assisted%20drawing%20therapy%20for%20children%20with%20ADHD%20A%20randomised%20controlled%20trial.pdf"
+               target="_blank"
+               rel="noopener">
+                PDF
+            </a>
+
         </article>
 
     </div>
 
 </section>
 
-
-
-<!-- =====================================================
-     BODY IMAGE & IDENTITY
-===================================================== -->
 
 <section class="library-section" id="body-image">
 
@@ -1128,13 +1238,12 @@ footer{
         </h2>
 
         <p>
-            Research on body modification, piercing, body image, self-
-            objectification, appearance concerns, social acceptance, and the
-            psychological meanings attached to the modified body.
+            Research on body modification, piercing, body image,
+            self-objectification, appearance concerns, social acceptance,
+            and the psychological meanings attached to the modified body.
         </p>
 
     </div>
-
 
     <div class="research-grid">
 
@@ -1169,7 +1278,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1177,7 +1285,8 @@ footer{
             </div>
 
             <h3>
-                Body Modification and Self-Destructive Behavior in Adolescents: Psychological Manifestations
+                Body Modification and Self-Destructive Behavior in Adolescents:
+                Psychological Manifestations
             </h3>
 
             <div class="authors">
@@ -1200,7 +1309,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1208,7 +1316,8 @@ footer{
             </div>
 
             <h3>
-                Body Piercing Trends and Motivations Among Students at the University of Cape Coast, Ghana
+                Body Piercing Trends and Motivations Among Students at the
+                University of Cape Coast, Ghana
             </h3>
 
             <div class="authors">
@@ -1231,7 +1340,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1239,7 +1347,8 @@ footer{
             </div>
 
             <h3>
-                Body Piercing and Adolescent Risk-Taking: Association or Expression?
+                Body Piercing and Adolescent Risk-Taking:
+                Association or Expression?
             </h3>
 
             <div class="authors">
@@ -1260,7 +1369,6 @@ footer{
             </a>
 
         </article>
-
 
 
         <article class="research-card">
@@ -1293,7 +1401,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1324,7 +1431,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1332,7 +1438,8 @@ footer{
             </div>
 
             <h3>
-                Self-Objectification, Body Uneasiness, and Body Investment in Individuals Undergoing Body Modification and Plastic Surgery
+                Self-Objectification, Body Uneasiness, and Body Investment in
+                Individuals Undergoing Body Modification and Plastic Surgery
             </h3>
 
             <div class="authors">
@@ -1356,7 +1463,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1364,7 +1470,8 @@ footer{
             </div>
 
             <h3>
-                Body Piercing and Tattoos: A Survey on Young Adults’ Knowledge of the Risks and Practices in Body Art
+                Body Piercing and Tattoos: A Survey on Young Adults’
+                Knowledge of the Risks and Practices in Body Art
             </h3>
 
             <div class="authors">
@@ -1386,7 +1493,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1394,7 +1500,8 @@ footer{
             </div>
 
             <h3>
-                Deviance as an Historical Artefact: A Scoping Review of Psychological Studies of Body Modification
+                Deviance as an Historical Artefact: A Scoping Review of
+                Psychological Studies of Body Modification
             </h3>
 
             <div class="authors">
@@ -1422,11 +1529,6 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     CLINICAL PERSPECTIVES
-===================================================== -->
-
 <section class="library-section" id="clinical">
 
     <div class="section-heading">
@@ -1442,7 +1544,6 @@ footer{
         </p>
 
     </div>
-
 
     <div class="research-grid">
 
@@ -1477,7 +1578,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1485,7 +1585,8 @@ footer{
             </div>
 
             <h3>
-                The Darker Side: Personality and Motivations of Clinical and Counselling Psychologists
+                The Darker Side: Personality and Motivations of Clinical and
+                Counselling Psychologists
             </h3>
 
             <div class="authors">
@@ -1513,11 +1614,6 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     ART IMAGE & PSYCHOLOGY
-===================================================== -->
-
 <section class="library-section" id="art-image">
 
     <div class="section-heading">
@@ -1533,7 +1629,6 @@ footer{
         </p>
 
     </div>
-
 
     <div class="research-grid">
 
@@ -1569,7 +1664,6 @@ footer{
         </article>
 
 
-
         <article class="research-card">
 
             <div class="card-type">
@@ -1598,7 +1692,6 @@ footer{
             </a>
 
         </article>
-
 
 
         <article class="research-card">
@@ -1630,7 +1723,6 @@ footer{
             </a>
 
         </article>
-
 
 
         <article class="research-card">
@@ -1667,11 +1759,6 @@ footer{
 </section>
 
 
-
-<!-- =====================================================
-     THEORY
-===================================================== -->
-
 <section class="library-section theory-section" id="theory">
 
     <div class="section-heading">
@@ -1687,7 +1774,6 @@ footer{
         </p>
 
     </div>
-
 
     <div class="theory-box">
 
@@ -1717,7 +1803,6 @@ footer{
             </a>
 
         </article>
-
 
 
         <article class="theory-item">
@@ -1750,21 +1835,15 @@ footer{
 
 </section>
 
-
-
 </main>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer id="contact">
 
     <div class="footer-inner">
 
         <div class="footer-top">
+
 
             <div class="footer-brand-area">
 
@@ -1864,7 +1943,5 @@ footer{
 
 </footer>
 
-
 </body>
-
 </html>
